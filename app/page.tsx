@@ -2,90 +2,114 @@
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollByAmount = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
-    const amount = dir === "left" ? -500 : 500;
+    const amount = dir === "left" ? -520 : 520;
     scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50 text-slate-900 overflow-x-hidden">
+    <main
+      className="relative min-h-screen text-slate-900 overflow-x-hidden"
+      style={{
+        backgroundImage: "url('/gama-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* SOFT OVERLAY */}
+      <div className="absolute inset-0 bg-white/65 backdrop-blur-[3px]" />
 
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-36 pb-20">
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
-          Gama Dynamics
-        </h1>
+      {/* CONTENT */}
+      <div className="relative z-10">
 
-        <p className="mt-6 text-xl text-slate-600 max-w-2xl leading-relaxed">
-          A software laboratory where intelligent systems are grown,
-          observed, and evolved.
-        </p>
-      </section>
+        {/* HERO */}
+        <section className="max-w-6xl mx-auto px-6 pt-36 pb-24 text-center">
 
-      {/* CAROUSEL */}
-      <section className="relative pb-36">
+          {/* LOGO */}
+          <div className="flex justify-center mb-10">
+            <Image
+              src="/logo+text.png"
+              alt="Gama Dynamics"
+              width={260}
+              height={260}
+              priority
+            />
+          </div>
 
-        {/* Arrows */}
-        <button
-          onClick={() => scrollByAmount("left")}
-          className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/70 backdrop-blur border border-white/60 shadow hover:bg-white transition"
-        >
-          ←
-        </button>
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
+            Gama Dynamics
+          </h1>
 
-        <button
-          onClick={() => scrollByAmount("right")}
-          className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-white/70 backdrop-blur border border-white/60 shadow hover:bg-white transition"
-        >
-          →
-        </button>
+          <p className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            A software laboratory where intelligent systems are grown,
+            observed, and evolved.
+          </p>
+        </section>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-10 overflow-x-auto px-6 snap-x snap-mandatory scroll-smooth"
-        >
+        {/* CAROUSEL */}
+        <section className="relative pb-36">
 
-          <SpecimenCard
-            index="001"
-            title="KASU Finance"
-            description="A time-based financial intelligence system that simulates cash flow, goal feasibility, and credit behavior across weeks."
-            status="Actively evolving"
-          />
+          {/* ARROWS */}
+          <button
+            onClick={() => scrollByAmount("left")}
+            className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full bg-white/70 backdrop-blur border border-white/60 shadow hover:bg-white transition"
+          >
+            ←
+          </button>
 
-          <SpecimenCard
-            index="002"
-            title="Tensland"
-            description="A stigma-free social discovery system built around shared spaces, traits, and cooperative play."
-            status="Incubating"
-          />
+          <button
+            onClick={() => scrollByAmount("right")}
+            className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 h-12 w-12 items-center justify-center rounded-full bg-white/70 backdrop-blur border border-white/60 shadow hover:bg-white transition"
+          >
+            →
+          </button>
 
-          <SpecimenCard
-            index="003"
-            title="VOID"
-            description="A voice-first, windowless command system for hierarchical organizations."
-            status="Concept phase"
-          />
+          <div
+            ref={scrollRef}
+            className="flex gap-10 overflow-x-auto px-6 snap-x snap-mandatory scroll-smooth"
+          >
+            <SpecimenCard
+              index="001"
+              title="KASU Finance"
+              description="A time-based financial intelligence system that simulates cash flow, goal feasibility, and credit behavior across weeks."
+              status="Actively evolving"
+            />
 
-          <SpecimenCard
-            index="004"
-            title="ChronoFlow"
-            description="A time-based simulation engine powering multiple financial and planning systems."
-            status="Internal engine"
-          />
+            <SpecimenCard
+              index="002"
+              title="Tensland"
+              description="A stigma-free social discovery system built around shared spaces, traits, and cooperative play."
+              status="Incubating"
+            />
 
-        </div>
-      </section>
+            <SpecimenCard
+              index="003"
+              title="VOID"
+              description="A voice-first, windowless command system for hierarchical organizations."
+              status="Concept phase"
+            />
 
+            <SpecimenCard
+              index="004"
+              title="ChronoFlow"
+              description="A temporal simulation engine powering multiple financial and planning systems."
+              status="Internal engine"
+            />
+          </div>
+        </section>
+
+      </div>
     </main>
   );
 }
 
-/* ---------- COMPONENT ---------- */
+/* ---------- SPECIMEN CARD ---------- */
 
 function SpecimenCard({
   index,
@@ -100,18 +124,17 @@ function SpecimenCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0.85, scale: 0.97 }}
-      whileHover={{ opacity: 1, scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 220, damping: 20 }}
+      initial={{ opacity: 0.9, scale: 0.97 }}
+      whileHover={{ opacity: 1, scale: 1.035 }}
+      transition={{ type: "spring", stiffness: 220, damping: 22 }}
       className="
         snap-center shrink-0
         w-[85vw] md:w-[60vw] lg:w-[46rem]
         rounded-3xl
-        bg-white/60 backdrop-blur-2xl
+        bg-white/65 backdrop-blur-2xl
         border border-white/50
-        shadow-[0_20px_40px_rgba(0,0,0,0.08)]
+        shadow-[0_25px_45px_rgba(0,0,0,0.12)]
         p-8 md:p-12
-        transition-opacity transition-transform
       "
     >
       <div className="flex items-center gap-3 text-sm text-slate-500">

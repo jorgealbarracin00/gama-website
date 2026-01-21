@@ -100,8 +100,9 @@ function SpecimenCard({
 }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 220, damping: 18 }}
+      initial={{ opacity: 0.85, scale: 0.97 }}
+      whileHover={{ opacity: 1, scale: 1.03 }}
+      transition={{ type: "spring", stiffness: 220, damping: 20 }}
       className="
         snap-center shrink-0
         w-[85vw] md:w-[60vw] lg:w-[46rem]
@@ -110,6 +111,7 @@ function SpecimenCard({
         border border-white/50
         shadow-[0_20px_40px_rgba(0,0,0,0.08)]
         p-8 md:p-12
+        transition-opacity transition-transform
       "
     >
       <div className="flex items-center gap-3 text-sm text-slate-500">

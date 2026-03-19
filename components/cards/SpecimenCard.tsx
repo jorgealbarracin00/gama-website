@@ -18,20 +18,21 @@ export default function SpecimenCard({ specimen }: SpecimenCardProps) {
       className="
         relative overflow-hidden
         snap-center shrink-0
-        w-[88vw] md:w-[62vw] lg:w-[46rem]
-        rounded-3xl
+        w-[82vw] sm:w-[70vw] md:w-[26rem] lg:w-[28rem]
+        min-h-[32rem]
+        rounded-[2.25rem]
         bg-white/70 backdrop-blur-2xl
         border border-white/70
         shadow-[0_25px_45px_rgba(15,23,42,0.12)]
-        p-7 md:p-10
+        p-7 md:p-8
       "
     >
       <div className="pointer-events-none absolute -top-20 -right-12 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.45),rgba(99,102,241,0))] blur-2xl" />
       <div className="pointer-events-none absolute -bottom-16 left-10 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.35),rgba(56,189,248,0))] blur-2xl" />
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col gap-6">
         <div>
-          <div className="flex items-center gap-3 text-sm text-slate-500">
-            <span className="tracking-widest uppercase text-indigo-600">
+          <div className="flex items-center justify-between gap-3 text-xs text-slate-500">
+            <span className="tracking-[0.3em] uppercase text-indigo-600">
               Specimen {specimen.index}
             </span>
             <span className="flex items-center gap-2">
@@ -40,29 +41,40 @@ export default function SpecimenCard({ specimen }: SpecimenCardProps) {
             </span>
           </div>
 
-          <h3 className="mt-4 text-3xl font-semibold tracking-tight">
-            {specimen.title}
-          </h3>
-          <p className="mt-2 text-sm text-slate-600">{specimen.subtitle}</p>
-
-          <p className="mt-4 text-slate-700 max-w-2xl leading-relaxed">
-            {specimen.description}
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {specimen.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-slate-700"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="mt-4 flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl border border-white/70 bg-white/70 backdrop-blur shadow-inner" />
+            <div>
+              <h3 className="text-2xl font-semibold tracking-tight">
+                {specimen.title}
+              </h3>
+              <p className="text-sm text-slate-600">{specimen.subtitle}</p>
+            </div>
           </div>
         </div>
 
-        <div className="hidden lg:block">
-          <div className="h-40 w-40 rounded-2xl border border-white/60 bg-gradient-to-br from-white/70 via-indigo-50/60 to-slate-100/70 shadow-inner" />
+        <div className="rounded-2xl border border-white/70 bg-white/60 backdrop-blur shadow-inner">
+          <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-sky-100 via-white to-indigo-100" />
+        </div>
+
+        <div className="space-y-3">
+          <p className="text-sm text-slate-700 leading-relaxed">
+            {specimen.description}
+          </p>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Focus: {specimen.tags.join(", ")}. Built to ship fast, learn faster, and
+            evolve toward the next release.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          {specimen.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-slate-700"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
 

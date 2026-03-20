@@ -259,7 +259,15 @@ export default function Home() {
                   disabled={!canGoLeft}
                   className="absolute left-[12%] top-[82%] z-50 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-16 md:w-16 md:text-2xl"
                 >
-                  <Image src="/arrow.png" alt="Previous" width={32} height={32} className="opacity-90" />
+                  <span className="relative h-8 w-8 overflow-hidden rounded-full md:h-10 md:w-10">
+                    <Image
+                      src="/arrow.png"
+                      alt="Previous"
+                      fill
+                      className="object-cover opacity-95"
+                      sizes="40px"
+                    />
+                  </span>
                 </button>
 
                 <button
@@ -269,7 +277,16 @@ export default function Home() {
                   disabled={!canGoRight}
                   className="absolute left-[82%] top-[82%] z-50 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-16 md:w-16 md:text-2xl"
                 >
-                  <Image src="/arrow.png" alt="Next" width={32} height={32} className="opacity-90" style={{ transform: "scaleX(-1)" }} />
+                  <span className="relative h-8 w-8 overflow-hidden rounded-full md:h-10 md:w-10">
+                    <Image
+                      src="/arrow.png"
+                      alt="Next"
+                      fill
+                      className="object-cover opacity-95"
+                      sizes="40px"
+                      style={{ transform: "scaleX(-1)" }}
+                    />
+                  </span>
                 </button>
 
                 <div className="absolute bottom-[14%] left-[50%] z-40 flex -translate-x-1/2 items-center gap-2 md:bottom-[11%]">

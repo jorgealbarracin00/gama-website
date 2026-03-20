@@ -8,119 +8,112 @@ type Specimen = {
   id: string;
   name: string;
   tone: string;
+  href: string;
 };
 
-type PodSlot = {
-  key: "front" | "left" | "right" | "back";
-  wrapperClassName: string;
-  style: React.CSSProperties;
-  cardClassName: string;
+type VisibleCard = {
+  specimen: Specimen;
+  layer: "active" | "next" | "third";
 };
 
 const specimens: Specimen[] = [
   {
     id: "SPECIMEN 001",
     name: "CashCast",
+    href: "https://cashcast.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(16,185,129,0.88),rgba(5,150,105,0.72))] border border-emerald-300/30",
   },
   {
     id: "SPECIMEN 002",
     name: "VOID",
+    href: "https://void.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
   },
   {
     id: "SPECIMEN 003",
     name: "Tensland",
+    href: "https://tensland.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
   },
   {
     id: "SPECIMEN 004",
     name: "ChronoFlow",
+    href: "https://chronoflow.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
   },
-];
-
-const podSlots: PodSlot[] = [
   {
-    key: "front",
-    wrapperClassName:
-      "absolute left-[50%] top-[61%] -translate-x-1/2 -translate-y-1/2",
-    style: {
-      transform: "translate(-50%, -50%) perspective(1200px) rotateX(2deg) rotateY(0deg) scale(1.03)",
-      opacity: 1,
-      zIndex: 30,
-    },
-    cardClassName:
-      "h-[240px] w-[138px] md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px] opacity-100",
+    id: "SPECIMEN 005",
+    name: "Orbit",
+    href: "https://orbit.gamadynamics.com.au",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(129,140,248,0.66),rgba(67,56,202,0.58))] border border-indigo-300/30",
   },
   {
-    key: "left",
-    wrapperClassName:
-      "absolute left-[31%] top-[63%] -translate-x-1/2 -translate-y-1/2",
-    style: {
-      transform: "translate(-50%, -50%) perspective(1200px) rotateY(26deg) rotateZ(-8deg) scale(0.9)",
-      opacity: 0.78,
-      zIndex: 20,
-    },
-    cardClassName:
-      "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
-  },
-  {
-    key: "right",
-    wrapperClassName:
-      "absolute left-[69%] top-[63%] -translate-x-1/2 -translate-y-1/2",
-    style: {
-      transform: "translate(-50%, -50%) perspective(1200px) rotateY(-26deg) rotateZ(8deg) scale(0.9)",
-      opacity: 0.78,
-      zIndex: 20,
-    },
-    cardClassName:
-      "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
-  },
-  {
-    key: "back",
-    wrapperClassName:
-      "absolute left-[50%] top-[38%] -translate-x-1/2 -translate-y-1/2",
-    style: {
-      transform: "translate(-50%, -50%) perspective(1200px) rotateX(1deg) scale(0.74)",
-      opacity: 0.4,
-      zIndex: 10,
-    },
-    cardClassName:
-      "h-[166px] w-[98px] md:h-[198px] md:w-[116px] xl:h-[224px] xl:w-[132px]",
+    id: "SPECIMEN 006",
+    name: "Memoir",
+    href: "https://memoir.gamadynamics.com.au",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
   },
 ];
 
-function wrapIndex(index: number, length: number) {
-  return (index + length) % length;
+const cardLayerClasses: Record<VisibleCard["layer"], string> = {
+  active:
+    "left-[20%] top-[58%] z-30 h-[240px] w-[138px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px]",
+  next:
+    "left-[47%] top-[58%] z-20 h-[210px] w-[122px] -translate-x-1/2 -translate-y-1/2 opacity-80 md:h-[260px] md:w-[148px] xl:h-[300px] xl:w-[170px]",
+  third:
+    "left-[69%] top-[58%] z-10 h-[182px] w-[106px] -translate-x-1/2 -translate-y-1/2 opacity-52 md:h-[225px] md:w-[128px] xl:h-[260px] xl:w-[148px]",
+};
+
+const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {
+  active: {
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-4deg) rotateZ(-1deg) scale(1.02)",
+    filter: "blur(0px) saturate(1)",
+  },
+  next: {
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-12deg) rotateZ(-3deg) scale(0.94)",
+    filter: "blur(0.4px) saturate(0.92)",
+  },
+  third: {
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-18deg) rotateZ(-5deg) scale(0.88)",
+    filter: "blur(1.1px) saturate(0.76)",
+  },
+};
+
+function clamp(value: number, min: number, max: number) {
+  return Math.min(Math.max(value, min), max);
 }
 
 export default function Home() {
-  const [frontIndex, setFrontIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const arrangedPods = useMemo(
-    () =>
-      specimens.map((specimen, specimenIndex) => {
-        const slotIndex = wrapIndex(specimenIndex - frontIndex, specimens.length);
-        return {
-          specimen,
-          slot: podSlots[slotIndex],
-        };
-      }),
-    [frontIndex],
-  );
+  const visibleCards = useMemo<VisibleCard[]>(() => {
+    const active = specimens[selectedIndex];
+    const next = specimens[selectedIndex + 1];
+    const third = specimens[selectedIndex + 2];
 
-  function rotateLeft() {
-    setFrontIndex((current) => wrapIndex(current + 1, specimens.length));
+    return [
+      active ? { specimen: active, layer: "active" } : null,
+      next ? { specimen: next, layer: "next" } : null,
+      third ? { specimen: third, layer: "third" } : null,
+    ].filter(Boolean) as VisibleCard[];
+  }, [selectedIndex]);
+
+  function selectPrevious() {
+    setSelectedIndex((current) => clamp(current - 1, 0, specimens.length - 1));
   }
 
-  function rotateRight() {
-    setFrontIndex((current) => wrapIndex(current - 1, specimens.length));
+  function selectNext() {
+    setSelectedIndex((current) => clamp(current + 1, 0, specimens.length - 1));
   }
+
+  const canGoLeft = selectedIndex > 0;
+  const canGoRight = selectedIndex < specimens.length - 1;
 
   return (
     <section
@@ -199,21 +192,21 @@ export default function Home() {
           <div className="flex h-full w-full items-center justify-center">
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
               <div className="relative mt-10 h-[320px] w-full max-w-4xl md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
-                {arrangedPods.map(({ slot, specimen }) => (
+                {visibleCards.map(({ specimen, layer }) => (
                   <div
                     key={specimen.name}
-                    className={slot.wrapperClassName}
+                    className={`absolute ${cardLayerClasses[layer]}`}
                     style={{
-                      ...slot.style,
+                      ...cardLayerStyles[layer],
                       transition:
-                        "left 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 650ms cubic-bezier(0.22, 1, 0.36, 1), filter 650ms cubic-bezier(0.22, 1, 0.36, 1)",
+                        "left 520ms cubic-bezier(0.22, 1, 0.36, 1), top 520ms cubic-bezier(0.22, 1, 0.36, 1), transform 520ms cubic-bezier(0.22, 1, 0.36, 1), opacity 520ms cubic-bezier(0.22, 1, 0.36, 1), filter 520ms cubic-bezier(0.22, 1, 0.36, 1)",
                     }}
                   >
                     <a
-                      href={`https://${specimen.name.toLowerCase()}.gamadynamics.com.au`}
+                      href={specimen.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone} ${slot.key === "front" ? "blur-0 saturate-100" : slot.key === "back" ? "blur-[1.2px] saturate-75" : "blur-[0.4px] saturate-90"}`}
+                      className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone}`}
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />
@@ -237,25 +230,41 @@ export default function Home() {
                   </div>
                 ))}
 
-                <div className="pointer-events-none absolute inset-x-[20%] bottom-4 h-16 rounded-full bg-cyan-400/10 blur-[48px] md:bottom-8" />
+                <div className="pointer-events-none absolute inset-x-[16%] bottom-5 h-16 rounded-full bg-cyan-400/10 blur-[48px] md:bottom-10" />
 
                 <button
                   type="button"
-                  aria-label="Rotate specimens left"
-                  onClick={rotateLeft}
-                  className="absolute left-[28%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 md:h-14 md:w-14 md:text-2xl"
+                  aria-label="Previous specimen"
+                  onClick={selectPrevious}
+                  disabled={!canGoLeft}
+                  className="absolute left-[22%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">←</span>
                 </button>
 
                 <button
                   type="button"
-                  aria-label="Rotate specimens right"
-                  onClick={rotateRight}
-                  className="absolute left-[72%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 md:h-14 md:w-14 md:text-2xl"
+                  aria-label="Next specimen"
+                  onClick={selectNext}
+                  disabled={!canGoRight}
+                  className="absolute left-[76%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">→</span>
                 </button>
+
+                <div className="absolute bottom-[8%] left-[50%] z-40 flex -translate-x-1/2 items-center gap-2 md:bottom-[6%]">
+                  {specimens.map((specimen, index) => (
+                    <button
+                      key={specimen.name}
+                      type="button"
+                      aria-label={`Select ${specimen.name}`}
+                      onClick={() => setSelectedIndex(index)}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                        index === selectedIndex ? "w-8 bg-white" : "w-2.5 bg-white/35 hover:bg-white/55"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

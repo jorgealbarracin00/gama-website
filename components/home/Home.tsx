@@ -261,7 +261,7 @@ export default function Home() {
                 >
                   <span className="relative h-10 w-10 md:h-12 md:w-12 overflow-hidden rounded-full">
                     <Image
-                      src="/arrow.png"
+                      src="/arrow1.png"
                       alt="Previous"
                       fill
                       className="object-contain scale-[1.25] opacity-95"
@@ -279,7 +279,7 @@ export default function Home() {
                 >
                   <span className="relative h-10 w-10 md:h-12 md:w-12 overflow-hidden rounded-full">
                     <Image
-                      src="/arrow.png"
+                      src="/arrow1.png"
                       alt="Next"
                       fill
                       className="object-contain scale-[1.25] opacity-95"

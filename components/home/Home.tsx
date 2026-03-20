@@ -13,7 +13,7 @@ type Specimen = {
 
 type VisibleCard = {
   specimen: Specimen;
-  layer: "active" | "next" | "third";
+  layer: "hiddenLeft" | "active" | "next" | "third" | "hiddenRight";
 };
 
 const specimens: Specimen[] = [
@@ -62,26 +62,38 @@ const specimens: Specimen[] = [
 ];
 
 const cardLayerClasses: Record<VisibleCard["layer"], string> = {
+  hiddenLeft:
+    "left-[-6%] top-[58%] z-0 h-[230px] w-[132px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[290px] md:w-[164px] xl:h-[330px] xl:w-[186px] pointer-events-none",
   active:
-    "left-[20%] top-[58%] z-30 h-[240px] w-[138px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px]",
+    "left-[34%] top-[58%] z-30 h-[240px] w-[138px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px]",
   next:
-    "left-[47%] top-[58%] z-20 h-[210px] w-[122px] -translate-x-1/2 -translate-y-1/2 opacity-80 md:h-[260px] md:w-[148px] xl:h-[300px] xl:w-[170px]",
+    "left-[54%] top-[58%] z-20 h-[210px] w-[122px] -translate-x-1/2 -translate-y-1/2 opacity-82 md:h-[260px] md:w-[148px] xl:h-[300px] xl:w-[170px]",
   third:
-    "left-[69%] top-[58%] z-10 h-[182px] w-[106px] -translate-x-1/2 -translate-y-1/2 opacity-52 md:h-[225px] md:w-[128px] xl:h-[260px] xl:w-[148px]",
+    "left-[70%] top-[58%] z-10 h-[182px] w-[106px] -translate-x-1/2 -translate-y-1/2 opacity-56 md:h-[225px] md:w-[128px] xl:h-[260px] xl:w-[148px]",
+  hiddenRight:
+    "left-[88%] top-[58%] z-0 h-[166px] w-[98px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[198px] md:w-[116px] xl:h-[224px] xl:w-[132px] pointer-events-none",
 };
 
 const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {
+  hiddenLeft: {
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(14deg) rotateZ(2deg) scale(0.92)",
+    filter: "blur(1.4px) saturate(0.72)",
+  },
   active: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-4deg) rotateZ(-1deg) scale(1.02)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-3deg) rotateZ(-1deg) scale(1.02)",
     filter: "blur(0px) saturate(1)",
   },
   next: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-12deg) rotateZ(-3deg) scale(0.94)",
-    filter: "blur(0.4px) saturate(0.92)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-10deg) rotateZ(-2deg) scale(0.95)",
+    filter: "blur(0.35px) saturate(0.92)",
   },
   third: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-18deg) rotateZ(-5deg) scale(0.88)",
-    filter: "blur(1.1px) saturate(0.76)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-16deg) rotateZ(-4deg) scale(0.89)",
+    filter: "blur(1px) saturate(0.76)",
+  },
+  hiddenRight: {
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-20deg) rotateZ(-5deg) scale(0.84)",
+    filter: "blur(1.6px) saturate(0.66)",
   },
 };
 
@@ -93,14 +105,18 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const visibleCards = useMemo<VisibleCard[]>(() => {
+    const previous = specimens[selectedIndex - 1];
     const active = specimens[selectedIndex];
     const next = specimens[selectedIndex + 1];
     const third = specimens[selectedIndex + 2];
+    const incomingRight = specimens[selectedIndex + 3];
 
     return [
+      previous ? { specimen: previous, layer: "hiddenLeft" } : null,
       active ? { specimen: active, layer: "active" } : null,
       next ? { specimen: next, layer: "next" } : null,
       third ? { specimen: third, layer: "third" } : null,
+      incomingRight ? { specimen: incomingRight, layer: "hiddenRight" } : null,
     ].filter(Boolean) as VisibleCard[];
   }, [selectedIndex]);
 
@@ -191,7 +207,7 @@ export default function Home() {
 
           <div className="flex h-full w-full items-center justify-center">
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
-              <div className="relative mt-10 h-[320px] w-full max-w-4xl md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
+              <div className="relative mt-10 h-[320px] w-full max-w-[980px] md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
                 {visibleCards.map(({ specimen, layer }) => (
                   <div
                     key={specimen.name}
@@ -237,7 +253,7 @@ export default function Home() {
                   aria-label="Previous specimen"
                   onClick={selectPrevious}
                   disabled={!canGoLeft}
-                  className="absolute left-[22%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[12%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">←</span>
                 </button>
@@ -247,7 +263,7 @@ export default function Home() {
                   aria-label="Next specimen"
                   onClick={selectNext}
                   disabled={!canGoRight}
-                  className="absolute left-[76%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[82%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">→</span>
                 </button>

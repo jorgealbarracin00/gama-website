@@ -69,31 +69,23 @@ export default function Home() {
             Digital systems grown, tested, and deployed for real life.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/specimens"
-              className="min-w-[270px] rounded-full border border-purple-300/70 bg-purple-400/14 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_35px_rgba(168,85,247,0.25)] backdrop-blur-md transition hover:bg-purple-400/22"
-            >
-              Explore Specimens System
-            </Link>
-
-            <Link
-              href="#ideas"
-              className="min-w-[250px] rounded-full border border-white/45 bg-white/10 px-10 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-md transition hover:bg-white/18"
-            >
-              View Research
-            </Link>
+          <div className="mx-auto mt-14 flex w-full max-w-3xl items-center gap-6 text-white/90">
+            <div className="h-px flex-1 bg-white/18" />
+            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-white/92 md:text-base">
+              Active Specimens
+            </p>
+            <div className="h-px flex-1 bg-white/18" />
           </div>
         </div>
       </div>
 
       {/* Specimen Pods (fake 3D stage) */}
-      <div className="relative z-10 mt-16 flex justify-center px-6">
-        <div className="relative w-full max-w-5xl h-[360px]">
+      <div className="relative z-10 mt-10 flex justify-center px-6 pb-20 md:pb-28">
+        <div className="relative h-[360px] w-full max-w-5xl md:h-[420px]">
 
           {/* Center pod */}
           <div
-            className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-1/2 top-[48%] -translate-x-1/2 -translate-y-1/2"
             style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
           >
             <div className="w-[260px] h-[160px] rounded-2xl bg-green-500/80 shadow-[0_0_40px_rgba(34,197,94,0.4)] flex items-center justify-center text-black font-semibold">
@@ -103,7 +95,7 @@ export default function Home() {
 
           {/* Left pod */}
           <div
-            className="absolute left-[10%] top-[35%]"
+            className="absolute left-[8%] top-[44%]"
             style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
           >
             <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
@@ -113,7 +105,7 @@ export default function Home() {
 
           {/* Right pod */}
           <div
-            className="absolute right-[10%] top-[35%]"
+            className="absolute right-[8%] top-[44%]"
             style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
           >
             <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
@@ -123,7 +115,7 @@ export default function Home() {
 
           {/* Back pod */}
           <div
-            className="absolute left-1/2 top-[15%] -translate-x-1/2"
+            className="absolute left-1/2 top-[18%] -translate-x-1/2"
             style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
           >
             <div className="w-[220px] h-[120px] rounded-2xl bg-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.2)] flex items-center justify-center text-black font-semibold">

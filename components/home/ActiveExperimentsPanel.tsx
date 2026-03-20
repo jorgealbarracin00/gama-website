@@ -59,9 +59,13 @@ export default function ActiveExperimentsPanel({
   return (
     <section
       id="experiments"
-      className="mx-auto mt-24 w-full max-w-6xl px-6 sm:px-8"
+      className="relative mx-auto mt-24 w-full max-w-6xl px-6 sm:px-8"
     >
-      <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-[0_0_60px_rgba(139,92,246,0.18)] backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-1/2 top-[-120px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-purple-500/20 blur-[120px]" />
+        <div className="absolute right-[-80px] bottom-[-120px] h-[320px] w-[320px] rounded-full bg-fuchsia-500/20 blur-[120px]" />
+      </div>
+      <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] shadow-[0_0_80px_rgba(139,92,246,0.22)] backdrop-blur-xl">
         <div className="border-b border-white/10 px-6 py-6 sm:px-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">

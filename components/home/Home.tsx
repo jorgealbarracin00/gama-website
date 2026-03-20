@@ -48,29 +48,48 @@ const podSlots: PodSlot[] = [
   {
     key: "front",
     wrapperClassName:
-      "absolute left-[50%] top-[58%] -translate-x-1/2 -translate-y-1/2",
-    style: { transform: "translate(-50%, -50%) scale(1.02)", zIndex: 30 },
+      "absolute left-[50%] top-[61%] -translate-x-1/2 -translate-y-1/2",
+    style: {
+      transform: "translate(-50%, -50%) perspective(1200px) rotateX(2deg) rotateY(0deg) scale(1.03)",
+      opacity: 1,
+      zIndex: 30,
+    },
     cardClassName:
       "h-[240px] w-[138px] md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px] opacity-100",
   },
   {
     key: "left",
-    wrapperClassName: "absolute left-[20%] top-[67%] -translate-x-1/2 -translate-y-1/2",
-    style: { transform: "scale(0.88) rotate(-7deg)", opacity: 0.82, zIndex: 20 },
+    wrapperClassName:
+      "absolute left-[31%] top-[63%] -translate-x-1/2 -translate-y-1/2",
+    style: {
+      transform: "translate(-50%, -50%) perspective(1200px) rotateY(26deg) rotateZ(-8deg) scale(0.9)",
+      opacity: 0.78,
+      zIndex: 20,
+    },
     cardClassName:
       "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
   },
   {
     key: "right",
-    wrapperClassName: "absolute left-[80%] top-[67%] -translate-x-1/2 -translate-y-1/2",
-    style: { transform: "scale(0.88) rotate(7deg)", opacity: 0.82, zIndex: 20 },
+    wrapperClassName:
+      "absolute left-[69%] top-[63%] -translate-x-1/2 -translate-y-1/2",
+    style: {
+      transform: "translate(-50%, -50%) perspective(1200px) rotateY(-26deg) rotateZ(8deg) scale(0.9)",
+      opacity: 0.78,
+      zIndex: 20,
+    },
     cardClassName:
       "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
   },
   {
     key: "back",
-    wrapperClassName: "absolute left-[50%] top-[36%] -translate-x-1/2 -translate-y-1/2",
-    style: { transform: "translate(-50%, -50%) scale(0.72)", opacity: 0.46, zIndex: 10 },
+    wrapperClassName:
+      "absolute left-[50%] top-[38%] -translate-x-1/2 -translate-y-1/2",
+    style: {
+      transform: "translate(-50%, -50%) perspective(1200px) rotateX(1deg) scale(0.74)",
+      opacity: 0.4,
+      zIndex: 10,
+    },
     cardClassName:
       "h-[166px] w-[98px] md:h-[198px] md:w-[116px] xl:h-[224px] xl:w-[132px]",
   },
@@ -187,14 +206,14 @@ export default function Home() {
                     style={{
                       ...slot.style,
                       transition:
-                        "left 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 650ms cubic-bezier(0.22, 1, 0.36, 1)",
+                        "left 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 650ms cubic-bezier(0.22, 1, 0.36, 1), filter 650ms cubic-bezier(0.22, 1, 0.36, 1)",
                     }}
                   >
                     <a
                       href={`https://${specimen.name.toLowerCase()}.gamadynamics.com.au`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone}`}
+                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone} ${slot.key === "front" ? "blur-0 saturate-100" : slot.key === "back" ? "blur-[1.2px] saturate-75" : "blur-[0.4px] saturate-90"}`}
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />

@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import ActiveExperimentsPanel from "./ActiveExperimentsPanel";
 
 export default function Home() {
   return (
-    <>
     <section
       className="relative min-h-screen overflow-hidden bg-[#050b16] text-white"
       style={{
@@ -79,10 +77,10 @@ export default function Home() {
               Inspect Active Specimens
             </Link>
             <Link
-              href="#experiments"
+              href="/specimens"
               className="min-w-[270px] rounded-full border border-purple-300/70 bg-purple-400/14 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_35px_rgba(168,85,247,0.25)] backdrop-blur-md transition hover:bg-purple-400/22"
             >
-              Inspect Active Experiments
+              Explore Specimens System
             </Link>
 
             <Link
@@ -95,8 +93,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-
-    <ActiveExperimentsPanel />
-    </>
   );
 }

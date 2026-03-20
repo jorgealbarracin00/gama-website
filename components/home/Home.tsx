@@ -63,15 +63,15 @@ const specimens: Specimen[] = [
 
 const cardLayerClasses: Record<VisibleCard["layer"], string> = {
   hiddenLeft:
-    "left-[-7%] top-[58%] z-0 h-[250px] w-[142px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[314px] md:w-[178px] xl:h-[356px] xl:w-[202px] pointer-events-none",
+    "left-[-7%] top-[64%] z-0 h-[250px] w-[142px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[314px] md:w-[178px] xl:h-[356px] xl:w-[202px] pointer-events-none",
   active:
-    "left-[34%] top-[58%] z-30 h-[270px] w-[154px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[340px] md:w-[192px] xl:h-[390px] xl:w-[220px]",
+    "left-[34%] top-[64%] z-30 h-[270px] w-[154px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[340px] md:w-[192px] xl:h-[390px] xl:w-[220px]",
   next:
-    "left-[54%] top-[58%] z-20 h-[236px] w-[136px] -translate-x-1/2 -translate-y-1/2 opacity-84 md:h-[296px] md:w-[168px] xl:h-[338px] xl:w-[192px]",
+    "left-[54%] top-[64%] z-20 h-[236px] w-[136px] -translate-x-1/2 -translate-y-1/2 opacity-84 md:h-[296px] md:w-[168px] xl:h-[338px] xl:w-[192px]",
   third:
-    "left-[71%] top-[58%] z-10 h-[206px] w-[118px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[254px] md:w-[144px] xl:h-[292px] xl:w-[166px]",
+    "left-[71%] top-[64%] z-10 h-[206px] w-[118px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[254px] md:w-[144px] xl:h-[292px] xl:w-[166px]",
   hiddenRight:
-    "left-[89%] top-[58%] z-0 h-[188px] w-[108px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[228px] md:w-[130px] xl:h-[258px] xl:w-[148px] pointer-events-none",
+    "left-[89%] top-[64%] z-0 h-[188px] w-[108px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[228px] md:w-[130px] xl:h-[258px] xl:w-[148px] pointer-events-none",
 };
 
 const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {

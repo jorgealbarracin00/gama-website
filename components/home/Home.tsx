@@ -208,7 +208,7 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
-              <div className="relative mt-3 h-[390px] w-full max-w-[1080px] md:mt-6 md:h-[490px] xl:mt-8 xl:h-[560px]">
+              <div className="relative mt-3 h-[360px] w-full max-w-[1080px] md:mt-5 md:h-[450px] xl:mt-6 xl:h-[510px]">
                 {visibleCards.map(({ specimen, layer }) => (
                   <div
                     key={specimen.name}
@@ -257,7 +257,7 @@ export default function Home() {
                   aria-label="Previous specimen"
                   onClick={selectPrevious}
                   disabled={!canGoLeft}
-                  className="absolute left-[12%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[12%] top-[82%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">←</span>
                 </button>
@@ -267,12 +267,12 @@ export default function Home() {
                   aria-label="Next specimen"
                   onClick={selectNext}
                   disabled={!canGoRight}
-                  className="absolute left-[82%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[82%] top-[82%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">→</span>
                 </button>
 
-                <div className="absolute bottom-[8%] left-[50%] z-40 flex -translate-x-1/2 items-center gap-2 md:bottom-[6%]">
+                <div className="absolute bottom-[14%] left-[50%] z-40 flex -translate-x-1/2 items-center gap-2 md:bottom-[11%]">
                   {specimens.map((specimen, index) => (
                     <button
                       key={specimen.name}

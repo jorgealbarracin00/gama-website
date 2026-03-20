@@ -225,6 +225,20 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone} ${layer === "active" ? "animate-[pulse_4.8s_ease-in-out_infinite] shadow-[0_0_65px_rgba(255,255,255,0.14)]" : ""}`}
                     >
+                      {specimen.name === "CashCast" && (
+                        <>
+                          <Image
+                            src="/backgrounds/cashcast-PREVIEW.webp"
+                            alt="CashCast preview"
+                            fill
+                            className="object-cover opacity-72"
+                            sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
+                            quality={70}
+                            priority={layer === "active"}
+                          />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.10),rgba(3,9,20,0.20)_52%,rgba(3,9,20,0.42))]" />
+                        </>
+                      )}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />
                       <div className="absolute bottom-0 left-0 right-0 h-24 bg-[linear-gradient(180deg,rgba(2,6,23,0),rgba(2,6,23,0.34))]" />
@@ -232,13 +246,13 @@ export default function Home() {
 
                       <div className="relative z-10 flex h-full w-full flex-col justify-between p-4 md:p-5">
                         <div>
-                          <p className="text-[10px] uppercase tracking-[0.24em] text-white/72 md:text-[11px]">
+                          <p className="text-[10px] uppercase tracking-[0.24em] text-white/86 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-[11px]">
                             {specimen.id}
                           </p>
                         </div>
 
                         <div>
-                          <h3 className="text-lg font-semibold md:text-xl xl:text-2xl">
+                          <h3 className="text-lg font-semibold text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.55)] md:text-xl xl:text-2xl">
                             {specimen.name}
                           </h3>
                         </div>

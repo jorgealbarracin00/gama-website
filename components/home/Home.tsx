@@ -18,14 +18,22 @@ export default function Home() {
 
       <header className="relative z-20 flex items-center justify-between px-8 md:px-12 pt-7">
         <div className="flex items-center gap-4">
-          <Image
-            src="/brand/logo-transp.png"
-            alt="GAMA Dynamics"
-            width={210}
-            height={56}
-            className="h-10 md:h-12 w-auto object-contain"
-            priority
-          />
+          <div className="group relative flex items-center justify-center rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-[1.03] hover:bg-white/15">
+            {/* subtle glow */}
+            <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle,rgba(120,180,255,0.25),transparent_70%)]" />
+
+            {/* pulse effect */}
+            <div className="pointer-events-none absolute inset-0 rounded-xl animate-[pulse_6s_ease-in-out_infinite] opacity-[0.08] bg-[radial-gradient(circle,rgba(120,180,255,0.6),transparent_70%)]" />
+
+            <Image
+              src="/brand/logo-transp.png"
+              alt="GAMA Dynamics"
+              width={210}
+              height={56}
+              className="relative h-10 md:h-12 w-auto object-contain brightness-110 transition duration-500 group-hover:brightness-125"
+              priority
+            />
+          </div>
         </div>
 
         <nav className="hidden md:flex items-center gap-10 text-white/80 text-lg">

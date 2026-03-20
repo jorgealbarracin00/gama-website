@@ -47,8 +47,8 @@ const specimens: Specimen[] = [
   },
   {
     id: "SPECIMEN 005",
-    name: "Orbit",
-    href: "https://orbit.gamadynamics.com.au",
+    name: "ExpenseTrackWatch",
+    href: "https://expensetrackwatch.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(129,140,248,0.66),rgba(67,56,202,0.58))] border border-indigo-300/30",
   },
@@ -281,11 +281,11 @@ export default function Home() {
                           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,7,18,0.03),rgba(2,7,18,0.08)_52%,rgba(2,7,18,0.22))]" />
                         </>
                       )}
-                      {specimen.name === "VOID" && (
+                      {specimen.name === "ExpenseTrackWatch" && (
                         <>
                           <Image
-                            src="/backgrounds/void-PREVIEW.webp"
-                            alt="VOID preview"
+                            src="/backgrounds/expense_PREVIEW.webp"
+                            alt="ExpenseTrackWatch preview"
                             fill
                             className="object-cover opacity-92 brightness-[1.08] contrast-[1.1]"
                             sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"

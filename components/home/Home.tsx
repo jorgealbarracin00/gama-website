@@ -162,10 +162,7 @@ export default function Home() {
           </div>
         </div>
 
-        <nav className="hidden items-center gap-10 text-lg text-white/80 md:flex">
-          <Link href="#specimens" className="transition hover:text-white">
-            Specimens
-          </Link>
+        <nav className="hidden items-center gap-8 text-lg text-white/80 md:flex xl:gap-10">
           <Link href="#ideas" className="transition hover:text-white">
             Incubation Chamber
           </Link>

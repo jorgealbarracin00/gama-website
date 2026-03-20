@@ -245,6 +245,34 @@ export default function Home() {
                             src="/backgrounds/void-PREVIEW.webp"
                             alt="VOID preview"
                             fill
+                            className="object-cover opacity-92 brightness-[1.06] contrast-[1.08]"
+                            sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
+                            quality={70}
+                            priority={layer === "active"}
+                          />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,18,0.02),rgba(8,10,18,0.06)_52%,rgba(8,10,18,0.18))]" />
+                        </>
+                      )}
+                      {specimen.name === "Tensland" && (
+                        <>
+                          <Image
+                            src="/backgrounds/tensland-PREVIEW.webp"
+                            alt="Tensland preview"
+                            fill
+                            className="object-cover opacity-92 brightness-[1.06] contrast-[1.08]"
+                            sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
+                            quality={70}
+                            priority={layer === "active"}
+                          />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,18,0.02),rgba(8,10,18,0.06)_52%,rgba(8,10,18,0.18))]" />
+                        </>
+                      )}
+                      {specimen.name === "VOID" && (
+                        <>
+                          <Image
+                            src="/backgrounds/void-PREVIEW.webp"
+                            alt="VOID preview"
+                            fill
                             className="object-cover opacity-92 brightness-[1.08] contrast-[1.1]"
                             sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
                             quality={70}

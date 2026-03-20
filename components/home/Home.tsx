@@ -57,15 +57,15 @@ export default function Home() {
 
       <div className="relative z-10 flex h-[calc(100vh-92px)] flex-col items-center justify-start px-6 pt-10 md:h-[calc(100vh-96px)] md:pt-8">
         <div className="mx-auto max-w-5xl text-center">
-          <h1 className="text-5xl font-semibold tracking-[0.08em] text-white md:text-6xl xl:text-7xl">
+          <h1 className="text-3xl font-semibold tracking-[0.08em] text-white md:text-4xl xl:text-5xl">
             GAMA DYNAMICS
           </h1>
 
-          <p className="mt-4 text-lg font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-2xl xl:text-3xl">
+          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-lg xl:text-xl">
             Experimental Systems Lab
           </p>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/82 md:text-xl xl:text-2xl">
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base xl:text-lg">
             Digital systems grown, tested, and deployed for real life.
           </p>
 
@@ -84,40 +84,40 @@ export default function Home() {
 
             {/* Center pod */}
             <div
-              className="absolute left-1/2 top-[48%] -translate-x-1/2 -translate-y-1/2"
+              className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2"
               style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
             >
-              <div className="flex h-[150px] w-[250px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[150px] md:w-[250px] xl:h-[160px] xl:w-[260px]">
+              <div className="flex h-[260px] w-[150px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[190px]">
                 CashCast
               </div>
             </div>
 
             {/* Left pod */}
             <div
-              className="absolute left-[7%] top-[44%]"
+              className="absolute left-[7%] top-[55%]"
               style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
             >
-              <div className="flex h-[126px] w-[220px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[132px] md:w-[230px] xl:h-[140px] xl:w-[240px]">
+              <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[250px] md:w-[140px] xl:h-[280px] xl:w-[160px]">
                 VOID
               </div>
             </div>
 
             {/* Right pod */}
             <div
-              className="absolute right-[7%] top-[44%]"
+              className="absolute right-[7%] top-[55%]"
               style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
             >
-              <div className="flex h-[126px] w-[220px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[132px] md:w-[230px] xl:h-[140px] xl:w-[240px]">
+              <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[250px] md:w-[140px] xl:h-[280px] xl:w-[160px]">
                 Tensland
               </div>
             </div>
 
             {/* Back pod */}
             <div
-              className="absolute left-1/2 top-[18%] -translate-x-1/2"
+              className="absolute left-1/2 top-[30%] -translate-x-1/2"
               style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
             >
-              <div className="flex h-[108px] w-[200px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[114px] md:w-[210px] xl:h-[120px] xl:w-[220px]">
+              <div className="flex h-[180px] w-[110px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[200px] md:w-[120px] xl:h-[220px] xl:w-[130px]">
                 ChronoFlow
               </div>
             </div>

@@ -40,8 +40,8 @@ const specimens: Specimen[] = [
   },
   {
     id: "SPECIMEN 004",
-    name: "ChronoFlow",
-    href: "https://chronoflow.gamadynamics.com.au",
+    name: "GamaRepair",
+    href: "https://gamarepair.gamadynamics.com.au",
     tone:
       "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
   },
@@ -265,6 +265,20 @@ export default function Home() {
                             priority={layer === "active"}
                           />
                           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,18,0.02),rgba(8,10,18,0.06)_52%,rgba(8,10,18,0.18))]" />
+                        </>
+                      )}
+                      {specimen.name === "GamaRepair" && (
+                        <>
+                          <Image
+                            src="/backgrounds/gamarepair-PREVIEW.webp"
+                            alt="GamaRepair preview"
+                            fill
+                            className="object-cover opacity-92 brightness-[1.08] contrast-[1.1]"
+                            sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
+                            quality={70}
+                            priority={layer === "active"}
+                          />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,7,18,0.03),rgba(2,7,18,0.08)_52%,rgba(2,7,18,0.22))]" />
                         </>
                       )}
                       {specimen.name === "VOID" && (

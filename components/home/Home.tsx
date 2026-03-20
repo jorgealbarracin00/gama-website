@@ -55,73 +55,77 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="relative z-10 flex h-[calc(100vh-92px)] flex-col items-center justify-start px-6 pt-10 md:h-[calc(100vh-96px)] md:pt-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <h1 className="text-3xl font-semibold tracking-[0.08em] text-white md:text-4xl xl:text-5xl">
+      <div className="relative z-10 flex h-[calc(100vh-92px)] items-center px-6 pb-8 pt-6 md:h-[calc(100vh-96px)] md:px-10 md:pb-10 md:pt-4 xl:px-14">
+        <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 items-center gap-6 md:grid-cols-[0.9fr_2.1fr] md:gap-8 xl:grid-cols-[0.85fr_2.15fr] xl:gap-10">
+          <div className="max-w-md text-center md:text-left">
+          <h1 className="text-2xl font-semibold tracking-[0.08em] text-white md:text-3xl xl:text-4xl">
             GAMA DYNAMICS
           </h1>
 
-          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-lg xl:text-xl">
+          <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-300 md:text-sm xl:text-base">
             Experimental Systems Lab
           </p>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base xl:text-lg">
+          <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/78 md:text-sm xl:text-base">
             Digital systems grown, tested, and deployed for real life.
           </p>
 
-          <div className="mx-auto mt-8 flex w-full max-w-3xl items-center gap-5 text-white/90 md:mt-10">
+          <div className="mt-6 flex w-full max-w-sm items-center gap-4 text-white/90 md:mt-7">
             <div className="h-px flex-1 bg-white/18" />
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/92 md:text-sm xl:text-base">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/92 md:text-xs xl:text-sm">
               Active Specimens
             </p>
             <div className="h-px flex-1 bg-white/18" />
           </div>
-        </div>
+          </div>
 
-        {/* Specimen Pods (fake 3D stage) */}
-        <div className="relative z-10 mt-4 flex w-full flex-1 items-start justify-center px-6 pb-8 md:mt-5 md:pb-10">
-          <div className="relative h-[300px] w-full max-w-5xl md:h-[360px] xl:h-[400px]">
+          <div className="flex h-full w-full items-center justify-center">
+            {/* Specimen Pods (fake 3D stage) */}
+            <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
+              <div className="relative h-[320px] w-full max-w-5xl md:h-[430px] xl:h-[520px]">
 
-            {/* Center pod */}
-            <div
-              className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2"
-              style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
-            >
-              <div className="flex h-[260px] w-[150px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[190px]">
-                CashCast
+                {/* Center pod */}
+                <div
+                  className="absolute left-[49%] top-[54%] -translate-x-1/2 -translate-y-1/2"
+                  style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
+                >
+                  <div className="flex h-[260px] w-[150px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[330px] md:w-[186px] xl:h-[380px] xl:w-[214px]">
+                    CashCast
+                  </div>
+                </div>
+
+                {/* Left pod */}
+                <div
+                  className="absolute left-[12%] top-[58%]"
+                  style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+                >
+                  <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]">
+                    VOID
+                  </div>
+                </div>
+
+                {/* Right pod */}
+                <div
+                  className="absolute right-[12%] top-[58%]"
+                  style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+                >
+                  <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]">
+                    Tensland
+                  </div>
+                </div>
+
+                {/* Back pod */}
+                <div
+                  className="absolute left-[49%] top-[24%] -translate-x-1/2"
+                  style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
+                >
+                  <div className="flex h-[180px] w-[110px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[220px] md:w-[132px] xl:h-[250px] xl:w-[148px]">
+                    ChronoFlow
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            {/* Left pod */}
-            <div
-              className="absolute left-[7%] top-[55%]"
-              style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
-            >
-              <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[250px] md:w-[140px] xl:h-[280px] xl:w-[160px]">
-                VOID
-              </div>
-            </div>
-
-            {/* Right pod */}
-            <div
-              className="absolute right-[7%] top-[55%]"
-              style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
-            >
-              <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[250px] md:w-[140px] xl:h-[280px] xl:w-[160px]">
-                Tensland
-              </div>
-            </div>
-
-            {/* Back pod */}
-            <div
-              className="absolute left-1/2 top-[30%] -translate-x-1/2"
-              style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
-            >
-              <div className="flex h-[180px] w-[110px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[200px] md:w-[120px] xl:h-[220px] xl:w-[130px]">
-                ChronoFlow
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

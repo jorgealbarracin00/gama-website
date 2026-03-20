@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-[#050b16] text-white"
+      className="relative h-screen overflow-hidden bg-[#050b16] text-white"
       style={{
         backgroundImage: "url('/backgrounds/home-hero-hd.png')",
         backgroundSize: "cover",
@@ -16,7 +16,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.32),rgba(3,9,20,0.55)_55%,rgba(3,9,20,0.72))]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,18,0.7),rgba(2,7,18,0.22)_30%,rgba(2,7,18,0.22)_70%,rgba(2,7,18,0.7))]" />
 
-      <header className="relative z-20 flex items-center justify-between px-8 md:px-12 pt-7">
+      <header className="relative z-20 flex items-center justify-between px-8 pt-5 md:px-12 md:pt-6">
         <div className="flex items-center gap-4">
           <div className="group relative flex items-center justify-center rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-[1.03] hover:bg-white/15">
             {/* subtle glow */}
@@ -55,74 +55,74 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="relative z-10 flex min-h-screen items-start justify-center px-6 pt-28 md:pt-36">
+      <div className="relative z-10 flex h-[calc(100vh-92px)] flex-col items-center justify-start px-6 pt-10 md:h-[calc(100vh-96px)] md:pt-8">
         <div className="mx-auto max-w-5xl text-center">
-          <h1 className="text-5xl font-semibold tracking-[0.08em] text-white md:text-7xl">
+          <h1 className="text-5xl font-semibold tracking-[0.08em] text-white md:text-6xl xl:text-7xl">
             GAMA DYNAMICS
           </h1>
 
-          <p className="mt-5 text-xl font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-3xl">
+          <p className="mt-4 text-lg font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-2xl xl:text-3xl">
             Experimental Systems Lab
           </p>
 
-          <p className="mx-auto mt-7 max-w-4xl text-lg leading-relaxed text-white/82 md:text-2xl">
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/82 md:text-xl xl:text-2xl">
             Digital systems grown, tested, and deployed for real life.
           </p>
 
-          <div className="mx-auto mt-14 flex w-full max-w-3xl items-center gap-6 text-white/90">
+          <div className="mx-auto mt-8 flex w-full max-w-3xl items-center gap-5 text-white/90 md:mt-10">
             <div className="h-px flex-1 bg-white/18" />
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-white/92 md:text-base">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/92 md:text-sm xl:text-base">
               Active Specimens
             </p>
             <div className="h-px flex-1 bg-white/18" />
           </div>
         </div>
-      </div>
 
-      {/* Specimen Pods (fake 3D stage) */}
-      <div className="relative z-10 mt-10 flex justify-center px-6 pb-20 md:pb-28">
-        <div className="relative h-[360px] w-full max-w-5xl md:h-[420px]">
+        {/* Specimen Pods (fake 3D stage) */}
+        <div className="relative z-10 mt-4 flex w-full flex-1 items-start justify-center px-6 pb-8 md:mt-5 md:pb-10">
+          <div className="relative h-[300px] w-full max-w-5xl md:h-[360px] xl:h-[400px]">
 
-          {/* Center pod */}
-          <div
-            className="absolute left-1/2 top-[48%] -translate-x-1/2 -translate-y-1/2"
-            style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
-          >
-            <div className="w-[260px] h-[160px] rounded-2xl bg-green-500/80 shadow-[0_0_40px_rgba(34,197,94,0.4)] flex items-center justify-center text-black font-semibold">
-              CashCast
+            {/* Center pod */}
+            <div
+              className="absolute left-1/2 top-[48%] -translate-x-1/2 -translate-y-1/2"
+              style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
+            >
+              <div className="flex h-[150px] w-[250px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[150px] md:w-[250px] xl:h-[160px] xl:w-[260px]">
+                CashCast
+              </div>
             </div>
-          </div>
 
-          {/* Left pod */}
-          <div
-            className="absolute left-[8%] top-[44%]"
-            style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
-          >
-            <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
-              VOID
+            {/* Left pod */}
+            <div
+              className="absolute left-[7%] top-[44%]"
+              style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+            >
+              <div className="flex h-[126px] w-[220px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[132px] md:w-[230px] xl:h-[140px] xl:w-[240px]">
+                VOID
+              </div>
             </div>
-          </div>
 
-          {/* Right pod */}
-          <div
-            className="absolute right-[8%] top-[44%]"
-            style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
-          >
-            <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
-              Tensland
+            {/* Right pod */}
+            <div
+              className="absolute right-[7%] top-[44%]"
+              style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+            >
+              <div className="flex h-[126px] w-[220px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[132px] md:w-[230px] xl:h-[140px] xl:w-[240px]">
+                Tensland
+              </div>
             </div>
-          </div>
 
-          {/* Back pod */}
-          <div
-            className="absolute left-1/2 top-[18%] -translate-x-1/2"
-            style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
-          >
-            <div className="w-[220px] h-[120px] rounded-2xl bg-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.2)] flex items-center justify-center text-black font-semibold">
-              ChronoFlow
+            {/* Back pod */}
+            <div
+              className="absolute left-1/2 top-[18%] -translate-x-1/2"
+              style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
+            >
+              <div className="flex h-[108px] w-[200px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[114px] md:w-[210px] xl:h-[120px] xl:w-[220px]">
+                ChronoFlow
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>

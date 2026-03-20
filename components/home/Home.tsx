@@ -84,12 +84,14 @@ export default function Home() {
   const [frontIndex, setFrontIndex] = useState(0);
 
   const arrangedPods = useMemo(
-    () => [
-      { slot: podSlots[0], specimen: specimens[wrapIndex(frontIndex, specimens.length)] },
-      { slot: podSlots[1], specimen: specimens[wrapIndex(frontIndex + 1, specimens.length)] },
-      { slot: podSlots[2], specimen: specimens[wrapIndex(frontIndex + 2, specimens.length)] },
-      { slot: podSlots[3], specimen: specimens[wrapIndex(frontIndex + 3, specimens.length)] },
-    ],
+    () =>
+      specimens.map((specimen, specimenIndex) => {
+        const slotIndex = wrapIndex(specimenIndex - frontIndex, specimens.length);
+        return {
+          specimen,
+          slot: podSlots[slotIndex],
+        };
+      }),
     [frontIndex],
   );
 
@@ -179,12 +181,20 @@ export default function Home() {
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
               <div className="relative mt-10 h-[320px] w-full max-w-4xl md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
                 {arrangedPods.map(({ slot, specimen }) => (
-                  <div key={`${slot.key}-${specimen.name}`} className={slot.wrapperClassName} style={slot.style}>
+                  <div
+                    key={specimen.name}
+                    className={slot.wrapperClassName}
+                    style={{
+                      ...slot.style,
+                      transition:
+                        "left 650ms cubic-bezier(0.22, 1, 0.36, 1), top 650ms cubic-bezier(0.22, 1, 0.36, 1), transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 650ms cubic-bezier(0.22, 1, 0.36, 1)",
+                    }}
+                  >
                     <a
                       href={`https://${specimen.name.toLowerCase()}.gamadynamics.com.au`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone}`}
+                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone}`}
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />
@@ -214,7 +224,7 @@ export default function Home() {
                   type="button"
                   aria-label="Rotate specimens left"
                   onClick={rotateLeft}
-                  className="absolute left-[28%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/12 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[28%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">←</span>
                 </button>
@@ -223,7 +233,7 @@ export default function Home() {
                   type="button"
                   aria-label="Rotate specimens right"
                   onClick={rotateRight}
-                  className="absolute left-[72%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/12 md:h-14 md:w-14 md:text-2xl"
+                  className="absolute left-[72%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 md:h-14 md:w-14 md:text-2xl"
                 >
                   <span aria-hidden="true">→</span>
                 </button>

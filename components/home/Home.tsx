@@ -86,6 +86,53 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Specimen Pods (fake 3D stage) */}
+      <div className="relative z-10 mt-16 flex justify-center px-6">
+        <div className="relative w-full max-w-5xl h-[360px]">
+
+          {/* Center pod */}
+          <div
+            className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2"
+            style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
+          >
+            <div className="w-[260px] h-[160px] rounded-2xl bg-green-500/80 shadow-[0_0_40px_rgba(34,197,94,0.4)] flex items-center justify-center text-black font-semibold">
+              CashCast
+            </div>
+          </div>
+
+          {/* Left pod */}
+          <div
+            className="absolute left-[10%] top-[35%]"
+            style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+          >
+            <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
+              VOID
+            </div>
+          </div>
+
+          {/* Right pod */}
+          <div
+            className="absolute right-[10%] top-[35%]"
+            style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+          >
+            <div className="w-[240px] h-[140px] rounded-2xl bg-green-500/60 shadow-[0_0_25px_rgba(34,197,94,0.25)] flex items-center justify-center text-black font-semibold">
+              Tensland
+            </div>
+          </div>
+
+          {/* Back pod */}
+          <div
+            className="absolute left-1/2 top-[15%] -translate-x-1/2"
+            style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
+          >
+            <div className="w-[220px] h-[120px] rounded-2xl bg-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.2)] flex items-center justify-center text-black font-semibold">
+              ChronoFlow
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 }

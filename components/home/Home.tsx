@@ -63,15 +63,15 @@ const specimens: Specimen[] = [
 
 const cardLayerClasses: Record<VisibleCard["layer"], string> = {
   hiddenLeft:
-    "left-[-7%] top-[64%] z-0 h-[250px] w-[142px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[314px] md:w-[178px] xl:h-[356px] xl:w-[202px] pointer-events-none",
+    "left-[-7%] top-[68%] z-0 h-[266px] w-[152px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[334px] md:w-[190px] xl:h-[378px] xl:w-[214px] pointer-events-none",
   active:
-    "left-[34%] top-[64%] z-30 h-[270px] w-[154px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[340px] md:w-[192px] xl:h-[390px] xl:w-[220px]",
+    "left-[34%] top-[68%] z-30 h-[286px] w-[164px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[360px] md:w-[204px] xl:h-[412px] xl:w-[232px]",
   next:
-    "left-[54%] top-[64%] z-20 h-[236px] w-[136px] -translate-x-1/2 -translate-y-1/2 opacity-84 md:h-[296px] md:w-[168px] xl:h-[338px] xl:w-[192px]",
+    "left-[54%] top-[68%] z-20 h-[252px] w-[146px] -translate-x-1/2 -translate-y-1/2 opacity-84 md:h-[316px] md:w-[180px] xl:h-[360px] xl:w-[204px]",
   third:
-    "left-[71%] top-[64%] z-10 h-[206px] w-[118px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[254px] md:w-[144px] xl:h-[292px] xl:w-[166px]",
+    "left-[71%] top-[68%] z-10 h-[220px] w-[126px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[272px] md:w-[154px] xl:h-[310px] xl:w-[176px]",
   hiddenRight:
-    "left-[89%] top-[64%] z-0 h-[188px] w-[108px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[228px] md:w-[130px] xl:h-[258px] xl:w-[148px] pointer-events-none",
+    "left-[89%] top-[68%] z-0 h-[202px] w-[116px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[244px] md:w-[138px] xl:h-[276px] xl:w-[158px] pointer-events-none",
 };
 
 const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {
@@ -208,7 +208,7 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
-              <div className="relative mt-2 h-[360px] w-full max-w-[1080px] md:mt-4 md:h-[450px] xl:mt-6 xl:h-[520px]">
+              <div className="relative mt-3 h-[390px] w-full max-w-[1080px] md:mt-6 md:h-[490px] xl:mt-8 xl:h-[560px]">
                 {visibleCards.map(({ specimen, layer }) => (
                   <div
                     key={specimen.name}

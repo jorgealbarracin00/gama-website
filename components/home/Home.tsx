@@ -63,15 +63,15 @@ const specimens: Specimen[] = [
 
 const cardLayerClasses: Record<VisibleCard["layer"], string> = {
   hiddenLeft:
-    "left-[-6%] top-[58%] z-0 h-[230px] w-[132px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[290px] md:w-[164px] xl:h-[330px] xl:w-[186px] pointer-events-none",
+    "left-[-7%] top-[58%] z-0 h-[250px] w-[142px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[314px] md:w-[178px] xl:h-[356px] xl:w-[202px] pointer-events-none",
   active:
-    "left-[34%] top-[58%] z-30 h-[240px] w-[138px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px]",
+    "left-[34%] top-[58%] z-30 h-[270px] w-[154px] -translate-x-1/2 -translate-y-1/2 opacity-100 md:h-[340px] md:w-[192px] xl:h-[390px] xl:w-[220px]",
   next:
-    "left-[54%] top-[58%] z-20 h-[210px] w-[122px] -translate-x-1/2 -translate-y-1/2 opacity-82 md:h-[260px] md:w-[148px] xl:h-[300px] xl:w-[170px]",
+    "left-[54%] top-[58%] z-20 h-[236px] w-[136px] -translate-x-1/2 -translate-y-1/2 opacity-84 md:h-[296px] md:w-[168px] xl:h-[338px] xl:w-[192px]",
   third:
-    "left-[70%] top-[58%] z-10 h-[182px] w-[106px] -translate-x-1/2 -translate-y-1/2 opacity-56 md:h-[225px] md:w-[128px] xl:h-[260px] xl:w-[148px]",
+    "left-[71%] top-[58%] z-10 h-[206px] w-[118px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[254px] md:w-[144px] xl:h-[292px] xl:w-[166px]",
   hiddenRight:
-    "left-[88%] top-[58%] z-0 h-[166px] w-[98px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[198px] md:w-[116px] xl:h-[224px] xl:w-[132px] pointer-events-none",
+    "left-[89%] top-[58%] z-0 h-[188px] w-[108px] -translate-x-1/2 -translate-y-1/2 opacity-0 md:h-[228px] md:w-[130px] xl:h-[258px] xl:w-[148px] pointer-events-none",
 };
 
 const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {
@@ -80,16 +80,16 @@ const cardLayerStyles: Record<VisibleCard["layer"], React.CSSProperties> = {
     filter: "blur(1.4px) saturate(0.72)",
   },
   active: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-3deg) rotateZ(-1deg) scale(1.02)",
-    filter: "blur(0px) saturate(1)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-2deg) rotateZ(-0.8deg) scale(1.07)",
+    filter: "blur(0px) saturate(1.04)",
   },
   next: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-10deg) rotateZ(-2deg) scale(0.95)",
-    filter: "blur(0.35px) saturate(0.92)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-9deg) rotateZ(-1.8deg) scale(0.98)",
+    filter: "blur(0.28px) saturate(0.94)",
   },
   third: {
-    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-16deg) rotateZ(-4deg) scale(0.89)",
-    filter: "blur(1px) saturate(0.76)",
+    transform: "translate(-50%, -50%) perspective(1200px) rotateY(-14deg) rotateZ(-3.5deg) scale(0.93)",
+    filter: "blur(0.9px) saturate(0.8)",
   },
   hiddenRight: {
     transform: "translate(-50%, -50%) perspective(1200px) rotateY(-20deg) rotateZ(-5deg) scale(0.84)",
@@ -196,18 +196,19 @@ export default function Home() {
               Digital systems grown, tested, and deployed for real life.
             </p>
 
-            <div className="mt-6 flex w-full max-w-sm items-center gap-4 text-white/90 md:mt-7">
+          </div>
+
+          <div className="flex h-full w-full flex-col items-center justify-center">
+            <div className="mb-4 flex w-full max-w-[760px] items-center gap-4 text-white/90 md:mb-6">
               <div className="h-px flex-1 bg-white/18" />
               <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/92 md:text-xs xl:text-sm">
                 Active Specimens
               </p>
               <div className="h-px flex-1 bg-white/18" />
             </div>
-          </div>
 
-          <div className="flex h-full w-full items-center justify-center">
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
-              <div className="relative mt-10 h-[320px] w-full max-w-[980px] md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
+              <div className="relative mt-2 h-[360px] w-full max-w-[1080px] md:mt-4 md:h-[450px] xl:mt-6 xl:h-[520px]">
                 {visibleCards.map(({ specimen, layer }) => (
                   <div
                     key={specimen.name}
@@ -218,11 +219,14 @@ export default function Home() {
                         "left 520ms cubic-bezier(0.22, 1, 0.36, 1), top 520ms cubic-bezier(0.22, 1, 0.36, 1), transform 520ms cubic-bezier(0.22, 1, 0.36, 1), opacity 520ms cubic-bezier(0.22, 1, 0.36, 1), filter 520ms cubic-bezier(0.22, 1, 0.36, 1)",
                     }}
                   >
+                    {layer === "active" && (
+                      <div className="pointer-events-none absolute inset-[-18px] rounded-[36px] bg-[radial-gradient(circle,rgba(255,255,255,0.14),transparent_62%)] blur-[18px]" />
+                    )}
                     <a
                       href={specimen.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone}`}
+                      className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone} ${layer === "active" ? "animate-[pulse_4.8s_ease-in-out_infinite] shadow-[0_0_65px_rgba(255,255,255,0.14)]" : ""}`}
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />

@@ -71,12 +71,6 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="#specimens"
-              className="min-w-[270px] rounded-full border border-cyan-300/70 bg-cyan-400/14 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_35px_rgba(56,189,248,0.25)] backdrop-blur-md transition hover:bg-cyan-400/22"
-            >
-              Inspect Active Specimens
-            </Link>
-            <Link
               href="/specimens"
               className="min-w-[270px] rounded-full border border-purple-300/70 bg-purple-400/14 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_35px_rgba(168,85,247,0.25)] backdrop-blur-md transition hover:bg-purple-400/22"
             >

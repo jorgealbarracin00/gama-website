@@ -1,7 +1,106 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo, useState } from "react";
+
+type Specimen = {
+  id: string;
+  name: string;
+  tone: string;
+};
+
+type PodSlot = {
+  key: "front" | "left" | "right" | "back";
+  wrapperClassName: string;
+  style: React.CSSProperties;
+  cardClassName: string;
+};
+
+const specimens: Specimen[] = [
+  {
+    id: "SPECIMEN 001",
+    name: "CashCast",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(16,185,129,0.88),rgba(5,150,105,0.72))] border border-emerald-300/30",
+  },
+  {
+    id: "SPECIMEN 002",
+    name: "VOID",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
+  },
+  {
+    id: "SPECIMEN 003",
+    name: "Tensland",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
+  },
+  {
+    id: "SPECIMEN 004",
+    name: "ChronoFlow",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
+  },
+];
+
+const podSlots: PodSlot[] = [
+  {
+    key: "front",
+    wrapperClassName:
+      "absolute left-[49%] top-[54%] -translate-x-1/2 -translate-y-1/2",
+    style: { transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 },
+    cardClassName:
+      "h-[260px] w-[150px] md:h-[330px] md:w-[186px] xl:h-[380px] xl:w-[214px] opacity-100",
+  },
+  {
+    key: "left",
+    wrapperClassName: "absolute left-[12%] top-[58%]",
+    style: { transform: "scale(0.85) rotate(-4deg)", opacity: 0.74, zIndex: 20 },
+    cardClassName:
+      "h-[220px] w-[130px] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]",
+  },
+  {
+    key: "right",
+    wrapperClassName: "absolute right-[12%] top-[58%]",
+    style: { transform: "scale(0.85) rotate(4deg)", opacity: 0.74, zIndex: 20 },
+    cardClassName:
+      "h-[220px] w-[130px] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]",
+  },
+  {
+    key: "back",
+    wrapperClassName: "absolute left-[49%] top-[24%] -translate-x-1/2",
+    style: { transform: "scale(0.7)", opacity: 0.5, zIndex: 10 },
+    cardClassName:
+      "h-[180px] w-[110px] md:h-[220px] md:w-[132px] xl:h-[250px] xl:w-[148px]",
+  },
+];
+
+function wrapIndex(index: number, length: number) {
+  return (index + length) % length;
+}
 
 export default function Home() {
+  const [frontIndex, setFrontIndex] = useState(0);
+
+  const arrangedPods = useMemo(
+    () => [
+      { slot: podSlots[0], specimen: specimens[wrapIndex(frontIndex, specimens.length)] },
+      { slot: podSlots[1], specimen: specimens[wrapIndex(frontIndex + 1, specimens.length)] },
+      { slot: podSlots[2], specimen: specimens[wrapIndex(frontIndex + 2, specimens.length)] },
+      { slot: podSlots[3], specimen: specimens[wrapIndex(frontIndex + 3, specimens.length)] },
+    ],
+    [frontIndex],
+  );
+
+  function rotateLeft() {
+    setFrontIndex((current) => wrapIndex(current + 1, specimens.length));
+  }
+
+  function rotateRight() {
+    setFrontIndex((current) => wrapIndex(current - 1, specimens.length));
+  }
+
   return (
     <section
       className="relative h-screen overflow-hidden bg-[#050b16] text-white"
@@ -18,25 +117,22 @@ export default function Home() {
 
       <header className="relative z-20 flex items-center justify-between px-8 pt-5 md:px-12 md:pt-6">
         <div className="flex items-center gap-4">
-          <div className="group relative flex items-center justify-center rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-[1.03] hover:bg-white/15">
-            {/* subtle glow */}
-            <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle,rgba(120,180,255,0.25),transparent_70%)]" />
-
-            {/* pulse effect */}
-            <div className="pointer-events-none absolute inset-0 rounded-xl animate-[pulse_6s_ease-in-out_infinite] opacity-[0.08] bg-[radial-gradient(circle,rgba(120,180,255,0.6),transparent_70%)]" />
+          <div className="group relative flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.3)] backdrop-blur-md transition-all duration-500 hover:scale-[1.03] hover:bg-white/15">
+            <div className="pointer-events-none absolute inset-0 rounded-xl bg-[radial-gradient(circle,rgba(120,180,255,0.25),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="pointer-events-none absolute inset-0 rounded-xl animate-[pulse_6s_ease-in-out_infinite] bg-[radial-gradient(circle,rgba(120,180,255,0.6),transparent_70%)] opacity-[0.08]" />
 
             <Image
               src="/brand/logo-transp.png"
               alt="GAMA Dynamics"
               width={210}
               height={56}
-              className="relative h-10 md:h-12 w-auto object-contain brightness-110 transition duration-500 group-hover:brightness-125"
+              className="relative h-10 w-auto object-contain brightness-110 transition duration-500 group-hover:brightness-125 md:h-12"
               priority
             />
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-10 text-white/80 text-lg">
+        <nav className="hidden items-center gap-10 text-lg text-white/80 md:flex">
           <Link href="#specimens" className="transition hover:text-white">
             Specimens
           </Link>
@@ -58,72 +154,89 @@ export default function Home() {
       <div className="relative z-10 flex h-[calc(100vh-92px)] items-center px-6 pb-8 pt-6 md:h-[calc(100vh-96px)] md:px-10 md:pb-10 md:pt-4 xl:px-14">
         <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 items-center gap-6 md:grid-cols-[0.9fr_2.1fr] md:gap-8 xl:grid-cols-[0.85fr_2.15fr] xl:gap-10">
           <div className="max-w-md text-center md:text-left">
-          <h1 className="text-2xl font-semibold tracking-[0.08em] text-white md:text-3xl xl:text-4xl">
-            GAMA DYNAMICS
-          </h1>
+            <h1 className="text-2xl font-semibold tracking-[0.08em] text-white md:text-3xl xl:text-4xl">
+              GAMA DYNAMICS
+            </h1>
 
-          <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-300 md:text-sm xl:text-base">
-            Experimental Systems Lab
-          </p>
-
-          <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/78 md:text-sm xl:text-base">
-            Digital systems grown, tested, and deployed for real life.
-          </p>
-
-          <div className="mt-6 flex w-full max-w-sm items-center gap-4 text-white/90 md:mt-7">
-            <div className="h-px flex-1 bg-white/18" />
-            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/92 md:text-xs xl:text-sm">
-              Active Specimens
+            <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-300 md:text-sm xl:text-base">
+              Experimental Systems Lab
             </p>
-            <div className="h-px flex-1 bg-white/18" />
-          </div>
+
+            <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/78 md:text-sm xl:text-base">
+              Digital systems grown, tested, and deployed for real life.
+            </p>
+
+            <div className="mt-6 flex w-full max-w-sm items-center gap-4 text-white/90 md:mt-7">
+              <div className="h-px flex-1 bg-white/18" />
+              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/92 md:text-xs xl:text-sm">
+                Active Specimens
+              </p>
+              <div className="h-px flex-1 bg-white/18" />
+            </div>
           </div>
 
           <div className="flex h-full w-full items-center justify-center">
-            {/* Specimen Pods (fake 3D stage) */}
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
               <div className="relative h-[320px] w-full max-w-5xl md:h-[430px] xl:h-[520px]">
+                {arrangedPods.map(({ slot, specimen }) => (
+                  <div key={`${slot.key}-${specimen.name}`} className={slot.wrapperClassName} style={slot.style}>
+                    <a
+                      href={`https://${specimen.name.toLowerCase()}.gamadynamics.com.au`}
+                      className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone}`}
+                    >
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
+                      <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />
+                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-[linear-gradient(180deg,rgba(2,6,23,0),rgba(2,6,23,0.34))]" />
+                      <div className="absolute inset-0 rounded-[28px] border border-white/14" />
 
-                {/* Center pod */}
-                <div
-                  className="absolute left-[49%] top-[54%] -translate-x-1/2 -translate-y-1/2"
-                  style={{ transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 }}
-                >
-                  <div className="flex h-[260px] w-[150px] items-center justify-center rounded-2xl bg-green-500/80 text-black font-semibold shadow-[0_0_40px_rgba(34,197,94,0.4)] md:h-[330px] md:w-[186px] xl:h-[380px] xl:w-[214px]">
-                    CashCast
+                      <div className="relative z-10 flex h-full w-full flex-col justify-between p-4 md:p-5">
+                        <div>
+                          <p className="text-[10px] uppercase tracking-[0.24em] text-white/72 md:text-[11px]">
+                            {specimen.id}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-semibold md:text-xl xl:text-2xl">
+                            {specimen.name}
+                          </h3>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                </div>
+                ))}
 
-                {/* Left pod */}
-                <div
-                  className="absolute left-[12%] top-[58%]"
-                  style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+                <div className="pointer-events-none absolute inset-x-[20%] bottom-4 h-16 rounded-full bg-cyan-400/10 blur-[48px] md:bottom-8" />
+
+                <button
+                  type="button"
+                  aria-label="Rotate specimens left"
+                  onClick={rotateLeft}
+                  className="absolute left-[18%] top-[78%] z-40 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/18 bg-black/28 shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/10 md:h-16 md:w-16"
                 >
-                  <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]">
-                    VOID
-                  </div>
-                </div>
+                  <Image
+                    src="/ui/arrow-left-pod.png"
+                    alt="Rotate left"
+                    width={42}
+                    height={42}
+                    className="h-9 w-9 object-contain opacity-90 md:h-10 md:w-10"
+                  />
+                </button>
 
-                {/* Right pod */}
-                <div
-                  className="absolute right-[12%] top-[58%]"
-                  style={{ transform: "scale(0.85)", opacity: 0.7, zIndex: 20 }}
+                <button
+                  type="button"
+                  aria-label="Rotate specimens right"
+                  onClick={rotateRight}
+                  className="absolute right-[18%] top-[78%] z-40 flex h-14 w-14 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/18 bg-black/28 shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/10 md:h-16 md:w-16"
                 >
-                  <div className="flex h-[220px] w-[130px] items-center justify-center rounded-2xl bg-green-500/60 text-black font-semibold shadow-[0_0_25px_rgba(34,197,94,0.25)] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]">
-                    Tensland
-                  </div>
-                </div>
-
-                {/* Back pod */}
-                <div
-                  className="absolute left-[49%] top-[24%] -translate-x-1/2"
-                  style={{ transform: "scale(0.7)", opacity: 0.5, zIndex: 10 }}
-                >
-                  <div className="flex h-[180px] w-[110px] items-center justify-center rounded-2xl bg-green-500/50 text-black font-semibold shadow-[0_0_20px_rgba(34,197,94,0.2)] md:h-[220px] md:w-[132px] xl:h-[250px] xl:w-[148px]">
-                    ChronoFlow
-                  </div>
-                </div>
-
+                  <Image
+                    src="/ui/arrow-right-pod.png"
+                    alt="Rotate right"
+                    width={42}
+                    height={42}
+                    className="h-9 w-9 object-contain opacity-90 md:h-10 md:w-10"
+                  />
+                </button>
               </div>
             </div>
           </div>

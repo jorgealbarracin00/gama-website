@@ -48,31 +48,31 @@ const podSlots: PodSlot[] = [
   {
     key: "front",
     wrapperClassName:
-      "absolute left-[49%] top-[54%] -translate-x-1/2 -translate-y-1/2",
-    style: { transform: "translate(-50%, -50%) scale(1.1)", zIndex: 30 },
+      "absolute left-[50%] top-[58%] -translate-x-1/2 -translate-y-1/2",
+    style: { transform: "translate(-50%, -50%) scale(1.02)", zIndex: 30 },
     cardClassName:
-      "h-[260px] w-[150px] md:h-[330px] md:w-[186px] xl:h-[380px] xl:w-[214px] opacity-100",
+      "h-[240px] w-[138px] md:h-[300px] md:w-[170px] xl:h-[340px] xl:w-[192px] opacity-100",
   },
   {
     key: "left",
-    wrapperClassName: "absolute left-[12%] top-[58%]",
-    style: { transform: "scale(0.85) rotate(-4deg)", opacity: 0.74, zIndex: 20 },
+    wrapperClassName: "absolute left-[20%] top-[67%] -translate-x-1/2 -translate-y-1/2",
+    style: { transform: "scale(0.88) rotate(-7deg)", opacity: 0.82, zIndex: 20 },
     cardClassName:
-      "h-[220px] w-[130px] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]",
+      "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
   },
   {
     key: "right",
-    wrapperClassName: "absolute right-[12%] top-[58%]",
-    style: { transform: "scale(0.85) rotate(4deg)", opacity: 0.74, zIndex: 20 },
+    wrapperClassName: "absolute left-[80%] top-[67%] -translate-x-1/2 -translate-y-1/2",
+    style: { transform: "scale(0.88) rotate(7deg)", opacity: 0.82, zIndex: 20 },
     cardClassName:
-      "h-[220px] w-[130px] md:h-[272px] md:w-[152px] xl:h-[320px] xl:w-[178px]",
+      "h-[200px] w-[118px] md:h-[248px] md:w-[140px] xl:h-[286px] xl:w-[162px]",
   },
   {
     key: "back",
-    wrapperClassName: "absolute left-[49%] top-[24%] -translate-x-1/2",
-    style: { transform: "scale(0.7)", opacity: 0.5, zIndex: 10 },
+    wrapperClassName: "absolute left-[50%] top-[36%] -translate-x-1/2 -translate-y-1/2",
+    style: { transform: "translate(-50%, -50%) scale(0.72)", opacity: 0.46, zIndex: 10 },
     cardClassName:
-      "h-[180px] w-[110px] md:h-[220px] md:w-[132px] xl:h-[250px] xl:w-[148px]",
+      "h-[166px] w-[98px] md:h-[198px] md:w-[116px] xl:h-[224px] xl:w-[132px]",
   },
 ];
 
@@ -177,11 +177,13 @@ export default function Home() {
 
           <div className="flex h-full w-full items-center justify-center">
             <div className="relative z-10 flex w-full items-center justify-center pb-2 md:pb-0">
-              <div className="relative h-[320px] w-full max-w-5xl md:h-[430px] xl:h-[520px]">
+              <div className="relative mt-10 h-[320px] w-full max-w-4xl md:mt-14 md:h-[400px] xl:mt-16 xl:h-[470px]">
                 {arrangedPods.map(({ slot, specimen }) => (
                   <div key={`${slot.key}-${specimen.name}`} className={slot.wrapperClassName} style={slot.style}>
                     <a
                       href={`https://${specimen.name.toLowerCase()}.gamadynamics.com.au`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`group relative flex items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition duration-500 hover:scale-[1.03] ${slot.cardClassName} ${specimen.tone}`}
                     >
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
@@ -212,30 +214,18 @@ export default function Home() {
                   type="button"
                   aria-label="Rotate specimens left"
                   onClick={rotateLeft}
-                  className="absolute left-[18%] top-[78%] z-40 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/18 bg-black/28 shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/10 md:h-16 md:w-16"
+                  className="absolute left-[28%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/12 md:h-14 md:w-14 md:text-2xl"
                 >
-                  <Image
-                    src="/ui/arrow-left-pod.png"
-                    alt="Rotate left"
-                    width={42}
-                    height={42}
-                    className="h-9 w-9 object-contain opacity-90 md:h-10 md:w-10"
-                  />
+                  <span aria-hidden="true">←</span>
                 </button>
 
                 <button
                   type="button"
                   aria-label="Rotate specimens right"
                   onClick={rotateRight}
-                  className="absolute right-[18%] top-[78%] z-40 flex h-14 w-14 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/18 bg-black/28 shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/10 md:h-16 md:w-16"
+                  className="absolute left-[72%] top-[88%] z-50 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition hover:scale-105 hover:bg-white/12 md:h-14 md:w-14 md:text-2xl"
                 >
-                  <Image
-                    src="/ui/arrow-right-pod.png"
-                    alt="Rotate right"
-                    width={42}
-                    height={42}
-                    className="h-9 w-9 object-contain opacity-90 md:h-10 md:w-10"
-                  />
+                  <span aria-hidden="true">→</span>
                 </button>
               </div>
             </div>

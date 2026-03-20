@@ -259,12 +259,12 @@ export default function Home() {
                   disabled={!canGoLeft}
                   className="absolute left-[12%] top-[82%] z-50 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-16 md:w-16 md:text-2xl"
                 >
-                  <span className="relative h-8 w-8 overflow-hidden rounded-full md:h-10 md:w-10">
+                  <span className="relative h-10 w-10 md:h-12 md:w-12 overflow-hidden rounded-full">
                     <Image
                       src="/arrow.png"
                       alt="Previous"
                       fill
-                      className="object-cover opacity-95"
+                      className="object-contain scale-[1.25] opacity-95"
                       sizes="40px"
                     />
                   </span>
@@ -277,12 +277,12 @@ export default function Home() {
                   disabled={!canGoRight}
                   className="absolute left-[82%] top-[82%] z-50 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/40 text-xl text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/12 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 md:h-16 md:w-16 md:text-2xl"
                 >
-                  <span className="relative h-8 w-8 overflow-hidden rounded-full md:h-10 md:w-10">
+                  <span className="relative h-10 w-10 md:h-12 md:w-12 overflow-hidden rounded-full">
                     <Image
                       src="/arrow.png"
                       alt="Next"
                       fill
-                      className="object-cover opacity-95"
+                      className="object-contain scale-[1.25] opacity-95"
                       sizes="40px"
                       style={{ transform: "scaleX(-1)" }}
                     />

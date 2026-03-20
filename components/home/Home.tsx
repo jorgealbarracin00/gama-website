@@ -231,15 +231,15 @@ export default function Home() {
                             src="/backgrounds/cashcast-PREVIEW.webp"
                             alt="CashCast preview"
                             fill
-                            className="object-cover opacity-72"
+                            className="object-cover opacity-90 brightness-[1.1] contrast-[1.08]"
                             sizes="(max-width: 768px) 164px, (max-width: 1280px) 204px, 232px"
                             quality={70}
                             priority={layer === "active"}
                           />
-                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.10),rgba(3,9,20,0.20)_52%,rgba(3,9,20,0.42))]" />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.04),rgba(3,9,20,0.10)_52%,rgba(3,9,20,0.25))]" />
                         </>
                       )}
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_52%)]" />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.10),transparent_52%)]" />
                       <div className="absolute inset-x-3 top-3 h-10 rounded-2xl border border-white/12 bg-white/6" />
                       <div className="absolute bottom-0 left-0 right-0 h-24 bg-[linear-gradient(180deg,rgba(2,6,23,0),rgba(2,6,23,0.34))]" />
                       <div className="absolute inset-0 rounded-[28px] border border-white/14" />

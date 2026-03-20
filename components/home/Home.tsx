@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
-import Chip from "../ui/Chip";
 
-export default function Hero() {
+export default function Home() {
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden"
+      className="relative min-h-screen overflow-hidden bg-[#050b16] text-white"
       style={{
         backgroundImage: "url('/backgrounds/home-hero-hd.png')",
         backgroundSize: "cover",
@@ -12,41 +12,70 @@ export default function Hero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <h2 className="text-sm md:text-base tracking-[0.2em] text-white/60 uppercase mb-4">
-          GAMA DYNAMICS
-        </h2>
-        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
-          A software laboratory
-        </h1>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,180,255,0.18),rgba(0,0,0,0)_35%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.32),rgba(3,9,20,0.55)_55%,rgba(3,9,20,0.72))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,18,0.7),rgba(2,7,18,0.22)_30%,rgba(2,7,18,0.22)_70%,rgba(2,7,18,0.7))]" />
 
-        <p className="mt-5 text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-          We grow intelligent systems like living experiments - iterating in the open,
-          measuring reality, and evolving until they feel inevitable.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link
-            href="#specimens"
-            className="w-full sm:w-auto rounded-full bg-white text-slate-900 px-7 py-3 text-sm font-medium shadow-[0_14px_30px_rgba(15,23,42,0.25)] hover:bg-black transition"
-          >
-            Enter the Lab
-          </Link>
-
-          <Link
-            href="#ideas"
-            className="w-full sm:w-auto rounded-full border border-white/20 bg-white/10 backdrop-blur px-7 py-3 text-sm font-medium text-white shadow-[0_12px_24px_rgba(15,23,42,0.08)] hover:bg-white transition"
-          >
-            Browse Experiments
-          </Link>
+      <header className="relative z-20 flex items-center justify-between px-8 md:px-12 pt-7">
+        <div className="flex items-center gap-4">
+          <Image
+            src="/brand/logo-transp.png"
+            alt="GAMA Dynamics"
+            width={210}
+            height={56}
+            className="h-10 md:h-12 w-auto object-contain"
+            priority
+          />
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 text-white/70">
-          <Chip>Apple-style polish</Chip>
-          <Chip>Liquid-glass UI</Chip>
-          <Chip>Fast + lightweight</Chip>
-          <Chip>Designed to evolve</Chip>
+        <nav className="hidden md:flex items-center gap-10 text-white/80 text-lg">
+          <Link href="#specimens" className="transition hover:text-white">
+            Specimens
+          </Link>
+          <Link href="#ideas" className="transition hover:text-white">
+            Incubation Chamber
+          </Link>
+          <Link href="#evolution" className="transition hover:text-white">
+            Evolution Log
+          </Link>
+          <Link
+            href="#contact"
+            className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-md transition hover:bg-white/20"
+          >
+            Contact
+          </Link>
+        </nav>
+      </header>
+
+      <div className="relative z-10 flex min-h-screen items-start justify-center px-6 pt-28 md:pt-36">
+        <div className="mx-auto max-w-5xl text-center">
+          <h1 className="text-5xl font-semibold tracking-[0.08em] text-white md:text-7xl">
+            GAMA DYNAMICS
+          </h1>
+
+          <p className="mt-5 text-xl font-semibold uppercase tracking-[0.2em] text-cyan-300 md:text-3xl">
+            Experimental Systems Lab
+          </p>
+
+          <p className="mx-auto mt-7 max-w-4xl text-lg leading-relaxed text-white/82 md:text-2xl">
+            Digital systems grown, tested, and deployed for real life.
+          </p>
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="#specimens"
+              className="min-w-[270px] rounded-full border border-cyan-300/70 bg-cyan-400/14 px-10 py-4 text-lg font-semibold text-white shadow-[0_0_35px_rgba(56,189,248,0.25)] backdrop-blur-md transition hover:bg-cyan-400/22"
+            >
+              Inspect Active Specimens
+            </Link>
+
+            <Link
+              href="#ideas"
+              className="min-w-[250px] rounded-full border border-white/45 bg-white/10 px-10 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-md transition hover:bg-white/18"
+            >
+              View Research
+            </Link>
+          </div>
         </div>
       </div>
     </section>

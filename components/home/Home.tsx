@@ -682,36 +682,18 @@ export default function Home() {
               </div>
             )}
 
-            {/* --- BEGIN: Editorial Image Spread Block --- */}
-            {selectedSpecimen.detailImages && selectedSpecimen.detailImages.length > 0 && (
-              <div className="my-14 space-y-8">
-                {selectedSpecimen.detailImages.map((imagePath, index) => (
-                  <div
-                    key={imagePath}
-                    className={`relative overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] ${
-                      index % 3 === 0
-                        ? "min-h-[520px] md:ml-[-6rem] md:mr-[8rem]"
-                        : index % 3 === 1
-                          ? "min-h-[320px] md:ml-[10rem] md:mr-[-6rem]"
-                          : "min-h-[380px] md:ml-[3rem] md:mr-[3rem]"
-                    }`}
-                  >
-                    <Image
-                      src={imagePath}
-                      alt={`${selectedSpecimen.name} development visual ${index + 1}`}
-                      fill
-                      className="object-cover opacity-90 transition duration-700 hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 980px"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.26))]" />
-                    <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/78 backdrop-blur-md">
-                      {selectedSpecimen.name} / {index + 1}
-                    </div>
-                  </div>
-                ))}
+            {selectedSpecimen.detailImages?.[0] && (
+              <div className="my-12 relative min-h-[720px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] md:ml-[-4rem] md:mr-[12rem]">
+                <Image
+                  src={selectedSpecimen.detailImages[0]}
+                  alt={`${selectedSpecimen.name} phone portrait screenshot`}
+                  fill
+                  className="object-contain bg-black/10"
+                  sizes="(max-width: 768px) 100vw, 700px"
+                />
               </div>
             )}
-            {/* --- END: Editorial Image Spread Block --- */}
+
 
             {selectedSpecimen.whatItDoes && (
               <div className="mt-10 border-l border-emerald-200/20 pl-6">
@@ -724,6 +706,18 @@ export default function Home() {
               </div>
             )}
 
+            {selectedSpecimen.detailImages?.[1] && (
+              <div className="my-12 relative min-h-[420px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] md:ml-[8rem] md:mr-[-4rem]">
+                <Image
+                  src={selectedSpecimen.detailImages[1]}
+                  alt={`${selectedSpecimen.name} iPad landscape screenshot`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 1100px"
+                />
+              </div>
+            )}
+
             {selectedSpecimen.whoItHelps && (
               <div className="mt-10 border-l border-white/14 pl-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/86">
@@ -732,6 +726,18 @@ export default function Home() {
                 <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
                   {selectedSpecimen.whoItHelps}
                 </p>
+              </div>
+            )}
+
+            {selectedSpecimen.detailImages?.[2] && (
+              <div className="my-12 relative min-h-[420px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] md:ml-[-6rem] md:mr-[6rem]">
+                <Image
+                  src={selectedSpecimen.detailImages[2]}
+                  alt={`${selectedSpecimen.name} second iPad landscape screenshot`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 1100px"
+                />
               </div>
             )}
 

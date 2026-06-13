@@ -102,7 +102,7 @@ export default function Inc_GroceryMaster() {
         <div className="mx-auto max-w-7xl">
           <div className="relative min-h-[420px] overflow-hidden rounded-[40px] border border-white/12 bg-white/[0.045] shadow-[0_30px_90px_rgba(0,0,0,0.36)] md:min-h-[620px]">
             <Image
-              src="/GroceryMaster/GM_EvolutionTimeline.webp"
+              src="/incubator/GroceryMaster/GM_EvolutionTimeline.webp"
               alt="GroceryMaster evolution timeline inside a laboratory"
               fill
               priority
@@ -137,7 +137,7 @@ export default function Inc_GroceryMaster() {
 
           <div className="relative min-h-[360px] overflow-hidden rounded-[36px] border border-white/12 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.3)] md:min-h-[500px]">
             <Image
-              src="/GroceryMaster/GM_Origin.webp"
+              src="/incubator/GroceryMaster/GM_Origin.webp"
               alt="GroceryMaster origin lab concept"
               fill
               className="object-cover"
@@ -162,7 +162,7 @@ export default function Inc_GroceryMaster() {
         <div className="mx-auto mt-12 max-w-7xl">
           <div className="relative min-h-[420px] overflow-hidden rounded-[38px] border border-white/12 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.32)] md:min-h-[620px]">
             <Image
-              src="/GroceryMaster/GM_Experiment001.webp"
+              src="/incubator/GroceryMaster/GM_Experiment001.webp"
               alt="GroceryMaster early experiment hologram lab"
               fill
               className="object-cover"
@@ -176,7 +176,7 @@ export default function Inc_GroceryMaster() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="relative min-h-[380px] overflow-hidden rounded-[36px] border border-white/12 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.3)] md:min-h-[560px]">
             <Image
-              src="/GroceryMaster/GM_SyncEngine.webp"
+              src="/incubator/GroceryMaster/GM_SyncEngine.webp"
               alt="GroceryMaster sync engine laboratory illustration"
               fill
               className="object-cover"
@@ -221,7 +221,7 @@ export default function Inc_GroceryMaster() {
 
             <div className="relative min-h-[380px] overflow-hidden rounded-[36px] border border-red-200/16 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.3)] md:min-h-[560px]">
               <Image
-                src="/GroceryMaster/GM_AppleReview.webp"
+                src="/incubator/GroceryMaster/GM_AppleReview.webp"
                 alt="GroceryMaster Apple review lab rejection scene"
                 fill
                 className="object-cover"
@@ -236,7 +236,7 @@ export default function Inc_GroceryMaster() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="relative min-h-[380px] overflow-hidden rounded-[36px] border border-white/12 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.3)] md:min-h-[560px]">
             <Image
-              src="/GroceryMaster/GM_FamilyNetwork.webp"
+              src="/incubator/GroceryMaster/GM_FamilyNetwork.webp"
               alt="GroceryMaster family network laboratory illustration"
               fill
               className="object-cover"
@@ -275,7 +275,7 @@ export default function Inc_GroceryMaster() {
         <div className="mx-auto mt-14 max-w-7xl">
           <div className="relative min-h-[420px] overflow-hidden rounded-[40px] border border-emerald-200/16 bg-white/[0.045] shadow-[0_30px_90px_rgba(0,0,0,0.36)] md:min-h-[640px]">
             <Image
-              src="/GroceryMaster/GM_Deployment.webp"
+              src="/incubator/GroceryMaster/GM_Deployment.webp"
               alt="GroceryMaster deployment chamber launch scene"
               fill
               className="object-cover"

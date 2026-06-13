@@ -40,13 +40,13 @@ const specimens: Specimen[] = [
     principles: ["One living list", "Family first", "Reduce forgotten items"],
     difference:
       "Built around household collaboration rather than individual shopping.",
-    cardImage: "/backgrounds/GroceryMaster.webp",
+    cardImage: "/GroceryMaster/GroceryMaster.webp",
     detailImages: [
-      "/backgrounds/GroceryMaster1.webp",
-      "/backgrounds/GroceryMaster2.webp",
-      "/backgrounds/GroceryMaster3.webp",
+      "/GroceryMaster/GroceryMaster1.webp",
+      "/GroceryMaster/GroceryMaster2.webp",
+      "/GroceryMaster/GroceryMaster3.webp",
     ],
-    videoSrc: "/backgrounds/GroceryMasterVID.mp4",
+    videoSrc: "/GroceryMaster/GroceryMasterVID.mp4",
     tone:
       "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
   },
@@ -63,13 +63,13 @@ const specimens: Specimen[] = [
     principles: ["Capture knowledge", "Reduce rework", "Learn from history"],
     difference:
       "Designed from real factory experience instead of theoretical manufacturing workflows.",
-    cardImage: "/backgrounds/PVDAssistant.webp",
+    cardImage: "/PVDAssistant/PVDAssistant.webp",
     detailImages: [
-      "/backgrounds/PVDAssistant1.webp",
-      "/backgrounds/PVDAssistant2.webp",
-      "/backgrounds/PVDAssistant3.webp",
+      "/PVDAssistant/PVDAssistant1.webp",
+      "/PVDAssistant/PVDAssistant2.webp",
+      "/PVDAssistant/PVDAssistant3.webp",
     ],
-    videoSrc: "/backgrounds/PVDAssistantVID.mp4",
+    videoSrc: "/PVDAssistant/PVDAssistantVID.mp4",
     tone:
       "bg-[linear-gradient(180deg,rgba(59,130,246,0.72),rgba(29,78,216,0.60))] border border-blue-300/30",
   },

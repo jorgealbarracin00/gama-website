@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import HomeSheet from "./HomeSheet";
+import HomeMobile from "./HomeMobile";
 
 type Specimen = {
   id: string;
@@ -312,6 +313,11 @@ export default function Home() {
 
   return (
     <>
+      <div className="block md:hidden">
+        <HomeMobile />
+      </div>
+
+      <div className="hidden md:block">
     <section
       className="relative h-screen overflow-hidden bg-[#050b16] text-white"
       style={{
@@ -593,6 +599,7 @@ export default function Home() {
       canGoLeft={canGoLeft}
       canGoRight={canGoRight}
     />
+      </div>
     </>
   );
 }

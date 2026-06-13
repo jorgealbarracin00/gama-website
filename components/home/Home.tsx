@@ -628,44 +628,25 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="space-y-6 lg:sticky lg:top-8">
-            {selectedSpecimen.cardImage && (
-              <div className="relative min-h-[340px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.32)] md:min-h-[460px]">
-                <Image
-                  src={selectedSpecimen.cardImage}
-                  alt={`${selectedSpecimen.name} main preview`}
-                  fill
-                  className="object-cover opacity-90"
-                  sizes="(max-width: 1024px) 100vw, 540px"
-                  priority
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.04),rgba(3,9,20,0.36))]" />
-                <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-md">
-                  {selectedSpecimen.status === "live" ? "Deployed system" : "Incubating system"}
-                </div>
+        <div className="space-y-12">
+          {selectedSpecimen.cardImage && (
+            <div className="relative min-h-[360px] overflow-hidden rounded-[38px] border border-white/12 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.32)] md:min-h-[520px]">
+              <Image
+                src={selectedSpecimen.cardImage}
+                alt={`${selectedSpecimen.name} main preview`}
+                fill
+                className="object-cover opacity-90"
+                sizes="(max-width: 1024px) 100vw, 1180px"
+                priority
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,9,20,0.18),rgba(3,9,20,0.02)_45%,rgba(3,9,20,0.34))]" />
+              <div className="absolute left-6 top-6 rounded-full border border-white/18 bg-black/28 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-md">
+                {selectedSpecimen.status === "live" ? "Deployed system" : "Incubating system"}
               </div>
-            )}
+            </div>
+          )}
 
-            {selectedSpecimen.videoSrc && (
-              <div className="overflow-hidden rounded-[28px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
-                <video
-                  src={selectedSpecimen.videoSrc}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="aspect-video w-full rounded-2xl bg-black object-cover"
-                />
-                <p className="mt-3 px-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
-                  Deployment loop
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div>
+          <div className="mx-auto max-w-5xl">
             <div className="flex flex-wrap items-center gap-3">
               <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
                 {selectedSpecimen.id}
@@ -701,18 +682,18 @@ export default function Home() {
               </div>
             )}
 
-            {/* --- BEGIN: Detail Images Spread Block --- */}
+            {/* --- BEGIN: Editorial Image Spread Block --- */}
             {selectedSpecimen.detailImages && selectedSpecimen.detailImages.length > 0 && (
-              <div className="mt-10 grid gap-4 md:grid-cols-12">
+              <div className="my-14 space-y-8">
                 {selectedSpecimen.detailImages.map((imagePath, index) => (
                   <div
                     key={imagePath}
-                    className={`relative overflow-hidden rounded-[28px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] ${
+                    className={`relative overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] ${
                       index % 3 === 0
-                        ? "min-h-[360px] md:col-span-5 md:min-h-[520px]"
+                        ? "min-h-[520px] md:ml-[-6rem] md:mr-[8rem]"
                         : index % 3 === 1
-                          ? "min-h-[240px] md:col-span-7 md:min-h-[300px]"
-                          : "min-h-[240px] md:col-span-7 md:min-h-[300px] md:col-start-6"
+                          ? "min-h-[320px] md:ml-[10rem] md:mr-[-6rem]"
+                          : "min-h-[380px] md:ml-[3rem] md:mr-[3rem]"
                     }`}
                   >
                     <Image
@@ -720,9 +701,9 @@ export default function Home() {
                       alt={`${selectedSpecimen.name} development visual ${index + 1}`}
                       fill
                       className="object-cover opacity-90 transition duration-700 hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 720px"
+                      sizes="(max-width: 768px) 100vw, 980px"
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.28))]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.26))]" />
                     <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/78 backdrop-blur-md">
                       {selectedSpecimen.name} / {index + 1}
                     </div>
@@ -730,7 +711,7 @@ export default function Home() {
                 ))}
               </div>
             )}
-            {/* --- END: Detail Images Spread Block --- */}
+            {/* --- END: Editorial Image Spread Block --- */}
 
             {selectedSpecimen.whatItDoes && (
               <div className="mt-10 border-l border-emerald-200/20 pl-6">
@@ -835,6 +816,23 @@ export default function Home() {
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
                   {selectedSpecimen.currentStage}
+                </p>
+              </div>
+            )}
+
+            {selectedSpecimen.videoSrc && (
+              <div className="mt-14 overflow-hidden rounded-[34px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+                <video
+                  src={selectedSpecimen.videoSrc}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="aspect-video w-full rounded-[26px] bg-black object-cover"
+                />
+                <p className="mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
+                  Deployment loop
                 </p>
               </div>
             )}

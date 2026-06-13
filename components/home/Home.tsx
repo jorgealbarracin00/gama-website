@@ -164,7 +164,6 @@ function clamp(value: number, min: number, max: number) {
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const selectedSpecimen = specimens[selectedIndex];
 
   const visibleCards = useMemo<VisibleCard[]>(() => {
     const previous = specimens[selectedIndex - 1];
@@ -254,66 +253,6 @@ export default function Home() {
             <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/78 md:text-sm xl:text-base">
               Digital systems grown, tested, and deployed for real life.
             </p>
-
-            <div className="mt-7 rounded-3xl border border-white/14 bg-black/28 p-5 text-left shadow-[0_18px_55px_rgba(0,0,0,0.34)] backdrop-blur-md md:mt-8">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200/90">
-                    {selectedSpecimen.id}
-                  </p>
-                  <h2 className="mt-2 text-xl font-semibold tracking-wide text-white md:text-2xl">
-                    {selectedSpecimen.name}
-                  </h2>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/52">
-                    {selectedSpecimen.subtitle}
-                  </p>
-                </div>
-
-                <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
-                  {selectedSpecimen.status === "live" ? "Live" : "Incubating"}
-                </span>
-              </div>
-
-              <p className="mt-4 text-sm leading-relaxed text-white/78">
-                {selectedSpecimen.summary}
-              </p>
-
-              <div className="mt-5 grid gap-4 text-xs text-white/72 xl:grid-cols-2">
-                <div>
-                  <p className="font-semibold uppercase tracking-[0.2em] text-white/92">Features</p>
-                  <ul className="mt-2 space-y-1.5">
-                    {selectedSpecimen.features.map((feature) => (
-                      <li key={feature}>• {feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="font-semibold uppercase tracking-[0.2em] text-white/92">Principles</p>
-                  <ul className="mt-2 space-y-1.5">
-                    {selectedSpecimen.principles.map((principle) => (
-                      <li key={principle}>• {principle}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-4 rounded-2xl border border-white/10 bg-white/6 p-4">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-100/80">
-                  What makes it different
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-white/72">
-                  {selectedSpecimen.difference}
-                </p>
-              </div>
-
-              <Link
-                href={selectedSpecimen.incubationHref}
-                className="mt-5 inline-flex rounded-full border border-white/18 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/88 transition hover:bg-white/18"
-              >
-                Open incubation notes
-              </Link>
-            </div>
           </div>
 
           <div className="flex h-full w-full flex-col items-center justify-center">
@@ -510,6 +449,173 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="relative overflow-hidden bg-[#050b16] px-6 py-16 text-white md:px-10 md:py-20 xl:px-14">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.12),transparent_38%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,11,22,0),rgba(5,11,22,0.9)_35%,rgba(5,11,22,1))]" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-cyan-300">
+              Specimen Briefing
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-wide text-white md:text-4xl">
+              What each system is being built to solve
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-relaxed text-white/62 md:text-base">
+            Use the arrows above to explore the active specimens. Each product will have a deeper incubation page with build notes, problems, design decisions, experiments, and evolution history.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {specimens.map((specimen) => (
+            <article
+              key={specimen.name}
+              id={specimen.name.toLowerCase().replaceAll(" ", "-")}
+              className="group overflow-hidden rounded-[32px] border border-white/12 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-md transition hover:border-cyan-200/26 hover:bg-white/[0.065]"
+            >
+              <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
+                <div className="relative min-h-[260px] overflow-hidden bg-white/5">
+                  {specimen.name === "CashCast" && (
+                    <Image
+                      src="/backgrounds/cashcast-PREVIEW.webp"
+                      alt="CashCast app preview placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  {specimen.name === "VOID" && (
+                    <Image
+                      src="/backgrounds/void-PREVIEW.webp"
+                      alt="VOID concept image placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  {specimen.name === "Tensland" && (
+                    <Image
+                      src="/backgrounds/tensland-PREVIEW.webp"
+                      alt="Tensland concept image placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  {specimen.name === "GamaRepair" && (
+                    <Image
+                      src="/backgrounds/gamarepair-PREVIEW.webp"
+                      alt="GamaRepair app preview placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  {specimen.name === "ExpenseTrackWatch" && (
+                    <Image
+                      src="/backgrounds/expense_PREVIEW.webp"
+                      alt="ExpenseTrackWatch app preview placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  {specimen.name === "Memoir" && (
+                    <Image
+                      src="/backgrounds/memoir-PREVIEW.webp"
+                      alt="Memoir app preview placeholder"
+                      fill
+                      className="object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 420px"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.42))]" />
+                  <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-md">
+                    Image placeholder
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-7">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200/90">
+                        {specimen.id}
+                      </p>
+                      <h3 className="mt-2 text-2xl font-semibold tracking-wide text-white">
+                        {specimen.name}
+                      </h3>
+                      <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/48">
+                        {specimen.subtitle}
+                      </p>
+                    </div>
+                    <span className="shrink-0 rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
+                      {specimen.status === "live" ? "Live" : "Incubating"}
+                    </span>
+                  </div>
+
+                  <p className="mt-5 text-sm leading-relaxed text-white/72">
+                    {specimen.summary}
+                  </p>
+
+                  <div className="mt-6 grid gap-5 text-sm text-white/68 md:grid-cols-2">
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/92">
+                        Features
+                      </p>
+                      <ul className="mt-3 space-y-2">
+                        {specimen.features.map((feature) => (
+                          <li key={feature}>• {feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/92">
+                        Principles
+                      </p>
+                      <ul className="mt-3 space-y-2">
+                        {specimen.principles.map((principle) => (
+                          <li key={principle}>• {principle}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-4">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-100/80">
+                      What makes it different
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-white/68">
+                      {specimen.difference}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <Link
+                      href={specimen.incubationHref}
+                      className="rounded-full border border-white/18 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/88 transition hover:bg-white/18"
+                    >
+                      Incubation chamber
+                    </Link>
+                    <a
+                      href={specimen.status === "live" ? specimen.href : specimen.incubationHref}
+                      target={specimen.status === "live" ? "_blank" : undefined}
+                      rel={specimen.status === "live" ? "noopener noreferrer" : undefined}
+                      className="rounded-full border border-cyan-200/24 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100 transition hover:bg-cyan-300/16"
+                    >
+                      {specimen.status === "live" ? "Open app site" : "View build notes"}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

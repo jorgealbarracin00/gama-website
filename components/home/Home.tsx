@@ -832,7 +832,7 @@ export default function Home() {
                   className="aspect-video w-full rounded-[26px] bg-black object-cover"
                 />
                 <p className="mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
-                  Deployment loop
+                  Available on AppStore
                 </p>
               </div>
             )}

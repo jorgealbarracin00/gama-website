@@ -19,6 +19,15 @@ type Specimen = {
   cardImage?: string;
   detailImages?: string[];
   videoSrc?: string;
+  heroLine?: string;
+  origin?: string;
+  buildStory?: string;
+  challenges?: string[];
+  evolution?: string[];
+  currentStage?: string;
+  whatItDoes?: string;
+  whoItHelps?: string;
+  uniqueAdvantages?: string[];
 };
 
 type VisibleCard = {
@@ -47,6 +56,35 @@ const specimens: Specimen[] = [
       "/GroceryMaster/GroceryMaster3.webp",
     ],
     videoSrc: "/GroceryMaster/GroceryMasterVID.mp4",
+    heroLine: "One living list. Everyone synced.",
+    origin:
+      "GroceryMaster was born from a real household problem: grocery lists do not live in one place. One person remembers milk, another person buys eggs, someone forgets nappies, and the list becomes scattered across memory, messages, and last-minute calls.",
+    buildStory:
+      "The first version started as a simple shared list. Then it evolved into a family shopping system with groups, one home list, country-based shops, Shopping Mode, pantry magnets, duplicate warnings, and real-time syncing across devices.",
+    challenges: [
+      "Making the list feel alive across multiple family devices.",
+      "Handling Apple review feedback around iPad layouts and crowded screens.",
+      "Designing a subscription model where one sponsor can cover the household.",
+    ],
+    evolution: [
+      "V0.00001: simple grocery list concept.",
+      "V0.1: shared household group and real-time list syncing.",
+      "V0.5: Shopping Mode, shops, pantry magnets, duplicate detection.",
+      "V1.0: iPhone, iPad, StoreKit, Firestore, and App Store deployment path.",
+    ],
+    currentStage:
+      "Deployed system. GroceryMaster is the first family-facing specimen to escape the lab and become a real product.",
+    whatItDoes:
+      "GroceryMaster gives a household one shared grocery list that updates in real time. Family members can add items, organise them by shop, use pantry magnets for common essentials, and switch into Shopping Mode when someone is actually at the store.",
+    whoItHelps:
+      "It helps busy families, couples, parents, shared homes, and anyone who has ever asked: did we already buy that? Instead of sending messages, screenshots, or reminders, everyone works from the same living list.",
+    uniqueAdvantages: [
+      "One household list instead of multiple personal lists.",
+      "Shopping Mode shows when someone is actively shopping.",
+      "Pantry magnets turn repeated essentials into fast taps.",
+      "Duplicate detection helps avoid buying or adding the same thing again.",
+      "The subscription is designed around the family group, not only one user.",
+    ],
     tone:
       "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
   },
@@ -70,6 +108,35 @@ const specimens: Specimen[] = [
       "/PVDAssistant/PVDAssistant3.webp",
     ],
     videoSrc: "/PVDAssistant/PVDAssistantVID.mp4",
+    heroLine: "Factory knowledge captured before it disappears.",
+    origin:
+      "PVD Assistant came from the factory floor. The problem was not only color matching; it was the loss of process knowledge. Runs, machine conditions, cleaning history, gas changes, rework, and operator experience were happening every day, but most of that information was not being captured in a useful way.",
+    buildStory:
+      "The app grew from run logging into a stronger historical engine. It now treats every run as data: machine, color, time bucket, oven state, cleaning state, chamber fullness, LAB values, and process notes. The goal is to turn daily manufacturing experience into a memory system for better decisions.",
+    challenges: [
+      "Turning messy real-world factory conditions into structured data.",
+      "Building recommendations without pretending the process is perfectly predictable.",
+      "Separating UI experiments from the historical engine so the app can keep evolving.",
+    ],
+    evolution: [
+      "V0.00001: basic PVD run notes and machine tracking.",
+      "V0.2: machine workspaces for M3 and M4.",
+      "V0.5: Color Lab, LAB comparison, thresholds, and historical matching.",
+      "V1.0: deployed internal manufacturing assistant with stronger engine direction.",
+    ],
+    currentStage:
+      "Deployed system. PVD Assistant proves Gama Dynamics can build software from real industrial pain, not only consumer ideas.",
+    whatItDoes:
+      "PVD Assistant records coating runs, machine conditions, color data, cleaning events, and historical outcomes. It is designed to make the invisible knowledge of a PVD process easier to capture, compare, and reuse.",
+    whoItHelps:
+      "It helps operators, supervisors, and small manufacturing teams who depend on experience, memory, and handwritten notes to understand why a color passed, failed, shifted, or repeated successfully.",
+    uniqueAdvantages: [
+      "Built from real PVD factory work, not generic production theory.",
+      "Connects color results with machine history and process conditions.",
+      "Treats every run as future training data for better decisions.",
+      "Supports shop-floor reality: cleaning, oven time, chamber state, gas changes, and rework.",
+      "Designed to preserve operator knowledge before it disappears.",
+    ],
     tone:
       "bg-[linear-gradient(180deg,rgba(59,130,246,0.72),rgba(29,78,216,0.60))] border border-blue-300/30",
   },
@@ -534,6 +601,11 @@ export default function Home() {
             <p className="mt-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/48 md:text-sm">
               {selectedSpecimen.subtitle}
             </p>
+            {selectedSpecimen.heroLine && (
+              <p className="mt-6 max-w-3xl text-4xl font-semibold leading-tight text-white md:text-6xl">
+                {selectedSpecimen.heroLine}
+              </p>
+            )}
           </div>
 
           <div className="flex items-center gap-3">
@@ -556,60 +628,44 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative min-h-[340px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.32)] md:min-h-[460px]">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="space-y-6 lg:sticky lg:top-8">
             {selectedSpecimen.cardImage && (
-              <Image
-                src={selectedSpecimen.cardImage}
-                alt={`${selectedSpecimen.name} main preview`}
-                fill
-                className="object-cover opacity-90"
-                sizes="(max-width: 1024px) 100vw, 540px"
-                priority
-              />
-            )}
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.04),rgba(3,9,20,0.36))]" />
-            <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-md">
-              {selectedSpecimen.status === "live" ? "Deployed system" : "Incubating system"}
-            </div>
-          </div>
-
-          <div>
-            {selectedSpecimen.detailImages && selectedSpecimen.detailImages.length > 0 && (
-              <div className="mb-8 grid grid-cols-3 gap-3">
-                {selectedSpecimen.detailImages.map((imagePath, index) => (
-                  <div
-                    key={imagePath}
-                    className="relative h-24 overflow-hidden rounded-2xl border border-white/12 bg-white/[0.045] md:h-28"
-                  >
-                    <Image
-                      src={imagePath}
-                      alt={`${selectedSpecimen.name} detail ${index + 1}`}
-                      fill
-                      className="object-cover opacity-90"
-                      sizes="160px"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.28))]" />
-                  </div>
-                ))}
+              <div className="relative min-h-[340px] overflow-hidden rounded-[34px] border border-white/12 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,0,0,0.32)] md:min-h-[460px]">
+                <Image
+                  src={selectedSpecimen.cardImage}
+                  alt={`${selectedSpecimen.name} main preview`}
+                  fill
+                  className="object-cover opacity-90"
+                  sizes="(max-width: 1024px) 100vw, 540px"
+                  priority
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.04),rgba(3,9,20,0.36))]" />
+                <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-md">
+                  {selectedSpecimen.status === "live" ? "Deployed system" : "Incubating system"}
+                </div>
               </div>
             )}
 
             {selectedSpecimen.videoSrc && (
-              <div className="mb-8 overflow-hidden rounded-[28px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+              <div className="overflow-hidden rounded-[28px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
                 <video
                   src={selectedSpecimen.videoSrc}
-                  controls
+                  autoPlay
+                  muted
+                  loop
                   playsInline
                   preload="metadata"
                   className="aspect-video w-full rounded-2xl bg-black object-cover"
                 />
                 <p className="mt-3 px-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
-                  Deployment video
+                  Deployment loop
                 </p>
               </div>
             )}
+          </div>
 
+          <div>
             <div className="flex flex-wrap items-center gap-3">
               <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
                 {selectedSpecimen.id}
@@ -622,6 +678,81 @@ export default function Home() {
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/76 md:text-xl">
               {selectedSpecimen.summary}
             </p>
+
+            {selectedSpecimen.origin && (
+              <div className="mt-10 border-l border-cyan-200/24 pl-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200/90">
+                  Why it was born
+                </p>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
+                  {selectedSpecimen.origin}
+                </p>
+              </div>
+            )}
+
+            {selectedSpecimen.buildStory && (
+              <div className="mt-10 border-l border-white/14 pl-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/86">
+                  How it was built
+                </p>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
+                  {selectedSpecimen.buildStory}
+                </p>
+              </div>
+            )}
+
+            {/* --- BEGIN: Detail Images Spread Block --- */}
+            {selectedSpecimen.detailImages && selectedSpecimen.detailImages.length > 0 && (
+              <div className="mt-10 grid gap-4 md:grid-cols-12">
+                {selectedSpecimen.detailImages.map((imagePath, index) => (
+                  <div
+                    key={imagePath}
+                    className={`relative overflow-hidden rounded-[28px] border border-white/12 bg-white/[0.045] shadow-[0_18px_55px_rgba(0,0,0,0.24)] ${
+                      index % 3 === 0
+                        ? "min-h-[360px] md:col-span-5 md:min-h-[520px]"
+                        : index % 3 === 1
+                          ? "min-h-[240px] md:col-span-7 md:min-h-[300px]"
+                          : "min-h-[240px] md:col-span-7 md:min-h-[300px] md:col-start-6"
+                    }`}
+                  >
+                    <Image
+                      src={imagePath}
+                      alt={`${selectedSpecimen.name} development visual ${index + 1}`}
+                      fill
+                      className="object-cover opacity-90 transition duration-700 hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 720px"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.02),rgba(3,9,20,0.28))]" />
+                    <div className="absolute left-5 top-5 rounded-full border border-white/18 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/78 backdrop-blur-md">
+                      {selectedSpecimen.name} / {index + 1}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {/* --- END: Detail Images Spread Block --- */}
+
+            {selectedSpecimen.whatItDoes && (
+              <div className="mt-10 border-l border-emerald-200/20 pl-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-emerald-100/90">
+                  What it does
+                </p>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
+                  {selectedSpecimen.whatItDoes}
+                </p>
+              </div>
+            )}
+
+            {selectedSpecimen.whoItHelps && (
+              <div className="mt-10 border-l border-white/14 pl-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/86">
+                  Who it helps
+                </p>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
+                  {selectedSpecimen.whoItHelps}
+                </p>
+              </div>
+            )}
 
             <div className="mt-10 grid gap-8 md:grid-cols-2">
               <div>
@@ -655,6 +786,58 @@ export default function Home() {
                 {selectedSpecimen.difference}
               </p>
             </div>
+
+            {selectedSpecimen.uniqueAdvantages && selectedSpecimen.uniqueAdvantages.length > 0 && (
+              <div className="mt-10 rounded-[28px] border border-emerald-200/16 bg-emerald-300/8 p-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-emerald-100/90">
+                  What we have that others usually do not
+                </p>
+                <ul className="mt-4 grid gap-3 text-sm leading-relaxed text-white/68 md:grid-cols-2 md:text-base">
+                  {selectedSpecimen.uniqueAdvantages.map((advantage) => (
+                    <li key={advantage}>• {advantage}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {selectedSpecimen.challenges && selectedSpecimen.challenges.length > 0 && (
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
+                <div className="rounded-[28px] border border-white/12 bg-white/[0.045] p-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/92">
+                    Problems faced
+                  </p>
+                  <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/66 md:text-base">
+                    {selectedSpecimen.challenges.map((challenge) => (
+                      <li key={challenge}>• {challenge}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {selectedSpecimen.evolution && selectedSpecimen.evolution.length > 0 && (
+                  <div className="rounded-[28px] border border-white/12 bg-white/[0.045] p-6">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/92">
+                      Evolution path
+                    </p>
+                    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/66 md:text-base">
+                      {selectedSpecimen.evolution.map((step) => (
+                        <li key={step}>• {step}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {selectedSpecimen.currentStage && (
+              <div className="mt-10 rounded-[28px] border border-cyan-200/18 bg-cyan-300/8 p-6">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-100/90">
+                  Current stage
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
+                  {selectedSpecimen.currentStage}
+                </p>
+              </div>
+            )}
 
             <div className="mt-10 flex flex-wrap gap-3">
               <Link

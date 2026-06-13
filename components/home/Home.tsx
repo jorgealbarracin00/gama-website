@@ -225,6 +225,7 @@ export default function Home() {
   const canGoRight = selectedIndex < specimens.length - 1;
 
   return (
+    <>
     <section
       className="relative h-screen overflow-hidden bg-[#050b16] text-white"
       style={{
@@ -651,5 +652,6 @@ export default function Home() {
         </div>
       </div>
     </section>
+    </>
   );
 }

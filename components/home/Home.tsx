@@ -26,6 +26,54 @@ type VisibleCard = {
 const specimens: Specimen[] = [
   {
     id: "SPECIMEN 001",
+    name: "GroceryMaster",
+    subtitle: "Shared Family Shopping System",
+    status: "live",
+    href: "https://grocerymaster.gamadynamics.com.au",
+    incubationHref: "/incubation/grocerymaster",
+    summary:
+      "A real-time shared grocery system designed for households that shop together across multiple devices.",
+    features: ["Shared living list", "Shopping mode", "Pantry magnets"],
+    principles: ["One living list", "Family first", "Reduce forgotten items"],
+    difference:
+      "Built around household collaboration rather than individual shopping.",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
+  },
+  {
+    id: "SPECIMEN 002",
+    name: "PVD Assistant",
+    subtitle: "Industrial Coating Intelligence",
+    status: "live",
+    href: "https://pvdassistant.gamadynamics.com.au",
+    incubationHref: "/incubation/pvdassistant",
+    summary:
+      "A manufacturing assistant built to improve color matching, process tracking, historical analysis, and machine operation in PVD coating environments.",
+    features: ["Run history", "Color Lab", "Machine intelligence"],
+    principles: ["Capture knowledge", "Reduce rework", "Learn from history"],
+    difference:
+      "Designed from real factory experience instead of theoretical manufacturing workflows.",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(59,130,246,0.72),rgba(29,78,216,0.60))] border border-blue-300/30",
+  },
+  {
+    id: "SPECIMEN 003",
+    name: "Memoir",
+    subtitle: "AI-Assisted Memory Book",
+    status: "incubating",
+    href: "https://memoir.gamadynamics.com.au",
+    incubationHref: "/incubation/memoir",
+    summary:
+      "Memoir helps people record spoken memories and transform them into polished personal stories that can grow into a private life book.",
+    features: ["Voice-to-memory creation", "AI-polished Echoes", "Personal memoir structure"],
+    principles: ["User-owned memories", "Story over transcript", "Private by design"],
+    difference:
+      "Memoir is not a social network. It is a private place for memories to become a book.",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
+  },
+  {
+    id: "SPECIMEN 004",
     name: "CashCast",
     subtitle: "Financial Forecasting Engine",
     status: "incubating",
@@ -41,39 +89,7 @@ const specimens: Specimen[] = [
       "bg-[linear-gradient(180deg,rgba(16,185,129,0.88),rgba(5,150,105,0.72))] border border-emerald-300/30",
   },
   {
-    id: "SPECIMEN 002",
-    name: "VOID",
-    subtitle: "Experimental AI System",
-    status: "incubating",
-    href: "https://void.gamadynamics.com.au",
-    incubationHref: "/incubation/void",
-    summary:
-      "VOID is an experimental space for testing artificial intelligence interfaces, strange workflows, and systems that do not fit inside normal productivity software.",
-    features: ["AI-assisted experiments", "Interface prototypes", "System behavior testing"],
-    principles: ["Explore the unknown", "Prototype before polishing", "Use mystery with purpose"],
-    difference:
-      "VOID is not built to look normal first. It is built to discover what might become useful later.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
-  },
-  {
-    id: "SPECIMEN 003",
-    name: "Tensland",
-    subtitle: "Strategy World Builder",
-    status: "incubating",
-    href: "https://tensland.gamadynamics.com.au",
-    incubationHref: "/incubation/tensland",
-    summary:
-      "Tensland is a world-building and strategy experiment focused on turning maps, resources, factions, and decisions into a playable system.",
-    features: ["World and map concepts", "Faction and resource systems", "Strategy simulation ideas"],
-    principles: ["Systems create stories", "Simple rules can grow complexity", "Make strategy visual"],
-    difference:
-      "Tensland starts with systems first, then lets the world grow from the rules.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
-  },
-  {
-    id: "SPECIMEN 004",
+    id: "SPECIMEN 005",
     name: "GamaRepair",
     subtitle: "Repair Workflow Assistant",
     status: "incubating",
@@ -89,7 +105,7 @@ const specimens: Specimen[] = [
       "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
   },
   {
-    id: "SPECIMEN 005",
+    id: "SPECIMEN 006",
     name: "ExpenseTrackWatch",
     subtitle: "Fast Expense Capture",
     status: "incubating",
@@ -105,20 +121,36 @@ const specimens: Specimen[] = [
       "bg-[linear-gradient(180deg,rgba(129,140,248,0.66),rgba(67,56,202,0.58))] border border-indigo-300/30",
   },
   {
-    id: "SPECIMEN 006",
-    name: "Memoir",
-    subtitle: "AI-Assisted Memory Book",
+    id: "SPECIMEN 007",
+    name: "Tensland",
+    subtitle: "Strategy World Builder",
     status: "incubating",
-    href: "https://memoir.gamadynamics.com.au",
-    incubationHref: "/incubation/memoir",
+    href: "https://tensland.gamadynamics.com.au",
+    incubationHref: "/incubation/tensland",
     summary:
-      "Memoir helps people record spoken memories and transform them into polished personal stories that can grow into a private life book.",
-    features: ["Voice-to-memory creation", "AI-polished Echoes", "Personal memoir structure"],
-    principles: ["User-owned memories", "Story over transcript", "Private by design"],
+      "Tensland is a world-building and strategy experiment focused on turning maps, resources, factions, and decisions into a playable system.",
+    features: ["World and map concepts", "Faction and resource systems", "Strategy simulation ideas"],
+    principles: ["Systems create stories", "Simple rules can grow complexity", "Make strategy visual"],
     difference:
-      "Memoir is not a social network. It is a private place for memories to become a book.",
+      "Tensland starts with systems first, then lets the world grow from the rules.",
     tone:
-      "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
+      "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
+  },
+  {
+    id: "SPECIMEN 008",
+    name: "VOID",
+    subtitle: "Experimental AI System",
+    status: "incubating",
+    href: "https://void.gamadynamics.com.au",
+    incubationHref: "/incubation/void",
+    summary:
+      "VOID is an experimental space for testing artificial intelligence interfaces, strange workflows, and systems that do not fit inside normal productivity software.",
+    features: ["AI-assisted experiments", "Interface prototypes", "System behavior testing"],
+    principles: ["Explore the unknown", "Prototype before polishing", "Use mystery with purpose"],
+    difference:
+      "VOID is not built to look normal first. It is built to discover what might become useful later.",
+    tone:
+      "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
   },
 ];
 

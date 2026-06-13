@@ -7,8 +7,15 @@ import { useMemo, useState } from "react";
 type Specimen = {
   id: string;
   name: string;
+  subtitle: string;
+  status: "live" | "incubating";
   tone: string;
   href: string;
+  incubationHref: string;
+  summary: string;
+  features: string[];
+  principles: string[];
+  difference: string;
 };
 
 type VisibleCard = {
@@ -20,42 +27,96 @@ const specimens: Specimen[] = [
   {
     id: "SPECIMEN 001",
     name: "CashCast",
+    subtitle: "Financial Forecasting Engine",
+    status: "incubating",
     href: "https://cashcast.gamadynamics.com.au",
+    incubationHref: "/incubation/cashcast",
+    summary:
+      "CashCast is a forward-looking money simulator for families and individuals who want to test financial decisions before they become real-life pressure.",
+    features: ["Long-term cash-flow projection", "What-if financial scenarios", "Goals, purchases, and life-event simulation"],
+    principles: ["Future over past", "Clarity over spreadsheets", "Planning before panic"],
+    difference:
+      "Most finance apps explain what already happened. CashCast focuses on what could happen next.",
     tone:
       "bg-[linear-gradient(180deg,rgba(16,185,129,0.88),rgba(5,150,105,0.72))] border border-emerald-300/30",
   },
   {
     id: "SPECIMEN 002",
     name: "VOID",
+    subtitle: "Experimental AI System",
+    status: "incubating",
     href: "https://void.gamadynamics.com.au",
+    incubationHref: "/incubation/void",
+    summary:
+      "VOID is an experimental space for testing artificial intelligence interfaces, strange workflows, and systems that do not fit inside normal productivity software.",
+    features: ["AI-assisted experiments", "Interface prototypes", "System behavior testing"],
+    principles: ["Explore the unknown", "Prototype before polishing", "Use mystery with purpose"],
+    difference:
+      "VOID is not built to look normal first. It is built to discover what might become useful later.",
     tone:
       "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
   },
   {
     id: "SPECIMEN 003",
     name: "Tensland",
+    subtitle: "Strategy World Builder",
+    status: "incubating",
     href: "https://tensland.gamadynamics.com.au",
+    incubationHref: "/incubation/tensland",
+    summary:
+      "Tensland is a world-building and strategy experiment focused on turning maps, resources, factions, and decisions into a playable system.",
+    features: ["World and map concepts", "Faction and resource systems", "Strategy simulation ideas"],
+    principles: ["Systems create stories", "Simple rules can grow complexity", "Make strategy visual"],
+    difference:
+      "Tensland starts with systems first, then lets the world grow from the rules.",
     tone:
       "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
   },
   {
     id: "SPECIMEN 004",
     name: "GamaRepair",
+    subtitle: "Repair Workflow Assistant",
+    status: "incubating",
     href: "https://gamarepair.gamadynamics.com.au",
+    incubationHref: "/incubation/gamarepair",
+    summary:
+      "GamaRepair explores how repair jobs, parts, notes, photos, customer updates, and workflow history can be organized into one practical system.",
+    features: ["Repair job tracking", "Photo and note history", "Workflow status updates"],
+    principles: ["Every repair has a story", "Reduce forgotten details", "Make progress visible"],
+    difference:
+      "GamaRepair is designed around the messy reality of repair work, not a perfect office workflow.",
     tone:
       "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
   },
   {
     id: "SPECIMEN 005",
     name: "ExpenseTrackWatch",
+    subtitle: "Fast Expense Capture",
+    status: "incubating",
     href: "https://expensetrackwatch.gamadynamics.com.au",
+    incubationHref: "/incubation/expensetrackwatch",
+    summary:
+      "ExpenseTrackWatch is a lightweight expense capture idea focused on speed, habit, and reducing friction when recording small daily spending.",
+    features: ["Quick expense entry", "Watch-first interaction ideas", "Small spending awareness"],
+    principles: ["Capture before forgetting", "Speed beats complexity", "Small habits reveal patterns"],
+    difference:
+      "Instead of asking users to manage a full finance system, ExpenseTrackWatch focuses on the instant of spending.",
     tone:
       "bg-[linear-gradient(180deg,rgba(129,140,248,0.66),rgba(67,56,202,0.58))] border border-indigo-300/30",
   },
   {
     id: "SPECIMEN 006",
     name: "Memoir",
+    subtitle: "AI-Assisted Memory Book",
+    status: "incubating",
     href: "https://memoir.gamadynamics.com.au",
+    incubationHref: "/incubation/memoir",
+    summary:
+      "Memoir helps people record spoken memories and transform them into polished personal stories that can grow into a private life book.",
+    features: ["Voice-to-memory creation", "AI-polished Echoes", "Personal memoir structure"],
+    principles: ["User-owned memories", "Story over transcript", "Private by design"],
+    difference:
+      "Memoir is not a social network. It is a private place for memories to become a book.",
     tone:
       "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
   },
@@ -103,6 +164,7 @@ function clamp(value: number, min: number, max: number) {
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const selectedSpecimen = specimens[selectedIndex];
 
   const visibleCards = useMemo<VisibleCard[]>(() => {
     const previous = specimens[selectedIndex - 1];
@@ -193,6 +255,65 @@ export default function Home() {
               Digital systems grown, tested, and deployed for real life.
             </p>
 
+            <div className="mt-7 rounded-3xl border border-white/14 bg-black/28 p-5 text-left shadow-[0_18px_55px_rgba(0,0,0,0.34)] backdrop-blur-md md:mt-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200/90">
+                    {selectedSpecimen.id}
+                  </p>
+                  <h2 className="mt-2 text-xl font-semibold tracking-wide text-white md:text-2xl">
+                    {selectedSpecimen.name}
+                  </h2>
+                  <p className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-white/52">
+                    {selectedSpecimen.subtitle}
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-cyan-200/25 bg-cyan-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
+                  {selectedSpecimen.status === "live" ? "Live" : "Incubating"}
+                </span>
+              </div>
+
+              <p className="mt-4 text-sm leading-relaxed text-white/78">
+                {selectedSpecimen.summary}
+              </p>
+
+              <div className="mt-5 grid gap-4 text-xs text-white/72 xl:grid-cols-2">
+                <div>
+                  <p className="font-semibold uppercase tracking-[0.2em] text-white/92">Features</p>
+                  <ul className="mt-2 space-y-1.5">
+                    {selectedSpecimen.features.map((feature) => (
+                      <li key={feature}>• {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="font-semibold uppercase tracking-[0.2em] text-white/92">Principles</p>
+                  <ul className="mt-2 space-y-1.5">
+                    {selectedSpecimen.principles.map((principle) => (
+                      <li key={principle}>• {principle}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-white/10 bg-white/6 p-4">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-100/80">
+                  What makes it different
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-white/72">
+                  {selectedSpecimen.difference}
+                </p>
+              </div>
+
+              <Link
+                href={selectedSpecimen.incubationHref}
+                className="mt-5 inline-flex rounded-full border border-white/18 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/88 transition hover:bg-white/18"
+              >
+                Open incubation notes
+              </Link>
+            </div>
           </div>
 
           <div className="flex h-full w-full flex-col items-center justify-center">
@@ -220,9 +341,9 @@ export default function Home() {
                       <div className="pointer-events-none absolute inset-[-18px] rounded-[36px] bg-[radial-gradient(circle,rgba(255,255,255,0.14),transparent_62%)] blur-[18px]" />
                     )}
                     <a
-                      href={specimen.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={specimen.status === "live" ? specimen.href : specimen.incubationHref}
+                      target={specimen.status === "live" ? "_blank" : undefined}
+                      rel={specimen.status === "live" ? "noopener noreferrer" : undefined}
                       className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone} ${layer === "active" ? "animate-[pulse_4.8s_ease-in-out_infinite] shadow-[0_0_65px_rgba(255,255,255,0.14)]" : ""}`}
                     >
                       {specimen.name === "CashCast" && (
@@ -325,6 +446,9 @@ export default function Home() {
                           <h3 className="text-lg font-semibold text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.55)] md:text-xl xl:text-2xl">
                             {specimen.name}
                           </h3>
+                          <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.16em] text-white/72 drop-shadow-[0_3px_10px_rgba(0,0,0,0.5)] md:text-[10px]">
+                            {specimen.status === "live" ? "Open app site" : "Open incubation"}
+                          </p>
                         </div>
                       </div>
                     </a>

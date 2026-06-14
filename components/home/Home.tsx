@@ -103,11 +103,11 @@ const specimens: Specimen[] = [
     principles: ["Capture knowledge", "Reduce rework", "Learn from history"],
     difference:
       "Designed from real factory experience instead of theoretical manufacturing workflows.",
-    cardImage: "/PVDAssistant/PVDAssistant.webp",
+    cardImage: "/PVDAssistant/pvd-hero.webp",
     detailImages: [
-      "/PVDAssistant/PVDAssistant1.webp",
-      "/PVDAssistant/PVDAssistant2.webp",
-      "/PVDAssistant/PVDAssistant3.webp",
+      "/PVDAssistant/pvd-phone.webp",
+      "/PVDAssistant/pvd-colorlab.webp",
+      "/PVDAssistant/pvd-history-engine.webp",
     ],
     videoSrc: "/PVDAssistant/PVDAssistantVID.mp4",
     heroLine: "Factory knowledge captured before it disappears.",

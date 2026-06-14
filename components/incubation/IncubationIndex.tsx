@@ -1,6 +1,5 @@
-
-
 import Link from "next/link";
+import Image from "next/image";
 
 const specimens = [
   {
@@ -9,6 +8,7 @@ const specimens = [
     status: "Deployed",
     classification: "Family Systems",
     href: "/incubation/grocerymaster",
+    image: "/mobile/grocerymaster-thumb.webp",
     summary:
       "A shared household grocery system grown from real family chaos, Apple review pressure, iPad redesigns, and live deployment.",
     stack: "SwiftUI / Firebase / StoreKit",
@@ -20,6 +20,7 @@ const specimens = [
     status: "Deployed",
     classification: "Industrial Intelligence",
     href: "/incubation/pvdassistant",
+    image: "/PVDAssistant/pvd-hero.webp",
     summary:
       "A factory-floor assistant for PVD coating runs, color data, machine history, process notes, and operator knowledge preservation.",
     stack: "SwiftUI / Historical Engine / Color Lab",
@@ -31,6 +32,7 @@ const specimens = [
     status: "Incubating",
     classification: "AI Memory System",
     href: "/incubation/memoir",
+    image: "/mobile/memoir-thumb.webp",
     summary:
       "A private memory book system that turns spoken memories into polished Echoes and grows into one personal memoir.",
     stack: "SwiftUI / CloudKit / OpenAI Relay",
@@ -42,6 +44,7 @@ const specimens = [
     status: "Incubating",
     classification: "Financial Forecasting",
     href: "/incubation/cashcast",
+    image: "/mobile/cashcast-thumb.webp",
     summary:
       "A forward-looking cash-flow simulator for testing financial decisions before they become real-life pressure.",
     stack: "SwiftUI / Forecast Engine / What-if Simulator",
@@ -53,6 +56,7 @@ const specimens = [
     status: "Experimental",
     classification: "Repair Workflow",
     href: "/incubation/gamarepair",
+    image: "/mobile/mobile-hero-terminal.webp",
     summary:
       "A repair workflow concept for jobs, parts, customer notes, photos, status changes, and messy real-world repair history.",
     stack: "Workflow Engine / Job History / Notes",
@@ -64,6 +68,7 @@ const specimens = [
     status: "Experimental",
     classification: "Fast Expense Capture",
     href: "/incubation/expensetrackwatch",
+    image: "/mobile/mobile-hero-terminal.webp",
     summary:
       "A watch-first expense capture experiment focused on speed, habit, and recording small spending before it disappears.",
     stack: "Watch-first UI / Micro Capture / Finance Companion",
@@ -75,6 +80,7 @@ const specimens = [
     status: "Experimental",
     classification: "Strategy World Builder",
     href: "/incubation/tensland",
+    image: "/mobile/mobile-hero-terminal.webp",
     summary:
       "A strategy-world experiment where maps, factions, resources, and rules grow into a playable system.",
     stack: "World Engine / Simulation / Game Systems",
@@ -86,6 +92,7 @@ const specimens = [
     status: "Experimental",
     classification: "Unknown Systems",
     href: "/incubation/void",
+    image: "/mobile/mobile-hero-terminal.webp",
     summary:
       "A strange research space for AI interfaces, prototype workflows, and systems that do not yet fit normal software categories.",
     stack: "AI Experiments / Interface Research / Unknown",
@@ -192,7 +199,17 @@ export default function IncubationIndex() {
                   </span>
                 </div>
 
-                <p className="mt-6 min-h-[96px] text-sm leading-relaxed text-white/64">
+                <div className="mt-6 overflow-hidden rounded-[24px] border border-white/10 bg-black/24">
+                  <Image
+                    src={specimen.image}
+                    alt={`${specimen.name} incubation preview`}
+                    width={1200}
+                    height={800}
+                    className="h-36 w-full object-cover transition duration-500 group-hover:scale-[1.035]"
+                  />
+                </div>
+
+                <p className="mt-5 min-h-[96px] text-sm leading-relaxed text-white/64">
                   {specimen.summary}
                 </p>
 

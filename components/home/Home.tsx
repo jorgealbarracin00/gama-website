@@ -155,11 +155,11 @@ const specimens: Specimen[] = [
     principles: ["User-owned memories", "Meaning over transcript", "Legacy without social noise"],
     difference:
       "Memoir is not a journaling app, a social feed, or a folder of recordings. It is a private memory workshop where spoken stories become a structured book.",
-    cardImage: "/Memoir/memoir-hero.webp",
+    cardImage: "/memoir/memoir-hero.webp",
     detailImages: [
-      "/Memoir/memoir-phone.webp",
-      "/Memoir/memoir-book.webp",
-      "/Memoir/memoir-echoes.webp",
+      "/memoir/memoir-phone.webp",
+      "/memoir/memoir-book.webp",
+      "/memoir/memoir-echoes.webp",
     ],
     heroLine: "Every life deserves a book.",
     origin:

@@ -292,7 +292,7 @@ export default function HomeSheet({
                     alt="PVD Assistant App Store preview"
                     width={1600}
                     height={900}
-                    className="aspect-video w-full animate-pulse object-cover"
+                    className="aspect-video w-full animate-pulse object-contain bg-[#020617]"
                   />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(34,211,238,0.08),transparent_44%)]" />
                   <div className="absolute bottom-4 left-4 rounded-full border border-emerald-200/30 bg-emerald-400/16 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-100 shadow-[0_0_28px_rgba(52,211,153,0.22)] backdrop-blur-md md:bottom-6 md:left-6 md:text-xs">

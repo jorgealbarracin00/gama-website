@@ -284,21 +284,42 @@ export default function HomeSheet({
               </div>
             )}
 
-            {selectedSpecimen.videoSrc && (
-              <div className="mt-14 overflow-hidden rounded-[34px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
-                <video
-                  src={selectedSpecimen.videoSrc}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="aspect-video w-full rounded-[26px] bg-black object-cover"
-                />
-                <p className="mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
-                  Deployment loop
+            {selectedSpecimen.name === "PVD Assistant" ? (
+              <div className="mt-14 overflow-hidden rounded-[34px] border border-cyan-200/18 bg-black/24 p-3 shadow-[0_18px_50px_rgba(34,211,238,0.18)]">
+                <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-black">
+                  <Image
+                    src="/PVDAssistant/PVD Assistant-VID.webp"
+                    alt="PVD Assistant App Store preview"
+                    width={1600}
+                    height={900}
+                    className="aspect-video w-full animate-pulse object-cover"
+                  />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(34,211,238,0.08),transparent_44%)]" />
+                  <div className="absolute bottom-4 left-4 rounded-full border border-emerald-200/30 bg-emerald-400/16 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-100 shadow-[0_0_28px_rgba(52,211,153,0.22)] backdrop-blur-md md:bottom-6 md:left-6 md:text-xs">
+                    Now in App Store
+                  </div>
+                </div>
+                <p className="mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-100/62">
+                  Deployment status
                 </p>
               </div>
+            ) : (
+              selectedSpecimen.videoSrc && (
+                <div className="mt-14 overflow-hidden rounded-[34px] border border-white/12 bg-black/24 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
+                  <video
+                    src={selectedSpecimen.videoSrc}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="aspect-video w-full rounded-[26px] bg-black object-cover"
+                  />
+                  <p className="mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/48">
+                    Deployment loop
+                  </p>
+                </div>
+              )
             )}
 
             <div className="mt-10 flex flex-wrap gap-3">

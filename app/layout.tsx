@@ -24,9 +24,26 @@ export const metadata: Metadata = {
     "Gama Dynamics app laboratory, incubation chamber, and deployed project index.",
 
   icons: {
-    icon: "/11-gama-favicon-32.webp",
-    shortcut: "/11-gama-favicon-32.webp",
-    apple: "/13-gama-apple-touch-icon.png",
+    icon: [
+      {
+        url: "/11-gama-favicon-32.webp",
+        type: "image/webp",
+        sizes: "32x32",
+      },
+    ],
+    shortcut: [
+      {
+        url: "/11-gama-favicon-32.webp",
+        type: "image/webp",
+        sizes: "32x32",
+      },
+    ],
+    apple: [
+      {
+        url: "/13-gama-apple-touch-icon.png",
+        sizes: "180x180",
+      },
+    ],
   },
 };
 

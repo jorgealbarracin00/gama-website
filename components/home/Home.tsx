@@ -150,11 +150,52 @@ const specimens: Specimen[] = [
     href: "https://memoir.gamadynamics.com.au",
     incubationHref: "/incubation/memoir",
     summary:
-      "Memoir helps people record spoken memories and transform them into polished personal stories that can grow into a private life book.",
-    features: ["Voice-to-memory creation", "AI-polished Echoes", "Personal memoir structure"],
-    principles: ["User-owned memories", "Story over transcript", "Private by design"],
+      "Memoir turns spoken memories into polished Echoes that can grow into one private life book for a person or family.",
+    features: ["Voice-to-memory creation", "AI-polished Echoes", "Private memoir structure"],
+    principles: ["User-owned memories", "Meaning over transcript", "Legacy without social noise"],
     difference:
-      "Memoir is not a social network. It is a private place for memories to become a book.",
+      "Memoir is not a journaling app, a social feed, or a folder of recordings. It is a private memory workshop where spoken stories become a structured book.",
+    cardImage: "/Memoir/memoir-hero.webp",
+    detailImages: [
+      "/Memoir/memoir-phone.webp",
+      "/Memoir/memoir-book.webp",
+      "/Memoir/memoir-echoes.webp",
+    ],
+    heroLine: "Every life deserves a book.",
+    origin:
+      "Memoir started from a very human problem: most people do not write their life stories. They tell them casually, during family conversations, while walking, cooking, travelling, or remembering someone. Those stories are rich, but they are fragile. If nobody captures them, they slowly disappear.",
+    buildStory:
+      "The first idea was simple: record a memory and keep it. But a raw recording is not a book. A transcript is not a story. The project evolved into a process where someone can speak naturally, the system listens, extracts the meaning, shapes the memory into an Echo, and gradually organises those Echoes into chapters that feel like a real memoir.",
+    challenges: [
+      "Raw voice recordings are emotional but hard to reread later.",
+      "Automatic transcripts capture words, but not always rhythm, context, or meaning.",
+      "AI can easily over-polish a memory and make it stop sounding like the person who lived it.",
+      "A book structure needs order, chapters, tags, people, places, and time without making the user feel like they are filling a database.",
+      "Private memories need a different attitude from normal apps: they should not feel like content made for engagement.",
+    ],
+    evolution: [
+      "V0.00001: a voice recorder concept for preserving spoken memories.",
+      "V0.1: transcript experiments and early story-cleaning tests.",
+      "V0.2: Echo generation, where one spoken memory becomes one polished story entry.",
+      "V0.4: people, places, tags, and time-period ideas to help memories find their natural position.",
+      "V0.5: narrator voice profile concepts, so the writing improves without replacing the storyteller.",
+      "Current: shaping the experience from scattered Echoes into one private memoir book.",
+    ],
+    currentStage:
+      "Incubating system. The core direction is clear: capture memories through voice, turn them into Echoes, and build a memoir around them. The current work is focused on making the book experience feel natural, private, and emotionally valuable.",
+    whatItDoes:
+      "Memoir lets a person record a spoken memory, review the transcript, create a polished Echo, and gradually build a private book from those Echoes. The system can organise memories by chapters, tags, people, places, and time, while keeping the experience closer to storytelling than data entry.",
+    whoItHelps:
+      "It helps parents, grandparents, families, migrants, storytellers, and anyone who wants to preserve their life in more than photos. It is also for people who have stories but do not see themselves as writers.",
+    uniqueAdvantages: [
+      "Voice-first creation, because many memories are easier to speak than type.",
+      "Echoes are shaped as stories, not dumped as raw transcripts.",
+      "The memoir grows gradually instead of asking the user to write a whole book at once.",
+      "The process is designed to protect the storyteller's voice instead of replacing it with generic AI writing.",
+      "Private by design: the product is about legacy, not likes, feeds, or public posting.",
+      "The structure can remember people, places, tags, and time periods without exposing the full internal process.",
+      "Built around emotional usefulness: helping future family members understand the person behind the memories.",
+    ],
     tone:
       "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
   },

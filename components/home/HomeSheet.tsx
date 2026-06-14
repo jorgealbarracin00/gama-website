@@ -133,7 +133,7 @@ export default function HomeSheet({
             {selectedSpecimen.buildStory && (
               <div className="mt-10 border-l border-white/14 pl-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/86">
-                  How it was built
+                  How the process works
                 </p>
                 <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
                   {selectedSpecimen.buildStory}
@@ -225,7 +225,7 @@ export default function HomeSheet({
 
             <div className="mt-10 border-l border-cyan-200/24 pl-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200/90">
-                What makes it different
+                What makes us different
               </p>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/68 md:text-lg">
                 {selectedSpecimen.difference}
@@ -249,7 +249,7 @@ export default function HomeSheet({
               <div className="mt-10 grid gap-6 md:grid-cols-2">
                 <div className="rounded-[28px] border border-white/12 bg-white/[0.045] p-6">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/92">
-                    Problems faced
+                    Problems we tried to solve
                   </p>
                   <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/66 md:text-base">
                     {selectedSpecimen.challenges.map((challenge) => (
@@ -327,7 +327,7 @@ export default function HomeSheet({
                 href={selectedSpecimen.incubationHref}
                 className="rounded-full border border-white/18 bg-white/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white/88 transition hover:bg-white/18"
               >
-                Open incubator file
+                Open incubation chamber
               </Link>
               <a
                 href={selectedSpecimen.status === "live" ? selectedSpecimen.href : selectedSpecimen.incubationHref}
@@ -335,7 +335,7 @@ export default function HomeSheet({
                 rel={selectedSpecimen.status === "live" ? "noopener noreferrer" : undefined}
                 className="rounded-full border border-cyan-200/24 bg-cyan-300/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100 transition hover:bg-cyan-300/16"
               >
-                {selectedSpecimen.status === "live" ? "Open app site" : "View build notes"}
+                {selectedSpecimen.status === "live" ? "Open app site" : "View incubation notes"}
               </a>
             </div>
           </div>

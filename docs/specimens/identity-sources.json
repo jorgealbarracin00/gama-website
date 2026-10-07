@@ -1,0 +1,242 @@
+{
+  "specimen": "GAMA-005",
+  "inspectedAt": "2026-10-08",
+  "authority": "Current local implementation for technical claims; public live Coco UI for screenshots; user brief for creative direction and status",
+  "files": [
+    {
+      "source": "identity-service",
+      "path": "src/identity/domain/human-identity.ts",
+      "sha256": "d471a009a88c69d185f8666d9ca07fe19b1c8f14917b9f2bffe81b4baa607875"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/federated/application/authenticate-federated.ts",
+      "sha256": "3cc00166e699700ea8d93996a5d3f1af724c850b6ac3d315c900f9d64be32b47"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/federated/application/resolve-federated-identity.ts",
+      "sha256": "2e1cc1c3197a1126f37512667c6e749d2261ecf188bfd96f9bb9a2da75ff0afa"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/federated/application/manage-federated-authentication-methods.ts",
+      "sha256": "424fa781c13d94dd439c24551ec1ed7eebca1b186f1e8968dcec686f5bdb2184"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/email-security/application.ts",
+      "sha256": "592eb95befc4a7aeffb4323728b7f6902c966c27346881905fcf2aa927c5fb41"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/federated/adapters/apple-identity-token-verifier.ts",
+      "sha256": "143f477ec5ce2da6c5f859da6b4a4ce65e099cebf70dbbab46bf5946e2bf3b92"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/authentication/federated/adapters/google-identity-token-verifier.ts",
+      "sha256": "a9504f54a508976bc6462bf11662e8b7683dfe95487fc6a1bf66efb8aae15eb9"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/sessions/domain/session.ts",
+      "sha256": "5ae6fb855b0a0f6609a5c3f68cda0d4c73429edce81dca370963225848f8ab83"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/sessions/application/use-cases.ts",
+      "sha256": "85c0e17476009b02593131d401d8300ea5d8c3094bc508c37b06d5511c3defc9"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/infrastructure/postgres/postgres-human-identity-repository.ts",
+      "sha256": "e1b37674ffa5af0e668223528575034ed0a2d32c0107cb1554f7854ba0dcbdd0"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/infrastructure/postgres/postgres-session-repository.ts",
+      "sha256": "c3dd6b9a651bb7dde6f49dd7ec722e3f6caa450c13f280b1d9a6c7c76cc373e4"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/control-plane/application/control-plane.ts",
+      "sha256": "f60d827811fac629342567d47e572026683cdc881e93e4d6e4660c38fa26dda9"
+    },
+    {
+      "source": "identity-service",
+      "path": "src/config/env.ts",
+      "sha256": "33a868c25f308a6b14b715299238a6b6f58d0a4877b86dceb5902e7d4e27e3bf"
+    },
+    {
+      "source": "identity-service",
+      "path": "test/authentication/federated/federated-authentication.test.ts",
+      "sha256": "c2fbcc19cb849d71cb63b402e2620b5363dc0deda1e74e8113bab62c4e6d9027"
+    },
+    {
+      "source": "identity-service",
+      "path": "test/api/federated-account-linking-routes.test.ts",
+      "sha256": "4aa2e6260d4ee76b0bdd564471b74bb44c86a205fc325614d06f0783b49fd3e3"
+    },
+    {
+      "source": "identity-service",
+      "path": "test/sessions/session.test.ts",
+      "sha256": "bc45487c0bece4a724eb66deb6cb65c1e3234bf82a72758119a7d015d6d189f1"
+    },
+    {
+      "source": "identity-service",
+      "path": "test/config/env.test.ts",
+      "sha256": "e617c25fd8f0ce373ab70dd2a9145db6da592208b3c6e6bb07a584f81f69f81f"
+    },
+    {
+      "source": "identity-kit",
+      "path": "Package.swift",
+      "sha256": "aea4870f06ddb21cfb4eab0e997b6aec71cc49bb2e3625996841a93a33623cf8"
+    },
+    {
+      "source": "identity-kit",
+      "path": "CHANGELOG.md",
+      "sha256": "8e32baf204ffae4649fa985e79d088dc6882d6a367f261f457553737345e32b5"
+    },
+    {
+      "source": "identity-kit",
+      "path": "Sources/GAMAIdentityKit/Authentication/GAMAIdentityClient.swift",
+      "sha256": "fd4edee9c978caafab9edc85e7ed2bbcaaa6b5b0bec5d051677eb738975de205"
+    },
+    {
+      "source": "identity-kit",
+      "path": "Sources/GAMAIdentityKit/Storage/KeychainSessionStore.swift",
+      "sha256": "abca365d0b8e0912c3f852f5223c9379fdd4ef997f94f787414e870ca135b8f9"
+    },
+    {
+      "source": "identity-kit",
+      "path": "Tests/GAMAIdentityKitTests/GAMAIdentityKitTests.swift",
+      "sha256": "efabb9e50b1d56b11e64078132a1a3cda866d0774392bc52c850f77b9c937531"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/lib/auth.ts",
+      "sha256": "56dae1e7860c86a833018ad3e6dd3c0db10c0aa29c33f853d5854e83957b98fa"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/lib/auth-shared.ts",
+      "sha256": "0646804382f7658b1e83f1a1891e65a12a7c4d6f46e111bd7c61145908b1aab6"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/api/auth/login/route.ts",
+      "sha256": "d5e2889eb40825646fd4e4629b51fb42f57e752bae2ed820d63592b16a9d3b66"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/api/auth/logout/route.ts",
+      "sha256": "d6edac3cf8d8166363e0acc2cfe2c2cd90b691a02411739f8b24dcb402628534"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/api/auth/apple/callback/route.ts",
+      "sha256": "17c60450de3df19c7f62c7e2311d8e7afe766bd3aee69e4c0461d67300254da8"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/api/auth/google/callback/route.ts",
+      "sha256": "b19afe7a050809eac90acaaab029f3e3b20f6f9e3fa152dafad674f81f551a88"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/account/sign-in/page.tsx",
+      "sha256": "e22ca938329db0813ec5825dff09678636586eb44f5d5128e450f84d7f7e1265"
+    },
+    {
+      "source": "coco-web",
+      "path": "src/app/account/forgot-password/page.tsx",
+      "sha256": "fe63b2afd4c00cc5bbd7f999d8a0d8945c118bdbd53a95b7fdc58b0fd8aae7f5"
+    },
+    {
+      "source": "coco-native",
+      "path": "Core/Authentication/GAMAAuthenticationProvider.swift",
+      "sha256": "624dc7476656e0ca41072dc1433187b5c4db288a31843f0dde0687905a5ae826"
+    },
+    {
+      "source": "grocery-next",
+      "path": "Grocery NEXT/Core/Identity/IdentitySessionProviding.swift",
+      "sha256": "060275d64215ea6c69d9e3ac23a24685eb9e6367301d9f2a6b80756821a60b21"
+    },
+    {
+      "source": "grocery-next",
+      "path": "Backend/src/application/grocery-entitlement-service.ts",
+      "sha256": "b352c290baaec7127478c3d5fd533b75520cd481c567f8dd10d5c5fed268a102"
+    },
+    {
+      "source": "grocery-next",
+      "path": "Backend/src/domain/subscription-models.ts",
+      "sha256": "4235f5fe615be463a607de96dfcbd86abbaf25781ce53377e9f52c4c070feae0"
+    },
+    {
+      "source": "grocerymaster",
+      "path": "Core/AuthenticationStore.swift",
+      "sha256": "b40d46a33f0b0b71ff8c5131f75e53b6ec220a944e8fc4b1979eca04bf7d2fcb"
+    },
+    {
+      "source": "memoir",
+      "path": "Storage/CloudSyncFoundation.swift",
+      "sha256": "60466f0b15095ee5b1f3ef5597957fe12ef90d1e9d3dd65e6aa8957dd0aa75d2"
+    },
+    {
+      "source": "tara",
+      "path": "TARA/SettingsView.swift",
+      "sha256": "eb8feb68592ad6ec89777a0b71f0f36fc6677ee0084522052ffabe7bac97b169"
+    }
+  ],
+  "captures": [
+    {
+      "file": "public/specimens/identity/captures/coco-sign-in.webp",
+      "sourceUrl": "https://cocothellama.com/account/sign-in",
+      "originalSha256": "d14dff5f1cc9105805eef862b6016ad46ddf36e6ee774b4fd9a4096ebb7e5815",
+      "sha256": "8e2ce351d286374851000e2283df758dffab239ed8fa244d4168e89dbd23e8b2",
+      "date": "2026-10-08",
+      "method": "CUA live browser screenshot; full page; WebP encoding only",
+      "scope": "Public signed-out interface. No account data, credentials or tokens. Empty fields. No form submitted."
+    },
+    {
+      "file": "public/specimens/identity/captures/coco-recovery.webp",
+      "sourceUrl": "https://cocothellama.com/account/forgot-password",
+      "originalSha256": "ff5ee601fef367c1af2f37e5b37e8adb2fa0dec84b4241f10cfb0d775d2ccfaa",
+      "sha256": "ab01874f48b962ad918f19984e73f6518bca842a4b2c4275aa5dca85d0ad70f2",
+      "date": "2026-10-08",
+      "method": "CUA live browser screenshot; full page; WebP encoding only",
+      "scope": "Public signed-out interface. No account data, credentials or tokens. Empty fields. No form submitted."
+    }
+  ],
+  "sourceTestRun": {
+    "command": "node --import tsx --test test/authentication/federated/federated-authentication.test.ts test/api/federated-account-linking-routes.test.ts test/sessions/session.test.ts test/config/env.test.ts",
+    "tests": 40,
+    "passed": 40,
+    "failed": 0,
+    "skipped": 0,
+    "sdkTests": "Inspected, not executed",
+    "log": "Local QA: /tmp/identity-source-tests.log"
+  },
+  "adoptionBoundaries": [
+    "Coco website uses GAMA Identity; native Backstage authentication uses shared provider logic.",
+    "Grocery NEXT uses IdentityKit and separate principal / purchase / environment records; it is distinct from approved Specimen 001.",
+    "Approved GroceryMaster source uses Firebase Auth.",
+    "Memoir Echoes and TARA cloud-data continuity uses Apple / CloudKit.",
+    "No automatic cross-application session portability demonstrated.",
+    "Apple/Google provider credentials are explicitly linked; email text alone does not merge principals.",
+    "StoreKit purchase identity is a separate product mapping, not a GAMA principal."
+  ],
+  "failureAuthority": {
+    "the-twin": "Explicit service regression coverage for matching emails and provider subjects; no silent merges.",
+    "expired-bridge": "Renewal rotation, revoked/expired/reused credential tests; SDK concurrent-401 handling inspected.",
+    "four-passports": "Documented production response compatibility fixes in IdentityKit 1.0.2 and 1.0.3. Four documents are a metaphor, not four real product incidents.",
+    "wrong-environment": "Provider, origin and persistence configuration regression tests; not presented as a confirmed outage."
+  },
+  "publicationBoundary": "No production account data or operational configuration values read into website assets. Source examples are paraphrased, account demonstration is fictional. Artwork is conceptual; evolution is not a dated release chronology.",
+  "deploymentApproval": {
+    "date": "2026-10-08",
+    "instruction": "deploy the finished task at the end.",
+    "scope": "Publish the completed GAMA Identity Specimen 005 website change through the existing production integration after validation."
+  }
+}

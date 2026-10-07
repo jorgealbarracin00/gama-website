@@ -1,0 +1,343 @@
+{
+  "specimen": "GAMA-005",
+  "identityParticle": "Warm amber-white nucleus with fine halo; aqua infrastructure",
+  "artDirection": "Quiet architectural interchange; graphite, smoked glass, controlled routing; no security theatre",
+  "assets": [
+    {
+      "key": "hero",
+      "filename": "one-person-many-products-v1.webp",
+      "purpose": "hero",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 01 / HERO: wide eye-level view into a monumental but quiet central interchange, a single warm identity nucleus hovering over a circular basalt island in the centre. FOUR distinctly different destination chambers arranged around this hub and clearly visible: a green grocery/kitchen world with produce silhouettes; an amber paper-and-book archive; a soft violet chamber with a graceful sequence of time rings; a warm cream/coral children\u2019s clothing boutique. No competing orbs. Thin purposeful aqua pathways on the floor connect the nucleus to the four worlds through controlled doorways. Four worlds, one unchanged person. Architecture contains the complexity. Broad cinematic composition with the central nucleus and the nearest gateways readable in a narrow mobile crop. Dark upper area, warm subject strong enough to read, subtle volumetric daylight, rich tactile detail without visual clutter. No writing in image.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-894d4615-a285-4000-84b7-a5071449abfb.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "31d108a8a1a23ebe4e19a7c963bdc52be1be3e682d33c572fa0a03bdba64f84b",
+      "publishedPath": "/specimens/identity/one-person-many-products-v1.webp"
+    },
+    {
+      "key": "origin",
+      "filename": "four-separate-gates-v1.webp",
+      "purpose": "origin",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 02 / FOUR SEPARATE GATES: a long graphite stone concourse with four detached small doorway structures: green grocery shelves, amber library books, a violet time-ring room and a cream/coral boutique. Deliberate gaps in the floor paths, no central shared bridge yet. ONE amber-white nucleus with fine double halo in the foreground facing these disconnected chambers. Elegant, sparse, a slightly elevated three-quarter camera. Fragmentation is legible through architecture, not chaos.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-7ce5373b-d98c-42a7-be0e-91bc9b4411e9.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "bf5d3288ca72c3a2d923fa99b13c3a0590362626b9a3d5a1454bef2e6347e073",
+      "publishedPath": "/specimens/identity/four-separate-gates-v1.webp"
+    },
+    {
+      "key": "doors",
+      "filename": "many-doors-v1.webp",
+      "purpose": "doors",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 03 / MANY DOORS, ONE PERSON: three distinct slim entry portals on a dark stone terrace, one pearly white arch, one cobalt rectangular frame, one pale aqua frame. Their fine lit floor routes converge at ONE warm amber-white nucleus with double halo above a single basalt hub, then one route continues into the distance. Elevated three-quarter view, very clear convergence geometry. These are provider metaphors, not logos. No text, no duplicate nuclei, no shields. Consent and explicit convergence rather than automatic merging.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-6ee755ce-696d-4c95-b952-665f9816dfad.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "d4514e5395dc0b458de97e79e6086cd0e996da2b666eb8cb42e8e4d8cfa1bb84",
+      "publishedPath": "/specimens/identity/many-doors-v1.webp"
+    },
+    {
+      "key": "principal",
+      "filename": "principal-core-v1.webp",
+      "purpose": "principal",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 04 / THE PRINCIPAL CORE: intimate close-up of ONE small warm amber-white spherical nucleus with double halo, suspended inside a generous circular architectural opening. Outer smoked glass panels and slender cool aqua routing channels change position around it. The amber nucleus remains simple, human, unaltered. Restrained dark grey stone, brushed metal rim, precise joints, beautiful broad shadow. Eye-level central composition, physical macro model photography, one subject and a few layers.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-c6936c77-8160-4b67-bb43-b8891506f48e.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "25b478d60e2a4fb90c968193e502f05e91b04489c0faaee6adf4b86fd4cd2c96",
+      "publishedPath": "/specimens/identity/principal-core-v1.webp"
+    },
+    {
+      "key": "session",
+      "filename": "session-continuity-v1.webp",
+      "purpose": "session",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 05 / SESSION CONTINUITY: a quiet continuous arcing bridge made of modular graphite stone segments over dark still water. One small warm amber-white nucleus with a fine double halo hovers on the bridge midpoint. Behind it an old bridge segment is gently lowered while a fresh segment is already in place ahead, making the route continuous without drama. Cool aqua edge light, sophisticated infrastructure, graceful curve, side perspective. Continuity without an infinite-session promise. No text or screens.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-7608711f-6731-4cf4-8e39-18fd2a2a040e.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "b85a2ea897d2c41d57a939da7370470fc77fedf23bc1e77c9a3badba5bc32bf1",
+      "publishedPath": "/specimens/identity/session-continuity-v1.webp"
+    },
+    {
+      "key": "architecture",
+      "filename": "shared-layer-v1.webp",
+      "purpose": "architecture",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 06 / SHARED IDENTITY ARCHITECTURE: precise elevated architectural cutaway, three entrance channels passing through an outer smoked glass boundary into a central circular basalt court. ONE amber-white nucleus with double halo floats in the court. Four thin aqua routes continue outward through separate controlled apertures to four small distinct destination terraces, green, paper amber, violet, coral. Clear hierarchy of outside, centre, destinations. A beautiful physical infrastructure model, not a software diagram. No text. Sparse legible routing, no data exploding in every direction.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-efdfbaa2-665b-4452-bfbb-0980e4722d14.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "2049aa6e1e761b21387a2c4edb56df29f2dd7390b0deacaac40df3eba2c4d17b",
+      "publishedPath": "/specimens/identity/shared-layer-v1.webp"
+    },
+    {
+      "key": "kit",
+      "filename": "shared-kit-v1.webp",
+      "purpose": "kit",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 07 / THE SHARED KIT: a tactile architectural fabrication table of dark basalt. One elegantly engineered reusable circular gateway module in the foreground, with four matching modules installed into four different miniature destination structures behind it. Aqua joints reveal the same shared pattern. ONE warm amber-white nucleus double halo beside the foreground module. Fine brushed metal, clean structural discipline. Reuse of one dependable piece rather than four improvised mechanisms. Intimate close-up, no text, no screens, no toy aesthetic.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-d75c40c5-0d5b-42f5-8fa5-2cde48d03729.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "5fea312fb5142f7387c58e21fa8674b939d8edf534ba819fb6f05c65d68afd34",
+      "publishedPath": "/specimens/identity/shared-kit-v1.webp"
+    },
+    {
+      "key": "entitlement",
+      "filename": "identity-and-access-v1.webp",
+      "purpose": "entitlement",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 08 / IDENTITY AND ENTITLEMENT: a warm amber-white nucleus with fine double halo already recognised in a central circular concourse. Beyond it TWO independent destination doorways: one quietly open with a fine aqua access route, another deliberately closed by a single smoked glass panel with a visible separate control seam. The nucleus remains identical regardless of which destination is open. Identity is the centre, permission belongs to the destination. Asymmetrical precise composition, sophisticated calm architecture, no labels or padlocks.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-eb41fd0f-9123-4b1b-a910-c0c7cb313e31.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "7e06772651bbe8b9f959a2495b2c36e87211e3cd3f6bdf78baa3d83311105c27",
+      "publishedPath": "/specimens/identity/identity-and-access-v1.webp"
+    },
+    {
+      "key": "twins",
+      "filename": "failure-the-twin-v1.webp",
+      "purpose": "twins",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 09 / FAILURE: THE TWIN. Exactly TWO amber-white nuclei, visually indistinguishable, each with fine double halo, hover on two separate basalt islands. One island is connected to a pearly white provider gate, the other to a cobalt provider gate. Two identical blank cream nameplates stand beside the islands but NO readable text. A deliberate narrow channel between the islands prevents them merging merely because they look alike. Show the ambiguity quietly and elegantly. Symmetrical medium camera, each identity is distinct, no dystopia.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-d70607a6-6f9a-4e11-8255-2e498259f649.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "16c52f3c50d7bee9c51169349ced505e15c95685d5c955cab696a2d0755cde62",
+      "publishedPath": "/specimens/identity/failure-the-twin-v1.webp"
+    },
+    {
+      "key": "expired",
+      "filename": "failure-expired-bridge-v1.webp",
+      "purpose": "expired",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 10 / FAILURE: THE EXPIRED BRIDGE. One warm amber-white nucleus double halo has reached a destination doorway across a graphite bridge; behind it one bridge segment has receded, leaving a clear short gap and an unlit aqua edge. A successful arrival with broken continuity. Graceful infrastructure above calm dark water, not a disaster. No fallen figure, no alarms, no debris. The gap must be evident at small scale. Three-quarter low perspective, nucleus remains visible.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-1f863034-e2c8-4201-8a2f-195b83e4a656.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "381364fd75aad36d093c16b280801b3bd8930d59ee06f8d8a68f53d72c79dcd1",
+      "publishedPath": "/specimens/identity/failure-expired-bridge-v1.webp"
+    },
+    {
+      "key": "passports",
+      "filename": "failure-four-passports-v1.webp",
+      "purpose": "passports",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 11 / FAILURE: THE FOUR PASSPORTS. Four elegant blank passport-like slim identity documents on a graphite architectural desk, each fitted to a DIFFERENT incompatible doorway slot: green, amber, violet, coral. ONE warm amber-white nucleus double halo hovers above them, one person forced to carry four separate technical representations. Tactile translucent cards with blank name areas, no readable text, no literal government seals, no personal data. Tight still-life camera, refined physical model, duplication is the story.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-485631e1-0d2a-4309-9c58-14fc6a333022.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "bb2a7fde1558a9aeb47da7c175801a408dff85d40608dbe092de4dd1676683bc",
+      "publishedPath": "/specimens/identity/failure-four-passports-v1.webp"
+    },
+    {
+      "key": "environment",
+      "filename": "failure-wrong-environment-v1.webp",
+      "purpose": "environment",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 12 / FAILURE: THE WRONG ENVIRONMENT. Two nearly identical graphite gateways side by side, isolated on two parallel stone lanes separated by a clear glass divider. LEFT gate has a subtle blueprint/grid etched on its structure to signify a rehearsal model, RIGHT is a fully finished dark stone structure to signify live infrastructure. Aqua path on the left stops at the divider, never crosses into right. ONE small amber-white nucleus with double halo stands at the fork before the gates. Clear deliberate separation, no danger, no alarms, no lettering. Architectural medium-wide view.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-d92b922b-9096-4f78-b021-31bf3230a383.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "bd1d80003c53d1df5ed7fab9fdc7de1b1c0f678b3a999fdb52aece85a4bc9ff2",
+      "publishedPath": "/specimens/identity/failure-wrong-environment-v1.webp"
+    },
+    {
+      "key": "recovery",
+      "filename": "path-back-v1.webp",
+      "purpose": "recovery",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 13 / RECOVERY, A PATH BACK: a calm side entrance rejoining a main circular concourse. A short gently lit aqua return path emerges from a smaller outer arch and meets the same central amber-white identity nucleus with fine double halo. One former unlit path in the background remains separate. The system lets a person return without reinventing them. Quiet architecture, dark basalt and smoked glass, soft dawn light, close readable composition. No mail envelopes, no text, no UI, no locks.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-1a5d19a0-8d35-437a-8dfe-e8354c1b2d3d.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "d1270f5d271a05f7a35855839c95b49bf8ceb8dc6666b34afb5ad41322391410",
+      "publishedPath": "/specimens/identity/path-back-v1.webp"
+    },
+    {
+      "key": "evolution",
+      "filename": "identity-evolution-v1.webp",
+      "purpose": "evolution",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 14 / EVOLUTION OF IDENTITY: a beautiful architectural model on a graphite plinth, seven structural bays receding in a gentle curve. Early bays are small disconnected local doorways; intermediate bays acquire a shared circular hub, then reusable gateway modules and continuous lit paths; the final bay is one coherent connected architectural interchange. ONE amber-white nucleus with fine double halo sits at the curve's final focus, identity stays constant as the architecture matures. Elevated editorial model photography. No text, no numbered labels, no infographic arrows. Structural progression legible in silhouette.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-f5d968fd-9f56-44af-afc6-1b28cf517943.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "dd0b76b571a95f485ea2352f3171d5c8a724dcf3be02ffb530dd38904e453d2c",
+      "publishedPath": "/specimens/identity/identity-evolution-v1.webp"
+    },
+    {
+      "key": "invisible",
+      "filename": "invisible-infrastructure-v1.webp",
+      "purpose": "invisible",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 15 / INVISIBLE SUCCESS: a beautifully quiet dark stone gallery with a warm domestic destination visible far beyond a wide open doorway. ONE small warm amber-white nucleus with double halo moves naturally along the passage. A very fine aqua path is inset flush into the floor, barely noticeable, no devices or controls interrupt the route. Soft natural light, generous negative space, calm confidence. Infrastructure integrated so completely that the visitor scarcely notices it. No spectacle, no text.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-4c431c8e-72af-4422-b218-d807a042f1cd.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "5a8c8d7b88e503b6353b1238cd556abfefce6eeb56fe2bf9a51fadf9f7f155a4",
+      "publishedPath": "/specimens/identity/invisible-infrastructure-v1.webp"
+    },
+    {
+      "key": "final",
+      "filename": "same-human-v1.webp",
+      "purpose": "final",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic architectural artwork for GAMA Dynamics Specimen 005, GAMA Identity. Coherent world: a precise contemporary architectural model photographed like a premium film still, graphite stone, smoked glass, anodised dark metal, cool aqua routing light, small restrained cobalt and violet accents. The person is always ONE small warm amber-white spherical nucleus suspended in air, with a fine double halo, unchanged in every scene. Human scale, calm, believable materials, careful negative space, elegant engineering. No padlocks, shields, fingerprints, biometrics, hackers, code rain, server racks, security theatre, dashboards, UI, logos, charts, numbers or readable text. Illustrative physical metaphor only. Landscape 1536x1024. Scene 16 / FINAL UNIFIED ECOSYSTEM: mirror the hero's mature architectural interchange. ONE unchanged small amber-white spherical identity nucleus with fine double halo at the centre of a continuous circular basalt walkway. Around it four recognisable destination chambers: green produce/kitchen, warm paper library, violet time rings, cream/coral children's boutique. All are joined by thin deliberate aqua paths through their own boundaries. Soft morning daylight, the routes now feel natural and effortless. Restrained, no spectacle or duplicated identity, no text. Wide eye-level cinematic framing, full system visible, quiet human warmth inside precise architecture.",
+      "tool": "Built-in image_gen.imagegen",
+      "model": "Not exposed by the built-in tool",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-f46ebca1-d99e-472d-bc3c-b7bcb0a230ac.png",
+      "referenceAssets": [],
+      "productReferences": [
+        "GroceryMaster: green household world",
+        "Memoir Echoes: amber book archive",
+        "TARA: violet temporal world",
+        "Coco: cream/coral boutique"
+      ],
+      "date": "2026-10-08",
+      "revision": "v1; original conceptual scene, no product UI or operational data",
+      "kind": "conceptual artwork",
+      "sha256": "68db6287666dc1f80807d6ce03b610d70ded2685a27a4cba7f451f3b0fa25882",
+      "publishedPath": "/specimens/identity/same-human-v1.webp"
+    }
+  ]
+}

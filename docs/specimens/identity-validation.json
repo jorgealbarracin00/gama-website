@@ -1,0 +1,414 @@
+{
+  "specimen": "GAMA-005",
+  "validatedAt": "2026-10-08",
+  "state": "Validated production build; deployment authorised by user",
+  "checks": {
+    "productionBuild": "pass; Next.js 16.1.4; 13 generated pages; /incubation/identity static",
+    "lint": "pass",
+    "typescript": "pass; npx tsc --noEmit",
+    "diffWhitespace": "pass",
+    "widths": [
+      320,
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "chapterCases": [
+      {
+        "brokenLoadedImages": [],
+        "current": "01Origin",
+        "hash": "#origin",
+        "overflow": false,
+        "width": 320,
+        "chapter": "Origin"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "02Experiment",
+        "hash": "#experiment",
+        "overflow": false,
+        "width": 320,
+        "chapter": "Experiment"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "03System",
+        "hash": "#system",
+        "overflow": false,
+        "width": 320,
+        "chapter": "System"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "04Problems",
+        "hash": "#problems",
+        "overflow": false,
+        "width": 320,
+        "chapter": "Problems"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "05Solutions",
+        "hash": "#solutions",
+        "overflow": false,
+        "width": 320,
+        "chapter": "Solutions"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "06Evolution",
+        "hash": "#evolution",
+        "overflow": false,
+        "width": 320,
+        "chapter": "Evolution"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "01Origin",
+        "hash": "#origin",
+        "overflow": false,
+        "width": 390,
+        "chapter": "Origin"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "02Experiment",
+        "hash": "#experiment",
+        "overflow": false,
+        "width": 390,
+        "chapter": "Experiment"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "03System",
+        "hash": "#system",
+        "overflow": false,
+        "width": 390,
+        "chapter": "System"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "04Problems",
+        "hash": "#problems",
+        "overflow": false,
+        "width": 390,
+        "chapter": "Problems"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "05Solutions",
+        "hash": "#solutions",
+        "overflow": false,
+        "width": 390,
+        "chapter": "Solutions"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "06Evolution",
+        "hash": "#evolution",
+        "overflow": false,
+        "width": 390,
+        "chapter": "Evolution"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "01Origin",
+        "hash": "#origin",
+        "overflow": false,
+        "width": 768,
+        "chapter": "Origin"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "02Experiment",
+        "hash": "#experiment",
+        "overflow": false,
+        "width": 768,
+        "chapter": "Experiment"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "03System",
+        "hash": "#system",
+        "overflow": false,
+        "width": 768,
+        "chapter": "System"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "04Problems",
+        "hash": "#problems",
+        "overflow": false,
+        "width": 768,
+        "chapter": "Problems"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "05Solutions",
+        "hash": "#solutions",
+        "overflow": false,
+        "width": 768,
+        "chapter": "Solutions"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "06Evolution",
+        "hash": "#evolution",
+        "overflow": false,
+        "width": 768,
+        "chapter": "Evolution"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "01Origin",
+        "hash": "#origin",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "Origin"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "02Experiment",
+        "hash": "#experiment",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "Experiment"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "03System",
+        "hash": "#system",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "System"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "04Problems",
+        "hash": "#problems",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "Problems"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "05Solutions",
+        "hash": "#solutions",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "Solutions"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "06Evolution",
+        "hash": "#evolution",
+        "overflow": false,
+        "width": 1280,
+        "chapter": "Evolution"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "01Origin",
+        "hash": "#origin",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "Origin"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "02Experiment",
+        "hash": "#experiment",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "Experiment"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "03System",
+        "hash": "#system",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "System"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "04Problems",
+        "hash": "#problems",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "Problems"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "05Solutions",
+        "hash": "#solutions",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "Solutions"
+      },
+      {
+        "brokenLoadedImages": [],
+        "current": "06Evolution",
+        "hash": "#evolution",
+        "overflow": false,
+        "width": 1440,
+        "chapter": "Evolution"
+      }
+    ],
+    "keyboard": [
+      {
+        "focusVisible": true,
+        "live": "polite",
+        "outline": "3px",
+        "result": "Same fictional principalEXAMPLE-HUMANA verified Google provider relationship resolves to this example Human.Selected route: Google",
+        "selected": [
+          "02Google\u2197"
+        ]
+      },
+      {
+        "focusVisible": true,
+        "live": "polite",
+        "outline": "3px",
+        "result": "Same fictional principalEXAMPLE-HUMANThe authenticated password credential belongs to this example Human.Selected route: Email + password",
+        "selected": [
+          "03Email + password\u2197"
+        ]
+      },
+      {
+        "focusVisible": true,
+        "live": "polite",
+        "outline": "3px",
+        "result": "Same fictional principalEXAMPLE-HUMANA verified Apple provider relationship resolves to this example Human.Selected route: Apple",
+        "selected": [
+          "01Apple\u2197"
+        ]
+      },
+      {
+        "open": true,
+        "summary": "What the kit owns today"
+      },
+      {
+        "open": true,
+        "summary": "Where App Store purchases fit"
+      },
+      {
+        "open": true,
+        "summary": "Implementation evidence"
+      },
+      {
+        "open": true,
+        "summary": "Implementation evidence"
+      },
+      {
+        "open": true,
+        "summary": "Implementation evidence"
+      },
+      {
+        "open": true,
+        "summary": "Implementation evidence"
+      },
+      {
+        "open": true,
+        "summary": "Inside the evidence / What was verified"
+      }
+    ],
+    "semanticStructure": {
+      "h1": 1,
+      "chapterLinks": 6,
+      "images": 25,
+      "uniqueConceptualScenes": 16,
+      "liveCaptures": 2,
+      "failureStudies": 4,
+      "mutations": 7,
+      "emptyAlt": 0,
+      "duplicateIds": 0,
+      "politeLiveRegion": true,
+      "mutuallyExclusivePressedButtons": true,
+      "focusOutline": "3px warm outline"
+    },
+    "completeImageLoad": {
+      "rendered": 25,
+      "unloaded": 0,
+      "broken": 0
+    },
+    "contrastSamples": [
+      {
+        "foreground": "#edf1f4",
+        "background": "#0a1017",
+        "ratio": 16.82
+      },
+      {
+        "foreground": "#b4c0ca",
+        "background": "#0a1017",
+        "ratio": 10.31
+      },
+      {
+        "foreground": "#a8e9e3",
+        "background": "#101b25",
+        "ratio": 12.8
+      },
+      {
+        "foreground": "#f3c88f",
+        "background": "#0a1017",
+        "ratio": 12.25
+      },
+      {
+        "foreground": "#9baebc",
+        "background": "#0a1017",
+        "ratio": 8.34
+      },
+      {
+        "foreground": "#8ba2b3",
+        "background": "#0a1017",
+        "ratio": 7.2
+      },
+      {
+        "foreground": "#b4c0ca",
+        "background": "#101b25",
+        "ratio": 9.4
+      },
+      {
+        "foreground": "#edf1f4",
+        "background": "#233c44",
+        "ratio": 10.26
+      }
+    ],
+    "reducedMotion": "Scoped prefers-reduced-motion rule disables animation, transition and smooth scrolling; no automatic animation used",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "archive": "05 specimens; canonical deployed order 001 through 005; correct links and aqua treatment",
+    "preservation": {
+      "files": 116,
+      "changed": 0
+    },
+    "sourceRegressionTests": {
+      "passed": 40,
+      "failed": 0,
+      "sdkTests": "source inspected, not executed"
+    },
+    "homepage": "Fifth selector activates GAMA Identity briefing and links to /incubation/identity; end-of-list next controls disable correctly"
+  },
+  "proofs": {
+    "directory": "Local task QA/identity",
+    "opening": "desktop-opening.jpg",
+    "fullPage": "full-desktop-loaded.jpg",
+    "phoneOpening": "390-opening.jpg",
+    "phoneProvider": "390-provider-demo.jpg",
+    "responsive": "responsive-overview.png",
+    "homepage": "homepage-specimen-005.jpg"
+  },
+  "knownLimits": [
+    "No authenticated or cross-product account screenshots published; two public signed-out UI captures only.",
+    "GroceryMaster, Memoir Echoes and TARA are not represented as automatically sharing GAMA sessions.",
+    "Seven mutations are architectural concepts, not dated release claims.",
+    "Environment failure scene illustrates regression-tested boundaries, not a claimed production outage."
+  ],
+  "deployment": {
+    "approved": true,
+    "instruction": "deploy the finished task at the end.",
+    "method": "Existing GitHub main to Vercel production integration",
+    "liveUrl": "https://gamadynamics.com.au/incubation/identity",
+    "receipt": "Local task QA/identity/deployment.json"
+  }
+}

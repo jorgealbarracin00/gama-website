@@ -49,6 +49,8 @@ const specimens: Specimen[] = listSpecimens().map(record => {
     specimenFileFirst: true,
     tone: card.accent === "green"
       ? "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30"
+      : card.accent === "lavender"
+      ? "bg-[linear-gradient(180deg,rgba(142,111,151,0.76),rgba(74,48,73,0.72))] border border-purple-200/30"
       : "bg-[linear-gradient(180deg,rgba(142,111,76,0.72),rgba(54,44,50,0.60))] border border-amber-200/30",
   };
 });

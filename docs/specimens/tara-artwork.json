@@ -1,0 +1,211 @@
+{
+  "specimen": "GAMA-003",
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "filename": "day-with-tara-v1.webp",
+      "purpose": "Hero / morning assistant",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Morning in a premium domestic organisation station. TARA hovers beside one warm amber moment on a lavender timeline rail crossing a kitchen island. Quiet sage points behind, three smaller points ahead. A glass of water, ivory unbranded container, keys and folded bag nearby. Window light. Composition: small companion in centre-left, rail recedes to right, empty dark surface at right available for a separately mounted authentic phone.\nReference image is identity reference ONLY for the real existing TARA mascot: preserve the compact rounded lavender/plum floating capsule body, short side fins, black rounded faceplate with two white capsule eyes, and one small amber light at upper right. No mouth, nose, eyebrows, legs, hands, costume, humanoid body or redesign. Translate the exact character into softly tangible satin material, a small friendly companion about palm size. Do not copy the reference's flat background or circular disc.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-639ec4d6-5117-44fa-b8b3-4e69f2145db0.png",
+      "destination": "public/specimens/tara/day-with-tara-v1.webp",
+      "sourceReferenceAssets": [
+        "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/Assets.xcassets/AppIcon.appiconset/TARA-AppIcon.png"
+      ],
+      "mascotReferenceUsed": true,
+      "screenshotRelationship": "Authentic Today PNG mounted separately in HTML; no generated UI",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "everyday-arithmetic-v1.webp",
+      "purpose": "Origin / life coexists with schedule",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Candid cinematic domestic still life at a morning doorway. Adult in soft focus reaches for a work bag, coffee, keys, a child's small shoe and a closed ivory routine container on a narrow console. Thin frosted time rail threads naturally among these everyday objects, three quietly glowing moments. Unhurried and human. No mascot.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-c439494e-099d-4bba-8048-5375c7178d2d.png",
+      "destination": "public/specimens/tara/everyday-arithmetic-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "visible-sequence-v1.webp",
+      "purpose": "Experiment / sequence and priority",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Late-morning organisation studio. One curved satin-plum rail with five frosted markers at sequential intervals. The nearest marker softly amber and prominent, the later markers smaller and lavender. TARA floats alongside it, alert and friendly, a guide rather than an alarm. Wide cinematic depth, calm priority.\nReference image is identity reference ONLY for the real existing TARA mascot: preserve the compact rounded lavender/plum floating capsule body, short side fins, black rounded faceplate with two white capsule eyes, and one small amber light at upper right. No mouth, nose, eyebrows, legs, hands, costume, humanoid body or redesign. Translate the exact character into softly tangible satin material, a small friendly companion about palm size. Do not copy the reference's flat background or circular disc.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-3cdf7ed5-deb2-4277-818a-ab46501a5c6f.png",
+      "destination": "public/specimens/tara/visible-sequence-v1.webp",
+      "sourceReferenceAssets": [
+        "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/Assets.xcassets/AppIcon.appiconset/TARA-AppIcon.png"
+      ],
+      "mascotReferenceUsed": true,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "time-window-v1.webp",
+      "purpose": "Smart Time Bar / spatial timing",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Macro still life of one long translucent lavender-to-coral timing rail, warm amber translucent collar narrowly around a central diamond pin. A small silver bead at left indicates approaching time. Precision physical object on dark plum satin table, noon skylight, almost scientific product photography. No mascot, no numbers or text. Whole rail visible, strong central focal amber window.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-5ce45640-d96b-4f27-b09c-27c866e8b7e9.png",
+      "destination": "public/specimens/tara/time-window-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "same-identity-v1.webp",
+      "purpose": "Repeated intake / recognisable occurrences",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Three identical small frosted plum containers travel along one curved time rail, each carrying exactly the same soft teal/lavender material signature and matching embossed leaf pictogram, but in clearly different positions. One is prominent, two recede. Small neutral containers of other colours interleave. Noon studio. Visual metaphor for same item at different moments, no mascot or UI.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-101c830d-d19d-4da2-b041-540e7b09dc56.png",
+      "destination": "public/specimens/tara/same-identity-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "schedule-construction-v1.webp",
+      "purpose": "Frequency / anchor builds sequence",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Precision satin-plum worktable at midday. One amber anchor pin connects through a continuous frosted rail to evenly spaced lavender markers that curve into the distance. A single hand places the first pin; the rest already align. Minimal restrained technical elegance, warm ivory surfaces, no mascot, no numerical schedule, no pills.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-9c3e4151-d369-496f-af06-01f4c4b8de34.png",
+      "destination": "public/specimens/tara/schedule-construction-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "next-at-a-glance-v1.webp",
+      "purpose": "Widget / signal outside app",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: A slender frosted glass window in a domestic desk partition reveals one crisp amber moment on a rail, with two quieter lavender markers behind it. Keys and folded fabric nearby, early afternoon diffused light. The important thing is visible through the smallest opening. No display, screen, UI or mascot.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-436700f2-3269-49d4-8c86-e11759ff6fd4.png",
+      "destination": "public/specimens/tara/next-at-a-glance-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "failure-clone-v1.webp",
+      "purpose": "Failure 01 / conceptual identity stress study",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Evidence still life of two identical blank ivory cylinders side by side under a narrow soft inspection light, separated by a gap in a lavender rail. No identifying marks, ambiguity tangible. Afternoon shadows on plum tabletop, precise composed photograph, no mascot or text.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-6464ca4d-bd26-424b-a47a-f2b8b62ed08a.png",
+      "destination": "public/specimens/tara/failure-clone-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "failure-alarm-wall-v1.webp",
+      "purpose": "Failure 02 / conceptual equal-priority stress study",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Elegant wall of many small frosted amber light squares all equally illuminated, all demanding the same attention, with a quiet domestic chair in foreground. TARA tiny at edge looks toward the overwhelming field with alert eyes, unchanged friendly design. Restrained afternoon lighting, no emergency red, no screen cards or words.\nReference image is identity reference ONLY for the real existing TARA mascot: preserve the compact rounded lavender/plum floating capsule body, short side fins, black rounded faceplate with two white capsule eyes, and one small amber light at upper right. No mouth, nose, eyebrows, legs, hands, costume, humanoid body or redesign. Translate the exact character into softly tangible satin material, a small friendly companion about palm size. Do not copy the reference's flat background or circular disc.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-9aa6265c-2549-469b-a037-17009191a288.png",
+      "destination": "public/specimens/tara/failure-alarm-wall-v1.webp",
+      "sourceReferenceAssets": [
+        "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/Assets.xcassets/AppIcon.appiconset/TARA-AppIcon.png"
+      ],
+      "mascotReferenceUsed": true,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "failure-broken-rhythm-v1.webp",
+      "purpose": "Failure 03 / conceptual recurrence stress study",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Frosted lavender timeline rail broken into isolated sections, small satin markers clustered unevenly, one amber anchor disconnected. Precise overhead evidence photograph on charcoal/plum tabletop in afternoon light. Physical scheduling metaphor, not an actual medical device, no mascot or text.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-8d0a4f28-8d15-4f30-89fa-77dddcb04ec7.png",
+      "destination": "public/specimens/tara/failure-broken-rhythm-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "failure-hidden-next-v1.webp",
+      "purpose": "Failure 04 / conceptual glanceability stress study",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: An amber illuminated diamond schedule marker almost hidden behind overlapping smoked glass plates and opaque plum dividers; only its edge is visible. Carefully arranged evidence still life with layered shadows, warm late afternoon. No mascot, no UI, no text.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-6922ce50-5da2-4c0f-b96e-f4d9347db4a3.png",
+      "destination": "public/specimens/tara/failure-hidden-next-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "recorded-day-v1.webp",
+      "purpose": "History / outcomes retained",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: At dusk a continuous time rail enters a quiet shelf where past moments are kept as small satin tokens: sage circles with embossed check marks, muted plum tokens with double-chevron symbols and a restrained coral hollow ring. Upcoming translucent points continue beyond. Honest record of actions, not health results. No text, no mascot.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-44796280-29a4-41be-b5f2-068f29583f12.png",
+      "destination": "public/specimens/tara/recorded-day-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "first-alarm-v1.webp",
+      "purpose": "Mutation 001 / simple scheduled alert",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Single small frosted amber pulse suspended above a precision satin plinth on a plum desk, with one unlabelled ivory clock dial softly out of focus behind it. Beginning of the timing system, nothing complex. Night studio product photography, no mascot, no numbers, no text.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-a0101d70-a97a-4639-b7ae-a237186f06da.png",
+      "destination": "public/specimens/tara/first-alarm-v1.webp",
+      "sourceReferenceAssets": [],
+      "mascotReferenceUsed": false,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "evening-assistant-v1.webp",
+      "purpose": "Closing / calm next moment",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Landscape 1536x1024. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Night in the same premium lived-in domestic organisation station. TARA rests beside a thin timeline rail. Several completed soft sage points recede behind her, just one quiet amber future point ahead. Water glass and ivory closed routine container, soft fabric, distant dawn-blue window and warm bedside lamp. Friendly capsule mascot with resting closed-eye strokes, original amber indicator. Confident stillness, no phone, no UI, no text.\nReference image is identity reference ONLY for the real existing TARA mascot: preserve the compact rounded lavender/plum floating capsule body, short side fins, black rounded faceplate with two white capsule eyes, and one small amber light at upper right. No mouth, nose, eyebrows, legs, hands, costume, humanoid body or redesign. Translate the exact character into softly tangible satin material, a small friendly companion about palm size. Do not copy the reference's flat background or circular disc.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-58b79d70-0608-428f-a1ff-7a4e8869822c.png",
+      "destination": "public/specimens/tara/evening-assistant-v1.webp",
+      "sourceReferenceAssets": [
+        "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/Assets.xcassets/AppIcon.appiconset/TARA-AppIcon.png"
+      ],
+      "mascotReferenceUsed": true,
+      "screenshotRelationship": "No UI in generated artwork",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    },
+    {
+      "filename": "hero-mobile-v1.webp",
+      "purpose": "Mobile hero / deliberately portrait composition",
+      "prompt": "Use case: stylized-concept. Asset: bespoke cinematic editorial scene for GAMA Dynamics Specimen 003 TARA, a calm assistant that makes recurring time visible. World: precise but lived-in domestic organisation studio, satin plum metal, lavender frosted acrylic, warm ivory ceramic, translucent glass, amber timing lights, soft sage completion lights. Premium tactile 3D art with physically convincing materials, soft film lighting, nuanced charcoal shadows, no neon cyberpunk, no hospital or clinical scenes. Use time as spatial light rails and restrained markers, not a sea of clocks. Portrait 1024x1536, vertical composition. Keep focal objects inside central 65% with extra breathing room so the entire image can remain visible on mobile. No text, letters, numbers, logos, watermark, charts, fake UI or generated screens. Any phone is absent: authentic app UI will be placed separately in HTML. Conceptual illustration, not medical evidence.\nSCENE: Portrait 1024x1536 composition of morning premium domestic organisation station. TARA hovers in upper middle beside one softly lit amber moment. Satin plum rail curves downward to lavender points at lower left. Glass of water, closed ivory container and keys in foreground. Gentle light from left, uncluttered, character face fully visible, no phone. All important subjects arranged vertically, not cropped from landscape.\nReference image is identity reference ONLY for the real existing TARA mascot: preserve the compact rounded lavender/plum floating capsule body, short side fins, black rounded faceplate with two white capsule eyes, and one small amber light at upper right. No mouth, nose, eyebrows, legs, hands, costume, humanoid body or redesign. Translate the exact character into softly tangible satin material, a small friendly companion about palm size. Do not copy the reference's flat background or circular disc.",
+      "tool": "built-in image_gen",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-5226d583-dc5a-47f4-98bb-e35e0e2804ed.png",
+      "destination": "public/specimens/tara/hero-mobile-v1.webp",
+      "sourceReferenceAssets": [
+        "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/Assets.xcassets/AppIcon.appiconset/TARA-AppIcon.png"
+      ],
+      "mascotReferenceUsed": true,
+      "screenshotRelationship": "Authentic Today PNG mounted separately in HTML; no generated UI",
+      "date": "2026-10-08",
+      "revisionNotes": "v1; current native plum/lavender palette and unchanged mascot identity; fictional conceptual scene"
+    }
+  ]
+}

@@ -88,4 +88,16 @@ export type MemoirSpecimen = SpecimenIdentity & {
   currentStage: { heading: string; body: string };
 };
 
-export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen;
+export type TaraSpecimen = SpecimenIdentity & {
+  accent: "lavender";
+  artwork: Record<string, SpecimenArtwork>;
+  captures: (SpecimenArtwork & { id: string; title: string; platform: "iPhone" | "iPad" })[];
+  workflow: { title: string; body: string }[];
+  failures: { id: string; title: string; body: string; lesson: string; artwork: SpecimenArtwork }[];
+  solutions: { title: string; body: string }[];
+  mutations: Omit<SpecimenMutation, "artifact">[];
+  privacy: { title: string; body: string }[];
+  currentStage: { heading: string; body: string };
+};
+
+export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen;

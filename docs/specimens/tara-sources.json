@@ -1,0 +1,259 @@
+{
+  "specimen": "GAMA-003",
+  "inspectedAt": "2026-10-08",
+  "nativeCommit": "ec5f939be34e803ef6c771e60a357b990ef79164",
+  "authority": [
+    "User Specimen 003 brief for designation and deployed lifecycle",
+    "Current native TARA implementation for feature and timing claims",
+    "GAMAEvents source for recurrence and temporal phases",
+    "Native release fixture screenshot manifest for authentic UI evidence",
+    "App Store polish patch and report for documented engineering corrections"
+  ],
+  "sources": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARADesignSystem.swift",
+      "sha256": "3ebc06200ee15fadda1ff070fc485e4d7b6e2b4f639120b5b771e677e3685ff9"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARADomain.swift",
+      "sha256": "fbad3021f3f47ce7a3ed4dfbc573ef049853d313f42e8608970c6ad35749a00f"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARAScheduling.swift",
+      "sha256": "1b53a4e1325b9b60f0754c93640320b5c291af26394b541d1e096ddd4f76b701"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARAPresentation.swift",
+      "sha256": "36935d06e8467a50c11aad8de5ae5dc0c6feadfe5a657b9634affeff61b6bd91"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARAPersistence.swift",
+      "sha256": "8fa571179d108f48b1cb05e0cd2dbce09dd5dd0c3267b73baf9d012cfc5913af"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARAWidgetBridge.swift",
+      "sha256": "082b98d3524ce9781254b15cccb80937b14d8029a84510a152ddfbf20f6925de"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Shared/TARAAlarmService.swift",
+      "sha256": "25ad59b91dbee048357076b8fffa0de899d669daf7e45ed09b5d0e60f49f5a8b"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TodayView.swift",
+      "sha256": "e0ddccb05b26a2c342cb029f3f38520a8c355b6eedf5460a8d5f83389ced34d8"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/HistoryView.swift",
+      "sha256": "3ebd5f0450479cc6199a2a5d3d4e09fa17848bcb1fb192df66303d49fc63d746"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/AddIntakeFlow.swift",
+      "sha256": "e79b0a71108b3e93982586bc449c6d9868163e5bc59d3cfa5d8cfb682474d8e4"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TARAIntakeManagement.swift",
+      "sha256": "3ba9faaec1f3430455c4250010dea48c93061c57bc85da9a0885a3d97f6427f0"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TARAAppState.swift",
+      "sha256": "d44c43c5dd715e79c649c270b5ee29591ba2567d09b6ac20435ba094405c03a8"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TARANotificationService.swift",
+      "sha256": "8d663d51c86c664ddd88757eedb7501e3d0554f1a3361b07427209cbb9bc5f81"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/SettingsView.swift",
+      "sha256": "eb8feb68592ad6ec89777a0b71f0f36fc6677ee0084522052ffabe7bac97b169"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/HowToUseTARAView.swift",
+      "sha256": "dbe6c00e8c14eeeec2b7f68e79d072b92aae7c9d5f1c67795bcdaedddba15f4a"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TARAApp.swift",
+      "sha256": "44fa9f7a3f9d5a51ea73208605086985993d905ab85dc4ab114834e8935db029"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/TARAAppStoreFixture.swift",
+      "sha256": "c99194fda7a9213436f40f3b1968915319437126d427e1557ecb9fd4e9434fe8"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARA/PrivacyInfo.xcprivacy",
+      "sha256": "fc54b8c691da8c100da25217ab95baf664f259d0aeda82f36d47ecbdcf30917b"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/TARAWidgets/TARAWidgets.swift",
+      "sha256": "4d76039ed99eefaa377090208137b2466ebfd4a4281f076db1ef857881c91a37"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Verification/AppStorePolish/milestone.patch",
+      "sha256": "b67c445f53afd6e96c7c8decdd139edc1183e49a524dddeebf471b24267297d3"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Verification/AppStorePolish/report.txt",
+      "sha256": "346c303d4741c36ddb56811e9cf53eee73806ce457b945c5db513da905429957"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/README.md",
+      "sha256": "258be91d60300270307f3a76806ca029cf6dce1ce3af99d3fb6fab831707cae1"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/SDKs/GAMAEvents/Sources/GAMAEvents/TemporalState.swift",
+      "sha256": "48ac31a9055b8a1ac45bd289430fb34566805bf7aa065b80010e85396da6a617"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/SDKs/GAMAEvents/Sources/GAMAEvents/WindowConfiguration.swift",
+      "sha256": "b70cfa76f4e9b19dc641839db936e0487017e0208f433abef33a241de180c560"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/SDKs/GAMAEvents/Sources/GAMAEvents/ElapsedDurationRecurrence.swift",
+      "sha256": "710566eda1a8c10ff42010a95e83b37fc78b0ad54e95a070a2bc20b8c479c42f"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/SDKs/GAMAEvents/Sources/GAMAEvents/CalendarOccurrenceGeneration.swift",
+      "sha256": "cfa3028d7dbf9e0e62edd9cb86701799ce6b1ea044c3dbd1b06a1ad7f13b3cd1"
+    }
+  ],
+  "captures": [
+    {
+      "file": "public/specimens/tara/captures/iphone-01-today.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/01-today.png",
+      "sha256": "8124909b6e37677dce9aa5e3107801547840940029041dd23a5b7278d5da46b8",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-02-history.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/02-history.png",
+      "sha256": "bf723ef9a72ae3eaa4f434283e4edea74fd5382ed75a391d71e4a9553bc0fa85",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-03-manage-intakes.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/03-manage-intakes.png",
+      "sha256": "7a76443d00854b84f1e1ad4c8de7324c768559d1ae51827f9ac3458ab1928e0b",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-04-choose-times.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/04-choose-times.png",
+      "sha256": "1506980368f394a282287f3eeaa9efb4ee7486af0242e43f326468d3229d4b54",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-05-choose-days.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/05-choose-days.png",
+      "sha256": "6bfb7ce9cda2696344b1ab8c94f2fdfcb0fcc40f8a85e6d967880678ae086e60",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-06-guide.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPhone/06-guide.png",
+      "sha256": "26759f5795356d1f9e82bd63f0159857d281a07bc18a04ad4602421eb54def58",
+      "platform": "iPhone",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-01-today.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/01-today.png",
+      "sha256": "373c8a752577a48b5e3b6c0650102eba2224dbbaaca6d804d3b640becc0ca311",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-02-history.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/02-history.png",
+      "sha256": "0bdeb378870b1648310283093643de35d522add961a680032996b43dd6b5932f",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-03-manage-intakes.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/03-manage-intakes.png",
+      "sha256": "30f3beb16c2ac22eebbd77a03c77d580edd4fc603409c2dee8779f69302f24e8",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-04-choose-times.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/04-choose-times.png",
+      "sha256": "96aa15e401e2366177f7822aa6dd858f3587cb965d6c6280202e2d04d90157c1",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-05-choose-days.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/05-choose-days.png",
+      "sha256": "cef23bea6432bf84385b64026bb1d633e3f45c6c61f6a09f4410a8fddcf12969",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/ipad-13-06-guide.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/AppStore/Screenshots/iPad-13/06-guide.png",
+      "sha256": "3934ed9ef8ace1562ab897f5584111f795b6707818b2d6f2690ec28eb06f281a",
+      "platform": "iPad-13",
+      "kind": "authentic native release fixture capture, 2026-10-07; unchanged bytes"
+    },
+    {
+      "file": "public/specimens/tara/captures/iphone-settings-se.png",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/9. TARA Events/TaraEvents/Verification/AppStorePolish/screenshots/settings-light-se.png",
+      "sha256": "8d3521a3ad6d8d6d37ee9cd0d5120c659577213f27e3b7e80f2fc7523ae9080c",
+      "platform": "iPhone SE",
+      "kind": "native verification capture; unchanged bytes"
+    }
+  ],
+  "reconciliations": {
+    "palette": "Native source uses plum, lavender, sage, amber, coral and eight stable intake palettes; replaces speculative blue/cyan direction.",
+    "timing": "Default reminder 3 hours before/after, preferred band 20 minutes before/after; adjustable. Organisational, never a safe dosing window.",
+    "precision": "Hourly/half-hourly is time grid precision, not half-hour intake recurrence. Production elapsed choices are 1–24 hours; count choices 1–4 per day.",
+    "schedule": "Record Take/Skip without advertising automatic dose-plan recalculation.",
+    "ipad": "Same adaptive SwiftUI layout, bounded maximum reading column. No fabricated separate architecture.",
+    "screenshots": "Real native captures with DEBUG-only fictional records. Originals copied byte-for-byte. Dates/times are captured examples.",
+    "widgets": "Native source confirms 1/2/4 Home Screen capacity, overflow count, 3 Lock Screen forms and first-active Take on Medium/Large. No native widget screenshot found in release/verification assets. Present source-backed capacity typography and conceptual art, not fake widget UI.",
+    "failures": "Four clearly labelled design stress studies are conceptual. Historical reconciliation fixes are separately supported by actual milestone.patch.",
+    "privacy": "Local SwiftData/private CloudKit; local fallback no sync; no separate app account/backend/analytics; app lock does not hide names from notification/widget/alarm surfaces; deleted intake retains past history.",
+    "status": "Deployed lifecycle follows explicit user brief. Source release receipt says submitted/waiting review on Oct 7, so no public App Store availability, download badge or approval claim is introduced."
+  },
+  "nativeValidation": "Existing native release test receipts inspected. No native tests rerun and no health claims made.",
+  "webValidation": {
+    "status": "passed locally; user authorised production deployment on 2026-10-08",
+    "date": "2026-10-08",
+    "build": "npm run build: successful production compilation, TypeScript and 11 static pages",
+    "lint": "npm run lint: exit 0",
+    "typescript": "npx tsc --noEmit: exit 0",
+    "responsive": {
+      "widths": [
+        320,
+        390,
+        768,
+        1280,
+        1440
+      ],
+      "checks": "30 chapter navigation checks; correct hash and active chapter; no horizontal document overflow",
+      "visualReview": "Hero, native product chapter, failure studies, solutions and mutation scenes reviewed; portrait hero at 320; native screenshots retain their aspect ratio"
+    },
+    "keyboard": "17 native disclosures opened with Enter at 320; no overflow. Timing presets respond to Enter; slider ArrowRight changes 11:00 to 11:05 with matching accessible phase.",
+    "routes": "Home, incubation archive, TARA, GroceryMaster, Memoir and specimen API returned 200. API contains official 001, 002 and 003. TARA canonical uses production host.",
+    "captures": "All 13 capture URLs returned 200 with bytes matching their native source hashes.",
+    "integration": "Desktop carousel Select TARA opens the 003 briefing. Mobile compact index and incubation archive expose the TARA route and product site.",
+    "artwork": "15 built-in image_gen scenes; settled screenshots visually confirm artwork. Rapid DOM-only lazy-image readings are not used as a failed-load assertion.",
+    "preservation": "Six approved GroceryMaster and Memoir files passed SHA-256 baseline verification. Native TARA source untouched.",
+    "evidenceDirectory": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/tara",
+    "localPreview": "http://127.0.0.1:3002/incubation/tara"
+  },
+  "preservation": {
+    "baseline": "/tmp/tara-approved-baseline.sha256",
+    "files": "Approved GroceryMaster and Memoir records/renderers/styles retained byte-for-byte"
+  },
+  "deploymentApproval": {
+    "date": "2026-10-08",
+    "instruction": "deploy",
+    "target": "https://gamadynamics.com.au/incubation/tara"
+  }
+}

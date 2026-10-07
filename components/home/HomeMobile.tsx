@@ -8,7 +8,7 @@ import Image from "next/image";
 const mobileSpecimens = listSpecimens().map(record => {
   const card = getSpecimenCard(record.slug);
   return { ...card, status: card.status === "deployed" ? "Deployed" : card.statusLabel,
-    tone: card.accent === "green" ? "border-emerald-200/20 bg-emerald-300/8 text-emerald-100" : "border-amber-200/20 bg-amber-300/8 text-amber-100" };
+    tone: card.accent === "green" ? "border-emerald-200/20 bg-emerald-300/8 text-emerald-100" : card.accent === "lavender" ? "border-purple-200/20 bg-purple-300/8 text-purple-100" : "border-amber-200/20 bg-amber-300/8 text-amber-100" };
 });
 const latestDeployed = mobileSpecimens.filter(card => card.status === "Deployed").at(-1)!;
 

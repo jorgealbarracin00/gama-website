@@ -1,105 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSpecimenCard } from "@/lib/specimens/registry";
+import { getSpecimenCard, specimenGroups, specimenCount } from "@/lib/specimens/registry";
 
-const grocerymasterCard = getSpecimenCard("grocerymaster");
-const specimens = [
-  {
-    id: `SPECIMEN ${grocerymasterCard.id}`,
-    name: grocerymasterCard.name,
-    status: grocerymasterCard.statusLabel,
-    classification: grocerymasterCard.classification,
-    href: grocerymasterCard.incubationHref,
-    image: grocerymasterCard.image,
-    summary: grocerymasterCard.summary,
-    stack: grocerymasterCard.technologySummary.join(" / "),
-    tone: "border-emerald-200/18 bg-emerald-300/8 text-emerald-100",
-  },
-  {
-    id: "SPECIMEN 002",
-    name: "PVD Assistant",
-    status: "Deployed",
-    classification: "Industrial Intelligence",
-    href: "/incubation/pvdassistant",
-    image: "/PVDAssistant/pvd-hero.webp",
-    summary:
-      "A factory-floor assistant for PVD coating runs, color data, machine history, process notes, and operator knowledge preservation.",
-    stack: "SwiftUI / Historical Engine / Color Lab",
-    tone: "border-blue-200/18 bg-blue-300/8 text-blue-100",
-  },
-  {
-    id: "SPECIMEN 003",
-    name: "Memoir",
-    status: "Incubating",
-    classification: "AI Memory System",
-    href: "/incubation/memoir",
-    image: "/mobile/memoir-thumb.webp",
-    summary:
-      "A private memory book system that turns spoken memories into polished Echoes and grows into one personal memoir.",
-    stack: "SwiftUI / CloudKit / OpenAI Relay",
-    tone: "border-pink-200/18 bg-pink-300/8 text-pink-100",
-  },
-  {
-    id: "SPECIMEN 004",
-    name: "CashCast",
-    status: "Incubating",
-    classification: "Financial Forecasting",
-    href: "/incubation/cashcast",
-    image: "/mobile/cashcast-thumb.webp",
-    summary:
-      "A forward-looking cash-flow simulator for testing financial decisions before they become real-life pressure.",
-    stack: "SwiftUI / Forecast Engine / What-if Simulator",
-    tone: "border-green-200/18 bg-green-300/8 text-green-100",
-  },
-  {
-    id: "SPECIMEN 005",
-    name: "GamaRepair",
-    status: "Experimental",
-    classification: "Repair Workflow",
-    href: "/incubation/gamarepair",
-    image: "/mobile/mobile-hero-terminal.webp",
-    summary:
-      "A repair workflow concept for jobs, parts, customer notes, photos, status changes, and messy real-world repair history.",
-    stack: "Workflow Engine / Job History / Notes",
-    tone: "border-amber-200/18 bg-amber-300/8 text-amber-100",
-  },
-  {
-    id: "SPECIMEN 006",
-    name: "ExpenseTrackWatch",
-    status: "Experimental",
-    classification: "Fast Expense Capture",
-    href: "/incubation/expensetrackwatch",
-    image: "/mobile/mobile-hero-terminal.webp",
-    summary:
-      "A watch-first expense capture experiment focused on speed, habit, and recording small spending before it disappears.",
-    stack: "Watch-first UI / Micro Capture / Finance Companion",
-    tone: "border-indigo-200/18 bg-indigo-300/8 text-indigo-100",
-  },
-  {
-    id: "SPECIMEN 007",
-    name: "Tensland",
-    status: "Experimental",
-    classification: "Strategy World Builder",
-    href: "/incubation/tensland",
-    image: "/mobile/mobile-hero-terminal.webp",
-    summary:
-      "A strategy-world experiment where maps, factions, resources, and rules grow into a playable system.",
-    stack: "World Engine / Simulation / Game Systems",
-    tone: "border-fuchsia-200/18 bg-fuchsia-300/8 text-fuchsia-100",
-  },
-  {
-    id: "SPECIMEN 008",
-    name: "VOID",
-    status: "Experimental",
-    classification: "Unknown Systems",
-    href: "/incubation/void",
-    image: "/mobile/mobile-hero-terminal.webp",
-    summary:
-      "A strange research space for AI interfaces, prototype workflows, and systems that do not yet fit normal software categories.",
-    stack: "AI Experiments / Interface Research / Unknown",
-    tone: "border-cyan-200/18 bg-cyan-300/8 text-cyan-100",
-  },
-];
+const groups = specimenGroups().map(group => ({ ...group, cards: group.specimens.map(record => {
+  const card = getSpecimenCard(record.slug);
+  return { id: `SPECIMEN ${card.id}`, name: card.name, status: card.statusLabel,
+    classification: card.classification, href: card.incubationHref, image: card.image,
+    summary: card.summary, stack: card.technologySummary.join(" / "),
+    tone: card.accent === "green" ? "border-emerald-200/18 bg-emerald-300/8 text-emerald-100" : "border-amber-200/18 bg-amber-300/8 text-amber-100" };
+}) }));
 
 export default function IncubationIndex() {
   return (
@@ -136,44 +45,34 @@ export default function IncubationIndex() {
               <div className="mt-4 grid gap-3 text-sm text-white/64">
                 <div className="flex justify-between border-b border-white/8 pb-3">
                   <span>Total specimens</span>
-                  <span className="font-semibold text-white">08</span>
+                  <span className="font-semibold text-white">{specimenCount()}</span>
                 </div>
                 <div className="flex justify-between border-b border-white/8 pb-3">
                   <span>Deployed</span>
-                  <span className="font-semibold text-emerald-200">02</span>
+                  <span className="font-semibold text-emerald-200">{specimenCount("deployed")}</span>
                 </div>
                 <div className="flex justify-between border-b border-white/8 pb-3">
                   <span>Incubating</span>
-                  <span className="font-semibold text-cyan-200">02</span>
+                  <span className="font-semibold text-cyan-200">{specimenCount("incubating")}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Experimental</span>
-                  <span className="font-semibold text-fuchsia-200">04</span>
+                  <span className="font-semibold text-fuchsia-200">{specimenCount("experimental")}</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-2 border-b border-white/12">
-            {["All Files", "Deployed", "Incubating", "Experimental", "Evolution Logs"].map((tab, index) => (
-              <span
-                key={tab}
-                className={`rounded-t-2xl border border-b-0 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] ${
-                  index === 0
-                    ? "border-cyan-200/24 bg-cyan-300/10 text-cyan-100"
-                    : "border-white/12 bg-white/[0.035] text-white/52"
-                }`}
-              >
-                {tab}
-              </span>
-            ))}
-          </div>
+          <p className="mt-12 border-b border-white/12 pb-4 text-xs uppercase tracking-[0.18em] text-cyan-100">Official specimen archive</p>
         </div>
       </section>
 
       <section className="px-6 pb-24 md:px-10 xl:px-14">
-        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {specimens.map((specimen) => (
+        <div className="mx-auto max-w-7xl space-y-12">
+          {groups.map(group => <section key={group.status} aria-label={`${group.label} specimens`}>
+          <h2 className="mb-5 text-xs uppercase tracking-[0.18em] text-white/60">{group.label}{group.status === 'deployed' ? ' · Oldest first' : ''}</h2>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {group.cards.map((specimen) => (
             <Link
               key={specimen.name}
               href={specimen.href}
@@ -182,7 +81,7 @@ export default function IncubationIndex() {
               <div className="absolute right-5 top-5 h-16 w-16 rounded-full bg-cyan-300/8 blur-2xl transition group-hover:bg-cyan-300/18" />
 
               <div className="relative">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
                       {specimen.id}
@@ -229,6 +128,7 @@ export default function IncubationIndex() {
               </div>
             </Link>
           ))}
+          </div></section>)}
         </div>
       </section>
     </main>

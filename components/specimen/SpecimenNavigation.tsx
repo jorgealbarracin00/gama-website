@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import type { SpecimenChapter } from "@/lib/specimens/types";
 import styles from "./SpecimenFile.module.css";
 
-export default function SpecimenNavigation({ chapters }: { chapters: Pick<SpecimenChapter, "id" | "title">[] }) {
+export default function SpecimenNavigation({ chapters, className }: { chapters: Pick<SpecimenChapter, "id" | "title">[]; className?: string }) {
   const [active, setActive] = useState(chapters[0].id);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function SpecimenNavigation({ chapters }: { chapters: Pick<Specim
   }, [chapters]);
 
   return (
-    <nav className={styles.navigation} aria-label="Specimen chapters">
+    <nav className={className ?? styles.navigation} aria-label="Specimen chapters">
       {chapters.map(({ id, title }, index) => (
         <a key={id} href={`#${id}`} aria-current={active === id ? "location" : undefined} onClick={() => setActive(id)}>
           <span aria-hidden="true">0{index + 1}</span>{title}

@@ -64,3 +64,28 @@ export type PublicSpecimen = {
   currentStage: { heading: string; body: string };
   closingLines: string[];
 };
+
+// Shared archive identity; each specimen keeps its own narrative model and art
+// direction instead of inheriting another product's domain-specific fields.
+export type SpecimenIdentity = Pick<PublicSpecimen,
+  "id" | "number" | "slug" | "name" | "epithet" | "type" | "status" | "statusLabel" |
+  "generation" | "classification" | "summary" | "narrative" | "mission" | "platforms" |
+  "technologySummary" | "featuredOrder" | "productLink" | "chapters" | "closingLines"
+>;
+
+export type MemoirSpecimen = SpecimenIdentity & {
+  accent: "amber";
+  question: string;
+  artwork: Record<"hero" | "origin" | "experiment" | "capture" | "reflection" | "solutions" | "final", SpecimenArtwork>;
+  captures: (SpecimenArtwork & { id: string; title: string; platform: "iPhone" | "iPad" })[];
+  workflow: { title: string; body: string }[];
+  systemSurfaces: { title: string; body: string }[];
+  failures: { id: string; title: string; body: string; artwork: SpecimenArtwork; lesson: string }[];
+  solutions: { title: string; body: string }[];
+  validation: { heading: string; body: string; source: string };
+  privacy: { heading: string; paragraphs: string[]; details: { title: string; body: string }[]; url: string };
+  mutations: Omit<SpecimenMutation, "artifact">[];
+  currentStage: { heading: string; body: string };
+};
+
+export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen;

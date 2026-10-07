@@ -1,0 +1,164 @@
+{
+  "specimen": "GAMA-002",
+  "inspectedAt": "2026-10-08",
+  "authority": [
+    "User Specimen 002 brief for identity, deployed state and historical validation",
+    "Current native implementation for product behaviour",
+    "Existing product-site capture assets for native iPad proof",
+    "Current iPhone screenshots supplied directly by the user on 2026-10-08"
+  ],
+  "sources": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/README.md",
+      "sha256": "bda5491378a0dd724825bde29c51dba3a04ccbbec2a06fc89eafaee8618775fc"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes/Core/UI/Home/RecordingView.swift",
+      "sha256": "9a1bdb27950980d3954c8b5a7d0c8f0b930b796f20d4e951c02102c68dfdd721"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes/Core/UI/Home/AIProcessingConsentView.swift",
+      "sha256": "ecfa9dbc843309fb0f15d1f13f4afb8f8acec021a9be0b029917db218f712814"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes/Storage/MemoirSyncCoordinator.swift",
+      "sha256": "02a8234414ee6079dc6e94a9f1774f96bdf0332ba30def996bcd11d84bca4c09"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes/Storage/CloudSyncFoundation.swift",
+      "sha256": "60466f0b15095ee5b1f3ef5597957fe12ef90d1e9d3dd65e6aa8957dd0aa75d2"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes/Core/PDF/MemoirPDFExporter.swift",
+      "sha256": "3a88505464df3251ac7cd5233a8d46dd7fb80eafc3df521dda1f0e67472ceef9"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/3. Memoir Echoes/MemoirEchoes/MemoirEchoes.xcodeproj/project.pbxproj",
+      "sha256": "1c1d370816d4b0cdafa1847c303869b9137c1575fba8e4560e4fc379524fd699"
+    }
+  ],
+  "captures": [
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-home-ipad.webp",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/web-memoir/src/assets/screenshots/memoir-home-ipad.webp",
+      "sha256": "15f0b309ab71358b8176fa820f8aebbeac42dd8888406dbfeed79d8afcbf1b19",
+      "identicalToSource": true,
+      "platform": "iPad",
+      "kind": "authentic native UI capture; source marketing site and current native app cross-check"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-reading-ipad.webp",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/web-memoir/src/assets/screenshots/memoir-reading-ipad.webp",
+      "sha256": "fcb4ccde5606a41bb12446f305a35b3b66eb4277847804f3b28d765eb4a1ef1f",
+      "identicalToSource": true,
+      "platform": "iPad",
+      "kind": "authentic native UI capture; source marketing site and current native app cross-check"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-book-index-ipad.webp",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/web-memoir/src/assets/screenshots/memoir-book-index-ipad.webp",
+      "sha256": "df2665ca74fe0c859bf25b769dce08c3117b171fe7a2e707083c64ff976d22a4",
+      "identicalToSource": true,
+      "platform": "iPad",
+      "kind": "authentic native UI capture; source marketing site and current native app cross-check"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-welcome-ipad.webp",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/web-memoir/src/assets/screenshots/memoir-welcome-ipad.webp",
+      "sha256": "dda65d5d947d3e0b02fff05766ec9f93a94d9e60ba1989c403d68c5918bd1d08",
+      "identicalToSource": true,
+      "platform": "iPad",
+      "kind": "authentic native UI capture; source marketing site and current native app cross-check"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-recording-iphone.png",
+      "source": "/var/folders/px/mh7z6w_d7w37r3pk_vg6kk6m0000gn/T/codex-clipboard-c760b1e1-c4b3-4990-beda-953dbf64b091.png",
+      "sha256": "b957416157e2be22498215b6fb5025b8eebe7ad1a58bedadf14f7c2046d5db49",
+      "identicalToSource": true,
+      "platform": "iPhone",
+      "width": 1170,
+      "height": 2532,
+      "kind": "Current native iPhone screenshot supplied directly by the user on 2026-10-08; unmodified PNG"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-home-iphone.png",
+      "source": "/var/folders/px/mh7z6w_d7w37r3pk_vg6kk6m0000gn/T/codex-clipboard-b63376af-37c8-46ce-bf2d-5ca7fe288c5f.png",
+      "sha256": "964f6a07e219f5147eb4463abb02d6fae6759122673f8067ce4d449936550c8e",
+      "identicalToSource": true,
+      "platform": "iPhone",
+      "width": 1170,
+      "height": 2532,
+      "kind": "Current native iPhone screenshot supplied directly by the user on 2026-10-08; unmodified PNG"
+    },
+    {
+      "file": "public/specimens/memoir-echoes/captures/memoir-book-index-iphone.png",
+      "source": "/var/folders/px/mh7z6w_d7w37r3pk_vg6kk6m0000gn/T/codex-clipboard-2ff09fef-d18b-4b83-b891-ca866253e5c8.png",
+      "sha256": "3ee17b58c6cb4c47ad78dbaec0dcc6ae35625a710157c7f80f572e328231fcd6",
+      "identicalToSource": true,
+      "platform": "iPhone",
+      "width": 1170,
+      "height": 2532,
+      "kind": "Current native iPhone screenshot supplied directly by the user on 2026-10-08; unmodified PNG"
+    }
+  ],
+  "reconciliations": {
+    "audio": "Current RecordingView and consent say audio is transcribed, not permanently retained. No playback or preserved original audio claim.",
+    "export": "PDF export is implemented; not described as future.",
+    "sync": "CloudSyncFoundation selects customCKSyncEngine and SwiftData CloudKitDatabase.none.",
+    "validation": "Upgrade and cross-device result is historical evidence supplied in brief; not a new test by this website task.",
+    "iPhoneEvidence": "Resolved on 2026-10-08: user supplied current iPhone recording, home and memoir index screenshots. All three retained byte-for-byte. Earlier conflicting concept images remain excluded."
+  },
+  "generatedArtwork": "memoir-echoes-artwork.json; 15 fictional cinematic metaphors; no generated application UI",
+  "websiteChanges": "Official registry, home surfaces and API contain only 001 GroceryMaster and 002 Memoir Echoes. Prior unrelated routes preserved.",
+  "checks": [
+    {
+      "name": "Production build",
+      "result": "pass; Next.js 16.1.4; all routes generated; no warnings on final build"
+    },
+    {
+      "name": "TypeScript",
+      "result": "npx tsc --noEmit passed"
+    },
+    {
+      "name": "ESLint",
+      "result": "Changed specimen, registry, route and home files passed without warnings"
+    },
+    {
+      "name": "Responsive chapters",
+      "result": "All 6 anchors inspected at 320, 390, 768, 1280 and 1440. Active chapter correct; document width matched viewport at all 30 checks."
+    },
+    {
+      "name": "Keyboard",
+      "result": "All 11 native disclosures opened with Enter at 320; no horizontal overflow."
+    },
+    {
+      "name": "Official registry",
+      "result": "Local API returned exactly 001 GroceryMaster then 002 Memoir Echoes, both deployed. Home desktop selection, mobile list and official index verified in browser."
+    },
+    {
+      "name": "GroceryMaster preservation",
+      "result": "Canonical record, page component and CSS SHA-256 unchanged from start of Memoir implementation; existing route rendered correctly."
+    },
+    {
+      "name": "Metadata",
+      "result": "Memoir canonical and OG image use https://gamadynamics.com.au, not localhost."
+    },
+    {
+      "name": "Native product",
+      "result": "Source inspected and current native iPad-style app window cross-checked. No new native sync or upgrade test was run."
+    },
+    {
+      "name": "iPhone evidence",
+      "result": "Resolved: three current iPhone captures integrated byte-for-byte. Production build, standalone TypeScript and targeted ESLint pass. Recording, Home and Memoir Index inspected at 320, 390, 768, 1280 and 1440; no horizontal overflow. Original full-size image links retained."
+    },
+    {
+      "name": "iPhone follow-up verification",
+      "result": "15/15 target image checks passed across 320, 390, 768, 1280 and 1440. All target images loaded, all original 1170:2532 aspect ratios preserved, and no horizontal overflow. Screenshots and checks saved under qaDirectory/iphone-captures."
+    }
+  ],
+  "qaDirectory": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/memoir-echoes",
+  "captureCount": {
+    "iPhone": 3,
+    "iPad": 4
+  }
+}

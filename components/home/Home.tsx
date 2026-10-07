@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import HomeSheet from "./HomeSheet";
 import HomeMobile from "./HomeMobile";
-import { getSpecimenCard } from "@/lib/specimens/registry";
+import { getSpecimenCard, listSpecimens } from "@/lib/specimens/registry";
 
 type Specimen = {
   id: string;
@@ -39,213 +39,19 @@ type VisibleCard = {
   layer: "hiddenLeft" | "active" | "next" | "third" | "hiddenRight";
 };
 
-const grocerymasterCard = getSpecimenCard("grocerymaster");
-const specimens: Specimen[] = [
-  {
-    id: `SPECIMEN ${grocerymasterCard.id}`,
-    name: grocerymasterCard.name,
-    subtitle: grocerymasterCard.subtitle,
-    status: grocerymasterCard.status === "deployed" ? "live" : "incubating",
-    href: grocerymasterCard.href,
-    incubationHref: grocerymasterCard.incubationHref,
-    summary: grocerymasterCard.summary,
-    features: [],
-    principles: [],
-    difference: "",
-    cardImage: grocerymasterCard.image,
+const specimens: Specimen[] = listSpecimens().map(record => {
+  const card = getSpecimenCard(record.slug);
+  return {
+    id: `SPECIMEN ${card.id}`, name: card.name, subtitle: card.subtitle,
+    status: card.status === "deployed" ? "live" : "incubating",
+    href: card.href, incubationHref: card.incubationHref, summary: card.summary,
+    features: [], principles: [], difference: "", cardImage: card.image,
     specimenFileFirst: true,
-    tone: "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
-  },
-  {
-    id: "SPECIMEN 002",
-    name: "PVD Assistant",
-    subtitle: "Industrial Coating Intelligence",
-    status: "live",
-    href: "https://pvdassistant.gamadynamics.com.au",
-    incubationHref: "/incubation/pvdassistant",
-    summary:
-      "A manufacturing assistant built to improve color matching, process tracking, historical analysis, and machine operation in PVD coating environments.",
-    features: ["Run history", "Color Lab", "Machine intelligence"],
-    principles: ["Capture knowledge", "Reduce rework", "Learn from history"],
-    difference:
-      "Designed from real factory experience instead of theoretical manufacturing workflows.",
-    cardImage: "/PVDAssistant/pvd-hero.webp",
-    detailImages: [
-      "/PVDAssistant/pvd-phone.webp",
-      "/PVDAssistant/pvd-colorlab.webp",
-      "/PVDAssistant/pvd-history-engine.webp",
-    ],
-    videoSrc: "/PVDAssistant/PVDAssistantVID.mp4",
-    heroLine: "Factory knowledge captured before it disappears.",
-    origin:
-      "PVD Assistant came from the factory floor. The problem was not only color matching; it was the loss of process knowledge. Runs, machine conditions, cleaning history, gas changes, rework, and operator experience were happening every day, but most of that information was not being captured in a useful way.",
-    buildStory:
-      "The app grew from run logging into a stronger historical engine. It now treats every run as data: machine, color, time bucket, oven state, cleaning state, chamber fullness, LAB values, and process notes. The goal is to turn daily manufacturing experience into a memory system for better decisions.",
-    challenges: [
-      "Turning messy real-world factory conditions into structured data.",
-      "Building recommendations without pretending the process is perfectly predictable.",
-      "Separating UI experiments from the historical engine so the app can keep evolving.",
-    ],
-    evolution: [
-      "V0.00001: basic PVD run notes and machine tracking.",
-      "V0.2: machine workspaces for M3 and M4.",
-      "V0.5: Color Lab, LAB comparison, thresholds, and historical matching.",
-      "V1.0: deployed internal manufacturing assistant with stronger engine direction.",
-    ],
-    currentStage:
-      "Deployed system. PVD Assistant proves Gama Dynamics can build software from real industrial pain, not only consumer ideas.",
-    whatItDoes:
-      "PVD Assistant records coating runs, machine conditions, color data, cleaning events, and historical outcomes. It is designed to make the invisible knowledge of a PVD process easier to capture, compare, and reuse.",
-    whoItHelps:
-      "It helps operators, supervisors, and small manufacturing teams who depend on experience, memory, and handwritten notes to understand why a color passed, failed, shifted, or repeated successfully.",
-    uniqueAdvantages: [
-      "Built from real PVD factory work, not generic production theory.",
-      "Connects color results with machine history and process conditions.",
-      "Treats every run as future training data for better decisions.",
-      "Supports shop-floor reality: cleaning, oven time, chamber state, gas changes, and rework.",
-      "Designed to preserve operator knowledge before it disappears.",
-    ],
-    tone:
-      "bg-[linear-gradient(180deg,rgba(59,130,246,0.72),rgba(29,78,216,0.60))] border border-blue-300/30",
-  },
-  {
-    id: "SPECIMEN 003",
-    name: "Memoir",
-    subtitle: "AI-Assisted Memory Book",
-    status: "incubating",
-    href: "https://memoir.gamadynamics.com.au",
-    incubationHref: "/incubation/memoir",
-    summary:
-      "Memoir turns spoken memories into polished Echoes that can grow into one private life book for a person or family.",
-    features: ["Voice-to-memory creation", "AI-polished Echoes", "Private memoir structure"],
-    principles: ["User-owned memories", "Meaning over transcript", "Legacy without social noise"],
-    difference:
-      "Memoir is not a journaling app, a social feed, or a folder of recordings. It is a private memory workshop where spoken stories become a structured book.",
-    cardImage: "/memoir/memoir-hero.webp",
-    detailImages: [
-      "/memoir/memoir-phone.webp",
-      "/memoir/memoir-book.webp",
-      "/memoir/memoir-echoes.webp",
-    ],
-    heroLine: "Every life deserves a book.",
-    origin:
-      "Memoir started from a very human problem: most people do not write their life stories. They tell them casually, during family conversations, while walking, cooking, travelling, or remembering someone. Those stories are rich, but they are fragile. If nobody captures them, they slowly disappear.",
-    buildStory:
-      "The first idea was simple: record a memory and keep it. But a raw recording is not a book. A transcript is not a story. The project evolved into a process where someone can speak naturally, the system listens, extracts the meaning, shapes the memory into an Echo, and gradually organises those Echoes into chapters that feel like a real memoir.",
-    challenges: [
-      "Raw voice recordings are emotional but hard to reread later.",
-      "Automatic transcripts capture words, but not always rhythm, context, or meaning.",
-      "AI can easily over-polish a memory and make it stop sounding like the person who lived it.",
-      "A book structure needs order, chapters, tags, people, places, and time without making the user feel like they are filling a database.",
-      "Private memories need a different attitude from normal apps: they should not feel like content made for engagement.",
-    ],
-    evolution: [
-      "V0.00001: a voice recorder concept for preserving spoken memories.",
-      "V0.1: transcript experiments and early story-cleaning tests.",
-      "V0.2: Echo generation, where one spoken memory becomes one polished story entry.",
-      "V0.4: people, places, tags, and time-period ideas to help memories find their natural position.",
-      "V0.5: narrator voice profile concepts, so the writing improves without replacing the storyteller.",
-      "Current: shaping the experience from scattered Echoes into one private memoir book.",
-    ],
-    currentStage:
-      "Incubating system. The core direction is clear: capture memories through voice, turn them into Echoes, and build a memoir around them. The current work is focused on making the book experience feel natural, private, and emotionally valuable.",
-    whatItDoes:
-      "Memoir lets a person record a spoken memory, review the transcript, create a polished Echo, and gradually build a private book from those Echoes. The system can organise memories by chapters, tags, people, places, and time, while keeping the experience closer to storytelling than data entry.",
-    whoItHelps:
-      "It helps parents, grandparents, families, migrants, storytellers, and anyone who wants to preserve their life in more than photos. It is also for people who have stories but do not see themselves as writers.",
-    uniqueAdvantages: [
-      "Voice-first creation, because many memories are easier to speak than type.",
-      "Echoes are shaped as stories, not dumped as raw transcripts.",
-      "The memoir grows gradually instead of asking the user to write a whole book at once.",
-      "The process is designed to protect the storyteller's voice instead of replacing it with generic AI writing.",
-      "Private by design: the product is about legacy, not likes, feeds, or public posting.",
-      "The structure can remember people, places, tags, and time periods without exposing the full internal process.",
-      "Built around emotional usefulness: helping future family members understand the person behind the memories.",
-    ],
-    tone:
-      "bg-[linear-gradient(180deg,rgba(244,114,182,0.64),rgba(157,23,77,0.56))] border border-pink-300/30",
-  },
-  {
-    id: "SPECIMEN 004",
-    name: "CashCast",
-    subtitle: "Financial Forecasting Engine",
-    status: "incubating",
-    href: "https://cashcast.gamadynamics.com.au",
-    incubationHref: "/incubation/cashcast",
-    summary:
-      "CashCast is a forward-looking money simulator for families and individuals who want to test financial decisions before they become real-life pressure.",
-    features: ["Long-term cash-flow projection", "What-if financial scenarios", "Goals, purchases, and life-event simulation"],
-    principles: ["Future over past", "Clarity over spreadsheets", "Planning before panic"],
-    difference:
-      "Most finance apps explain what already happened. CashCast focuses on what could happen next.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(16,185,129,0.88),rgba(5,150,105,0.72))] border border-emerald-300/30",
-  },
-  {
-    id: "SPECIMEN 005",
-    name: "GamaRepair",
-    subtitle: "Repair Workflow Assistant",
-    status: "incubating",
-    href: "https://gamarepair.gamadynamics.com.au",
-    incubationHref: "/incubation/gamarepair",
-    summary:
-      "GamaRepair explores how repair jobs, parts, notes, photos, customer updates, and workflow history can be organized into one practical system.",
-    features: ["Repair job tracking", "Photo and note history", "Workflow status updates"],
-    principles: ["Every repair has a story", "Reduce forgotten details", "Make progress visible"],
-    difference:
-      "GamaRepair is designed around the messy reality of repair work, not a perfect office workflow.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(250,204,21,0.62),rgba(180,83,9,0.54))] border border-amber-300/30",
-  },
-  {
-    id: "SPECIMEN 006",
-    name: "ExpenseTrackWatch",
-    subtitle: "Fast Expense Capture",
-    status: "incubating",
-    href: "https://expensetrackwatch.gamadynamics.com.au",
-    incubationHref: "/incubation/expensetrackwatch",
-    summary:
-      "ExpenseTrackWatch is a lightweight expense capture idea focused on speed, habit, and reducing friction when recording small daily spending.",
-    features: ["Quick expense entry", "Watch-first interaction ideas", "Small spending awareness"],
-    principles: ["Capture before forgetting", "Speed beats complexity", "Small habits reveal patterns"],
-    difference:
-      "Instead of asking users to manage a full finance system, ExpenseTrackWatch focuses on the instant of spending.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(129,140,248,0.66),rgba(67,56,202,0.58))] border border-indigo-300/30",
-  },
-  {
-    id: "SPECIMEN 007",
-    name: "Tensland",
-    subtitle: "Strategy World Builder",
-    status: "incubating",
-    href: "https://tensland.gamadynamics.com.au",
-    incubationHref: "/incubation/tensland",
-    summary:
-      "Tensland is a world-building and strategy experiment focused on turning maps, resources, factions, and decisions into a playable system.",
-    features: ["World and map concepts", "Faction and resource systems", "Strategy simulation ideas"],
-    principles: ["Systems create stories", "Simple rules can grow complexity", "Make strategy visual"],
-    difference:
-      "Tensland starts with systems first, then lets the world grow from the rules.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(217,70,239,0.66),rgba(126,34,206,0.58))] border border-fuchsia-300/30",
-  },
-  {
-    id: "SPECIMEN 008",
-    name: "VOID",
-    subtitle: "Experimental AI System",
-    status: "incubating",
-    href: "https://void.gamadynamics.com.au",
-    incubationHref: "/incubation/void",
-    summary:
-      "VOID is an experimental space for testing artificial intelligence interfaces, strange workflows, and systems that do not fit inside normal productivity software.",
-    features: ["AI-assisted experiments", "Interface prototypes", "System behavior testing"],
-    principles: ["Explore the unknown", "Prototype before polishing", "Use mystery with purpose"],
-    difference:
-      "VOID is not built to look normal first. It is built to discover what might become useful later.",
-    tone:
-      "bg-[linear-gradient(180deg,rgba(56,189,248,0.65),rgba(14,116,144,0.58))] border border-cyan-300/30",
-  },
-];
+    tone: card.accent === "green"
+      ? "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30"
+      : "bg-[linear-gradient(180deg,rgba(142,111,76,0.72),rgba(54,44,50,0.60))] border border-amber-200/30",
+  };
+});
 
 const cardLayerClasses: Record<VisibleCard["layer"], string> = {
   hiddenLeft:

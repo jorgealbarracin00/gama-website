@@ -1,0 +1,29 @@
+{
+  "canonicalSource": "SPECIMEN BIBLE 001 — GROCERYMASTER",
+  "purpose": "Public specimen artwork: atmospheric metaphor only, no generated product UI.",
+  "model": "Built-in imagegen",
+  "artwork": [
+    {
+      "file": "/specimens/grocerymaster/household-organism-v2.webp",
+      "source": "exec-2a15773e-cb13-48d0-b778-2855fbcd5f8e.png",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic GroceryMaster specimen hero artwork, wide landscape 1536x1024.\nReference image: the supplied GroceryMaster deployment image is ONLY a character/material continuity reference, not a layout or text reference.\nCreate a new beautiful premium cinematic scene in the same strange GAMA laboratory universe, a collision of household grocery life and a dark laboratory museum. A small friendly Grocery Ninja with the SAME simple round silhouette, warm expressive eyes, dark cloth outfit and headband with a subtle single G marking, agile and practical, no weapons, no armor, no robotic machinery, is stepping out of an open glass specimen enclosure carrying a reusable grocery bag full of ordinary groceries. The ninja is integrated into the world, not a superhero. On the workbench are a paper grocery receipt with no readable writing, a few grocery crates, a modest stack of shopping bags, olive jar and familiar produce. Dark graphite metal, brushed stainless fixtures, worn glass, tiny warm amber task lamps, restrained GroceryMaster green containment light, tactile domestic warmth, rich shadow, slightly eccentric storytelling. No people. No fire/explosion/confetti. Background shelves and supermarket logistics extend softly into darkness. Compose the whole main subject and enclosure in central 65% so mobile can show full subject. Give left/top enough darkness for layout breathing room but DO NOT draw website copy. Camera at eye level, realistic premium movie prop photography, detailed but calm, cinematic green-and-warm neutral palette, no blue/purple neon.\nABSOLUTE CONSTRAINTS: no app screens, no smartphones, no tablets, no computer monitors, no interfaces, no diagrams, no graphs, no dashboard, no ratings, no metrics, no numbers, no performance claims, no text except the small G on the cloth headband, no logos or labels elsewhere. Any paper, plaques or tags must be blank. Preserve friendly grocery character continuity from reference. This is physical metaphor, not actual functionality."
+    },
+    {
+      "file": "/specimens/grocerymaster/origin-v2.webp",
+      "source": "exec-50024a00-28df-4171-a303-db000a99c12e.png",
+      "prompt": "Use case: stylized-concept. Asset type: wide cinematic origin artwork for GAMA Dynamics GroceryMaster specimen story, landscape 1536x1024. Match the material world and restrained green/amber lighting of the supplied GroceryMaster reference: a strange but quiet dark laboratory museum mixed with a domestic kitchen and supermarket workbench.\nScene: the VERY FIRST experiment before any ninja exists. One nearly empty old glass bell-jar specimen enclosure on a brushed dark-metal workbench contains only a single small folded cream paper grocery list with a few faint illegible pencil lines and the very first subtle green indicator light underneath. Beside it one simple reusable grocery bag, loose receipt paper, a carton of milk, a loaf of bread and an olive jar. Workbench scratches, warm domestic task lamp, background shelves dissolving into shadow, sparse calm composition with tactile real materials and detailed realistic cinematic photography. One object in containment, a small ordinary idea treated very seriously. Large enough central subject to read on a phone, the whole paper and vessel visible, no excessive glow. No character in this early scene. NOT a busy dashboard and NOT a futuristic control room.\nConstraints: no smartphones, tablets, screens, product UI, diagrams, futuristic holographic interfaces, readable text, logos, numbers, stats, claims, awards, stars, people, robot, military shapes. All labels/tags blank. Do not invent an app interface. Environment and physical metaphor only."
+    },
+    {
+      "file": "/specimens/grocerymaster/catalogue-v2.webp",
+      "source": "exec-4b3c4a86-0b7b-4679-9b63-a39d6ef56f55.png",
+      "prompt": "Create a new cinematic artwork in the same warm, realistic green laboratory world and metal/glass material language as the reference, but with NO character and NO glass tank in foreground. Wide landscape 1536x1024. An extraordinary archive made from ordinary groceries: stainless supermarket shelving and wooden crates meticulously holding bread, milk bottles, fruit, vegetables, olive jars, rice, pasta and modest grocery bags; tactile blank paper catalogue tags and restrained green marker lines connecting shelves like an emerging physical taxonomy. Warm amber desk lamps, deep green shadows, weathered metal, a hint of the laboratory behind the shelves. The ordinary items should feel beautifully observed and human. This is chapter VI catalogue intelligence, not a futuristic server room. NO readable text, numbers, labels, brand logos, app screens, devices, charts, metrics, dashboards, holographic UI, blue/purple neon or humans. Compose a coherent environmental scene, balanced and crop safe, with substantial detail. Image-only no border."
+    }
+  ],
+  "realProductUI": [
+    "/GroceryMaster/GroceryMaster1.webp",
+    "/GroceryMaster/GroceryMaster2.webp",
+    "/GroceryMaster/GroceryMaster3.webp"
+  ],
+  "originalsPreserved": true,
+  "conversion": "Sharp WebP quality 85; original dimensions retained."
+}

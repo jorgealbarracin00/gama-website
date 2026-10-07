@@ -14,6 +14,7 @@ export type HomeSheetSpecimen = {
   features: string[];
   principles: string[];
   difference: string;
+  specimenFileFirst?: boolean;
   cardImage?: string;
   detailImages?: string[];
   videoSrc?: string;
@@ -43,6 +44,25 @@ export default function HomeSheet({
   canGoLeft,
   canGoRight,
 }: HomeSheetProps) {
+  if (selectedSpecimen.specimenFileFirst) {
+    return (
+      <section className="bg-[#050b16] px-6 py-16 text-white md:px-10 md:py-20">
+        <div className="mx-auto max-w-5xl border-t border-emerald-200/20 pt-12">
+          <div className="flex flex-wrap items-center justify-between gap-6">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-emerald-200">{selectedSpecimen.id} / Specimen briefing</p>
+            <div className="flex gap-3">
+              <button type="button" onClick={selectPrevious} disabled={!canGoLeft} className="rounded-full border border-white/20 px-4 py-2 text-xs disabled:opacity-35">Previous</button>
+              <button type="button" onClick={selectNext} disabled={!canGoRight} className="rounded-full border border-white/20 px-4 py-2 text-xs disabled:opacity-35">Next</button>
+            </div>
+          </div>
+          <h2 className="mt-7 text-3xl font-semibold md:text-5xl">{selectedSpecimen.name}</h2>
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-emerald-100/70">{selectedSpecimen.subtitle}</p>
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/65">{selectedSpecimen.summary}</p>
+          <Link href={selectedSpecimen.incubationHref} className="mt-8 inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/10 px-6 py-3 text-xs uppercase tracking-[0.15em] text-emerald-100">Open specimen file ↗</Link>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className="relative overflow-hidden bg-[#050b16] px-6 py-16 text-white md:px-10 md:py-20 xl:px-14">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.12),transparent_38%)]" />

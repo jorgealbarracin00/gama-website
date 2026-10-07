@@ -1,17 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getSpecimenCard } from "@/lib/specimens/registry";
 
+const grocerymasterCard = getSpecimenCard("grocerymaster");
 const specimens = [
   {
-    id: "SPECIMEN 001",
-    name: "GroceryMaster",
-    status: "Deployed",
-    classification: "Family Systems",
-    href: "/incubation/grocerymaster",
-    image: "/mobile/grocerymaster-thumb.webp",
-    summary:
-      "A shared household grocery system grown from real family chaos, Apple review pressure, iPad redesigns, and live deployment.",
-    stack: "SwiftUI / Firebase / StoreKit",
+    id: `SPECIMEN ${grocerymasterCard.id}`,
+    name: grocerymasterCard.name,
+    status: grocerymasterCard.statusLabel,
+    classification: grocerymasterCard.classification,
+    href: grocerymasterCard.incubationHref,
+    image: grocerymasterCard.image,
+    summary: grocerymasterCard.summary,
+    stack: grocerymasterCard.technologySummary.join(" / "),
     tone: "border-emerald-200/18 bg-emerald-300/8 text-emerald-100",
   },
   {

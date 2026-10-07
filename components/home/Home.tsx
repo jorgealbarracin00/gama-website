@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import HomeSheet from "./HomeSheet";
 import HomeMobile from "./HomeMobile";
+import { getSpecimenCard } from "@/lib/specimens/registry";
 
 type Specimen = {
   id: string;
@@ -18,6 +19,7 @@ type Specimen = {
   features: string[];
   principles: string[];
   difference: string;
+  specimenFileFirst?: boolean;
   cardImage?: string;
   detailImages?: string[];
   videoSrc?: string;
@@ -37,58 +39,22 @@ type VisibleCard = {
   layer: "hiddenLeft" | "active" | "next" | "third" | "hiddenRight";
 };
 
+const grocerymasterCard = getSpecimenCard("grocerymaster");
 const specimens: Specimen[] = [
   {
-    id: "SPECIMEN 001",
-    name: "GroceryMaster",
-    subtitle: "Shared Family Shopping System",
-    status: "live",
-    href: "https://grocerymaster.gamadynamics.com.au",
-    incubationHref: "/incubation/grocerymaster",
-    summary:
-      "A real-time shared grocery system designed for households that shop together across multiple devices.",
-    features: ["Shared living list", "Shopping mode", "Pantry magnets"],
-    principles: ["One living list", "Family first", "Reduce forgotten items"],
-    difference:
-      "Built around household collaboration rather than individual shopping.",
-    cardImage: "/GroceryMaster/GroceryMaster.webp",
-    detailImages: [
-      "/GroceryMaster/GroceryMaster1.webp",
-      "/GroceryMaster/GroceryMaster2.webp",
-      "/GroceryMaster/GroceryMaster3.webp",
-    ],
-    videoSrc: "/GroceryMaster/GroceryMasterVID.mp4",
-    heroLine: "One living list. Everyone synced.",
-    origin:
-      "GroceryMaster was born from a real household problem: grocery lists do not live in one place. One person remembers milk, another person buys eggs, someone forgets nappies, and the list becomes scattered across memory, messages, and last-minute calls.",
-    buildStory:
-      "The first version started as a simple shared list. Then it evolved into a family shopping system with groups, one home list, country-based shops, Shopping Mode, pantry magnets, duplicate warnings, and real-time syncing across devices.",
-    challenges: [
-      "Making the list feel alive across multiple family devices.",
-      "Handling Apple review feedback around iPad layouts and crowded screens.",
-      "Designing a subscription model where one sponsor can cover the household.",
-    ],
-    evolution: [
-      "V0.00001: simple grocery list concept.",
-      "V0.1: shared household group and real-time list syncing.",
-      "V0.5: Shopping Mode, shops, pantry magnets, duplicate detection.",
-      "V1.0: iPhone, iPad, StoreKit, Firestore, and App Store deployment path.",
-    ],
-    currentStage:
-      "Deployed system. GroceryMaster is the first family-facing specimen to escape the lab and become a real product.",
-    whatItDoes:
-      "GroceryMaster gives a household one shared grocery list that updates in real time. Family members can add items, organise them by shop, use pantry magnets for common essentials, and switch into Shopping Mode when someone is actually at the store.",
-    whoItHelps:
-      "It helps busy families, couples, parents, shared homes, and anyone who has ever asked: did we already buy that? Instead of sending messages, screenshots, or reminders, everyone works from the same living list.",
-    uniqueAdvantages: [
-      "One household list instead of multiple personal lists.",
-      "Shopping Mode shows when someone is actively shopping.",
-      "Pantry magnets turn repeated essentials into fast taps.",
-      "Duplicate detection helps avoid buying or adding the same thing again.",
-      "The subscription is designed around the family group, not only one user.",
-    ],
-    tone:
-      "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
+    id: `SPECIMEN ${grocerymasterCard.id}`,
+    name: grocerymasterCard.name,
+    subtitle: grocerymasterCard.subtitle,
+    status: grocerymasterCard.status === "deployed" ? "live" : "incubating",
+    href: grocerymasterCard.href,
+    incubationHref: grocerymasterCard.incubationHref,
+    summary: grocerymasterCard.summary,
+    features: [],
+    principles: [],
+    difference: "",
+    cardImage: grocerymasterCard.image,
+    specimenFileFirst: true,
+    tone: "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30",
   },
   {
     id: "SPECIMEN 002",
@@ -446,9 +412,9 @@ export default function Home() {
                       <div className="pointer-events-none absolute inset-[-18px] rounded-[36px] bg-[radial-gradient(circle,rgba(255,255,255,0.14),transparent_62%)] blur-[18px]" />
                     )}
                     <a
-                      href={specimen.status === "live" ? specimen.href : specimen.incubationHref}
-                      target={specimen.status === "live" ? "_blank" : undefined}
-                      rel={specimen.status === "live" ? "noopener noreferrer" : undefined}
+                      href={specimen.status === "live" && !specimen.specimenFileFirst ? specimen.href : specimen.incubationHref}
+                      target={specimen.status === "live" && !specimen.specimenFileFirst ? "_blank" : undefined}
+                      rel={specimen.status === "live" && !specimen.specimenFileFirst ? "noopener noreferrer" : undefined}
                       className={`group relative flex h-full w-full items-center justify-center overflow-hidden rounded-[28px] text-white shadow-[0_0_40px_rgba(0,0,0,0.28)] backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] ${specimen.tone} ${layer === "active" ? "animate-[pulse_4.8s_ease-in-out_infinite] shadow-[0_0_65px_rgba(255,255,255,0.14)]" : ""}`}
                     >
                       {specimen.cardImage && (
@@ -566,7 +532,7 @@ export default function Home() {
                             {specimen.name}
                           </h3>
                           <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.16em] text-white/72 drop-shadow-[0_3px_10px_rgba(0,0,0,0.5)] md:text-[10px]">
-                            {specimen.status === "live" ? "Open app site" : "Open incubation"}
+                            {specimen.specimenFileFirst ? "Open specimen file" : specimen.status === "live" ? "Open app site" : "Open incubation"}
                           </p>
                         </div>
                       </div>

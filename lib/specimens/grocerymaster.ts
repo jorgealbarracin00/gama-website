@@ -1,0 +1,157 @@
+import type { PublicSpecimen } from "./types";
+
+// Canonical public interpretation of SPECIMEN BIBLE 001 — GROCERYMASTER.
+// Do not add metrics, release dates, or infrastructure relationships here unless
+// the Bible is revised. Artwork is metaphor; captures retain actual product UI.
+export const grocerymaster: PublicSpecimen = {
+  id: "GAMA-001",
+  number: "001",
+  slug: "grocerymaster",
+  name: "GroceryMaster",
+  epithet: "The household organism",
+  type: "app",
+  status: "deployed",
+  statusLabel: "Shipped / Active evolution",
+  generation: "2.x",
+  classification: "Household Systems / Shared Grocery Intelligence",
+  summary: "A shared household grocery system that keeps track of what the family needs, what it already has, and what it repeatedly buys.",
+  narrative: "The family shopping system that grew from chaos, notes and forgotten groceries into one living list.",
+  mission: "Remember the groceries. Share the household state.",
+  platforms: ["iPhone", "iPad"],
+  technologySummary: ["Swift / SwiftUI", "Cloud-backed synchronisation", "Subscription entitlements"],
+  featuredOrder: 1,
+  accent: "green",
+  productLink: { url: "https://grocerymaster.gamadynamics.com.au", label: "Visit GroceryMaster" },
+  heroLines: [
+    "It began as a grocery list.",
+    "Then another person needed the same list.",
+    "Then the list needed memory.",
+    "Then the pantry joined. Then previous purchases joined.",
+    "Then thousands of groceries needed names, icons and structure.",
+    "Eventually the list was no longer a list.",
+    "It had become a system.",
+  ],
+  chapters: [
+    {
+      id: "origin", title: "Origin", heading: "It started with forgetting things.",
+      paragraphs: [
+        "Milk. Bread. Something for dinner. The item somebody was definitely going to remember.",
+        "Household shopping is built from hundreds of tiny acts of memory, usually distributed among several people and several badly timed messages.",
+        "GroceryMaster began with one simple experiment: what if the list lived in one place for everyone? That was enough to start the mutation.",
+      ],
+      annotation: "The original problem was shared memory.",
+    },
+    {
+      id: "experiment", title: "Experiment", heading: "What happens when the list remembers?",
+      paragraphs: [
+        "A shared list creates new questions. Who changed it? Has someone already bought it? Do we already have one? Didn’t we buy this last week?",
+        "Can the person in the supermarket see what changed at home? The experiment expanded. The list became shared state. Shared state became household memory.",
+      ],
+      annotation: "How much of the repetitive mental work involved in household shopping can software quietly remember for the family?",
+    },
+    {
+      id: "system", title: "System", heading: "More than a checklist.",
+      paragraphs: [
+        "The list is the most visible surface. Behind it is a connected model of what the household needs, owns and buys again.",
+        "One household. One grocery state.",
+      ],
+      annotation: "The user should never have to understand the architecture to add milk.",
+    },
+    {
+      id: "problems", title: "Problems", heading: "Real households are terrible databases.",
+      paragraphs: [
+        "Two people edit the same list. Someone loses signal. A device is reinstalled. A subscription is restored. A change arrives several seconds later than expected.",
+        "Those moments became the useful part of the experiment. Every failure exposed another assumption.",
+      ],
+      annotation: "Problems are specimen data.",
+    },
+    {
+      id: "solutions", title: "Solutions", heading: "Make the complexity disappear.",
+      paragraphs: [
+        "GroceryMaster grew considerably underneath. The interaction was not supposed to.",
+        "The person standing in the kitchen should still be able to think: we need milk. Tap. Done.",
+        "Everything required to make that state shared, persistent and useful belongs behind the glass.",
+      ],
+      annotation: "Complexity belongs to the machine. Groceries belong to the household.",
+    },
+    {
+      id: "evolution", title: "Evolution", heading: "A list. An organism. A system.",
+      paragraphs: ["Seven meaningful mutations. Each changed what GroceryMaster could be."],
+      annotation: "Document mutations, not commits.",
+    },
+  ],
+  systemSurfaces: [
+    { id: "living-list", name: "Living List", description: "What the household needs. The current shared collection of things to buy." },
+    { id: "shopping-mode", name: "Shopping Mode", description: "The list in motion. A focused context for physically shopping while household updates can propagate." },
+    { id: "pantry", name: "Pantry", description: "What the household already has. Practical memory for imperfect shelves and real life." },
+    { id: "buy-again", name: "Buy Again", description: "What it keeps coming back for. Previous purchases reduce the work of starting again." },
+    { id: "groups", name: "Groups", description: "The people sharing the system. Household ownership instead of disconnected personal lists." },
+    { id: "catalogue", name: "Catalogue", description: "The vocabulary behind the interaction. Structured grocery items, aliases, categories and visual assets." },
+  ],
+  catalogue: {
+    approximateItemCount: 4600,
+    languages: ["English", "Spanish", "Simplified Chinese"],
+    note: "Catalogue items and associated assets—not retail-integrated supermarket SKUs. Multilingual catalogue work does not imply universal localisation.",
+  },
+  problems: [
+    { id: "P-01", title: "A shared list becomes shared state.", body: "Two people can change the same household. Updates have to propagate without making the interface difficult to trust." },
+    { id: "P-02", title: "Correct eventually can feel wrong now.", body: "A delay of several seconds becomes conspicuous when two people are actively shopping. Correctness and perceived responsiveness are different requirements." },
+    { id: "P-03", title: "Freshness has a cost.", body: "Constantly asking whether anything has changed wastes work. Active shopping and an idle screen do not need the same behaviour." },
+    { id: "P-04", title: "Thousands of items. Still no olives.", body: "Catalogue scale brought aliases, duplicates, missing essentials, icons and translations. Scale did not automatically produce completeness." },
+    { id: "P-05", title: "The App Store holds part of the truth.", body: "Transactions, renewal, restoration and trial states challenged ordinary assumptions about what an account owns." },
+    { id: "P-06", title: "TestFlight is its own environment.", body: "Sandbox behaviour, distribution restrictions and App Store state made release conditions part of the system." },
+    { id: "P-07", title: "Identity has to survive real life.", body: "Reinstalls, new devices and expired sessions pushed authentication beyond the simple question of whether login works." },
+    { id: "P-08", title: "An intelligent catalogue can slow you down.", body: "More choices can undermine the interaction the entire system is meant to protect: find an item, add it, leave." },
+  ],
+  solutions: [
+    { id: "S-01", title: "The Living List", body: "Model the list as shared household state so an item can have a life beyond a single tick." },
+    { id: "S-02", title: "Contextual Shopping Mode", body: "Concentrate more active household synchronisation where it matters: while someone is physically shopping." },
+    { id: "S-03", title: "Pantry + Buy Again", body: "Remember both what the household has now and what it has bought before." },
+    { id: "S-04", title: "Shared Groups", body: "Make the household the owner of the grocery state, rather than isolating it on one person’s device." },
+    { id: "S-05", title: "Catalogue intelligence", body: "Give everyday groceries a structured vocabulary of item definitions, visual assets, aliases and translated keys." },
+    { id: "S-06", title: "Less work while idle", body: "Reserve frequent presence and freshness checks for the contexts where they provide practical value." },
+    { id: "S-07", title: "Renewable identity sessions", body: "Let account access survive ordinary device and session changes more reliably." },
+    { id: "S-08", title: "StoreKit hardening", body: "Investigate entitlements through Sandbox, TestFlight, restore and reinstall scenarios. Payment logic is distributed systems logic." },
+  ],
+  mutations: [
+    { id: "the-list", numeral: "I", title: "The List", summary: "One device. One memory.", form: "A grocery list", meaning: "Move the household’s scattered memory into software.", artifact: "list", artwork: { src: "/specimens/grocerymaster/origin-v2.webp", alt: "One paper grocery list in a nearly empty glass specimen chamber.", width: 1536, height: 1024 } },
+    { id: "first-sync", numeral: "II", title: "First Sync", summary: "The list learns to exist in more than one place.", form: "A shared list", meaning: "Household state replaces local state. The first connection appears.", artifact: "sync", artwork: { src: "/specimens/grocerymaster/mutation-ii-sync-v3.webp", alt: "Two blank devices connected by a green physical conduit inside a glass laboratory enclosure.", width: 1536, height: 1024 } },
+    { id: "the-household", numeral: "III", title: "The Household", summary: "People become part of the system.", form: "Groups and shared ownership", meaning: "The grocery system belongs to the household rather than one device.", artifact: "household", artwork: { src: "/specimens/grocerymaster/mutation-iii-household-v3.webp", alt: "Four household key tags converge on one paper list inside a glass chamber.", width: 1536, height: 1024 } },
+    { id: "shopping-mode", numeral: "IV", title: "Shopping Mode", summary: "The specimen leaves the kitchen.", form: "A specialised shopping state", meaning: "Planning and buying become distinct contexts. The Grocery Ninja appears.", artifact: "shopping", artwork: { src: "/specimens/grocerymaster/mutation-iv-shopping-v3.webp", alt: "The Grocery Ninja pushes a trolley through a supermarket aisle, with the laboratory behind.", width: 1536, height: 1024 } },
+    { id: "the-pantry-remembers", numeral: "V", title: "The Pantry Remembers", summary: "Past and present begin to connect.", form: "Pantry + Buy Again", meaning: "What do we have? What do we usually buy? The environment begins to remember.", artifact: "pantry", artwork: { src: "/specimens/grocerymaster/mutation-v-pantry-v3.webp", alt: "Pantry shelves hold everyday groceries, with previous-purchase receipts clipped beneath them.", width: 1536, height: 1024 } },
+    { id: "catalogue-intelligence", numeral: "VI", title: "Catalogue Intelligence", summary: "Thousands of grocery concepts acquire structure.", form: "A structured grocery catalogue", meaning: "The catalogue becomes a system in its own right.", artifact: "catalogue", artwork: { src: "/specimens/grocerymaster/catalogue-v2.webp", alt: "A deep laboratory archive of grocery objects, indexed on many illuminated shelves.", width: 1536, height: 1024 } },
+    { id: "mission-ready", numeral: "VII", title: "Mission Ready", summary: "The experiment becomes a shipped product.", form: "GroceryMaster 2.x", meaning: "The chamber opens. A native iPhone and iPad product enters real household life.", artifact: "release", artwork: { src: "/specimens/grocerymaster/mutation-vii-release-v3.webp", alt: "The Grocery Ninja puts an ordinary grocery bag on a warm household kitchen counter outside the lab.", width: 1536, height: 1024 } },
+  ],
+  artwork: {
+    hero: { src: "/specimens/grocerymaster/household-organism-v2.webp", alt: "The friendly Grocery Ninja carrying a grocery bag out of an open glass laboratory chamber.", width: 1536, height: 1024 },
+    origin: { src: "/specimens/grocerymaster/origin-memory-v3.webp", alt: "A kitchen counter holds scattered grocery reminders, receipts, a blank phone, a bag and a nearly empty milk bottle.", width: 1536, height: 1024 },
+    catalogue: { src: "/specimens/grocerymaster/catalogue-v2.webp", alt: "A laboratory archive of ordinary grocery objects arranged on shelves, with restrained green catalogue lighting.", width: 1536, height: 1024 },
+    experiment: { src: "/specimens/grocerymaster/experiment-shared-state-v3.webp", alt: "Three blank devices in a grocery laboratory connect through one green conduit and a central paper list.", width: 1536, height: 1024 },
+    system: { src: "/specimens/grocerymaster/system-tableau-v3.webp", alt: "A grocery-system workbench holds a list, trolley, household tags, pantry shelves, receipts and catalogue cards.", width: 1536, height: 1024 },
+    solutions: { src: "/specimens/grocerymaster/solutions-calm-v3.webp", alt: "An ordered pantry laboratory with organised groceries, converging green conduits and a clear stainless workstation.", width: 1536, height: 1024 },
+    final: { src: "/specimens/grocerymaster/final-empty-chamber-v3.webp", alt: "An empty specimen chamber stands open beside a passage into a warm household kitchen.", width: 1536, height: 1024 },
+  },
+  failureSpecimens: [
+    { problemId: "P-02", artwork: { src: "/specimens/grocerymaster/problem-delay-v3.webp", alt: "Two blank devices sit beside separate paper records and an interrupted physical green signal.", width: 1536, height: 1024 } },
+    { problemId: "P-04", artwork: { src: "/specimens/grocerymaster/problem-omission-v3.webp", alt: "A conspicuously empty slot labelled OLIVES interrupts a densely stocked grocery archive.", width: 1536, height: 1024 } },
+    { problemId: "P-01", artwork: { src: "/specimens/grocerymaster/problem-conflict-v3.webp", alt: "Two identical milk bottles occupy one sorting tray as several green conduits converge.", width: 1536, height: 1024 } },
+    { problemId: "P-07", artwork: { src: "/specimens/grocerymaster/problem-access-v3.webp", alt: "A locked glass pantry door, household keys and groceries form an identity and access diagnostic specimen.", width: 1536, height: 1024 } },
+  ],
+  sceneCaptures: { system: "household", solutions: "pantry" },
+  captures: [
+    { id: "list", title: "Living List / iPhone", src: "/GroceryMaster/GroceryMaster1.webp", alt: "Actual GroceryMaster iPhone screenshot showing the Living List.", width: 1206, height: 2622 },
+    { id: "household", title: "Household workspace / iPad", src: "/GroceryMaster/GroceryMaster2.webp", alt: "Actual GroceryMaster iPad screenshot showing the household grocery workspace.", width: 2360, height: 1640 },
+    { id: "pantry", title: "Pantry / iPad", src: "/GroceryMaster/GroceryMaster3.webp", alt: "Actual GroceryMaster iPad screenshot showing the Pantry interface.", width: 1038, height: 810 },
+  ],
+  evidence: {
+    receipt: ["Milk", "Bread", "Something for dinner", "The thing we forgot"],
+    conclusion: "What if the list lived in one place for everyone?",
+    syncNote: "Cloud-backed synchronisation. Shared household state. Real-world delays have existed.",
+    testing: "Backed by automated functional and UI testing. Release behaviour is investigated through real device, Sandbox and TestFlight conditions.",
+  },
+  currentStage: {
+    heading: "Shipped. Still evolving.",
+    body: "Living List, Shopping Mode, Pantry, Buy Again, Groups and catalogue intelligence now belong to one native iPhone and iPad system, with authenticated accounts, subscription entitlements and App Store distribution.",
+  },
+  closingLines: ["It was supposed to remember the groceries.", "It ended up teaching us how to build systems."],
+};

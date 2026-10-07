@@ -1,20 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getSpecimenCard } from "@/lib/specimens/registry";
 import Link from "next/link";
 import Image from "next/image";
 
+const grocerymasterCard = getSpecimenCard("grocerymaster");
 const mobileSpecimens = [
   {
-    id: "001",
-    name: "GroceryMaster",
-    status: "Deployed",
-    subtitle: "Shared family shopping system",
-    summary: "One living grocery list for the whole household, with Shopping Mode, pantry magnets, and real-time syncing.",
-    href: "https://grocerymaster.gamadynamics.com.au",
-    incubationHref: "/incubation/grocerymaster",
+    ...grocerymasterCard,
+    status: grocerymasterCard.status === "deployed" ? "Deployed" : grocerymasterCard.statusLabel,
     tone: "border-emerald-200/20 bg-emerald-300/8 text-emerald-100",
-    image: "/mobile/grocerymaster-thumb.webp",
   },
   {
     id: "002",
@@ -196,7 +192,7 @@ export default function HomeMobile() {
               Open Incubation Chamber
             </Link>
             <a
-              href="https://grocerymaster.gamadynamics.com.au"
+              href={grocerymasterCard.href}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-white/14 bg-white/8 px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/76"
@@ -226,8 +222,8 @@ export default function HomeMobile() {
               </p>
               <div className="mt-4 grid h-20 grid-cols-2 gap-2 overflow-hidden">
                 <Image
-                  src="/mobile/grocerymaster-thumb.webp"
-                  alt="GroceryMaster"
+                  src={grocerymasterCard.image}
+                  alt={grocerymasterCard.name}
                   width={600}
                   height={400}
                   className="h-full w-full rounded-xl object-cover"
@@ -310,7 +306,7 @@ export default function HomeMobile() {
                   href={specimen.incubationHref}
                   className="rounded-full border border-white/14 bg-white/8 px-3 py-3 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-white/74"
                 >
-                  Incubator
+                  {specimen.id === "001" ? "Specimen file" : "Incubator"}
                 </Link>
                 <a
                   href={specimen.href}

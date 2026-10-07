@@ -1,0 +1,86 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import type { CocoSpecimen, SpecimenArtwork } from '@/lib/specimens/types';
+import SpecimenNavigation from './SpecimenNavigation';
+import CocoProductReveal from './CocoProductReveal';
+import styles from './CocoFile.module.css';
+
+function Art({ artwork, priority = false }: { artwork: SpecimenArtwork; priority?: boolean }) {
+  return <Image {...artwork} alt={artwork.alt} priority={priority} sizes="(max-width: 760px) 100vw, 1280px" className={styles.art} />;
+}
+function Chapter({ s, index }: { s: CocoSpecimen; index: number }) {
+  const c = s.chapters[index];
+  return <header className={styles.chapterHead}><p className={styles.eyebrow}>0{index + 1} / {c.title}</p><h2>{c.heading}</h2><div className={styles.prose}>{c.paragraphs.map(p => <p key={p}>{p}</p>)}</div></header>;
+}
+function Screen({ capture, phone = false }: { capture: CocoSpecimen['captures'][number]; phone?: boolean }) {
+  return <figure className={`${styles.screen} ${phone ? styles.phone : ''}`}><a href={capture.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${capture.title} screenshot`}><Image src={capture.src} alt={capture.alt} width={capture.width} height={capture.height} sizes={phone ? '(max-width: 600px) 85vw, 330px' : '(max-width: 760px) 95vw, 1100px'} /></a><figcaption><strong>{capture.surface} / {capture.title} ↗</strong><span>{capture.note}</span></figcaption></figure>;
+}
+export default function CocoFile({ specimen: s }: { specimen: CocoSpecimen }) {
+  const c = Object.fromEntries(s.captures.map(x => [x.id, x]));
+  return <main className={styles.file}>
+    <a className={styles.skip} href="#system">Skip to the real shop and Backstage</a>
+    <div className={styles.wrap}>
+      <div className={styles.filebar}><Link href="/incubation">← GAMA Dynamics / Specimen archive</Link><span><i />004 · Deployed</span></div>
+      <header className={styles.opening}>
+        <div className={styles.wordmark} aria-label="Coco the Llama"><span>COCO</span><span>THE LLAMA</span></div>
+        <div className={styles.openingCopy}><p className={styles.eyebrow}>Specimen 004 / Children’s fashion commerce system</p><h1>Front stage magic.<br /><em>Backstage machinery.</em></h1><p>A lovely little shop.<br />A surprisingly serious system underneath.</p></div>
+      </header>
+      <figure className={styles.hero}><picture><source media="(max-width: 600px)" srcSet={s.artwork.mobile.src} /><Art artwork={s.artwork.hero} priority /></picture><figcaption><span>The shop & the work behind it</span><span>Cinematic concept / Coco’s existing mascot</span></figcaption></figure>
+      <div className={styles.introduction}><p>Small shop.<br /><strong>Serious system.</strong></p><div><p>How much operational power can a very small retail business have without becoming operationally heavy?</p><span>Customer website + native Backstage application</span></div></div>
+    </div>
+    <SpecimenNavigation chapters={s.chapters} className={styles.navigation} />
+    <div className={styles.wrap}>
+      <section id="origin" className={`${styles.chapter} ${styles.origin}`}>
+        <div><Chapter s={s} index={0} /><p className={styles.pullquote}>The product is small.<br />The lifecycle is not.</p></div>
+        <figure><Art artwork={s.artwork.origin} /><figcaption>One illustrative garment / The work starts here</figcaption></figure>
+      </section>
+      <section id="experiment" className={styles.chapter}>
+        <Chapter s={s} index={1} />
+        <figure className={styles.wideScene}><Art artwork={s.artwork.enrichment} /><figcaption>The enrichment eye / A conceptual study in human judgement</figcaption></figure>
+        <ol className={styles.workflow}>{[
+          ['Start with a photo','Capture the physical item and choose its broad category.'],
+          ['Keep the facts human','Brand, condition and the relevant colour. Optional Product Tags add context.'],
+          ['Give it real stock','Set the size and quantity. Each sellable variant gets its own identity.'],
+          ['Review the assistance','Check suggested naming, classification and content before applying it.'],
+        ].map(([title,body],i)=><li key={title}><span className={styles.eyebrow}>0{i+1}</span><h3>{title}</h3><p>{body}</p></li>)}</ol>
+        <div className={styles.editorialPair}><div><p className={styles.eyebrow}>AI handles repetition</p><h3>The shopkeeper<br />keeps judgement.</h3><p>Merchant facts stay authoritative. AI suggestions carry confidence and provenance, and the app can ask for confirmation.</p><p>Exact-image hashing and semantic candidate matching provide a duplicate checkpoint before another record joins the catalogue.</p><details><summary>Useful words. Useful structure.</summary><dl className={styles.descriptionModel}><div><dt>Hook</dt><dd>The short reason to look closer.</dd></div><div><dt>Summary</dt><dd>The clear, useful product description.</dd></div><div><dt>Highlights</dt><dd>A few scannable details.</dd></div></dl><p>Legacy plain descriptions remain supported. Classification suggestions are validated before use; uncertainty can remain explicit.</p></details></div><figure><Art artwork={s.artwork.variants} /><figcaption>The product branches / Sizes, colours and exact inventory</figcaption></figure></div>
+      </section>
+      <section id="system" className={styles.chapter}>
+        <Chapter s={s} index={2} />
+        <div className={styles.stageLinks}><a href="#frontstage">The customer shop ↓</a><a href="#backstage">Behind the curtain ↓</a><a href="#quick-storage">Quick Storage ↓</a></div>
+        <CocoProductReveal />
+        <div id="frontstage" className={styles.sectionIntro}><p className={styles.eyebrow}>Front stage / The customer website</p><h3>Something lovely.<br />In the right size.</h3><p>Clear images, useful condition labels, a price and availability. The shop turns a rich product model into a simple decision.</p></div>
+        <Screen capture={c.shop} />
+        <details className={styles.mobileEvidence}><summary>See the collection on a phone</summary><Screen capture={c['shop-mobile']} phone /></details>
+        <div className={styles.editorialPair}><div><p className={styles.eyebrow}>A little guidance</p><h3>“What are we<br />shopping for?”</h3><p>Help Me Choose asks four approachable questions: size, who it’s for, the little moment and colour.</p><p>When an exact match is scarce, it relaxes colour, then moment, then recipient. The chosen size stays fixed.</p><p className={styles.note}>The machine knows more than the shopper needs to see.</p><details><summary>See the desktop starting point</summary><Screen capture={c.choose} /></details></div><Screen capture={c['choose-mobile']} phone /></div>
+        <div className={styles.searchStory}><figure><Art artwork={s.artwork.search} /><figcaption>One simple query / Many useful product signals</figcaption></figure><div><p className={styles.eyebrow}>Discovery / Quiet intelligence</p><h3>Search looks simple<br />because the work<br />happened earlier.</h3><p>Title, brand, descriptions, tags, shopping facets and variant sizes and colours contribute to discovery. Existing legacy data still has a place.</p><details><summary>Small sizes. Specific meaning.</summary><p>Current size guides: 0000 = Newborn; 000 = 0–3m; 00 = 3–6m; 0 = 6–12m; 1 = 12–18m; 2 = 18–24m; 3 = 24–36m. Ages are a guide. Matching uses the actual available variant size.</p><Screen capture={c.size} /></details></div></div>
+        <div className={styles.shopEvidence}><Screen capture={c.product} /><div><Screen capture={c['product-mobile']} phone /><div><h3>The garment<br />gets the space.</h3><p>Original photography and additional gallery views help shoppers inspect the piece. Larger views stay one tap away.</p><details><summary>Open another real gallery view</summary><Screen capture={c.gallery} /></details></div></div></div>
+        <details className={styles.identityEvidence}><summary>A real account, quietly in the background</summary><div className={styles.editorialPair}><div><h3>A little continuity.</h3><p>Registration, sign-in, sign-out, email verification, password reset and persistent sessions are implemented through GAMA Identity. Apple and Google are available sign-in routes.</p><p>The navigation adapts to account state. The capture here shows public sign-in options; it does not show an authenticated session.</p><a className={styles.textLink} href="https://cocothellama.com/privacy" target="_blank" rel="noopener noreferrer">Read Coco’s privacy policy ↗</a></div><Screen capture={c['sign-in']} /></div></details>
+      </section>
+    </div>
+    <div id="backstage" className={styles.backstage}>
+      <div className={styles.wrap}>
+        <header className={styles.curtain}><p className={styles.eyebrow}>Still chapter 03 / Pull back the curtain</p><h2>Welcome to<br /><em>Backstage.</em></h2><p>A small retail control system built around the object in your hands.</p></header>
+        <figure className={styles.wideScene}><Art artwork={s.artwork.backstage} /><figcaption>A conceptual workbench / Photograph, identify, store, publish</figcaption></figure>
+        <div className={styles.editorialPair}><div><p className={styles.eyebrow}>Native application / Catalog</p><h3>The collection.<br />With its working clothes on.</h3><p>Browse shared product records, then open the sizes, variants and actions behind each piece.</p><p>The native Catalog keeps publication state and product-level information together. Find &amp; Scan is the faster route when an exact item is already in hand.</p></div><Screen capture={c.catalog} phone /></div>
+        <div className={styles.lifecycle}><p className={styles.eyebrow}>From arrival to the next home</p><ol>{['Arrival','Identification','Enrichment','Storage','Publication','Sale','Fulfilment'].map((x,i)=><li key={x}><span>0{i+1}</span>{x}</li>)}</ol><p className={styles.note}>The full retail lifecycle. The live website currently supports browsing, without online checkout. The backend has order and configured shipping-rate support; automatic postage-label purchase is a future direction.</p></div>
+        <div className={styles.editorialPair}><figure><Art artwork={s.artwork.scan} /><figcaption>Label → exact variant / A physical way into the record</figcaption></figure><div><p className={styles.eyebrow}>Find & Scan</p><h3>The object is<br />the shortcut.</h3><p>Scan the QR label, or search by product, SKU, size or colour. Resolve an exact variant and open Item Actions.</p><p>The idle search surface leaves the catalogue out of the way. The task begins with the item you are holding.</p></div></div>
+        <div className={styles.actionComparison}><article><p className={styles.eyebrow}>Exact variant / Item Actions</p><h3>This size.<br />This stock.</h3><ul><li>Change Price</li><li>Put Away / Move</li><li>Increase Stock</li><li>AI Photos & Coco Details</li><li>Item / Product Details</li><li>Label for the exact SKU</li></ul></article><article><p className={styles.eyebrow}>Shared record / Product Actions</p><h3>The whole<br />product.</h3><ul><li>Edit Product</li><li>Prices across sizes</li><li>Add Size</li><li>Inventory across variants</li><li>AI Photos & Classification</li><li>Labels across variants</li></ul></article><p className={styles.note}>Publish and Unpublish act on the whole product, including when opened from an item. A SKU label identifies inventory; it is not a postage label.</p></div>
+        <div id="quick-storage" className={styles.storageStory}><div><p className={styles.eyebrow}>Quick Storage / Put Away</p><h3>Every item<br />needs a home.</h3><p>“Needs a Home” shows what is waiting. Quick Storage helps the operator finish the work.</p><ol className={styles.storageSteps}><li><strong>Build the batch.</strong> Tap to scan each item label. Accepted items join the batch.</li><li><strong>Choose one home.</strong> Scan the destination storage label.</li><li><strong>Review. Confirm.</strong> Move the batch together, with an atomic stock update.</li></ol><div className={styles.soundNotes}><p className={styles.eyebrow}>A small sound. Less uncertainty.</p><dl><div><dt>Beep</dt><dd>The label was read.</dd></div><div><dt>Chime</dt><dd>The item was accepted.</dd></div><div><dt>Low tone</dt><dd>The item was not added.</dd></div></dl></div><details><summary>When the connection gets in the way</summary><p>An ambiguous response keeps the same operation identity and payload for retry. The workflow guards against moving the same stock twice. Rejected and changed-stock cases stay visible before confirmation.</p></details></div><Screen capture={c['put-away']} phone /></div>
+        <figure className={styles.wideScene}><Art artwork={s.artwork.storage} /><figcaption>A problem list becomes a physical workflow / Conceptual storage study</figcaption></figure>
+        <div className={styles.photography}><div className={styles.sectionIntro}><p className={styles.eyebrow}>AI Photos / Visual merchandising</p><h3>Same garment.<br />A different way to see it.</h3><p>Flat Lay, Close Up, Mannequin, Family Vibes, Special Occasion, Studio Product, In Motion and Custom Styled are the current selectable scenes.</p></div><figure><Art artwork={s.artwork.photography} /><figcaption>Illustrative photography contexts / Not outputs for the real Bonds garment</figcaption></figure><div className={styles.photoPrinciple}><strong>Keep the product true.</strong><p>Originals remain available. The generation context carries saved product facts and size-derived age context. Colour, print, construction and details still need human review.</p></div></div>
+      </div>
+    </div>
+    <div className={styles.wrap}>
+      <section id="problems" className={styles.chapter}><Chapter s={s} index={3} /><p className={styles.note}>Study 01 records a regression. Studies 02–03 explain current design pressures. Study 04 connects the documented batch backend change to the current native flow.</p><div className={styles.failures}>{s.failures.map(f=><article key={f.id}><figure><Art artwork={f.artwork} /><figcaption>Failure specimen {f.id} / Cinematic metaphor</figcaption></figure><div><p className={styles.eyebrow}>Study {f.id}</p><h3>{f.title}</h3><p>{f.body}</p><p className={styles.lesson}>{f.lesson}</p><details><summary>The engineering evidence</summary><p>{f.evidence}</p></details></div></article>)}</div></section>
+      <section id="solutions" className={styles.chapter}><Chapter s={s} index={4} /><figure className={styles.wideScene}><Art artwork={s.artwork.customer} /><figcaption>Front stage / The complexity has somewhere else to live</figcaption></figure><div className={styles.solutions}>{[
+        ['Richer behind. Simpler in front.','Structured product information powers search and approachable shopping questions. The customer sees the parts that help them choose.'],
+        ['The right action at the right level.','Product editing, exact variants and physical allocations retain their own responsibilities. The model follows the garment into the stockroom.'],
+        ['Assistance with a checkpoint.','AI content, photography and duplicate candidates support the shopkeeper. Useful suggestions still need a human decision.'],
+        ['A short loop for physical work.','Scan, accept, choose a destination and confirm. Sound distinguishes a read label from accepted stock.'],
+      ].map(([title,body],i)=><article key={title}><span className={styles.eyebrow}>0{i+1}</span><h3>{title}</h3><p>{body}</p></article>)}</div><p className={styles.pullquote}>The customer sees the clothes.<br />The system remembers the details.</p></section>
+      <section id="evolution" className={styles.chapter}><Chapter s={s} index={5} /><p className={styles.note}>{s.chapters[5].annotation}</p><div className={styles.mutations}>{s.mutations.map(m=><article key={m.id}><figure><Art artwork={m.artwork} /></figure><div><p className={styles.eyebrow}>Mutation {m.id} / {m.numeral}</p><h3>{m.title}</h3><p>{m.summary}</p><details><summary>{m.form}</summary><p>{m.meaning}</p></details></div></article>)}</div><aside className={styles.current}><div><p className={styles.eyebrow}>Current state / Shipped & live</p><h3>A real shop.<br />An evolving system.</h3><p>The customer storefront and dedicated Backstage application connect the lovely things to the work behind them.</p><p className={styles.note}>Next horizon: a more connected sale-to-fulfilment loop, including postage labels and tracking. The live storefront remains browse-first today.</p></div><a className={styles.cta} href={s.productLink.url} target="_blank" rel="noopener noreferrer">Visit Coco’s shop ↗</a></aside></section>
+      <footer className={styles.ending}><figure><Art artwork={s.artwork.final} /><figcaption>The work settles / A conceptual packing-bench scene</figcaption></figure><p className={styles.closing}>Cute on the outside.<br /><em>Structured underneath.</em></p><Link href="/incubation">Back to the specimen archive ↗</Link><small>GAMA Dynamics / Specimen 004 / Coco the Llama</small><p className={styles.evidenceNote}>Cinematic scenes are conceptual. Website captures and product photography are authentic. The native Put Away capture uses fictional verification inventory. Additional signed-in and Backstage screen evidence is pending.</p></footer>
+    </div>
+  </main>;
+}

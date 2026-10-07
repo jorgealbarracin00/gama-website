@@ -100,4 +100,12 @@ export type TaraSpecimen = SpecimenIdentity & {
   currentStage: { heading: string; body: string };
 };
 
-export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen;
+export type CocoSpecimen = SpecimenIdentity & {
+  accent: "coral";
+  artwork: Record<string, SpecimenArtwork>;
+  captures: (SpecimenArtwork & { id: string; title: string; surface: "Website" | "Backstage"; note: string })[];
+  failures: { id: string; title: string; body: string; lesson: string; evidence: string; artwork: SpecimenArtwork }[];
+  mutations: Omit<SpecimenMutation, "artifact">[];
+};
+
+export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen | CocoSpecimen;

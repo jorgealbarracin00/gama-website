@@ -1,0 +1,300 @@
+{
+  "specimen": "GAMA-004",
+  "inspectedAt": "2026-10-08",
+  "brief": {
+    "path": "/Users/jorgealbarracin/.codex/attachments/09697f87-f48e-45c7-9475-b7a413ebcc74/Pasted text.txt",
+    "sha256": "69701e292baad32df7de13ca688314206d32577c2f8f93f8d9a29667591a58e3"
+  },
+  "authority": [
+    "User Specimen 004 brief for designation and deployed lifecycle",
+    "Current customer website implementation and live public captures",
+    "Current GAMA Platform/coco native working tree and backend source for operational claims",
+    "Source history and tests for correction and design evidence"
+  ],
+  "websiteCommit": "1d0585f753f99874ba16d7ce68cb1c9a10490b87",
+  "platformCommit": "c2b7f8bf371ed5bc4d4d824c648b753b3ea233f5",
+  "nativeWorkingTreeNote": "apps/ios is present in the current working tree but untracked at inspection. File hashes, not the platform HEAD alone, identify inspected native source. No Coco product files were modified.",
+  "sources": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/README.md",
+      "sha256": "26db17cea88fe93d46dbcaadbb7c1d3d8ff3d528918822eae5be2199515d8cc4"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/app/globals.css",
+      "sha256": "9b6a66766e5e5b654c373210544a522e2b2f8d3773d4c003a52095bdffdb66b2"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/lib/site.ts",
+      "sha256": "5156d1c24c429d405f3c1c722d79ff426d1697c5bc06d2588b022796014ce569"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/lib/catalogue.ts",
+      "sha256": "2fd398bb4588585624c583b136e2eed8f9dd1602b434b1f780b43c213169fbc4"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/lib/sizes.ts",
+      "sha256": "ae473aedfed892a44bf4e92e1cdb3eaa355fb9e0942e9100a6f6800cd167f57e"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/lib/discovery.ts",
+      "sha256": "4c8560ad2b2d8497be1ec3d1d15ccf9e35f477ec5d115953e41158fbf4e5883f"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/lib/auth.ts",
+      "sha256": "56dae1e7860c86a833018ad3e6dd3c0db10c0aa29c33f853d5854e83957b98fa"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/app/product/[id]/page.tsx",
+      "sha256": "9daf2a702a6decdb04b22a137abf06731f38cb27988f641824ed7153b5972986"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/components/SiteHeader.tsx",
+      "sha256": "cc770d9b1acbd8cb9dd2cdf4ad48e3cafcbeb6618e07fe31550ed333e78166fb"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/cocothellama.com/src/app/privacy/page.tsx",
+      "sha256": "9860ff31260815c68d567894705cc5e5a19140ece2db75ef5990884ee127ed0a"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Core/DesignSystem/CocoDesignSystem.swift",
+      "sha256": "da4b59b0d2baec9b50ca7d76c9832797fdac3efb57d880e98abfb52edf717fcb"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Core/Models/ProductCreationModels.swift",
+      "sha256": "0cccd5b385172d945e26f86dda7b7dc65c1eb27be08bdea5b473dddac5ac58aa"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Core/PhysicalOperations/AcceptedStockScanFeedback.swift",
+      "sha256": "64158f9811fbcfa9250f6c707b833c8a27700e93c12c86becdb79e95cc8d7819"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Products/ProductCreationFlowView.swift",
+      "sha256": "0ed03256e6480df352590efda3d6c9deaa5ed90d04d7864a09955aac93c21407"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Products/ProductCreationSteps.swift",
+      "sha256": "6bd4fb4ccdd39a8b13556ff3f4f89a64d55fa2d3efada57c2ddc9773bae548fa"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Backstage/BackstageOperationalViews.swift",
+      "sha256": "eb5dad976e548ac10e1581eaf52e479a7b9b9583e547733b4bd8ea3dbf2752bf"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Backstage/BackstageMerchantWorkflows.swift",
+      "sha256": "b5e4ebc41d304110f603db96b725519d3eb3579f9a8039c2604b22bdcc9d0cc8"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Backstage/QuickStorageView.swift",
+      "sha256": "4998afe1d36da55a030df26349537b5190ea0b34a1b1ed312ab644aabdf8d2f0"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Backstage/QuickStorageModel.swift",
+      "sha256": "a5e85569d22f041956c87e8335afb663dc5470d254ec672040fb3f7c64bd84a0"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanion/Features/Backstage/PutAwayUITestSupport.swift",
+      "sha256": "6b2edbd3a97fa2de6b83966062444d4f6e39378b928f3c395cc552d192e2f3af"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/apps/ios/CocoCompanion/CocoCompanionUITests/PutAwayUITests.swift",
+      "sha256": "403e9edd4d0c95434c84e83ce57b7d2e399c148c5f03c0b066cc6adee9f1c973"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/README.md",
+      "sha256": "e220ab38c8a4623d14c397f5373b880f7c427c29d5d35539c2291b85fa3e6be3"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/domain.ts",
+      "sha256": "ace96a23fda3424e239b5bff1df5da7876da06089bdd6d6ca0abb30a1f27ed4a"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/service.ts",
+      "sha256": "3c5fc31e2b32836d4bc2a3e8399087c6619583747f92cf220a75de560d5dfde1"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/shipping.ts",
+      "sha256": "b3129407d91d09a419f1fa5f6685ed5b97f6a20efe088f501aaecbfcd803ca77"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/product-similarity.ts",
+      "sha256": "e8b668fee37a345ba5fd5e90dc132b0ba618276248ddc8ecbe01d246094b87cb"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/enrichment/contracts.ts",
+      "sha256": "f35ab1f1cc79b6f2f77c5c474ca27951e124e94e0e9c36c6812ecd0fc81b78ad"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/src/enrichment/image-generation-scenes.ts",
+      "sha256": "ef4e96c26cf82b1185ad09ffaac5409082d4153af28f170567f999354586b5bf"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/test/enrichment-contracts.test.ts",
+      "sha256": "543f17fb5c183c822de19aae6d6cb0b9ff292022069181514c344557cea86e4b"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/test/physical-operations.test.ts",
+      "sha256": "b104961a2eab9bf3a26898d7a9e1d561cc529c5bdee8a448b4ded95a2399aa33"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/3. Platform/GAMA Platform/coco/backend/test/quick-storage.test.ts",
+      "sha256": "15d97db1a26119d8089f45667d052c104f0917c39ab494c5120a4350fe8cfd0f"
+    }
+  ],
+  "captures": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/backstage-catalog.png",
+      "sha256": "de98c64c3459ba5bb7070f883190af49adac490aa5a01ef3c35d64ffbf1c9b80",
+      "destination": "public/specimens/coco/captures/backstage-catalog.png",
+      "source": "iPhone Mirroring / native Coco Catalog",
+      "method": "CUA iPhone Mirroring screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/backstage-put-away.png",
+      "sha256": "fe338752f52662b380a8409cd78a3f0967ae52d6b6ed7ad34f5f37bbccb1260a",
+      "destination": "public/specimens/coco/captures/backstage-put-away.png",
+      "source": "/private/tmp/coco-put-away-screen.png",
+      "method": "Existing native verification screenshot, copied without pixel changes",
+      "fictionalInventory": true
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/choose-desktop.png",
+      "sha256": "df62926c4e8344ed36354ad73ba84ca44d0f410e2277f94491cf2de253ab863f",
+      "destination": "public/specimens/coco/captures/choose-desktop.png",
+      "source": "https://cocothellama.com/choose",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/choose-mobile.png",
+      "sha256": "c12cccc488cbfad106306afe4ff2782f783e7a8ac1eae3c2927ae497b20f672a",
+      "destination": "public/specimens/coco/captures/choose-mobile.png",
+      "source": "https://cocothellama.com/choose?step=3&size=00&who=either",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/product-desktop.png",
+      "sha256": "7b653d968a069b699e5a0510c14446f50030138b8898c045178a5c6c44b520d2",
+      "destination": "public/specimens/coco/captures/product-desktop.png",
+      "source": "https://cocothellama.com/product/3140A469-F34C-4949-B6C2-B1E7C80603DB",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/product-gallery-desktop.png",
+      "sha256": "040b8872eef04b6dcd7399c5ec0f322e506735f6b9cf14cb4b23b0a145a8bea2",
+      "destination": "public/specimens/coco/captures/product-gallery-desktop.png",
+      "source": "https://cocothellama.com/product/3140A469-F34C-4949-B6C2-B1E7C80603DB",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/product-mobile.png",
+      "sha256": "883d963191c270e67ea82a6735a0f9bcb59c4d2bcaa6d506af4ff9ed852e8e48",
+      "destination": "public/specimens/coco/captures/product-mobile.png",
+      "source": "https://cocothellama.com/product/3140A469-F34C-4949-B6C2-B1E7C80603DB",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/shop-desktop.png",
+      "sha256": "b4c90677f0b6e1b77bd517a7075caf72a0b8a46567a430f7dff673af27becfbb",
+      "destination": "public/specimens/coco/captures/shop-desktop.png",
+      "source": "https://cocothellama.com/shop",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/shop-mobile.png",
+      "sha256": "b8383ee3b2f49c4c7a636775d03e16b542bd48c4e013129441565144fd40fcfa",
+      "destination": "public/specimens/coco/captures/shop-mobile.png",
+      "source": "https://cocothellama.com/shop",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/shop-size-desktop.png",
+      "sha256": "32bb844ca944dbe76175693dc47074b133398548d02a3f8d4252b14c7673bf82",
+      "destination": "public/specimens/coco/captures/shop-size-desktop.png",
+      "source": "https://cocothellama.com/shop?f_size=00",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/captures/sign-in-desktop.png",
+      "sha256": "c24d7eee09804e4ac7f2d2fc5669ef5c2b5947b1f4a68dda682e391d509d11a3",
+      "destination": "public/specimens/coco/captures/sign-in-desktop.png",
+      "source": "https://cocothellama.com/account/sign-in",
+      "method": "CUA browser screenshot",
+      "fictionalInventory": false,
+      "formatNote": "Original CUA screenshot bytes retained in local QA/capture-originals. JPEG decoded losslessly to PNG for an accurate public MIME type; no semantic image edits."
+    }
+  ],
+  "productPhotography": {
+    "sourceUrl": "https://cocothellama.com/_next/image?url=%2Fmedia%2Fec39c675-9a9f-4c50-8f43-37dbadc6fb63%3Frendition%3Ddetail&w=1080&q=75",
+    "listing": "https://cocothellama.com/product/3140A469-F34C-4949-B6C2-B1E7C80603DB",
+    "export": "CUA observed page asset bundle; AVIF decoded to PNG. No visual edits or watermark removal.",
+    "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/coco/products/dinosaur-wondersuit-original.png",
+    "sha256": "beabfa4a52f62354e96bbda5f2f43e263c392266e8c82561a17bbc06057793a7"
+  },
+  "artworkManifest": "docs/specimens/coco-artwork.json",
+  "claimReconciliations": [
+    {
+      "topic": "Checkout / shipping",
+      "finding": "Live product page explicitly says website checkout is not yet available. Backend order and configured fixed-rate/package-fit shipping support exist. No evidence of automatic carrier postage-label purchase; treated as future direction."
+    },
+    {
+      "topic": "Size mapping",
+      "finding": "Current source uses separate 1=12\u201318m, 2=18\u201324m, 3=24\u201336m rather than the older coarse ranges in the brief. Availability uses an in-stock, purchasable variant with positive available quantity."
+    },
+    {
+      "topic": "Quick Storage",
+      "finding": "Current client is deliberate tap-to-scan, one label per request, with label-read beep, backend-accepted chime, rejected low tone. Batch destination review and confirmation perform atomic put-away with stable-operation retry."
+    },
+    {
+      "topic": "Product / item actions",
+      "finding": "Product, variant and physical allocation are separate. Publication acts on the entire product even from Item Actions. SKU labels are inventory labels, separate from postage."
+    },
+    {
+      "topic": "AI / photos",
+      "finding": "Merchant facts remain authoritative. Enrichment v3 tracks confidence/provenance and validates structured hook, summary, highlights. Eight current selectable image scenes; originalEnhanced is legacy. Human review still required for product truth."
+    },
+    {
+      "topic": "Help Me Choose",
+      "finding": "Four steps: size, recipient, moment, colour. Relaxation order is colour, moment, recipient; never size."
+    },
+    {
+      "topic": "Authentication",
+      "finding": "Registration, sign-in/out, verification, reset, persistent secure cookie, Apple/Google routes and account-state navigation found in current source. Public sign-in captured. Signed-in navigation not captured."
+    },
+    {
+      "topic": "Failure studies",
+      "finding": "01 is supported by commit 3f423d2 enrichment recovery regression, including blank subcategory. 02/03 are conceptual design pressures supported by current Find & Scan and action models, not invented historical bugs. 04 uses documented commit c2b7f8b atomic batch Put Away and current retry tests."
+    }
+  ],
+  "evidenceLimitations": [
+    "Only Catalog and Put Away native screenshots are currently available. Catalog captured from the live native app; Put Away is an authentic native verification screen with fictional inventory.",
+    "Find & Scan, Item Actions, Product Actions, creation/enrichment, stock editing and labels are supported in current source but do not yet have dedicated screenshot evidence on the specimen.",
+    "iPhone Mirroring repeatedly disconnected because the iPhone was in use. User availability requested once; no authenticated web session available.",
+    "Coco native/backend tests inspected, not rerun as part of this website-only change. Website build, lint, TypeScript and browser checks tracked separately."
+  ],
+  "validation": {
+    "status": "Website build, lint, TypeScript, responsive and keyboard checks passed; capture gaps remain",
+    "report": "docs/specimens/coco-validation.json"
+  },
+  "deploymentApproval": {
+    "date": "2026-10-08",
+    "instruction": "deploy",
+    "scope": "Publish the reviewed Specimen 004 Coco build to the existing GAMA Dynamics production website. Known screenshot evidence gaps remain explicit."
+  }
+}

@@ -1,0 +1,782 @@
+{
+  "specimen": "GAMA-004",
+  "validatedAt": "2026-10-08",
+  "state": "Validated build; user authorised production publication",
+  "preview": "http://localhost:3003/incubation/coco",
+  "deployment": {
+    "method": "Existing GitHub main \u2192 Vercel production integration",
+    "liveUrl": "https://gamadynamics.com.au/incubation/coco",
+    "verificationReceipt": "Local task QA/coco/deployment.json, recorded after publication"
+  },
+  "commands": {
+    "npm run build": "pass",
+    "npm run lint": "pass",
+    "npx tsc --noEmit": "pass",
+    "git diff --check": "pass"
+  },
+  "responsive": [
+    {
+      "requestedWidth": 320,
+      "chapter": "Origin",
+      "active": "#origin",
+      "brokenImages": [],
+      "hash": "#origin",
+      "headingTop": 186.890625,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 320,
+      "chapter": "Experiment",
+      "active": "#experiment",
+      "brokenImages": [],
+      "hash": "#experiment",
+      "headingTop": 186.7109375,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 320,
+      "chapter": "System",
+      "active": "#system",
+      "brokenImages": [],
+      "hash": "#system",
+      "headingTop": 186.5234375,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 320,
+      "chapter": "Problems",
+      "active": "#problems",
+      "brokenImages": [],
+      "hash": "#problems",
+      "headingTop": 186.71875,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 320,
+      "chapter": "Solutions",
+      "active": "#solutions",
+      "brokenImages": [],
+      "hash": "#solutions",
+      "headingTop": 186.609375,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 320,
+      "chapter": "Evolution",
+      "active": "#evolution",
+      "brokenImages": [],
+      "hash": "#evolution",
+      "headingTop": 186.7109375,
+      "pageWidth": 320,
+      "viewport": [
+        320,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "Origin",
+      "active": "#origin",
+      "brokenImages": [],
+      "hash": "#origin",
+      "headingTop": 188.515625,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "Experiment",
+      "active": "#experiment",
+      "brokenImages": [],
+      "hash": "#experiment",
+      "headingTop": 188.640625,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "System",
+      "active": "#system",
+      "brokenImages": [],
+      "hash": "#system",
+      "headingTop": 188.46875,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "Problems",
+      "active": "#problems",
+      "brokenImages": [],
+      "hash": "#problems",
+      "headingTop": 188.5,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "Solutions",
+      "active": "#solutions",
+      "brokenImages": [],
+      "hash": "#solutions",
+      "headingTop": 188.28125,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 390,
+      "chapter": "Evolution",
+      "active": "#evolution",
+      "brokenImages": [],
+      "hash": "#evolution",
+      "headingTop": 188.4453125,
+      "pageWidth": 390,
+      "viewport": [
+        390,
+        1000
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "Origin",
+      "active": "#origin",
+      "brokenImages": [],
+      "hash": "#origin",
+      "headingTop": 241.5859375,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "Experiment",
+      "active": "#experiment",
+      "brokenImages": [],
+      "hash": "#experiment",
+      "headingTop": 241.7265625,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "System",
+      "active": "#system",
+      "brokenImages": [],
+      "hash": "#system",
+      "headingTop": 241.5859375,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "Problems",
+      "active": "#problems",
+      "brokenImages": [],
+      "hash": "#problems",
+      "headingTop": 241.4609375,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "Solutions",
+      "active": "#solutions",
+      "brokenImages": [],
+      "hash": "#solutions",
+      "headingTop": 241.25,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 768,
+      "chapter": "Evolution",
+      "active": "#evolution",
+      "brokenImages": [],
+      "hash": "#evolution",
+      "headingTop": 241.2578125,
+      "pageWidth": 768,
+      "viewport": [
+        768,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "Origin",
+      "active": "#origin",
+      "brokenImages": [],
+      "hash": "#origin",
+      "headingTop": 277.1796875,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "Experiment",
+      "active": "#experiment",
+      "brokenImages": [],
+      "hash": "#experiment",
+      "headingTop": 241.46875,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "System",
+      "active": "#system",
+      "brokenImages": [],
+      "hash": "#system",
+      "headingTop": 241.328125,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "Problems",
+      "active": "#problems",
+      "brokenImages": [],
+      "hash": "#problems",
+      "headingTop": 241.515625,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "Solutions",
+      "active": "#solutions",
+      "brokenImages": [],
+      "hash": "#solutions",
+      "headingTop": 241.4921875,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1280,
+      "chapter": "Evolution",
+      "active": "#evolution",
+      "brokenImages": [],
+      "hash": "#evolution",
+      "headingTop": 241.4921875,
+      "pageWidth": 1280,
+      "viewport": [
+        1280,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "Origin",
+      "active": "#origin",
+      "brokenImages": [],
+      "hash": "#origin",
+      "headingTop": 310.71875,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "Experiment",
+      "active": "#experiment",
+      "brokenImages": [],
+      "hash": "#experiment",
+      "headingTop": 241.40625,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "System",
+      "active": "#system",
+      "brokenImages": [],
+      "hash": "#system",
+      "headingTop": 241.390625,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "Problems",
+      "active": "#problems",
+      "brokenImages": [],
+      "hash": "#problems",
+      "headingTop": 241.71875,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "Solutions",
+      "active": "#solutions",
+      "brokenImages": [],
+      "hash": "#solutions",
+      "headingTop": 241.4375,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "requestedWidth": 1440,
+      "chapter": "Evolution",
+      "active": "#evolution",
+      "brokenImages": [],
+      "hash": "#evolution",
+      "headingTop": 241.34375,
+      "pageWidth": 1440,
+      "viewport": [
+        1440,
+        1080
+      ]
+    }
+  ],
+  "openings": [
+    {
+      "h1Width": 288,
+      "height": 1080,
+      "hero": "http://localhost:3003/specimens/coco/hero-mobile-v1.webp",
+      "pageWidth": 320,
+      "width": 320,
+      "y": 0
+    },
+    {
+      "h1Width": 485,
+      "height": 1080,
+      "hero": "http://localhost:3003/_next/image?url=%2Fspecimens%2Fcoco%2Ffront-stage-backstage-v1.webp&w=1920&q=75",
+      "pageWidth": 768,
+      "width": 768,
+      "y": 0
+    },
+    {
+      "h1Width": 851.7265625,
+      "height": 1080,
+      "hero": "http://localhost:3003/_next/image?url=%2Fspecimens%2Fcoco%2Ffront-stage-backstage-v1.webp&w=1920&q=75",
+      "pageWidth": 1440,
+      "width": 1440,
+      "y": 0
+    }
+  ],
+  "screenshotDimensions": [
+    {
+      "file": "1280-evolution.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1280-experiment.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1280-origin.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1280-problems.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1280-solutions.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1280-system.png",
+      "width": 1280,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-evolution.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-experiment.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-opening.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-origin.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-problems.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-solutions.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "1440-system.png",
+      "width": 1440,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-evolution.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-experiment.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-opening.png",
+      "width": 320,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-origin.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-problems.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-solutions.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "320-system.png",
+      "width": 320,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-evolution.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-experiment.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-origin.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-problems.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-solutions.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "390-system.png",
+      "width": 390,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-evolution.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-experiment.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-opening.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-origin.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-problems.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-solutions.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    },
+    {
+      "file": "768-system.png",
+      "width": 768,
+      "height": 1080,
+      "format": "jpeg"
+    }
+  ],
+  "keyboard": {
+    "chapterLinks": "Enter activation checked for all 30 width/chapter combinations",
+    "productReveal": "Enter and Space select the two perspectives; mutually exclusive aria-pressed states and live labelled region verified",
+    "focus": "Solid visible focus outline observed on reveal button",
+    "disclosures": "Native details/summary toggled by Enter; account screenshot becomes visible",
+    "mobileCollectionDisclosure": "Enter opens and closes the collection capture; at 390px document width remains 390px."
+  },
+  "accessibility": {
+    "singleH1": true,
+    "sixChapterNavigationLinks": true,
+    "fourFailureArticles": true,
+    "sevenMutationArticles": true,
+    "imagesWithoutAlt": 0,
+    "duplicateIds": 0,
+    "colourContrastSamples": [
+      {
+        "context": "Cream / body",
+        "foreground": "#472417",
+        "background": "#fffaf0",
+        "ratio": 13.17
+      },
+      {
+        "context": "Cream / muted",
+        "foreground": "#70574a",
+        "background": "#fffaf0",
+        "ratio": 6.41
+      },
+      {
+        "context": "Cream / editorial accent",
+        "foreground": "#a34c41",
+        "background": "#fffaf0",
+        "ratio": 5.5
+      },
+      {
+        "context": "Backstage / body",
+        "foreground": "#fffaf0",
+        "background": "#30231d",
+        "ratio": 14.59
+      },
+      {
+        "context": "Backstage / muted",
+        "foreground": "#d9c4b5",
+        "background": "#30231d",
+        "ratio": 9.04
+      },
+      {
+        "context": "Product reveal / labels",
+        "foreground": "#ddc9bb",
+        "background": "#39271f",
+        "ratio": 8.86
+      },
+      {
+        "context": "Customer card / body",
+        "foreground": "#472417",
+        "background": "#f2e3cd",
+        "ratio": 10.86
+      }
+    ],
+    "reducedMotion": "Scoped CSS disables transitions/animation under prefers-reduced-motion. OS setting not changed."
+  },
+  "metadata": {
+    "canonical": "https://gamadynamics.com.au/incubation/coco",
+    "openGraph": "Coco hero and description",
+    "twitter": "summary_large_image"
+  },
+  "registry": {
+    "order": [
+      "001 GroceryMaster",
+      "002 Memoir Echoes",
+      "003 TARA",
+      "004 Coco the Llama"
+    ],
+    "count": "04",
+    "archiveVerifiedInBrowser": true
+  },
+  "console": "No error or warning logs observed in local specimen tab",
+  "preservedApprovedFiles": [
+    {
+      "path": "components/specimen/SpecimenFile.tsx",
+      "sha256": "0431fcb149eaadfa5a53399f8e049b371fc6a64806bc87e88165e80ddf237367"
+    },
+    {
+      "path": "components/specimen/SpecimenFile.module.css",
+      "sha256": "abd889d2003e6e407fd13a41b6ac1123b88fc291bd9f84551e701c4f8150b11f"
+    },
+    {
+      "path": "lib/specimens/grocerymaster.ts",
+      "sha256": "c61868e181b183b9568ccfab97379cc57e1ba4328c63512372e8f0cdb7e55ced"
+    },
+    {
+      "path": "components/specimen/MemoirFile.tsx",
+      "sha256": "d60ab64bd9666195e108f7645811bc2272f14b9a146115d67e0ac6b24325b8df"
+    },
+    {
+      "path": "components/specimen/MemoirFile.module.css",
+      "sha256": "4fe7539819c19dd2a269763053d7b6057273ae985e3c5b316c3f6c1e18c320c7"
+    },
+    {
+      "path": "lib/specimens/memoir-echoes.ts",
+      "sha256": "7827a39488a7f16b66eaec1a7312fb9411396213bad878c473fc6e8fe071ce43"
+    },
+    {
+      "path": "components/specimen/TaraFile.tsx",
+      "sha256": "3650ad067cdcbf5f8e462af351ace88317d191e98f0c2cfc0b02a1ae3c3dde9c"
+    },
+    {
+      "path": "components/specimen/TaraFile.module.css",
+      "sha256": "81bfb40a7c076cf2b612906eb1985837dc60a31304fcad65f6cc4e569a249e43"
+    },
+    {
+      "path": "components/specimen/TaraMascot.tsx",
+      "sha256": "b9bf3c2d1c9f2ee2bb87fc53d9aeae4452147fd1cb3784d7bcbd1b46185e809e"
+    },
+    {
+      "path": "components/specimen/TaraTimeWindow.tsx",
+      "sha256": "5bde9fe474dbf1c10465089f9a685f0334a8e5b87a6c7a54b997c2118954f62b"
+    },
+    {
+      "path": "lib/specimens/tara.ts",
+      "sha256": "36fb8ea2f3ba73a3c147f6279303a1a04d1460683e465229c4a95c137a5ed96f"
+    },
+    {
+      "path": "app/incubation/tara/page.tsx",
+      "sha256": "1e03fb1b8fdd3d2bdf824ebce7dd21ac4ba9646318c06e84ac9c4d5482a59c5e"
+    }
+  ],
+  "reviewScreenshots": {
+    "opening": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/coco/1440-opening.png",
+    "phone": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/coco/mobile-opening.png",
+    "backstage": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/coco/desktop-backstage.png",
+    "storage": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/coco/desktop-storage.png",
+    "overview": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/coco/page-overview.png"
+  },
+  "remainingEvidence": [
+    "Authenticated website navigation screenshot",
+    "Dedicated native Find & Scan, Item Actions, Product Actions, creation/enrichment, stock editing and label-workflow screenshots"
+  ],
+  "limits": [
+    "Native/backend Coco tests were inspected, not rerun. This change only affects the GAMA website.",
+    "Browser semantic and keyboard checks plus sampled contrast are not a complete assistive-technology audit."
+  ],
+  "previewLeftOpen": true,
+  "deploymentApproval": {
+    "date": "2026-10-08",
+    "instruction": "deploy",
+    "scope": "Publish the reviewed Specimen 004 Coco build to the existing GAMA Dynamics production website. Known screenshot evidence gaps remain explicit."
+  }
+}

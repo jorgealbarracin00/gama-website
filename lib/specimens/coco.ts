@@ -1,0 +1,63 @@
+import type { CocoSpecimen, SpecimenArtwork } from './types';
+const art = (file: string, alt: string, portrait = false): SpecimenArtwork => ({src: `/specimens/coco/${file}-${['search-intelligence','quick-storage','failure-nameless','failure-homeless-stockroom','photo-studio'].includes(file) ? 'v2' : 'v1'}.webp`, alt, width: portrait ? 1024 : 1536, height: portrait ? 1536 : 1024});
+const artwork = {
+  hero: art('front-stage-backstage', 'Coco welcomes visitors into a warm boutique, with a carefully organised stockroom visible through an open timber divider.'),
+  mobile: art('hero-mobile', 'A coral romper, the original Coco llama and a tidy stockroom arranged in a portrait composition.', true),
+  origin: art('single-garment', 'One illustrative coral romper on linen beside a blank swing tag and packing tissue.'),
+  machine: art('commerce-machine', 'A conceptual cutaway connects receiving, photography, variants, storage, display and packing in one small boutique.'),
+  enrichment: art('enrichment-eye', 'A shopkeeper compares a physical garment with a set of blank attribute cards at a photo station.'),
+  variants: art('product-variants', 'One illustrative garment branches into several sizes, each with its own tag and stock tray.'),
+  search: art('search-intelligence', 'A magnifying glass and organised swatches connect a simple search to a richer catalogue.'),
+  backstage: art('backstage-workbench', 'An organised Coco workbench with scanner, photo station, stock bins and packing materials.'),
+  scan: art('find-and-scan', 'A handheld scanner identifies a tag on a garment in a warm boutique stockroom.'),
+  storage: art('quick-storage', 'A garment moves from a waiting basket into a specific storage bin.'),
+  photography: art('photo-studio', 'An illustrative garment is presented through flat lay, dress form and fabric-detail photography setups.'),
+  nameless: art('failure-nameless', 'A garment’s conceptual metadata frame has one conspicuous missing card.'),
+  rack: art('failure-endless-rack', 'An impossibly long rack makes finding one physical garment difficult.'),
+  identity: art('failure-split-identity', 'One garment is reflected through conflicting product and item representations.'),
+  homeless: art('failure-homeless-stockroom', 'Waiting garments and empty destination bins have no clear put-away path between them.'),
+  customer: art('customer-magic', 'A parent feels a lilac cardigan in a warm, tactile boutique.'),
+  final: art('packed-and-quiet', 'A conceptual packed parcel rests on Coco’s bench as the organised shop settles for the evening.'),
+};
+const capture = (id: string, file: string, title: string, width: number, height: number, surface: 'Website' | 'Backstage' = 'Website', note = 'Authentic public website capture · 8 October 2026'): CocoSpecimen['captures'][number] => ({id,src:`/specimens/coco/captures/${file}.png`,title,width,height,surface,note,alt:`Authentic Coco ${surface} capture: ${title}. ${note}.`});
+export const coco: CocoSpecimen = {
+  id:'004',number:'004',slug:'coco',name:'Coco the Llama',epithet:'Front stage magic. Backstage machinery.',type:'system',status:'deployed',statusLabel:'Shipped / Live',generation:'A small shop, connected',classification:'CHILDREN’S FASHION / COMMERCE & PHYSICAL OPERATIONS',
+  summary:'A warm children’s fashion shop with a dedicated Backstage system connecting product facts, variants, stock, AI assistance, search and physical storage.',
+  narrative:'The customer sees the clothes. The specimen pulls back the curtain on the work that makes them discoverable.',mission:'Small shop. Serious system.',platforms:['Customer website','Native Backstage application'],technologySummary:['Next.js','SwiftUI','GAMA Identity','TypeScript','Firestore','AI-assisted catalogue'],featuredOrder:4,accent:'coral',productLink:{url:'https://cocothellama.com',label:'Visit Coco’s shop'},closingLines:['Cute on the outside.','Structured underneath.'],artwork,
+  chapters:[
+    {id:'origin',title:'Origin',heading:'A tiny romper still needs a SKU.',paragraphs:['One lovely piece. A photograph, a size, a price. Then stock, a place on a shelf, a listing and a way to find it again.','A small shop is still a real operation. The product is small. The lifecycle is not.']},
+    {id:'experiment',title:'Experiment',heading:'Less typing. More shopkeeping.',paragraphs:['Start with the thing in your hands. Photograph it. Add the facts only the shopkeeper knows. Let software help with the repetitive catalogue work.','The experiment: give a small business more operational power without giving it more operational weight.']},
+    {id:'system',title:'System',heading:'One garment. Two realities.',paragraphs:['Parents see something lovely in the right size. Backstage sees a product, exact variants, available stock and a physical home.','The two views belong to the same system. Complexity stays behind the curtain.']},
+    {id:'problems',title:'Problems',heading:'Little clothes. Proper problems.',paragraphs:['The hard parts live between the garment, the record and the shelf. A missing field. An ambiguous action. A pile of stock that still needs putting away.'],annotation:'Cinematic metaphors paired with source-backed engineering and design evidence.'},
+    {id:'solutions',title:'Solutions',heading:'Turn the work into short loops.',paragraphs:['Find the exact item. Give it the right action. Put it where it belongs. Keep the shop’s information in step with the physical world.','A problem list tells you what is waiting. A workflow helps you finish the job.']},
+    {id:'evolution',title:'Evolution',heading:'From listing to a little retail machine.',paragraphs:['Seven capabilities, brought into one connected operation. Each gives the small shop a little less work to carry.'],annotation:'Conceptual mutations of the system, rather than dated release milestones.'},
+  ],
+  captures:[
+    capture('shop','shop-desktop','The live collection',1440,1080),
+    capture('product','product-desktop','Bonds Dinosaur Print Wondersuit',1440,1080),
+    capture('gallery','product-gallery-desktop','The real product gallery',1440,1080),
+    capture('size','shop-size-desktop','Size 00 selected',1440,1080),
+    capture('choose','choose-desktop','Help Me Choose · Start with size',1440,1080),
+    capture('choose-mobile','choose-mobile','Help Me Choose · A moment for them',390,1000),
+    capture('shop-mobile','shop-mobile','The collection on a phone',390,1000),
+    capture('product-mobile','product-mobile','Product photography on a phone',390,1000),
+    capture('sign-in','sign-in-desktop','Account sign-in options',1440,1080),
+    capture('catalog','backstage-catalog','Catalog · Shared product records',616,1388,'Backstage','Authentic native application · captured through iPhone Mirroring, 8 October 2026'),
+    capture('put-away','backstage-put-away','Put Away · Quick Storage and Needs a Home',1206,2622,'Backstage','Native verification capture · fictional Blue Romper inventory'),
+  ],
+  failures:[
+    {id:'01',title:'The nameless garment',body:'The photograph is clear. The structured answer is not. An empty suggested subcategory can still make an enrichment response invalid.',lesson:'Optional means absent or null. A present suggestion needs useful content. Validate the whole result before applying it, and make recovery explicit.',evidence:'The enrichment recovery regression tests explicitly cover subcategory.value = an empty string. The current contract rejects blank suggestions and supports a null subcategory.',artwork:artwork.nameless},
+    {id:'02',title:'The endless rack',body:'When someone is holding an item, a long inventory list asks the wrong question. They need that exact size, SKU and stock context.',lesson:'Find & Scan begins with a scan or a search. The catalogue stays out of the way until the operator looks for something.',evidence:'Current Find & Scan opens with an empty search state and resolves an exact variant before opening Item Actions.',artwork:artwork.rack},
+    {id:'03',title:'The split identity',body:'A product is the shared idea. A variant is a particular size and colour. A stock allocation says how many live in a particular place. Their actions cannot all mean the same thing.',lesson:'Keep product editing and publication at product level. Keep an exact item’s price, stock and movement attached to its variant and allocation.',evidence:'Current Product Actions and Item Actions use distinct routes and action models. Publication from either surface explicitly changes the whole product.',artwork:artwork.identity},
+    {id:'04',title:'The homeless stockroom',body:'“Needs a Home” makes waiting stock visible. The work is getting it off the staging table and into a known location.',lesson:'Scan a batch of items, scan one destination, review and confirm. If a response is lost, retry the same operation instead of moving the stock twice.',evidence:'The batch Put Away backend commit adds an atomic movement. Current client tests cover changed stock, rejected scans and retrying an ambiguous response with the same operation identity.',artwork:artwork.homeless},
+  ],
+  mutations:[
+    {id:'001',numeral:'I',title:'The Listing',summary:'A lovely piece gets a place online.',form:'Object → listing',meaning:'Photography and useful product information turn a physical garment into a discoverable page.',artwork:artwork.origin},
+    {id:'002',numeral:'II',title:'The Catalogue',summary:'Structure makes the collection findable.',form:'Listing → searchable record',meaning:'Titles, brand, descriptions, tags, shopping facets and variants make a simple query useful.',artwork:artwork.search},
+    {id:'003',numeral:'III',title:'The Variant',summary:'The right size becomes an exact thing.',form:'Product → variants',meaning:'Each size and colour can carry its own SKU, stock, effective price and storage allocations.',artwork:artwork.variants},
+    {id:'004',numeral:'IV',title:'The Eye',summary:'AI assists. The shopkeeper decides.',form:'Photo → reviewed enrichment',meaning:'Structured suggestions help describe and classify the item while merchant facts stay authoritative.',artwork:artwork.enrichment},
+    {id:'005',numeral:'V',title:'The Scanner',summary:'The physical object opens the record.',form:'Label → exact item',meaning:'Scanning bridges an item in the operator’s hands to its relevant actions.',artwork:artwork.scan},
+    {id:'006',numeral:'VI',title:'The Stockroom',summary:'Every item can find its home.',form:'Waiting stock → put-away loop',meaning:'A batch, a scanned destination and a reviewed movement connect physical storage to inventory.',artwork:artwork.storage},
+    {id:'007',numeral:'VII',title:'The Machine Behind the Shop',summary:'The pieces work as one operation.',form:'Shop + Backstage',meaning:'The storefront, catalogue, identity, imagery and physical workflows share product truth. Website checkout and automatic postage-label purchase are not claimed as live features.',artwork:artwork.machine},
+  ],
+};

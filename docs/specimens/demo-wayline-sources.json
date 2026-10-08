@@ -1,0 +1,110 @@
+{
+  "reviewedAt": "2026-10-08",
+  "project": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO.xcodeproj",
+  "nativeBuild": "passed, iOS 26.5, Debug, simulator, signing disabled",
+  "substantiveRegistrations": [
+    "wayline",
+    "cocoTheLlama",
+    "groceryMasterPhoenix"
+  ],
+  "placeholderRegistrations": [
+    "boutiqueInventory",
+    "smartOrderDesk",
+    "fieldOperations",
+    "productionControl",
+    "personalCompanion",
+    "futureConcept"
+  ],
+  "hostingNote": "ReferenceProducts Phoenix is compiled into host and shadows imported package demo composition. Actual seeded Martins UI observed.",
+  "noPublicDistributionVerified": true,
+  "files": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO.xcodeproj/project.pbxproj",
+      "sha256": "b767eeb603d1e22cb8844601e6e534f5cca9ffe59ab9df86b34cfa9b1c00fcb6"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMOUITests/GAMA_DEMOUITestsLaunchTests.swift",
+      "sha256": "b59ae2f8029a22466e9e077a94e03785b4324844ec3f642283fa42a076deba88"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMOUITests/GAMA_DEMOUITests.swift",
+      "sha256": "08dbfa40b47d93a7e4b8e71ff83a970a032bccec9f546bd82d2bf0b667453c90"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMOTests/GAMA_DEMOTests.swift",
+      "sha256": "05bf5798f882ec399e7c0263b1229205a050e83d29f3028107bde95012ba5a66"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/GAMA_DEMOApp.swift",
+      "sha256": "264925f1b35048a8d41e96d3f51e4702f18e273dd5fe334a767cd2abee540203"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/DemoHosting.swift",
+      "sha256": "c2fb0e3e1fad6c135d9e3e037aee2e07400a518d0a9e066d81c8070841c9e5ed"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ContentView.swift",
+      "sha256": "b31c499cdf9bd55187a286b38a5d3dbcd9e3076662fa69689452ea6a3308d0dd"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/DEMO_HOSTING.md",
+      "sha256": "a23033eefb3346cdbfb7f50d890d8c7183bcfb162c3ce14437682c88080414e2"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineInsightsReportViews.swift",
+      "sha256": "a8e79561ff024ef2ef28ef824c518a17b42f4dde3ce05ea2e21ac612a49f8e8b"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineRootView.swift",
+      "sha256": "e585281724a36f2172bb4d9f14c9cdcfadfac35d56b86bca665a82a05a13e62d"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineLobbyArtwork.swift",
+      "sha256": "352249dce5081698821b9006b0f6de13410be3d0e7761e5e1d8f30861bfed49d"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineFlowView.swift",
+      "sha256": "107104b63d807138d22c0ba158ece903190b5b4a611981a34c84a2fb291aae4c"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineSetupView.swift",
+      "sha256": "5ba7b4325ba4b5eb6afc98a835981ddc94ed7e9ec8da49099251bc25c1bf86be"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineController.swift",
+      "sha256": "fa6621ca220275ddfc939af0c047494de5e3ba7fe6dee0b318085208bcfa330b"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineModels.swift",
+      "sha256": "d151aeb7fb82cb8350b14f8470f0d5f2c0d668ca5f57a849521f90512ca3aee9"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineJourneyReplayViews.swift",
+      "sha256": "446a591140261cf39daa528ba71c20fc0dde01a7367da8d1362665453bb1891e"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/Wayline/WaylineScenario.swift",
+      "sha256": "abbe87a6a408b919c0572f2206e6c3e781bf949b70f345b2b4fae47c89890185"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ReferenceProducts/GroceryMasterPhoenix/Demo/PhoenixShowcaseSupport.swift",
+      "sha256": "adc892655570642b79d54ac177429a4e27f7ff53c0235e94171d9b5e5899998e"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ReferenceProducts/GroceryMasterPhoenix/DesignSystem/PhoenixResources.swift",
+      "sha256": "01f6ebcc252e9097f562a43acb464df4447796dd790dbc61b9e581286d629090"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ReferenceProducts/GroceryMasterPhoenix/Navigation/PhoenixIdentityFlow.swift",
+      "sha256": "b11ce4685350f2c192e37aa7eaa773e21a371ba7e947b38a75e6c08334a8ea6d"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ReferenceProducts/GroceryMasterPhoenix/PublicAPI/GroceryMasterPhoenixRootView.swift",
+      "sha256": "19b159faf980f05f4e183b64c47622c4b0d550377a242ba8d4214373a89b73af"
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/6. GAMA DEMO/GAMA DEMO/GAMA DEMO/ReferenceProducts/GroceryMasterPhoenix/Features/Home/PhoenixHomeView.swift",
+      "sha256": "3272955cd68e289ceedf17142f5e2af9addd224787e1dbb339aac66b7e6bbbcb"
+    }
+  ]
+}

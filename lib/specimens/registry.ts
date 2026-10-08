@@ -3,12 +3,14 @@ import { memoirEchoes } from './memoir-echoes';
 import { tara } from './tara';
 import { coco } from './coco';
 import { identity } from './identity';
-import type { CanonicalSpecimen, MemoirSpecimen, PublicSpecimen, SpecimenStatus, TaraSpecimen, CocoSpecimen, IdentitySpecimen } from './types';
+import { gamaDemo } from './gama-demo';
+import { wayline } from './wayline';
+import type { CanonicalSpecimen, MemoirSpecimen, PublicSpecimen, SpecimenStatus, TaraSpecimen, CocoSpecimen, IdentitySpecimen, ExhibitionSpecimen } from './types';
 
 // Permanent IDs never follow carousel position. featuredOrder records entry into
 // the lifecycle group: append future shipped specimens, never renumber these.
 const lifecycle: SpecimenStatus[] = ['deployed', 'incubating', 'experimental', 'concept', 'paused', 'archived'];
-export const specimenRegistry: readonly CanonicalSpecimen[] = [grocerymaster, memoirEchoes, tara, coco, identity];
+export const specimenRegistry: readonly CanonicalSpecimen[] = [grocerymaster, memoirEchoes, tara, coco, identity, gamaDemo, wayline];
 export function listSpecimens(): CanonicalSpecimen[] {
   return [...specimenRegistry].sort((a, b) => lifecycle.indexOf(a.status) - lifecycle.indexOf(b.status) || a.featuredOrder - b.featuredOrder);
 }
@@ -29,6 +31,7 @@ export function getSpecimen(slug: 'memoir'): MemoirSpecimen;
 export function getSpecimen(slug: 'tara'): TaraSpecimen;
 export function getSpecimen(slug: 'coco'): CocoSpecimen;
 export function getSpecimen(slug: 'identity'): IdentitySpecimen;
+export function getSpecimen(slug: 'gama-demo' | 'wayline'): ExhibitionSpecimen;
 export function getSpecimen(slug: string): CanonicalSpecimen | undefined;
 export function getSpecimen(slug: string): CanonicalSpecimen | undefined {
   return specimenRegistry.find(specimen => specimen.slug === slug);

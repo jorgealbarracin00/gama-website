@@ -53,8 +53,9 @@ const specimens: Specimen[] = listSpecimens().map(record => {
       ? "bg-[linear-gradient(180deg,rgba(142,111,151,0.76),rgba(74,48,73,0.72))] border border-purple-200/30"
       : card.accent === "coral"
       ? "bg-[linear-gradient(180deg,rgba(164,87,78,0.80),rgba(75,39,32,0.76))] border border-rose-200/30"
-      : card.accent === "aqua"
+      : (card.accent === "aqua" || card.accent === "electric")
       ? "bg-[linear-gradient(180deg,rgba(48,104,117,0.80),rgba(21,42,59,0.80))] border border-cyan-200/30"
+      : card.accent === "titanium" ? "bg-[linear-gradient(180deg,rgba(50,77,92,0.80),rgba(12,30,38,0.80))] border border-slate-200/30"
       : "bg-[linear-gradient(180deg,rgba(142,111,76,0.72),rgba(54,44,50,0.60))] border border-amber-200/30",
   };
 });

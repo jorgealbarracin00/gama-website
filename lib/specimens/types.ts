@@ -116,4 +116,10 @@ export type IdentitySpecimen = SpecimenIdentity & {
   mutations: Omit<SpecimenMutation, "artifact">[];
 };
 
-export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen | CocoSpecimen | IdentitySpecimen;
+export type ExhibitionSpecimen = SpecimenIdentity & {
+  accent: "electric" | "titanium";
+  artwork: Record<string, SpecimenArtwork>;
+  captures: (SpecimenArtwork & { id: string; title: string; note: string })[];
+};
+
+export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen | CocoSpecimen | IdentitySpecimen | ExhibitionSpecimen;

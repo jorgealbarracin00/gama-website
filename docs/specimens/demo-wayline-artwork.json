@@ -1,0 +1,205 @@
+{
+  "generatedAt": "2026-10-08",
+  "assets": [
+    {
+      "key": "demoHero",
+      "specimen": "gama-demo",
+      "name": "gateway",
+      "prompt": "Use case: stylized-concept. Asset: GAMA DEMO cinematic portfolio gateway, wide 1536x1024. One beautiful titanium iPhone upright in a midnight graphite exhibition space, screen a simple soft-white neutral display reserved for authentic app screenshot compositing later. Around the phone three distinct floating portal frames with strong dimensional perspective: a warm green household kitchen with grocery list notes and a small black grocery ninja figurine; a coral and cream children's clothing boutique with llama motif; a petrol blue industrial factory with cyan and amber trolley capsules. Portals feel tangible, glass windows into real worlds, not floating generic app icons. Phone central foreground, carefully spaced portals behind and beside it, electric cyan rim lighting and luminous soft white. Sophisticated editorial product photography blended with restrained cinematic 3D worldbuilding, precise materials, black negative space, no distracting particles, no code, no text, no invented software UI, no watermark. Conceptual artwork, one cohesive scene.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-9917782a-cf93-4914-a55d-474004721d79.png",
+      "publishedPath": "public/specimens/gama-demo/gateway-v1.webp",
+      "sha256": "977c11b8547f5426c4c1b62993b017bb2c7199e17e3533a43e6dc93069dba91d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "usage": "Superseded by gateway-v2; retained as original edit reference."
+    },
+    {
+      "key": "demoBoundary",
+      "specimen": "gama-demo",
+      "name": "local-worlds",
+      "prompt": "Use case: stylized-concept. Asset: GAMA DEMO local-data architecture artwork, landscape 1536x1024. Premium architectural cutaway of a single iPad lying at a gentle angle on a dark graphite exhibition plinth. Inside the near transparent tablet's screen boundary are three separate beautiful miniature worlds: green household kitchen, coral clothing boutique, petrol blue factory, each in its own shallow module with a small tray of deliberately artificial sample data blocks. Illuminated cyan touch ripples interact with these worlds. Behind the device, far away across a clean wide physical gap, an enclosed real warehouse and customer records archive are separate, unconnected, quiet and dark. No arrows or cables bridge the gap. The visual lesson is meaningful local interaction with example data, separate from live operations, not a network security product. Precision glass, anodized aluminium, cyan rimlight, soft white highlights. No shields, padlocks, codes, text, watermarks. Cohesive cinematic scene, not a collage. Strong large silhouettes legible on mobile, plenty of space.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-40d2c1e1-bd49-494c-86a5-80885a3a46a8.png",
+      "publishedPath": "public/specimens/gama-demo/local-worlds-v1.webp",
+      "sha256": "3a5cb614c09cfca92b5972a13759e52791e1d87b3cd622c2273367f5812d888b",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "key": "demoIcons",
+      "specimen": "gama-demo",
+      "name": "concept-icons",
+      "prompt": "Use case: stylized-concept. Asset: GAMA DEMO five explanatory icons as a cohesive horizontal gallery 1536x1024. Five large isolated sculptural icons evenly arranged in one row on a plain very dark midnight navy background, ample padding. Left to right: (1) fingertip touching a small glass app tile with concentric cyan response rings for interactive experience; (2) three deliberately artificial frosted sample-data blocks for mocked data; (3) two separate small environments divided by a visible gap for protected production separation, no shield or padlock; (4) a clean titanium phone silhouette with small integrated chip for device-native operation; (5) three distinct independently standing rounded portal modules for independent demos. Premium minimal glass and brushed titanium material language, cyan edges and restrained green/coral/blue accents. Each icon easy to recognize at small scale, strong silhouettes, consistent lighting, no letters, no labels, no numbers, no decorative UI, no watermark. Icons centered in five equal columns and separated by empty space; not an infographic. Solid background, nontransparent.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-cdbfeecd-2d45-4729-bb8c-cc56565f1ea2.png",
+      "publishedPath": "public/specimens/gama-demo/concept-icons-v1.webp",
+      "sha256": "592b6eb8ce6ab0d7bf31ef5c491e42d1596f74bc3c87735185e8e6b3273b19bf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "exports": {
+        "method": "Individual icon crops from source artwork, no redrawing",
+        "paths": [
+          "public/specimens/gama-demo/icons/1.webp",
+          "public/specimens/gama-demo/icons/2.webp",
+          "public/specimens/gama-demo/icons/3.webp",
+          "public/specimens/gama-demo/icons/4.webp",
+          "public/specimens/gama-demo/icons/5.webp"
+        ]
+      }
+    },
+    {
+      "key": "waylineWatch",
+      "specimen": "wayline",
+      "name": "watch-to-factory",
+      "prompt": "Use case: stylized-concept. Asset: WAYLINE Specimen 007 opening, wide 1536x1024 cinematic artwork. A macro view of an exquisite open mechanical Swiss watch movement transitioning seamlessly into a modern PVD coating factory. Left: precision brass gears, jeweled bearings, brushed titanium, intricate visible teeth. Right: gears become circular vacuum coating chambers, clean industrial aisles and orderly component trolleys. A thin cyan route threads across both worlds, with a small amber queue near one chamber. Premium photographic realism with restrained surreal scale transition, obsidian and petrol navy, titanium silver, champagne metal, cyan light and amber signal. Strong visual hierarchy, physically credible industrial details, airy dark background, no smoke or fantasy workers. Wide composition designed to remain intelligible on mobile. No text, logos, charts, watermarks, padlocks or generic circuit imagery. One single scene, not a collage. This is conceptual future-facing artwork.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-5ab65fe3-e1b0-47e7-9d2e-2006fd91be24.png",
+      "publishedPath": "public/specimens/wayline/watch-to-factory-v1.webp",
+      "sha256": "4e4c934c1359781842cd507a0a81eb44def06d198947f6282657d8046f6d6b83",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "key": "waylineManager",
+      "specimen": "wayline",
+      "name": "manager",
+      "prompt": "Use case: stylized-concept. Asset: WAYLINE manager iPad scene, landscape 1536x1024. A production manager wearing navy factory workwear and clear protective glasses stands in a clean modern PVD coating facility with stainless vacuum chambers and numbered physical trolleys. Natural three-quarter over-shoulder photographic view: manager holds an iPad in landscape in the foreground, screen visible and legible. On iPad a beautifully precise conceptual dark petrol WAYLINE dashboard: title WAYLINE, eight linked process nodes in two rows with distinct rectangular processing stations and slender waiting buffers, small cyan item capsules labelled W001 W002 W003, amber queue before PVD, readable top metric tiles 'Throughput', 'Flow efficiency', 'Waiting', and a slim historical timeline below. No fabricated big percentage claims, numeric values unnecessary. Cream and cyan interface typography, clear operational geometry. Warm work light, cyan signals, titanium textures, quiet cinematic depth. Tablet hand anatomy credible, sophisticated operational concept illustration, no holographic screens floating in air, no robots, no generic code, no stock-photo handshake, no watermark. Clearly future-facing conceptual dashboard rather than an actual screenshot.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-4ac4d7fd-9445-4d5f-8707-1a7fe9ab9463.png",
+      "publishedPath": "public/specimens/wayline/manager-v1.webp",
+      "sha256": "049fa2bd7b177a620d74066e6e3e9f6eee321fed8449491a7aa17c3dfab7b36e",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "key": "waylineIcons",
+      "specimen": "wayline",
+      "name": "concept-icons",
+      "prompt": "Use case: stylized-concept. Asset: WAYLINE operational icon language, 1536x1024 wide. Eight sculptural explanatory icons in a very precise 4-column by 2-row grid, each icon isolated with generous space, on solid obsidian petrol navy background. Row1: an item capsule inside a station slot for active processing; an amber item capsule beside a clock for waiting; three small numbered-free capsules in a single ordered lane for queue; three outlined station slots with one occupied for capacity. Row2: capsule crossing a finish-line gate for throughput; a precise stopwatch for elapsed time; a bottleneck funnel with three amber/orange/red capsules for delay; a continuous curved cyan route joining two stations for production flow. Titanium and dark glass surfaces, restrained cyan emissive edges and warm amber waiting elements. Large simple silhouettes, no literal gears for software, no text, no numbers, no watermark. Consistent elevated technical exhibition aesthetic, crisp distinct meanings. Do not create decorative data charts. Every icon centered in its equal grid cell.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-ef1b1bfa-5477-4831-a8eb-d428a1ddf8ef.png",
+      "publishedPath": "public/specimens/wayline/concept-icons-v1.webp",
+      "sha256": "fd258464c88fe35321d381737b6071b6a8dab83012bc826e5a1c7dd7135505ec",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "exports": {
+        "method": "4 \u00d7 2 equal-cell crop, no redrawing",
+        "paths": [
+          "public/specimens/wayline/icons/1.webp",
+          "public/specimens/wayline/icons/2.webp",
+          "public/specimens/wayline/icons/3.webp",
+          "public/specimens/wayline/icons/4.webp",
+          "public/specimens/wayline/icons/5.webp",
+          "public/specimens/wayline/icons/6.webp",
+          "public/specimens/wayline/icons/7.webp",
+          "public/specimens/wayline/icons/8.webp"
+        ]
+      }
+    },
+    {
+      "key": "waylinePills",
+      "specimen": "wayline",
+      "name": "living-items",
+      "prompt": "Use case: stylized-concept. Asset: WAYLINE living production items, wide landscape 1536x1024. Cinematic close low-angle view of a detailed miniature modern manufacturing line on a titanium drafting table in a dark petrol factory. Individual production items are sleek horizontal elongated capsules, NOT upright cylinders, each with one consistent short ID: W001, W002, W003, W004, W005. They travel along precise narrow cyan pathways connecting three distinct process modules with small numbered station bays. Foreground a waiting buffer: W003 cyan, W004 amber, W005 orange/red, each still distinct, accumulating before a circular PVD coating chamber; background completed cyan capsules move onward. Readable small elapsed labels such as '00:20', '00:40', '01:00' beside waiting items. Rich material depth, controlled warm signal light, polished steel, restrained architecture. No visual overload, no smoke, no people, no invented productivity claims, no text except these short identifiers/timers, no watermark. Conceptual illustration of waiting accumulation with large clear capsule silhouettes, not an actual interface screenshot.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-a7b1c4b0-be75-4318-a181-961a04c44016.png",
+      "publishedPath": "public/specimens/wayline/living-items-v1.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "2b35bcbab340d48ef6c8067e0624b5ddd2c1a303d368c1c3e6d8eb9cf5070ae5"
+    },
+    {
+      "key": "demoHeroV2",
+      "specimen": "gama-demo",
+      "name": "gateway",
+      "prompt": "Edit the attached cinematic gateway artwork. Preserve its beautiful graphite studio, green household portal with small grocery ninja on left, coral llama boutique portal behind centre right, and blue factory portal far right. Replace only the central blank-screen iPhone with an upright portrait iPad (correct approximately 3:4 display proportions) on the same pedestal. Its screen must display the second attached authentic GAMA DEMO Lobby screenshot, preserving its black UI, actual 3-column product card grid, cyan Launch buttons, identities and content as faithfully as possible, rendered like the screenshot on real glass. Do not invent any additional app UI, logos or text. Keep the tablet reasonably prominent, framed by the portals. High-end photoreal cinematic product illustration, landscape 3:2. This is a conceptual environment around the provided authentic application screen; the original screenshot will also be shown separately on the webpage.",
+      "tool": "built-in image_gen",
+      "model": "not exposed by tool",
+      "original": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-8d46a8ed-6254-4543-8287-afd314b45586.png",
+      "publishedPath": "public/specimens/gama-demo/gateway-v2.webp",
+      "referencedImages": [
+        "public/specimens/gama-demo/gateway-v1.webp",
+        "/tmp/gama-demo-lobby.png"
+      ],
+      "classification": "Generated concept composition informed by native capture. Display original native screenshot separately for authoritative interface detail.",
+      "sha256": "a9d5758164eadb22b0b44a3353c17c4f13f43f482d713a1740cdf5cf449ac59b",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "nativeCaptures": [
+    {
+      "file": "public/specimens/gama-demo/captures/coco.webp",
+      "sha256": "04d3cdd9b6662ef104279b4ae5d4ca52af0659fb351b24313fdb6342d9838623",
+      "dimensions": [
+        1350,
+        1800
+      ],
+      "method": "Device Hub screenshot button; original 2064 x 2752, proportionally resized and exported WebP",
+      "date": "2026-10-08",
+      "data": "Locally authored mock/demo state only"
+    },
+    {
+      "file": "public/specimens/gama-demo/captures/lobby.webp",
+      "sha256": "10483b8eba20828e12311ef87e27659e4e2c4a11f50bec7ab86500022c1832b3",
+      "dimensions": [
+        1350,
+        1800
+      ],
+      "method": "Device Hub screenshot button; original 2064 x 2752, proportionally resized and exported WebP",
+      "date": "2026-10-08",
+      "data": "Locally authored mock/demo state only"
+    },
+    {
+      "file": "public/specimens/gama-demo/captures/phoenix.webp",
+      "sha256": "a742ecfb43a4f7a8188a34fe18ba7177b5973b8bbd71f606d1a198169e31cf60",
+      "dimensions": [
+        1350,
+        1800
+      ],
+      "method": "Device Hub screenshot button; original 2064 x 2752, proportionally resized and exported WebP",
+      "date": "2026-10-08",
+      "data": "Locally authored mock/demo state only"
+    },
+    {
+      "file": "public/specimens/gama-demo/captures/wayline.webp",
+      "sha256": "a0af875214290344d1100a889d25faa97c7b10eb9ecf6d29b04b8475debd077e",
+      "dimensions": [
+        1350,
+        1800
+      ],
+      "method": "Device Hub screenshot button; original 2064 x 2752, proportionally resized and exported WebP",
+      "date": "2026-10-08",
+      "data": "Locally authored mock/demo state only"
+    },
+    {
+      "file": "public/specimens/wayline/captures/native-flow.webp",
+      "sameCaptureAs": "public/specimens/gama-demo/captures/wayline.webp"
+    }
+  ],
+  "captureLimitations": "Native iPad screenshots captured. Separate iPhone and rotated landscape captures could not be completed because the Mac locked; no screenshots or device layouts were fabricated. Native iOS simulator build succeeded. Both website specimens tested responsively."
+}

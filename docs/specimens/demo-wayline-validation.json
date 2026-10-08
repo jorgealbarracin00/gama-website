@@ -1,0 +1,109 @@
+{
+  "specimens": [
+    "006 — GAMA DEMO",
+    "007 — WAYLINE"
+  ],
+  "reviewDate": "2026-10-08",
+  "releaseState": "Website publication approved by user; publishing through the existing production integration.",
+  "baselineCommit": "75f85392916a97ce46e0d6c6cda3231d364ca060",
+  "localPreviews": {
+    "gamaDemo": "http://127.0.0.1:3005/incubation/gama-demo",
+    "wayline": "http://127.0.0.1:3005/incubation/wayline",
+    "manager": "http://127.0.0.1:3005/incubation/wayline/manager"
+  },
+  "automatedChecks": {
+    "productionBuild": "passed — Next.js production build, including both specimens and standalone manager route",
+    "lint": "passed — npm run lint",
+    "typecheck": "passed — npx tsc --noEmit; production build also typechecks",
+    "diffWhitespace": "passed — git diff --check",
+    "simulationTests": {
+      "command": "npm run test:wayline",
+      "passed": 7,
+      "failed": 0,
+      "coverage": [
+        "24 stable items complete all eight stages; active plus waiting equals journey time",
+        "event clock is independent of frame size and accelerated playback",
+        "bottleneck creates queue; restoration drains it without dropping items",
+        "FIFO admission order and configured station capacities",
+        "buffer dwell counts as waiting, never active processing",
+        "configuration changes preserve existing active service contracts",
+        "explicit waiting severity thresholds and clock boundaries"
+      ]
+    }
+  },
+  "preservation": {
+    "baselineFilesChecked": 147,
+    "unchangedFiles": 145,
+    "expectedSharedChanges": [
+      "lib/specimens/types.ts",
+      "lib/specimens/registry.ts"
+    ],
+    "result": "Existing specimen pages, narratives, components and assets remain byte-for-byte unchanged. Shared archive/home surfaces receive only new theme support and registration.",
+    "publicRegistry": "Seven official specimens, 001–007. GAMA Events and GAMA Retail were not added."
+  },
+  "browserChecks": {
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "overflow": "No document horizontal overflow on either specimen or standalone manager at the tested widths. Deliberate living-line horizontal scroll remains inside its own container.",
+    "navigation": "All twelve chapter links resolve to the corresponding chapter heading.",
+    "assets": "Both complete specimen pages inspected after loading their chapters: no broken images or missing image alt text.",
+    "gamaDemo": [
+      "Compare mode accepts keyboard activation",
+      "Product family and platform filters work, including empty results",
+      "Phone filter excludes iPad-only WAYLINE",
+      "Enter/end browser demonstration works",
+      "Phoenix item check and add work; duplicate active item guard works"
+    ],
+    "wayline": [
+      "Start, pause, step, reset, accelerators and manager toggle exercised",
+      "PVD bottleneck produces increasing queues and configured severity signals",
+      "Restoring flow retains existing work and allows all 24 items to finish naturally",
+      "Item selection shows identity, queue position and complete elapsed history",
+      "Process duration/capacity changes and buffer dwell controls work",
+      "Waiting signal thresholds are configurable",
+      "Standalone manager displays all eight stations in one row at 1024px landscape width",
+      "At simulated 03:00 with PVD slowed, the standalone manager showed queue 9 and W008 queue position 7, active 01:00 plus waiting 00:36 equals journey 01:36",
+      "Final standalone manager console contained no warnings or errors"
+    ],
+    "accessibility": "Semantic controls, explicit input labels, image alt text, keyboard interaction, visible focus and textual status signals inspected. Reduced-motion styles disable motion. This is not a formal assistive-technology certification."
+  },
+  "nativeEvidence": {
+    "build": "GAMA DEMO Debug iOS Simulator build passed with signing disabled on iOS 26.5",
+    "captures": "Authentic iPad Lobby, Phoenix, Coco and WAYLINE screenshots, captured through the native device UI",
+    "truth": "Three substantial native demonstration registrations verified. Six additional registrations use placeholder views. Native WAYLINE has six stages and authored local scenarios; browser WAYLINE is a separate conceptual eight-stage model.",
+    "limitation": "The Mac locked before the iPhone screenshot could be completed. Native capture coverage is iPad only; website phone layouts were tested in the browser."
+  },
+  "proofDirectory": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/specimens-006-007",
+  "proofFiles": [
+    "gama-demo-desktop.png",
+    "gama-demo-phone.png",
+    "gama-demo-full-page.png",
+    "wayline-desktop.png",
+    "wayline-manager-ipad.png"
+  ],
+  "provenance": {
+    "sources": "docs/specimens/demo-wayline-sources.json",
+    "artwork": "docs/specimens/demo-wayline-artwork.json",
+    "bibles": [
+      "docs/specimens/gama-demo-bible.md",
+      "docs/specimens/wayline-bible.md"
+    ]
+  },
+  "modelLimits": "Finite illustrative 24-item cohort. Instantaneous transfers, independent station slots and configured seconds; no batch recipe physics, machine interlocks, live telemetry, prediction engine or fabricated productivity claims. Standalone manager has its own local simulation session. Concept artwork and future capabilities are labelled.",
+  "deployment": {
+    "approved": true,
+    "instruction": "deploy",
+    "method": "Existing GitHub main to Vercel production integration",
+    "targets": [
+      "https://gamadynamics.com.au/incubation/gama-demo",
+      "https://gamadynamics.com.au/incubation/wayline",
+      "https://gamadynamics.com.au/incubation/wayline/manager"
+    ],
+    "receipt": "Local task specimens-006-007/deployment.json recorded after live verification"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "specimen": "008",
+  "checkedAt": "2026-10-08",
+  "deployment": {
+    "approved": true,
+    "instruction": "DEPLOY",
+    "approvedAt": "2026-10-08",
+    "method": "Existing GitHub main to Vercel production integration",
+    "targets": [
+      "https://gamadynamics.com.au/incubation/cashcast"
+    ],
+    "receipt": "Local task cashcast-review/deployment.json recorded after live verification"
+  },
+  "localPreview": "http://127.0.0.1:3006/incubation/cashcast",
+  "runtime": "Next.js16.1.4 production build served locally",
+  "checks": {
+    "lint": "passed",
+    "typescript": "passed",
+    "productionBuild": "passed:17 generated pages",
+    "cashcastTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "waylineRegressionTests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "diffCheck": "passed",
+    "httpRoutes": {
+      "count": 11,
+      "allStatus": 200,
+      "routes": [
+        "/",
+        "/incubation",
+        "/incubation/grocerymaster",
+        "/incubation/memoir",
+        "/incubation/tara",
+        "/incubation/coco",
+        "/incubation/identity",
+        "/incubation/gama-demo",
+        "/incubation/wayline",
+        "/incubation/cashcast",
+        "/api/specimens"
+      ]
+    },
+    "canonicalRegistry": "Eight specimens001–008;008cashcast paused.",
+    "baselineFiles": 186,
+    "baselineChanges": [
+      "lib/specimens/types.ts",
+      "lib/specimens/registry.ts"
+    ],
+    "existingSpecimenContent": "Existing001–007 pages, components and assets unchanged; only shared types/registry in baseline changed. Home and archive card tone functions add neon support.",
+    "images": {
+      "loaded": 16,
+      "total": 16,
+      "failed": 0
+    },
+    "browserConsole": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "responsive": {
+    "widthsChecked": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "horizontalOverflow": "None after fixing320px controller grid min-width.",
+    "mobileControls": "Payment move, recalculation, comparison and timeline keyboard operation checked at390px.",
+    "scope": "Manual browser checks and DOM bounds. No full assistive-technology audit claimed."
+  },
+  "accessibility": {
+    "labels": "All input/select controls have labels or aria-labels.",
+    "buttonTargets": "All main buttons at least44px high.",
+    "keyboard": "Enter toggles controller; range Home and11ArrowRight steps produce day11. Visible focus outline verified.",
+    "screenReaderSemantics": "Six labelled chapter links, heading structure, text warnings, labelled forecast SVG, table captions, status region, native details, pressed states.",
+    "reducedMotion": "Scoped prefers-reduced-motion disables transitions/animations; timeline playback starts only on explicit action.",
+    "qualification": "Manual/structural review; not a WCAG certification."
+  },
+  "interactionChecks": {
+    "default": "Opening$2000; firstshortfall−$350May15; closing$3660.",
+    "paymentMove": "Rent moved toMay19; no shortfall, minimum$850, closing$3660 unchanged.",
+    "income": "Additional$500May14; minimum$150.",
+    "unexpectedExpense": "$450May13 gives firstshortfall−$30May13 and minimum−$800May15.",
+    "cashGoal": "$2500June1 is added toactual events; all marker coordinates within plot.",
+    "comparison": "Recalculates original and modified minima, shortfalls and closing balances.",
+    "reset": "Restores original scenario and controls.",
+    "playback": "Advances to day35 and stops interval; paused/manual slider supported.",
+    "waitAccelerate": "Original$2000goal:WAITJune1;ACCELERATEMay6,$2010repaymentJune6.",
+    "stress": "Second salary delayed toJune8 plus$800June3:WAITminimum−$2340,ACCELERATEminimum−$2350; full repayment notfunded.",
+    "eligibility": "$2500purchase blocked because purchase+fee exceeds availablecredit; nonqualifying/prior unpaid assumptions also block arrangement.",
+    "engine": "All six inspection buttons switch explanations.",
+    "history": "All four era buttons switch; airport clearlyconcept extension.",
+    "controller": "Original versusagreed rentmove recalculates a real independent forecast."
+  },
+  "reviewCorrections": [
+    "Axis bounds now include intraday event balances as well as daily closings.",
+    "Airport timetable labelled conceptual extension; retained source only hasSAVINGS/CREDITCARDrows.",
+    "First project wording corrected tofirst seriousGAMAsoftwareproject.",
+    "Native statement-cycle ambitions distinguished from authored billing-day support.",
+    "320px controller grid clipping fixed."
+  ],
+  "evidence": {
+    "desktop": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/cashcast-review/desktop-hero.png",
+    "forecastComparison": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/cashcast-review/forecast-comparison.png",
+    "mobile": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/cashcast-review/mobile-forecast.png",
+    "native": "cashcast-artwork.json#nativeCaptures"
+  },
+  "knownLimits": [
+    "Browser model is an independent35day illustrative calculation, not the native engine or financial advice.",
+    "No banking connection, personal data, actual transactions or probabilistic forecasting.",
+    "No unknown lender interest/default fees calculated; only explicit fictionalfee/terms.",
+    "Native credit terms and repayment-capacity validation remain incomplete; weekly grouping can conceal shortfalls within a week.",
+    "Native simulator build requiredtwo compiler compatibilityfixes in isolated copy; original source left unchanged.",
+    "No historical screenshot archive found; four gallerydirections are clearly labelled reconstructions/concept extension.",
+    "Approximate twelveiterations is creator testimony, not twelve establishedreleaseversions."
+  ]
+}

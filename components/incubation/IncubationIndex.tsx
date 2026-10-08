@@ -7,7 +7,7 @@ const groups = specimenGroups().map(group => ({ ...group, cards: group.specimens
   return { id: `SPECIMEN ${card.id}`, name: card.name, status: card.statusLabel,
     classification: card.classification, href: card.incubationHref, image: card.image,
     summary: card.summary, stack: card.technologySummary.join(" / "),
-    tone: card.accent === "green" ? "border-emerald-200/18 bg-emerald-300/8 text-emerald-100" : card.accent === "lavender" ? "border-purple-200/18 bg-purple-300/8 text-purple-100" : card.accent === "coral" ? "border-rose-200/20 bg-rose-300/8 text-rose-100" : (card.accent === "aqua" || card.accent === "electric") ? "border-cyan-200/20 bg-cyan-300/8 text-cyan-100" : card.accent === "titanium" ? "border-slate-200/20 bg-slate-300/8 text-slate-100" : "border-amber-200/18 bg-amber-300/8 text-amber-100" };
+    tone: card.accent === "neon" ? "border-fuchsia-200/25 bg-fuchsia-300/10 text-fuchsia-100" : card.accent === "green" ? "border-emerald-200/18 bg-emerald-300/8 text-emerald-100" : card.accent === "lavender" ? "border-purple-200/18 bg-purple-300/8 text-purple-100" : card.accent === "coral" ? "border-rose-200/20 bg-rose-300/8 text-rose-100" : (card.accent === "aqua" || card.accent === "electric") ? "border-cyan-200/20 bg-cyan-300/8 text-cyan-100" : card.accent === "titanium" ? "border-slate-200/20 bg-slate-300/8 text-slate-100" : "border-amber-200/18 bg-amber-300/8 text-amber-100" };
 }) }));
 
 export default function IncubationIndex() {

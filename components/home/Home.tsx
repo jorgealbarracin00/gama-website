@@ -47,7 +47,7 @@ const specimens: Specimen[] = listSpecimens().map(record => {
     href: card.href, incubationHref: card.incubationHref, summary: card.summary,
     features: [], principles: [], difference: "", cardImage: card.image,
     specimenFileFirst: true,
-    tone: card.accent === "green"
+    tone: card.accent === "neon" ? "bg-[linear-gradient(180deg,rgba(110,39,117,0.80),rgba(15,56,65,0.80))] border border-fuchsia-200/30" : card.accent === "green"
       ? "bg-[linear-gradient(180deg,rgba(34,197,94,0.72),rgba(21,128,61,0.60))] border border-green-300/30"
       : card.accent === "lavender"
       ? "bg-[linear-gradient(180deg,rgba(142,111,151,0.76),rgba(74,48,73,0.72))] border border-purple-200/30"

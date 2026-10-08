@@ -122,4 +122,10 @@ export type ExhibitionSpecimen = SpecimenIdentity & {
   captures: (SpecimenArtwork & { id: string; title: string; note: string })[];
 };
 
-export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen | CocoSpecimen | IdentitySpecimen | ExhibitionSpecimen;
+export type CashCastSpecimen = SpecimenIdentity & {
+  accent: "neon";
+  artwork: Record<string, SpecimenArtwork>;
+  captures: (SpecimenArtwork & { id: string; title: string; note: string })[];
+};
+
+export type CanonicalSpecimen = PublicSpecimen | MemoirSpecimen | TaraSpecimen | CocoSpecimen | IdentitySpecimen | ExhibitionSpecimen | CashCastSpecimen;

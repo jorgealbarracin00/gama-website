@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "specimen": {
+    "id": "008",
+    "slug": "cashcast",
+    "title": "CASH CAST",
+    "subtitle": "See Tomorrow. Change Today.",
+    "status": "Paused — Research & Development",
+    "releaseStatusAuthority": "Creator brief supplied for this specimen; historical commit messages are not a release status."
+  },
+  "investigatedAt": "2026-10-08",
+  "scope": "Read-only source and Git investigation. This receipt records authored implementation and evidence; it does not certify native financial correctness, deployment, lender eligibility, or a production-ready app.",
+  "authorities": {
+    "creatorBrief": "/Users/jorgealbarracin/.codex/attachments/87af1a4a-552a-4bdc-a4f4-df77dddf2e07/Pasted text.txt",
+    "productOrigin": "Creator testimony: the first serious GAMA DYNAMICS software project, born from wanting to see a cash shortfall before payday.",
+    "approximateIterations": "Creator testimony: approximately twelve major iterations. The retained repositories have 2 and 62 commits respectively, with no version tags found. Twelve retained versions were not located or reconstructed as fact.",
+    "noDeployment": "Local approval required. Do not deploy until explicitly approved.",
+    "publicationApproval": "Creator explicitly instructed DEPLOY on 8 October 2026 after local review. This authorises publication of the website specimen, not a CashCast native app release."
+  },
+  "repositories": [
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/GamaFinanceApp",
+      "branch": "master",
+      "head": "bc7e90a",
+      "retainedCommitCount": 2,
+      "firstRetainedCommit": {
+        "sha": "57d5742",
+        "date": "2025-07-18",
+        "subject": "Initial Commit"
+      },
+      "latestRetainedCommit": {
+        "sha": "bc7e90a",
+        "date": "2026-02-04",
+        "subject": "WIP: before testing 2-Feb baseline"
+      },
+      "branches": [
+        "master",
+        "origin/master"
+      ],
+      "inspectionState": "Clean. No writes performed.",
+      "identityEvidence": "Source documentation identifies FinanceApp v8. This is an earlier retained codebase, not a complete archive of every iteration."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/KASU Finance",
+      "branch": "main",
+      "head": "a00478c",
+      "retainedCommitCount": 62,
+      "firstRetainedCommit": {
+        "sha": "d89855a",
+        "date": "2025-09-28",
+        "subject": "Initial Commit"
+      },
+      "latestRetainedCommit": {
+        "sha": "a00478c",
+        "date": "2026-05-06",
+        "subject": "DONE!!!"
+      },
+      "branches": [
+        "main"
+      ],
+      "inspectionState": "Existing user changes preserved in GraphV2.swift, HomeV2.swift, HomeCommandSurfaceView.swift. No writes performed by investigation.",
+      "identityEvidence": [
+        "CashCast display strings in native help/settings/onboarding.",
+        "App Group group.com.gamadynamics.CashCast.",
+        "Original fox in Assets.xcassets/AppIcon.appiconset/icon-fox.png."
+      ],
+      "currentSourceNote": "Working tree includes later mock interface edits. Findings distinguish these mocks from the engine-connected root."
+    },
+    {
+      "path": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/web-cashcast",
+      "inspectionState": "Read-only asset inspection.",
+      "identityEvidence": "Separate CashCast landing page with generated concept phone previews.",
+      "captureWarning": "preview-projection.webp, preview-goals.webp and preview-cash-now.webp are conceptual marketing artwork, not authentic native screenshots. Do not use as evidence of historical implemented UI."
+    }
+  ],
+  "classificationPolicy": {
+    "IMPLEMENTED": "A concrete model, computation, persistence operation, or connected UI exists in retained source. This classification means authored implementation, not a guarantee of correctness or production readiness.",
+    "EXPERIMENTAL": "A retained design experiment, mock, partial mechanism, or source-backed historical direction; completeness and financial validation are not established.",
+    "VISIONARY": "A future-facing proposal or the new browser interpretation, visibly identified as a concept rather than a shipped CashCast capability."
+  },
+  "files": [
+    {
+      "repository": "GamaFinanceApp",
+      "path": "GamaFinanceApp/Logic/Engine/ChronoFlowEngine.swift",
+      "sha256": "0b971fdff486340a0de523adbf95ee2a2e81fe8ce4f0b6b3639ad7b6fb2ff26e",
+      "evidence": "Earlier week-by-week recompute orchestration. Explicitly assumes lockedSavings=0 because locked-savings timeline is not implemented."
+    },
+    {
+      "repository": "GamaFinanceApp",
+      "path": "GamaFinanceApp/Logic/Engine/FlowComputation.swift",
+      "sha256": "42fcd0e14ba6ec6a179cf1d9bffe16c7218a7f5ed1c173bbd88d97b28d4fcb35",
+      "evidence": "Earlier stateless weekly income-minus-expense surplus, normalized priority allocation, per-goal target cap, baseline-versus-simulated ETA comparison. Uses Double and minimal weekly card handling."
+    },
+    {
+      "repository": "GamaFinanceApp",
+      "path": "GamaFinanceApp/Logic/Rules/CreditCardRules.swift",
+      "sha256": "ffdaced2bf7f11152d9dd5feb2810865f81111b8578f2ec675aad138d5b2e2c5",
+      "evidence": "Minimal credit limit/charge/pay-immediately versus defer strategy. Does not implement lender terms."
+    },
+    {
+      "repository": "GamaFinanceApp",
+      "path": "GamaFinanceApp/specs.swift",
+      "sha256": "473e77fed6b17135ee0fd2153bd72ab8d01e2b57ccaac9489f7919775824875d",
+      "evidence": "Design decisions dated 2025-08-13, including ChronoFlow, goals, future-only changes, credit as a cash-flow tool and simple UI. Product specifications are intent, not proof that all described functions shipped."
+    },
+    {
+      "repository": "GamaFinanceApp",
+      "path": "GamaFinanceApp/dataflow.md",
+      "sha256": "9ce4fcf9bdbe7a14f96b560e682f97739b893997b24dbe3b036d063186670317",
+      "evidence": "FinanceApp v8 ERD/store description for ledger entries, goals, priorities and financial timeline."
+    },
+    {
+      "repository": "KASU Finance",
+      "path": "KASU Finance/Engine/ChronoFlowEngineV3.swift",
+      "sha256": "a8a2cf77c44532233aeb60896bcf5f4ce91a0faf97102418c2f23f9f1ca8730a",
+      "evidence": "Current authored V3 implementation: rolling projections, cash truth persistence, goals, recurring entries, card/debt planning, calibration and exports.",
+      "importantRanges": [
+        {
+          "start": 638,
+          "end": 794,
+          "purpose": "Snapshot and rolling projection; after-goal cash carries into later weeks."
+        },
+        {
+          "start": 838,
+          "end": 901,
+          "purpose": "Due-week planned goal spend, deterministic priority order and shared-cash reservation."
+        },
+        {
+          "start": 956,
+          "end": 997,
+          "purpose": "Dynamic lookahead floor and first negative-cash week scanning."
+        },
+        {
+          "start": 1969,
+          "end": 2081,
+          "purpose": "Apply goal date/lock edits and optional credit intent."
+        },
+        {
+          "start": 3001,
+          "end": 3232,
+          "purpose": "Billing wall and credit borrow check, including repayment-capacity limitations."
+        },
+        {
+          "start": 4278,
+          "end": 4372,
+          "purpose": "One-time, weeks, months and years occurrence detection."
+        }
+      ]
+    },
+    {
+      "repository": "KASU Finance",
+      "path": "KASU Finance/Engine/EngineContractV3.swift",
+      "sha256": "93f8f0ee8d9340b92aeda83703b71161b311b1afaddf592ad02dd6ffc7312eee",
+      "evidence": "Public contract with Decimal money, YearWeek, cash/snapshot/goal/credit DTOs. Intent comments and implementation may differ; public presentation must not assert all comments as completed behavior."
+    },
+    {
+      "repository": "KASU Finance",
+      "path": "KASU Finance/NativeiOS/View/Modules/SettingsView/WhatIDoForNerdsView.swift",
+      "sha256": "54abaad170bbf4ca33c461c5f9eb87e84ca107e7dacd335dc21b771541b03fc7",
+      "evidence": "Native plain-English explanation validates future-first/no-shame philosophy, deterministic cash projections, no compulsory category budgets and no pressure to log every coffee. Explicitly says card planning does not auto-pay real cards."
+    },
+    {
+      "repository": "KASU Finance",
+      "path": "KASU Finance/Assets.xcassets/AppIcon.appiconset/icon-fox.png",
+      "sha256": "08f57d0da442907238e52d4207b4344a2861ce2bb939c958927498df0b6b9469",
+      "evidence": "Authoritative original fox, visually inspected. Black background; geometric magenta upper outline and ears, cyan lower jaw, cyan slanted eyes and nose. Preserve recognizable geometry."
+    }
+  ],
+  "implemented": [
+    {
+      "feature": "Deterministic weekly cash projection",
+      "source": "KASU Finance/Engine/ChronoFlowEngineV3.swift:638",
+      "detail": "Authored rolling snapshots use start cash + occurring income − occurring expenses − accepted due-week goal spending. The next week carries forward cash after goals. Negative-cash detection scans actual computed snapshots.",
+      "qualification": "Not audited against a comprehensive native test suite. Native weekly grouping can conceal intraweek payment ordering."
+    },
+    {
+      "feature": "Decimal money and explicit year-week identity",
+      "sources": [
+        "KASU Finance/Engine/EngineContractV3.swift",
+        "KASU Finance/Engine/WeekIndexing.swift"
+      ],
+      "detail": "Decimal financial values and YearWeek avoid treating repeating week numbers as globally unique. Calendar-year weeks begin Monday; the implementation is not the older Australian financial-year v8 approach."
+    },
+    {
+      "feature": "Recurring income/expense definitions with edit history",
+      "sources": [
+        "KASU Finance/Models/EntryDefinition.swift",
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift:4278"
+      ],
+      "detail": "Stable UUID and seriesId, amount, start/end dates, frequencies. Ongoing edits stop an old series instance and clone a new future instance; upcoming edits apply in place."
+    },
+    {
+      "feature": "Cash truth and protected cash",
+      "sources": [
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift",
+        "KASU Finance/NativeiOS/View/Modules/Cash/CashAccountsView.swift"
+      ],
+      "detail": "Authored SwiftData cash truth anchors, total/protected values and guided calibration. Protected cash differs from the dynamic forecasting floor."
+    },
+    {
+      "feature": "Due-date goals and shared-cash checks",
+      "sources": [
+        "KASU Finance/Models/Goal.swift",
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift:838",
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift:1546"
+      ],
+      "detail": "Authored goal target/date/state, lock-first and due-date ordering, viability checks and due-week planned spending; unviable goals are skipped rather than allowed to consume cash."
+    },
+    {
+      "feature": "Credit planning and debt lifecycle",
+      "sources": [
+        "KASU Finance/Models/CreditCard.swift",
+        "KASU Finance/Models/CreditDebt.swift",
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift:1969"
+      ],
+      "detail": "Authored card limit/balance/billing day, one active debt invariant, planned borrowing and repayment entries, debt pay/destroy operations, goal acceleration and survival rescue mechanisms.",
+      "qualification": "Planning code exists, but accuracy of safe-borrow capacity and real interest-free eligibility is not established. No automatic bank/card payments."
+    },
+    {
+      "feature": "Native modules and records/exports",
+      "sources": [
+        "KASU Finance/NativeiOS/Root/RootTabView.swift",
+        "KASU Finance/NativeiOS/View/Home/HomeCommandSurfaceView.swift",
+        "KASU Finance/Models/Reports/LedgerCSVExporter.swift",
+        "KASU Finance/Models/Reports/LedgerPDFExporter.swift"
+      ],
+      "detail": "Source-connected root launcher exposes projections, goals, cash, credit card, records, entry creation, settings and insights. CSV/PDF report code is retained.",
+      "qualification": "Source presence does not certify every module, cloud sync or external service at runtime."
+    }
+  ],
+  "experimental": [
+    {
+      "feature": "Traditional finance dashboard",
+      "evidence": {
+        "commit": "613e087",
+        "date": "2025-11-08",
+        "path": "KASU Finance/View/Dashboard/DashboardView.swift"
+      },
+      "detail": "Retained source combines a mini surplus chart, leftover breakdown, goal card/ring and Essentials/Expert modes. No original screenshot was found; any website recreation must say source-backed reconstruction."
+    },
+    {
+      "feature": "iPhone-style launcher",
+      "evidence": {
+        "commit": "103ff68",
+        "date": "2025-12-27",
+        "path": "KASU Finance/NativeiOS/View/Home/HomeCommandSurfaceView.swift"
+      },
+      "detail": "Retained source presents a three-column grid of familiar module icons beneath a command panel."
+    },
+    {
+      "feature": "Airport-style status board",
+      "evidence": {
+        "commit": "41d4e86",
+        "date": "2026-01-10",
+        "path": "KASU Finance/NativeiOS/View/Home/CommandSurfacePanel.swift",
+        "lines": [
+          128,
+          216
+        ]
+      },
+      "detail": "Source explicitly comments 'Airport-style status board (always visible)' and implements monospaced SAVINGS and CREDIT CARD rows. This verifies a visual direction, not a full retained arrival/departure timetable implementation."
+    },
+    {
+      "feature": "Engine rewrites V2 to V3",
+      "evidence": [
+        {
+          "commit": "41d4e86",
+          "date": "2026-01-10",
+          "detail": "ChronoFlowEngineV2.swift introduced while older engine and dashboard changed."
+        },
+        {
+          "commit": "5a32939",
+          "date": "2026-02-06",
+          "detail": "Commit describes rebuilt engine/contract with broken UI links."
+        },
+        {
+          "commit": "3df3068",
+          "date": "2026-02-23",
+          "detail": "Commit reports engine wiring finished with bugs remaining."
+        }
+      ],
+      "detail": "Supports the narrative of increasing capability and engineering complexity. Commit messages describe work checkpoints, not audited acceptance."
+    },
+    {
+      "feature": "Goals Race and card timing refinement",
+      "evidence": [
+        {
+          "commit": "be3ddee",
+          "date": "2026-01-20",
+          "detail": "Beginning Goal Race."
+        },
+        {
+          "commit": "03d74db",
+          "date": "2026-03-29",
+          "detail": "Cross-year goal marker fixes."
+        },
+        {
+          "commit": "bb411d9",
+          "date": "2026-04-04",
+          "detail": "Billing-date fixes in progress."
+        },
+        {
+          "commit": "3740cc4",
+          "date": "2026-04-05",
+          "detail": "Goals/card mostly fixed, variable weekly credit amounts still planned."
+        }
+      ],
+      "detail": "Authored goal acceleration UI and billing logic are research implementations, not validated lender-specific advice."
+    },
+    {
+      "feature": "HomeV2 and GraphV2 interface mocks",
+      "sources": [
+        "KASU Finance/NativeiOS/View/HomeV2.swift",
+        "KASU Finance/NativeiOS/View/GraphV2.swift"
+      ],
+      "detail": "Working tree includes hardcoded scenario impact/cash cards and no-op actions. HomeV2 is reachable through a mock presentation control; GraphV2 is a mock view. Do not show mock figures as outputs from the engine."
+    },
+    {
+      "feature": "WeekClose history freezing and prewarming",
+      "source": "KASU Finance/Engine/ChronoFlowEngineV3.swift",
+      "detail": "Rule comment V3-35 says WeekClose historical freezing is future/not enforced. preGenerateSnapshotsUpToHorizonIfNeeded is intentionally empty. Retained persistence/report types do not prove completion of these mechanisms."
+    }
+  ],
+  "visionary": [
+    {
+      "feature": "The browser financial horizon",
+      "detail": "A new self-contained, illustrative event-by-event interpretation for the specimen, with independently tested calculations. It is not the native V3 engine port or evidence of a completed native next-generation UI."
+    },
+    {
+      "feature": "Cinematic fox, beast engine and controller metaphor",
+      "detail": "Original generated artwork and explanatory visuals expand the authentic fox identity. They are conceptual illustrations, not native screenshots or historical records."
+    },
+    {
+      "feature": "Relaunch or production-ready financial assistant",
+      "detail": "No relaunch, release date, real banking connection, guaranteed forecast accuracy or financial outcome is promised. Product remains paused."
+    }
+  ],
+  "validationGaps": [
+    {
+      "topic": "Credit terms are incomplete",
+      "source": "KASU Finance/Models/CreditCard.swift",
+      "detail": "Retained model stores limit, balance, active flag, policy and billing day. It does not model APR, fees, a separate statement closing date/payment due date, grace-period eligibility, minimum payments, cash advances, promotional terms or lender-specific exceptions. Do not imply universal interest-free access."
+    },
+    {
+      "topic": "Possible carried-cash double counting",
+      "source": "KASU Finance/Engine/ChronoFlowEngineV3.swift:3108",
+      "detail": "repaymentCapacity sums positive projectedAvailableCash minus floor over successive weeks. Those values are cash stocks, not independently earned weekly surpluses; carried cash can be counted repeatedly. This is a source-review concern requiring financial model validation before any safe-borrow claim."
+    },
+    {
+      "topic": "Contract/implementation divergence",
+      "sources": [
+        "KASU Finance/Engine/EngineContractV3.swift",
+        "KASU Finance/Engine/ChronoFlowEngineV3.swift"
+      ],
+      "detail": "Some comments describe survival-only goals or non-carried dips while current rolling projection carries after-goal cash and flags negative after-goal balances. Credit billing helper comments and implementation also differ. Describe observed code narrowly rather than treating every comment as completed intent."
+    },
+    {
+      "topic": "Weekly granularity",
+      "source": "KASU Finance/Engine/ChronoFlowEngineV3.swift",
+      "detail": "Native projections group occurrences by week. A salary later in the same week can offset a bill earlier in the week, concealing a temporary day-level shortfall. New browser simulation uses explicit event dates/order and must document its own same-day assumption."
+    },
+    {
+      "topic": "Native automated tests",
+      "source": "KASU FinanceTests/KASU_FinanceTests.swift",
+      "detail": "The retained primary test file is the generated empty example test. Debug invariant assertions exist in the engine but are not a comprehensive financial test suite."
+    },
+    {
+      "topic": "Build compatibility",
+      "detail": "Unmodified source fails current compiler compatibility checks. An isolated capture copy builds successfully after adding import SwiftData and compositingGroup() before blendMode(.screen). Original source is untouched. No financial logic or interface design was changed.",
+      "status": "Isolated simulator build and two current-source captures completed; original unchanged build not established."
+    },
+    {
+      "topic": "Historical coverage",
+      "detail": "No original historical screenshot set, twelve version tags or additional finance archives found in the inspected product/archive folders. Use real captured current UI where obtained; historical visual reconstructions must remain labelled."
+    }
+  ],
+  "captureCandidates": [
+    {
+      "path": "KASU Finance/NativeiOS/View/Home/HomeCommandSurfaceView.swift",
+      "purpose": "Authentic engine-connected current launcher."
+    },
+    {
+      "path": "KASU Finance/NativeiOS/View/Modules/ProjectionsSheetView.swift",
+      "purpose": "Authentic current weekly projections."
+    },
+    {
+      "path": "KASU Finance/NativeiOS/View/Modules/Goals/GoalsRaceView.swift",
+      "purpose": "Authentic goal planning and acceleration experiment."
+    },
+    {
+      "path": "KASU Finance/NativeiOS/View/Modules/Cash/CashAccountsView.swift",
+      "purpose": "Authentic total/protected cash UI."
+    },
+    {
+      "path": "KASU Finance/NativeiOS/View/Modules/CreditCard/CreditCardDetailSheet.swift",
+      "purpose": "Authentic credit configuration; illustrative entries only."
+    },
+    {
+      "path": "KASU Finance/NativeiOS/View/Modules/SettingsView/WhatIDoForNerdsView.swift",
+      "purpose": "Authentic philosophy/engine explanation."
+    }
+  ],
+  "privacy": "No credentials, API keys, bank connections, personal balances or private account data are included in this receipt. Native capture should use isolated mocked data. The website demonstration must remain self-contained and ask for no real financial details.",
+  "captureBuild": {
+    "isolatedSource": "/tmp/cashcast-008-capture-source",
+    "bundle": "/tmp/cashcast-008-capture-build/Build/Products/Debug-iphonesimulator/KASU Finance.app",
+    "bundleIdentifier": "com.gamadynamics.CashCast",
+    "buildLog": "/tmp/cashcast-008-capture-build.log",
+    "originalSourceModified": false,
+    "credentialConfigCopied": false,
+    "builtInfoOpenAIKeyEmpty": true,
+    "compatibilityChanges": [
+      {
+        "path": "KASU Finance/KASUOrbitv2/Shared/OrbitPresenter.swift",
+        "change": "Added missing import SwiftData."
+      },
+      {
+        "path": "KASU Finance/NativeiOS/View/Modules/CreditCard/CreditCardDetailSheet.swift",
+        "change": "Added compositingGroup() before blendMode(.screen) to resolve SwiftUI View/ShapeStyle overload ambiguity."
+      }
+    ],
+    "emptyConfigurationStub": "secrets.xcconfig: OPENAI_API_KEY intentionally empty. No original credentials copied.",
+    "claimBoundary": "Current-source simulator capture with two compiler compatibility fixes; not production validation."
+  },
+  "nativeCaptures": [
+    {
+      "id": "calibration",
+      "classification": "native-current-source-capture",
+      "source": "/Users/jorgealbarracin/Desktop/Screenshot Cash Cast 008 Review 08-10-2026 at 4.39.22 pm.png",
+      "sourceDimensions": [
+        1206,
+        2622
+      ],
+      "sourceSha256": "1061162a558e12a22c55677539a5f6844848188b34b7502a8f036699273e35e9",
+      "export": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/cashcast/captures/calibration-current.webp",
+      "publicPath": "/specimens/cashcast/captures/calibration-current.webp",
+      "exportDimensions": [
+        780,
+        1696
+      ],
+      "exportSha256": "aa5349c5110eda6d33df39dcc6ac73d253706dd7985f88f80d489efea1116eac",
+      "processing": "Proportional 780px-wide resample, WebP quality92; no cropping or interface alteration.",
+      "captureMethod": "DeviceHub native screenshot button, actual CashCast simulator app, 8 October 2026 Australia/Sydney.",
+      "context": "Actual native calibration sheet before Apply. Fictional cash increased from $0 to $2,000; no events. One-time thing selected."
+    },
+    {
+      "id": "launcher",
+      "classification": "native-current-source-capture",
+      "source": "/Users/jorgealbarracin/Desktop/Screenshot Cash Cast 008 Review 08-10-2026 at 4.43.17 pm.png",
+      "sourceDimensions": [
+        1206,
+        2622
+      ],
+      "sourceSha256": "6f4384c18693a3d6db66436e0a1d9106fc0c7247b202df76bfe9bbb41a6ac9b0",
+      "export": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/2. Websites/gama-website/public/specimens/cashcast/captures/launcher-current.webp",
+      "publicPath": "/specimens/cashcast/captures/launcher-current.webp",
+      "exportDimensions": [
+        780,
+        1696
+      ],
+      "exportSha256": "fc4b7b44eb3f698f51196142f0ea12f34693bf6ebd88e973717a550f0a343f2c",
+      "processing": "Proportional 780px-wide resample, WebP quality92; no cropping or interface alteration.",
+      "captureMethod": "DeviceHub native screenshot button, actual CashCast simulator app, 8 October 2026 Australia/Sydney.",
+      "context": "Actual native engine-connected launcher after applying fictional $2,000 cash. No income or expense events."
+    }
+  ]
+}

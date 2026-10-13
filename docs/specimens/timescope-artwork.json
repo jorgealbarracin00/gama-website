@@ -1,0 +1,94 @@
+{
+  "specimen": "009",
+  "createdAt": "2026-10-13",
+  "assets": [
+    {
+      "id": "summary",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope/docs/AppStore/Screenshots/Summary.png",
+      "published": "public/specimens/timescope/captures/summary.webp",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "sha256": "6c9bc77c1a716d903a169145d2e95de840a6634ae0dd9d3e410d1a6458c61e2b",
+      "classification": "Actual native SwiftUI render with isolated synthetic fixture data"
+    },
+    {
+      "id": "expanded-summary",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope/Investigation/UI/Release Summary Expanded.png",
+      "published": "public/specimens/timescope/captures/expanded-summary.webp",
+      "dimensions": [
+        2000,
+        1200
+      ],
+      "sha256": "73403d97fa062e13d3103214a60db75050e8ca0480110547940d51e782e3c70b",
+      "classification": "Actual native SwiftUI render with isolated synthetic fixture data"
+    },
+    {
+      "id": "timeline",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope/docs/AppStore/Screenshots/Timeline.png",
+      "published": "public/specimens/timescope/captures/timeline.webp",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "sha256": "a0e0d4bbbe8f4d728f1a5ee2fb1194f4e58d4162b075e093c34e01b777c7466f",
+      "classification": "Actual native SwiftUI render with isolated synthetic fixture data"
+    },
+    {
+      "id": "journal",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope/docs/AppStore/Screenshots/Activity Journal.png",
+      "published": "public/specimens/timescope/captures/journal.webp",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "sha256": "87c64f3616f7382a43e9fe21c45132a9b401332f9b1db6b2f3b2858193c5af24",
+      "classification": "Actual native SwiftUI render with isolated synthetic fixture data"
+    },
+    {
+      "id": "settings",
+      "source": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope/docs/AppStore/Screenshots/Settings.png",
+      "published": "public/specimens/timescope/captures/settings.webp",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "sha256": "4795273d2bce07161f98b29360ea168210b6dafd7f819e64652932a283b3a859",
+      "classification": "Actual native SwiftUI render with isolated synthetic fixture data"
+    },
+    {
+      "id": "hero",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-52cab027-d4c1-4a5b-867a-5b749bdc1d93.png",
+      "published": "public/specimens/timescope/hero-v1.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "9aae4e743453f96ab1cd2dd2c0683d14b155e9313faf8fa74debfa9a7285a8ea",
+      "classification": "Original generated conceptual illustration",
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: cinematic concept artwork for GAMA TimeScope native Mac time-awareness product and Specimen 009, wide 1536x1024. Primary request: a day becomes understandable through a quiet silver-and-glass optical lens, with many small blocks of computer time finding their place along one clear horizontal timeline. Style: extraordinary premium tactile 3D editorial product sculpture, calm rather than futuristic surveillance. Scene: midnight ink backdrop softly illuminated with violet and indigo. A large circular smoked glass lens floating above a silver desk plane; beyond and through it a single luminous ribbon of dimensional segments in violet, azure, green, amber and coral extends into the distance, with comfortable dark negative space at left and full scene at right. Segments make a measured daily sequence, no graphs, no dashboards, no invented native app UI. Materials: brushed aluminium, translucent coloured optical glass, restrained reflections and real depth. Lighting: gentle dawn glow, sculptural rim light, dignity and clarity. Avoid text, words, numbers, logos, money, giant clocks, eyeballs, spying cameras, human faces, cartoon mascots, neon circuits, dystopian monitoring. This is a conceptual visual metaphor for understanding one's day, not a photograph of TimeScope software."
+    },
+    {
+      "id": "horizon",
+      "source": "/Users/jorgealbarracin/.codex/generated_images/01a1153d-4ad5-7d73-8fb8-f59612360dad/exec-21b575ef-5654-4e02-b037-ca2c1dbab8c8.png",
+      "published": "public/specimens/timescope/horizon-v1.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "e68f70de3589701f50e78e85640ad5cd141b0e2e2811d41a4dff68c2a81254d3",
+      "classification": "Original generated conceptual illustration",
+      "tool": "image_gen.imagegen",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial conceptual lifestyle image for GAMA TimeScope, wide1536x1024. A parent and a school-age teenager sit side by side at a simple family desk, talking openly and calmly about a shared laptop; the teen holds the trackpad and the parent is listening, both have agency. We see from behind and a little to the side, faces modestly visible in natural light; no recognizable public people. The silver laptop display is softly out of focus with simple coloured horizontal bands but no readable text or invented app screenshot. Warm modern home, daylight, a notebook with unreadable writing, one small plant, comfortable breathing room. Refined cinematic editorial photography, realistic hands, dignified candid interaction, slightly violet hue in a desk object connects subtly to TimeScope's existing purple identity. No blaming, policing, hidden camera, restrictive imagery, spyware symbols, badges, timers, advertising text or logos. This illustrates a possible family conversation, not actual users or a testimonial."
+    }
+  ],
+  "originalIcon": {
+    "path": "public/specimens/timescope/icon-original.png",
+    "sha256": "f5d31042363e636e8706b404b75ee7c6eaed90cacdc998a4bc233757a44ed271",
+    "unchanged": true
+  },
+  "nativeCaptures": "Actual SwiftUI renders with isolated synthetic fixture data; not real usage or evidence of App Store release.",
+  "conceptScenes": "AI-generated explanatory scenes, not real users or testimonials."
+}

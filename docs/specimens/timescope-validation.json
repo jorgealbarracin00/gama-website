@@ -1,0 +1,77 @@
+{
+  "specimen": "009 — GAMA TimeScope",
+  "verifiedAt": "2026-10-13",
+  "publicationApproved": true,
+  "approval": "Publish both websites",
+  "localSpecimen": "http://127.0.0.1:3009/incubation/timescope",
+  "localProductSite": "http://127.0.0.1:3109/",
+  "productionTargets": [
+    "https://gamadynamics.com.au/incubation/timescope",
+    "https://timescope.gamadynamics.com.au/"
+  ],
+  "checks": {
+    "lint": "passed",
+    "typescript": "passed",
+    "productionBuild": "passed:18 pages generated",
+    "regressionTests": {
+      "cashcast": 14,
+      "wayline": 7,
+      "failures": 0
+    },
+    "staticJavaScriptSyntax": "passed",
+    "staticLinksAssetsIdsAria": "passed",
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "horizontalOverflow": "none on both pages",
+    "existingSpecimens": "205 baseline files compared;001–008 content unchanged; expected shared registry change only. Types and card styling addprism support.",
+    "privacyReview": "No unsupported remoteparent,attention,identity,blocking or releasedAppStoreclaims.",
+    "exampleArithmetic": "120+78+60=258 active minutes;Chrome28+15+10+25=78 nestedminutes.",
+    "interactionReview": "Bothviews, application choices, optional metadata, threeperspectives, allfive nativecaptures, keyboardgallery switch checked.",
+    "browserConsole": "Noerrors/warnings in specimen preview."
+  },
+  "apple": {
+    "appId": "6822109552",
+    "version": "1.0.0",
+    "build": "2",
+    "state": "Waiting for Review",
+    "marketing": "https://timescope.gamadynamics.com.au/",
+    "support": "https://timescope.gamadynamics.com.au/support/",
+    "privacy": "https://timescope.gamadynamics.com.au/privacy/",
+    "savedLinksAlreadyCorrect": true,
+    "appleFieldsChanged": false
+  },
+  "hosting": {
+    "siteProjectId": "appgprj_6accae1ea89881919bb4b32741f8655b",
+    "audience": "Existing public access retained",
+    "customDomain": "timescope.gamadynamics.com.au",
+    "domainStatus": "active",
+    "sslStatus": "active",
+    "CNAME": "custom-domains.chatgpt.site.",
+    "dnsChanged": false,
+    "sourceCopy": "/private/tmp/gama-timescope-site",
+    "sourcePackage": "Local tasktimescope-review/product-site-source.zip",
+    "sourceCommit": "7c6cbc89fc40e3ef2e822f090aa2ce0ad7dfb789",
+    "savedVersion": "appgprj_6accae1ea89881919bb4b32741f8655b~appgver_69f3aae8a1448191a96020b21d78fb9e",
+    "deploymentId": "appgdep_6acd872f692c819181f7f1381b49a842",
+    "deploymentStatus": "succeeded",
+    "providerUrl": "https://gama-timescope.qmhh7ckn87.chatgpt.site"
+  },
+  "evidence": {
+    "desktopSpecimen": "Local tasktimescope-review/specimen-desktop.png",
+    "productSite": "Local tasktimescope-review/product-desktop.png",
+    "sourceReceipt": "timescope-sources.json",
+    "artworkInventory": "timescope-artwork.json"
+  },
+  "limitations": [
+    "A website cannot observeapplications or browseractivity; all demonstrationdata is fictional.",
+    "Nativecaptures use isolatedsyntheticfixtures.",
+    "AppStoreversion isWaitingforReview, not approved or publiclyreleased.",
+    "No actualpersonal activityrecords or credentials are included.",
+    "TimeScope privacy/support/termspaths and source-specific legalcontent are retained;support adds currentreviewstatus."
+  ]
+}

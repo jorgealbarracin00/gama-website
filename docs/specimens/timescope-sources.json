@@ -1,0 +1,389 @@
+{
+  "specimen": "009 — GAMA TimeScope",
+  "investigatedAt": "2026-10-13",
+  "sourceRoot": "/Users/jorgealbarracin/Library/Mobile Documents/com~apple~CloudDocs/GAMA DYNAMICS/1. Products/13. GAMA TimeScope",
+  "scope": "Read-only inspection of product documentation, native source, artwork and synthetic native UI renders. No credentials or personal activity databases were read. No source project edits or test execution.",
+  "gitHistory": "No .git directory was available at the product project root; file hashes identify the inspected snapshot.",
+  "product": {
+    "name": "GAMA TimeScope",
+    "subtitle": "See where your time goes.",
+    "platform": "Native macOS menu-bar app",
+    "minimumOS": "macOS 14",
+    "version": "1.0.0",
+    "build": "1",
+    "bundleId": "com.gamadynamics.TimeScope",
+    "price": "Free; no in-app purchases or subscriptions",
+    "distributionTruth": "Development preview, intended Mac App Store release; the local documents do not establish production signing, App Review approval or a live App Store listing."
+  },
+  "origin": {
+    "source": "Current user instruction in this website task",
+    "description": "A developer wanted to understand how computer time was spent. The same need extends to personal Mac users and parents seeking open accountability around school and leisure.",
+    "copyDirection": "Curiosity, clarity and shared conversations. Avoid productivity scores, moral judgments, hidden surveillance or claiming to prove attention."
+  },
+  "verifiedImplementation": [
+    {
+      "claim": "Universal foreground-application sessions, with separate timestamps and durations",
+      "sources": [
+        "Sources/TimeScopeApp/AppModel.swift",
+        "Sources/TimeScopeCore/TrackingEngine.swift",
+        "Sources/TimeScopeCore/Models.swift"
+      ]
+    },
+    {
+      "claim": "Daily application totals, a seven-day summary and expandable application → website → recorded metadata hierarchy",
+      "sources": [
+        "Sources/TimeScopeApp/Views.swift",
+        "Sources/TimeScopeCore/PresentationReporting.swift",
+        "docs/HierarchicalSummaryVerification.txt"
+      ]
+    },
+    {
+      "claim": "A selectable Activity Timeline and Activity Journal with recorded usage, observed inactivity, confirmed normal quits and inferred interruptions",
+      "sources": [
+        "Sources/TimeScopeApp/Views.swift",
+        "Sources/TimeScopeCore/PresentationReporting.swift",
+        "Sources/TimeScopeCore/TrackingEngine.swift"
+      ]
+    },
+    {
+      "claim": "Idle, sleep/display/account inactivity, paused, unavailable and unrecorded intervals remain distinct from active totals",
+      "sources": [
+        "Sources/TimeScopeCore/TrackingEngine.swift",
+        "Sources/TimeScopeCore/Models.swift"
+      ]
+    },
+    {
+      "claim": "Transactional local SQLite checkpoints, recovery after interruptions and explicit unknown gaps; no fabricated activity before monitoring",
+      "sources": [
+        "Sources/TimeScopeCore/TrackingEngine.swift",
+        "Sources/TimeScopeCore/Store.swift",
+        "docs/Architecture.txt"
+      ]
+    },
+    {
+      "claim": "Recording starts only after the first-use Start recording acknowledgement; Not now leaves recording stopped",
+      "sources": [
+        "Sources/TimeScopeCore/Capabilities.swift",
+        "Sources/TimeScopeApp/AppModel.swift",
+        "Sources/TimeScopeApp/Views.swift"
+      ]
+    },
+    {
+      "claim": "Optional, visible Guardian Mode protects administrative controls, history deletion and optionally normal quitting",
+      "sources": [
+        "Sources/TimeScopeCore/Guardian.swift",
+        "Sources/TimeScopeApp/AppModel.swift",
+        "Sources/TimeScopeApp/Views.swift"
+      ]
+    },
+    {
+      "claim": "Retention choices are 30, 90, 365 days or no automatic expiry; 90 days is the default",
+      "sources": [
+        "Sources/TimeScopeCore/Models.swift",
+        "Sources/TimeScopeApp/Views.swift"
+      ]
+    }
+  ],
+  "privacy": {
+    "localOnly": true,
+    "accountRequired": false,
+    "cloudSync": false,
+    "gamaIdentityDependency": false,
+    "appBackend": false,
+    "externalAnalytics": false,
+    "records": [
+      "application name and bundle identifier",
+      "macOS account UID",
+      "session timestamps and active duration",
+      "termination reasons",
+      "idle and observed inactivity periods",
+      "monitoring gaps, checkpoints and lifecycle journal",
+      "preferences",
+      "optional website origins",
+      "separately opted-in page titles and YouTube identifiers"
+    ],
+    "doesNotCollect": [
+      "passwords",
+      "keystrokes",
+      "screenshots",
+      "private-message contents",
+      "browser cookies",
+      "authentication tokens",
+      "page contents or DOM",
+      "browser history databases",
+      "playback state",
+      "channel names",
+      "Discord sections"
+    ],
+    "permissions": {
+      "appTracking": "No additional macOS permission",
+      "optionalBrowserDetails": "Per-browser Enable action and normal macOS Automation consent",
+      "notRequested": [
+        "Accessibility",
+        "Screen Recording",
+        "Input Monitoring"
+      ]
+    },
+    "browserDefaults": "Chrome and Safari metadata are off by default; page titles and YouTube identifiers are additional off-by-default choices.",
+    "urlRules": "Store canonical website origin; discard arbitrary paths, queries, fragments and credentials. Optional allowlisted YouTube identifier is the limited exception.",
+    "titlesAllowedHosts": [
+      "YouTube",
+      "Wikipedia",
+      "Apple developer documentation",
+      "example domains"
+    ],
+    "chromePrivate": "Native private-window mode checked before and after reading; full live incognito validation remains outstanding.",
+    "safariPrivate": "No verified native private-window flag; users must disable Safari website details before private browsing.",
+    "storageProtection": "SQLite database in local application container; not separately encrypted by TimeScope. macOS account/file protection and user backups apply.",
+    "guardianCredential": "Salted PBKDF2-HMAC-SHA256 verifier and retry state in macOS Keychain; no plain passcode persistence.",
+    "publicPolicyEffectiveDate": "2026-10-12",
+    "publicWebsiteAndEmail": "Website hosting technical logs and voluntary support email are separate from offline app collection."
+  },
+  "measurementAndFamilyBoundaries": [
+    "Foreground app or sampled website exposure is not proof of watching, reading, attention or productivity.",
+    "A macOS account UID does not identify the individual using a shared account.",
+    "Guardian Mode does not prevent Force Quit, shutdown, uninstalling or normal operating-system management.",
+    "There is no remote parent dashboard, schedule enforcement, app blocking, family account system or online passcode reset.",
+    "Passive video viewing can become idle; dedicated lock/unlock detection remains unverified.",
+    "Browser details are sampled and can miss quick tab changes; missing observations stay unclassified.",
+    "Website time is a component of parent app time, not additional computer time. Conflicting overlaps remain unclassified.",
+    "Stored content fields do not imply collected channels or independent content durations; current content records lack independent start/end timestamps."
+  ],
+  "browserCoverage": {
+    "Chrome": "Verified sandbox native metadata and later isolated live end-to-end example.com collection → SQLite → Summary; explicit Automation required.",
+    "Safari": "Native sandbox metadata verified; latest one-click permission/refinement workflow not re-tested live.",
+    "OperaEdgeBrave": "Untested; detailed adapters disabled.",
+    "Firefox": "No implemented native detailed adapter.",
+    "otherApps": "Generic foreground application tracking does not depend on the browser registry."
+  },
+  "existingVerificationReports": {
+    "latest": "docs/HierarchicalSummaryVerification.txt, 2026-10-13: 58 automated tests, universal arm64/x86_64 Release build and strict ad-hoc signature verification passed.",
+    "evidenceType": "Existing project reports and inspected code; these tests were not re-run by this website investigation.",
+    "pending": [
+      "Production distribution signing",
+      "Apple sandbox exception review for browser targets",
+      "App Store submission and approval",
+      "Minimum macOS and physical Intel validation",
+      "Full physical lifecycle/stopwatch audit",
+      "Production-bundle permission denial/revocation/incognito checks",
+      "Signed login-item validation"
+    ]
+  },
+  "assets": [
+    {
+      "relativePath": "Assets/Icon/TimeScope-master.png",
+      "kind": "Reference-derived approved raster icon master",
+      "provenance": "Existing image_gen artwork, prompts preserved in Assets/Icon/Generation-prompts.txt",
+      "note": "Purple tile, silver monitor, static 4h 32m TODAY and five-colour usage bar. Edge pixels are visibly ragged; preserve identity rather than invent another mark."
+    },
+    {
+      "relativePath": "Assets/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png",
+      "kind": "Native 1024px app-icon rendition",
+      "provenance": "Existing native app asset"
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Summary.png",
+      "kind": "Native SwiftUI render",
+      "data": "Isolated synthetic example; label as illustrative/native demo, not real tracked user history"
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Timeline.png",
+      "kind": "Native SwiftUI render",
+      "data": "Isolated synthetic example; label as illustrative/native demo, not real tracked user history"
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Activity Journal.png",
+      "kind": "Native SwiftUI render",
+      "data": "Isolated synthetic example; label as illustrative/native demo, not real tracked user history"
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Settings.png",
+      "kind": "Native SwiftUI render",
+      "data": "Isolated synthetic example; permission states are fixtures"
+    },
+    {
+      "relativePath": "Investigation/UI/Release Summary Expanded.png",
+      "kind": "Native SwiftUI hierarchy render",
+      "data": "Isolated synthetic example; includes fixture YouTube metadata"
+    }
+  ],
+  "existingWeb": {
+    "sourceDirectory": "website/dist",
+    "pages": [
+      "/",
+      "/privacy/",
+      "/support/",
+      "/terms/"
+    ],
+    "customDomain": "https://timescope.gamadynamics.com.au",
+    "providerSite": "https://gama-timescope.qmhh7ckn87.chatgpt.site",
+    "documentedHosting": "ChatGPT Sites, custom hostname and SSL active on 2026-10-12; requires fresh external verification for changes.",
+    "documentedDNS": {
+      "CNAME": "timescope → custom-domains.chatgpt.site.",
+      "TXTVerification": "_openai-site-verification.timescope",
+      "TXTCustomHostname": "_cf-custom-hostname.timescope"
+    },
+    "nativeInAppPrivacyURL": "https://timescope.gamadynamics.com.au/privacy/",
+    "listingURLs": {
+      "marketingUrl": "https://timescope.gamadynamics.com.au/",
+      "supportUrl": "https://timescope.gamadynamics.com.au/support/",
+      "privacyPolicyUrl": "https://timescope.gamadynamics.com.au/privacy/"
+    },
+    "linkScope": "Listing.json and local docs are prepared metadata, not proof the values are saved in App Store Connect. Check the actual Apple record before reporting a redirect/update.",
+    "reuse": "Existing privacy, support and terms content is specific and source-backed; safe to migrate with accurate hosting wording and working routes, preserving canonical subdomain paths if possible."
+  },
+  "sourceReceipts": [
+    {
+      "relativePath": "README.md",
+      "sha256": "eacd1ff10ef20ca479702f03331d7d2e8e12a30f7287655635f8a98bbcc5625a",
+      "bytes": 4880
+    },
+    {
+      "relativePath": "docs/Architecture.txt",
+      "sha256": "f376e64e78e2b19262408276c1f7469affddab74711ae869ade0f2d0102927b9",
+      "bytes": 6439
+    },
+    {
+      "relativePath": "docs/PrivacyPolicy.txt",
+      "sha256": "ee756666796cc193c97829731e8a7556f97c9de337cc1a070d81353074a2ebe7",
+      "bytes": 6232
+    },
+    {
+      "relativePath": "docs/ReleasePlan.txt",
+      "sha256": "9597f0257a6e60a10da07192caafdfa74b47d1a9c85e206b59bb540414b8f3ae",
+      "bytes": 2959
+    },
+    {
+      "relativePath": "docs/UIRefinementVerification.txt",
+      "sha256": "0d515a44fb88559c942d24a04c9b53c6fef6f014678bc6189e296c0a75673ab0",
+      "bytes": 5485
+    },
+    {
+      "relativePath": "docs/HierarchicalSummaryVerification.txt",
+      "sha256": "4a8024f313bbd75402740ee7cb22b78aaf3d755cb76e7974fd9e67c5f478d533",
+      "bytes": 5826
+    },
+    {
+      "relativePath": "docs/BrowserFeasibility.txt",
+      "sha256": "6a38479a436f7ed2deb8e6f3987b9aca0b0d90ba5aeb85b8a0a808cd35766e01",
+      "bytes": 7793
+    },
+    {
+      "relativePath": "docs/AppStore/Listing.json",
+      "sha256": "3e616f321f88bdccb766f9c3aa2a1272aba7b5da25f21bf2f9e39628a81e2e94",
+      "bytes": 2524
+    },
+    {
+      "relativePath": "docs/AppStore/PrivacyDisclosures.txt",
+      "sha256": "9b3d409153564ea415531ded1781e839f361d5d80fb05ccdda0c6aedd814689e",
+      "bytes": 2606
+    },
+    {
+      "relativePath": "docs/WebsiteAndDNS.txt",
+      "sha256": "0a87d2cda9795f224e32c33aade420b4bc0ecbd3582709ebed31bee231685863",
+      "bytes": 2416
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/Models.swift",
+      "sha256": "64c120e9f47f448ea97d2c76c6c73c9e0587d9384797ab5461c73845829fcc7e",
+      "bytes": 7132
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/TrackingEngine.swift",
+      "sha256": "a87854ec03d777a9d056098d7f43491a40e6e4c5f22e3976b42d5481696637ea",
+      "bytes": 10859
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/PresentationReporting.swift",
+      "sha256": "6654925008cfdaad6e34bfa5bcc3cecde7f2a9ada1d8b6ba2d36284b290c428c",
+      "bytes": 12709
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/Guardian.swift",
+      "sha256": "f230151d3c4dfe4539b62cb7113832f054f3d04e0eac4d4f0dbecb99c0780dd6",
+      "bytes": 6077
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/BrowserAutomation.swift",
+      "sha256": "628495d021d69539926e027c5d0ff2448e85c1d7b1b892700b0774c94da95fd0",
+      "bytes": 8518
+    },
+    {
+      "relativePath": "Sources/TimeScopeCore/Capabilities.swift",
+      "sha256": "e77d0aa38c2ba2fac27fa0e1087f52d60741dc64fb1722354168634ac3895487",
+      "bytes": 2834
+    },
+    {
+      "relativePath": "Sources/TimeScopeApp/AppModel.swift",
+      "sha256": "64e6a329d98ceee597ec53ff57ccf6fe0bbf5ced44f08cdca6837d3a1fda64e0",
+      "bytes": 25728
+    },
+    {
+      "relativePath": "Sources/TimeScopeApp/Views.swift",
+      "sha256": "79c7c0cb4553e6d7ce892e647a1a65e08d134ca98decad4db972eec4914f0e1c",
+      "bytes": 48475
+    },
+    {
+      "relativePath": "Assets/Icon/TimeScope-master.png",
+      "sha256": "f5d31042363e636e8706b404b75ee7c6eaed90cacdc998a4bc233757a44ed271",
+      "bytes": 1359095,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "relativePath": "Assets/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png",
+      "sha256": "64b621c004fe327296a8744ae0a2476957ac0816e61a81a09994cf4baf38258e",
+      "bytes": 966786,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Summary.png",
+      "sha256": "4160e9480c902150f3c0d8b982e5bf70730ec5ca415b3c7820102cf64bed1ad6",
+      "bytes": 195768,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Timeline.png",
+      "sha256": "f34d3ead9fea5d6dadcdd333cd5aaabc61cf1d0ea5efe0286e41a4787e5e2a73",
+      "bytes": 199373,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Activity Journal.png",
+      "sha256": "15196289cab82ab254f922eb3aa68d0f3e587c04b9fc4c36d25ba3abc17b82e4",
+      "bytes": 182410,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "relativePath": "docs/AppStore/Screenshots/Settings.png",
+      "sha256": "8826984f5b012d7e117ea9870bdb861f58fcb2f2d06527126d9fda544e627883",
+      "bytes": 209538,
+      "width": 2560,
+      "height": 1600
+    },
+    {
+      "relativePath": "Investigation/UI/Release Summary Expanded.png",
+      "sha256": "de4cbdc4b5af075dcaa26ea256d5665a8e36f823f701d093f1d3453c7142a75d",
+      "bytes": 133981,
+      "width": 2000,
+      "height": 1200
+    }
+  ],
+  "appleVerification": {
+    "verifiedAt": "2026-10-13",
+    "source": "Signed-in App Store Connect UI",
+    "appId": "6822109552",
+    "version": "1.0.0",
+    "build": "2",
+    "status": "Waiting for Review",
+    "marketing": "https://timescope.gamadynamics.com.au/",
+    "support": "https://timescope.gamadynamics.com.au/support/",
+    "privacy": "https://timescope.gamadynamics.com.au/privacy/",
+    "linksAlreadyCorrect": true,
+    "appleFieldsChanged": false
+  }
+}

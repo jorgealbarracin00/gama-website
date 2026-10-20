@@ -121,6 +121,12 @@ export default function HomeMobile() {
 
           <div className="mt-6 flex flex-col gap-3">
             <Link
+              href="/apps"
+              className="rounded-full border border-cyan-200/40 bg-cyan-200 px-5 py-4 text-center text-xs font-bold uppercase tracking-[0.16em] text-[#07111f] transition hover:bg-cyan-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100"
+            >
+              Explore Our Apps
+            </Link>
+            <Link
               href="/incubation"
               className="rounded-full border border-cyan-200/24 bg-cyan-300/10 px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100"
             >

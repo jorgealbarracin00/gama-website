@@ -1,0 +1,138 @@
+{
+  "verifiedAt": "2026-10-21 Australia/Sydney",
+  "route": "/apps",
+  "implementation": "Six original character-driven app worlds with layered HTML names, descriptions, real SVG QR codes and direct external actions; four iOS worlds on wide screens, two larger web worlds, responsive tablet layout and dedicated portrait web artwork on phones.",
+  "preview": {
+    "url": "https://gama-website-c7v4n7v6a-jorgealbarracin00s-projects.vercel.app/apps",
+    "id": "dpl_Fy3YZ4nyQ2hJPSVWmwDS6iygjggt",
+    "status": "READY",
+    "environment": "Preview",
+    "access": "Existing Vercel Authentication retained. Sign in with the project's Vercel account.",
+    "source": "Current reviewed working-directory files. Changes remain uncommitted; no Git push."
+  },
+  "production": {
+    "changed": false,
+    "domain": "https://gamadynamics.com.au",
+    "deployment": "dpl_4pFbYf1DtdrUMGPLGnVZPebYJtb2",
+    "created": "2026-10-13",
+    "verification": "vercel inspect confirmed the existing production deployment and aliases after preview publication."
+  },
+  "files": {
+    "added": [
+      "app/apps/page.tsx",
+      "app/apps/opengraph-image.tsx",
+      "components/apps/AppsShowcase.tsx",
+      "components/apps/ProductScene.tsx",
+      "components/apps/Showcase.module.css",
+      "lib/apps/registry.ts",
+      "scripts/generate-app-qrs.mjs",
+      "tests/apps-showcase.test.mjs",
+      "public/apps/qr/dunnymaster.svg",
+      "public/apps/qr/tara.svg",
+      "public/apps/qr/grocerymaster.svg",
+      "public/apps/qr/memoirechoes.svg",
+      "public/apps/qr/cashcast.svg",
+      "public/apps/qr/coco.svg",
+      "public/apps/scenes/dunnymaster-v1.webp",
+      "public/apps/scenes/tara-v1.webp",
+      "public/apps/scenes/grocerymaster-v1.webp",
+      "public/apps/scenes/memoirechoes-v1.webp",
+      "public/apps/scenes/cashcast-v1.webp",
+      "public/apps/scenes/coco-v1.webp",
+      "public/apps/scenes/cashcast-mobile-v1.webp",
+      "public/apps/scenes/coco-mobile-v1.webp",
+      "docs/apps-showcase-artwork.json",
+      "docs/apps-showcase-validation.json"
+    ],
+    "modified": [
+      "components/home/Home.tsx",
+      "components/home/HomeMobile.tsx",
+      "components/incubation/IncubationIndex.tsx",
+      "package.json",
+      "package-lock.json"
+    ]
+  },
+  "artwork": {
+    "workflow": "Built-in image_gen. Six original scenes and two mobile portrait adaptations; all final WebP assets saved in public/apps/scenes.",
+    "reused": [
+      "public/brand/logo-transp.png",
+      "Official Coco identity from public/specimens/coco/brand/coco-hero.png as the reference for Coco's new scene."
+    ],
+    "promptsAndPaths": "docs/apps-showcase-artwork.json",
+    "totalOptimizedSceneBytes": 1077424,
+    "outstandingAssets": [],
+    "notes": "The reference mockup is not used as a flattened page. Blank sign/book surfaces are intentional: text, QR codes and buttons are real layered HTML. No generated QR codes or embedded app labels in scene artwork."
+  },
+  "copySources": [
+    {
+      "product": "DunnyMaster",
+      "url": "https://apps.apple.com/au/app/dunnymaster/id6819902112",
+      "verified": "Toilet-break timer and five mini-games; entertainment, no health-tracking claims."
+    },
+    {
+      "product": "TARA",
+      "url": "https://apps.apple.com/au/app/tara-timed-intake-assistant/id6819933946",
+      "verified": "Timed intakes and routine reminders, beyond hydration."
+    },
+    {
+      "product": "GroceryMaster",
+      "url": "https://apps.apple.com/au/app/grocerymaster/id6767196131",
+      "verified": "Shared household grocery list."
+    },
+    {
+      "product": "MemoirEchoes",
+      "url": "https://apps.apple.com/au/app/memoirechoes/id6792436890",
+      "verified": "Memories, spoken stories and a personal memoir."
+    },
+    {
+      "product": "CashCast",
+      "url": "https://cashcast.gamadynamics.com.au",
+      "verified": "Cash-flow planning destination. No trading, crypto or investment claims."
+    },
+    {
+      "product": "Coco The Llama",
+      "url": "https://cocothellama.com",
+      "verified": "Children's clothing shop. Copy avoids the mockup's unsupported games-platform claim."
+    }
+  ],
+  "checks": {
+    "lint": "passed, no errors or warnings",
+    "typescript": "passed",
+    "productionBuild": "passed locally and on Vercel; 20/20 static pages generated",
+    "automatedTests": {
+      "newShowcase": 9,
+      "existingCashCast": 14,
+      "existingWayline": 7,
+      "total": 30,
+      "passed": 30
+    },
+    "destinations": "All six exact user URLs returned HTTP200. All six real HTML actions clicked and opened their matching destinations in new tabs.",
+    "qr": "All six SVG payloads independently decoded via jsQR. All six rendered JPEG QR codes independently decoded at native desktop1440 and phone390 sizes; final production-build phone320 screenshot also decoded all six exact URLs at native resolution.",
+    "breakpoints": [
+      320,
+      390,
+      600,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "responsive": "No horizontal overflow; every QR and button stays inside its scene. All touch targets at least44 CSSpx.",
+    "keyboard": "Tab traversal reaches every app action in order; visible focus outlines verified.",
+    "navigation": "Desktop home at1280, mobile home at320, and incubation Apps links verified in browser.",
+    "reducedMotion": "Stylesheet verified: prefers-reduced-motion removes all new animations and transitions. Browser OS media emulation was not performed.",
+    "semantics": "Semantic h1/h2/h3 structure, labelled sections and links, meaningful scene/QR alternatives, skip link and safe external rel attributes.",
+    "browserConsole": "Finished local production build and hosted Preview: zero errors or warnings. Hosted browser verified all six scene images loaded and exactly six apps rendered.",
+    "sharing": "Authenticated remote preview serves a valid1200x630PNG. Canonical URL and metadata verified.",
+    "performance": "Static server-rendered /apps; no new client component or animation library. Local SVG QR assets, responsive Next images and mobile art direction.",
+    "scope": "Only the new showcase, its assets, navigation entries and necessary dependencies changed. Specimen001–009 content, DNS and infrastructure unchanged."
+  },
+  "evidenceDirectory": "/Users/jorgealbarracin/.codex/visualizations/2026/10/07/01a1153d-4ad5-7d73-8fb8-f59612360dad/apps-showcase",
+  "screenshots": [
+    "showcase-preview-live.jpg",
+    "showcase-final-desktop.jpg",
+    "showcase-final-mobile.jpg",
+    "showcase-final-320.jpg"
+  ]
+}

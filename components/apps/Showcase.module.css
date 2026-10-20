@@ -1,0 +1,215 @@
+.page {
+  --ink: #080e22;
+  min-height: 100vh;
+  color: #f5f7ff;
+  background: radial-gradient(ellipse at 48% 0%, #1b2452 0%, transparent 43%), radial-gradient(ellipse at 105% 65%, #21172f 0%, transparent 36%), #080e22;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  overflow-x: clip;
+}
+
+.page *, .page *::before, .page *::after { box-sizing: border-box; }
+.page a { -webkit-tap-highlight-color: transparent; }
+.page a:focus-visible { outline: 3px solid #b6efff; outline-offset: 5px; }
+.skipLink { position: fixed; left: 1rem; top: -6rem; z-index: 30; padding: 1rem 1.4rem; border-radius: .7rem; color: #071525; background: #c5f3ff; font-weight: 700; }
+.skipLink:focus { top: 1rem; }
+
+.header { max-width: 1560px; margin: auto; padding: 25px 48px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.brand { flex: 0 0 auto; display: block; border-radius: 8px; }
+.brand img { width: 190px; height: auto; display: block; }
+.nav { display: flex; gap: 32px; align-items: center; font-size: 14px; color: #c6cde7; }
+.nav a { padding: 13px 0; text-decoration: none; white-space: nowrap; transition: color .2s; }
+.nav a:hover { color: white; }
+.nav a[aria-current] { color: white; box-shadow: 0 2px #8bcfff; }
+
+.main { max-width: 1560px; margin: auto; padding: 0 48px; }
+.hero { text-align: center; padding: 42px 0 45px; animation: arrive .65s ease-out both; }
+.eyebrow { display: flex; align-items: center; justify-content: center; gap: 9px; margin: 0 0 14px; font-size: 10px; text-transform: uppercase; letter-spacing: .24em; color: #b2c6f0; font-weight: 600; }
+.eyebrow span { width: 5px; height: 5px; background: #a5dcf6; border-radius: 50%; box-shadow: 0 0 15px #91bffc; }
+.hero h1 { margin: 0; font-family: var(--font-brand), Arial, sans-serif; font-size: clamp(42px, 5.2vw, 80px); font-weight: 600; line-height: 1.13; letter-spacing: -.055em; }
+.hero h1 span { color: #bbbcfa; background: linear-gradient(105deg, #76d4f8 0%, #b2b5ff 48%, #eb9bee 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { color: #d2e7ff; font-size: clamp(17px, 1.65vw, 23px); font-weight: 600; margin: 17px 0 7px; letter-spacing: -.02em; }
+.intro { color: #aabbdc; font-size: clamp(14px, 1.2vw, 16px); margin: 0; line-height: 1.65; }
+
+.sectionHeading { display: flex; justify-content: space-between; align-items: baseline; gap: 15px; margin: 0 0 16px; }
+.sectionHeading h2 { margin: 0; font-size: 15px; font-weight: 500; letter-spacing: -.01em; color: #e2e9fc; }
+.sectionHeading p { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 11px; color: #a6b5d5; }
+.sectionHeading p span { color: #a8cffa; }
+.iosGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.webGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.webSection { margin-top: 34px; }
+
+.scene { container-type: inline-size; position: relative; isolation: isolate; aspect-ratio: 2 / 3; border-radius: 23px; box-shadow: 0 13px 28px #0003; background: #f3e4d0; overflow: hidden; transition: box-shadow .3s; }
+.scene:hover { box-shadow: 0 12px 40px #0005, 0 0 24px #9ab4ff12; }
+.artwork { display: block; position: absolute; inset: 0; z-index: -1; }
+.artwork img { object-fit: cover; transition: filter .4s; }
+.scene:hover .artwork img { filter: brightness(1.025); }
+
+/* These inset areas sit on the physical blank props in the scene artwork.
+   The QR images and action links never rotate, warp, animate or lose quiet zones. */
+.sign { position: absolute; left: 14%; width: 72%; top: 49%; height: 37%; display: flex; flex-direction: column; justify-content: center; gap: 12px; color: #252238; text-align: center; }
+.signCopy { min-width: 0; }
+.productName { font-family: var(--font-brand), Arial, sans-serif; font-size: clamp(19px, 7cqw, 29px); line-height: 1.15; letter-spacing: -.055em; font-weight: 600; margin: 0 0 7px; }
+.description { font-size: clamp(11px, 3.65cqw, 14px); line-height: 1.4; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.scanRow { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 10px; width: 100%; }
+.qr { width: 100%; height: auto; display: block; border-radius: 1px; background: white; aspect-ratio: 1; }
+.action { display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%; min-height: 48px; padding: 6px 7px; border: 1px solid #fff5; border-radius: 9px; color: white; background: #101018; text-decoration: none; box-shadow: 0 4px 10px #17131a18; transition: background .2s, box-shadow .2s, transform .2s; }
+.action:hover { background: #282637; box-shadow: 0 6px 12px #17131a35; transform: translateY(-2px); }
+.action:active { transform: translateY(0); }
+.page .action:focus-visible { outline-color: #2059a8; outline-offset: 4px; }
+.appleMark { width: 18px; height: 21px; flex-shrink: 0; }
+.storeLabel { display: flex; flex-direction: column; text-align: left; line-height: 1.1; white-space: nowrap; }
+.storeLabel > span { font-size: clamp(7px, 2.4cqw, 10px); }
+.storeLabel strong { font-size: clamp(13px, 4.3cqw, 18px); font-weight: 500; margin-top: 1px; letter-spacing: -.02em; }
+.dunnymaster .sign { top: 48%; height: 36%; }
+.tara .sign { top: 50%; height: 36%; }
+.grocerymaster .sign { top: 55%; height: 34%; }
+.grocerymaster .productName { font-size: clamp(18px, 6.5cqw, 27px); }
+
+.bookScene .sign { left: 10%; width: 80%; top: 49%; height: 35%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12%; text-align: left; }
+.bookScene .signCopy { align-self: center; }
+.bookScene .productName { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(23px, 8.8cqw, 37px); letter-spacing: -.045em; overflow-wrap: normal; }
+.bookScene .description { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(12px, 4.05cqw, 16px); line-height: 1.4; text-wrap: pretty; }
+.bookEyebrow { display: block; color: #745537; font-size: clamp(7px, 2.35cqw, 10px); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 11px; }
+.bookFlourish { display: block; margin: 13px 0 0; color: #9c7443; font-size: 15px; }
+.bookScene .scanRow { display: flex; flex-direction: column; gap: 10px; align-self: center; }
+.bookScene .action { gap: 4px; padding: 5px; }
+.bookScene .appleMark { width: 15px; }
+.bookScene .storeLabel > span { font-size: clamp(7px, 2.2cqw, 9px); }
+.bookScene .storeLabel strong { font-size: clamp(13px, 4cqw, 17px); }
+
+.webScene { aspect-ratio: 3 / 2; }
+.webScene .sign { left: 58%; top: 18%; width: 34%; height: 64%; gap: 12px; }
+.webScene .productName { font-size: clamp(23px, 4.5cqw, 36px); }
+.webScene .description { font-size: clamp(12px, 2.3cqw, 16px); line-height: 1.35; }
+.webScene .scanRow { display: flex; flex-direction: column; gap: 12px; }
+.webScene .qr { width: min(62%, 164px); }
+.webAction { min-height: 46px; border: none; font-size: clamp(12px, 2.5cqw, 17px); font-weight: 600; white-space: nowrap; letter-spacing: -.035em; gap: 10px; background: #173a92; }
+.webAction:hover { background: #102b72; }
+.webAction svg { width: 20px; height: 20px; flex-shrink: 0; }
+.coco .sign { left: 51%; width: 37%; top: 18%; height: 63%; }
+.coco .webAction { background: #7035bd; }
+.coco .webAction:hover { background: #572494; }
+.coco .productName { font-size: clamp(22px, 3.7cqw, 32px); }
+
+.scanHint { display: flex; align-items: center; justify-content: center; gap: 9px; color: #a5b5d4; margin: 31px 0 0; font-size: 12px; line-height: 1.6; text-align: center; }
+.scanHint svg { width: 19px; height: 19px; flex-shrink: 0; color: #a1bfdc; }
+.footer { max-width: 1464px; margin: 42px auto 0; border-top: 1px solid #cbd4ff18; padding: 24px 0 30px; display: flex; gap: 20px; justify-content: space-between; align-items: center; color: #a6b2d0; font-size: 12px; }
+.footer p { margin: 0; }
+.footer a { color: #dbe4fa; text-decoration: none; font-family: var(--font-brand), Arial, sans-serif; font-size: 10px; letter-spacing: .1em; padding: 9px 0; }
+.footer a span { margin-left: 7px; color: #abd9f6; }
+
+@keyframes arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1399px) {
+  .main, .header { padding-left: 36px; padding-right: 36px; }
+  .main { max-width: 1100px; }
+  .iosGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .scene { border-radius: 25px; }
+  .productName { font-size: clamp(24px, 7cqw, 34px); }
+  .description { font-size: clamp(13px, 3.65cqw, 17px); }
+  .sign { gap: 17px; }
+  .scanRow { grid-template-columns: 1.05fr 1fr; gap: 15px; }
+  .action { min-height: 55px; }
+  .appleMark { width: 24px; height: 28px; }
+  .storeLabel > span { font-size: clamp(8px, 2.4cqw, 12px); }
+  .storeLabel strong { font-size: clamp(15px, 4.3cqw, 23px); }
+  .bookScene .productName { font-size: clamp(26px, 8.8cqw, 43px); }
+  .bookScene .description { font-size: clamp(14px, 4cqw, 19px); }
+  .bookScene .storeLabel > span { font-size: clamp(8px, 2.2cqw, 11px); }
+  .bookScene .storeLabel strong { font-size: clamp(14px, 4cqw, 21px); }
+  .bookScene .appleMark { width: 19px; }
+  .webScene .sign { gap: 9px; }
+  .webScene .productName { font-size: clamp(21px, 4.5cqw, 30px); }
+  .webScene .description { font-size: clamp(11px, 2.3cqw, 14px); }
+  .webScene .scanRow { gap: 9px; }
+  .webAction { min-height: 44px; gap: 6px; padding: 7px; font-size: clamp(11px, 2.4cqw, 15px); }
+  .webAction svg { width: 15px; height: 15px; }
+  .footer { margin-left: 36px; margin-right: 36px; }
+}
+
+@media (min-width: 601px) and (max-width: 1199px) {
+  .webGrid { grid-template-columns: 1fr; }
+  .webScene .productName { font-size: clamp(26px, 4.5cqw, 37px); }
+  .webScene .description { font-size: clamp(14px, 2.3cqw, 17px); }
+  .webScene .qr { width: min(60%, 172px); }
+  .webScene .sign, .webScene .scanRow { gap: 16px; }
+  .webAction { font-size: 17px; min-height: 50px; }
+}
+
+@media (max-width: 600px) {
+  .header { flex-wrap: wrap; justify-content: center; padding: 22px 20px 0; gap: 8px; }
+  .brand img { width: 161px; }
+  .nav { flex-basis: 100%; justify-content: center; gap: 24px; font-size: 11px; }
+  .nav a { padding: 12px 0; }
+  .main { padding: 0 16px; max-width: 480px; }
+  .hero { padding: 36px 0 32px; }
+  .eyebrow { font-size: 8px; letter-spacing: .2em; margin-bottom: 13px; }
+  .hero h1 { font-size: clamp(35px, 10.1vw, 48px); letter-spacing: -.055em; }
+  .subtitle { font-size: clamp(14px, 3.9vw, 18px); margin-top: 16px; }
+  .intro { font-size: 12px; line-height: 1.6; max-width: 310px; margin: 0 auto; }
+  .sectionHeading { gap: 8px; margin-bottom: 12px; }
+  .sectionHeading h2 { font-size: 12px; }
+  .sectionHeading p { font-size: 9px; gap: 4px; }
+  .iosGrid, .webGrid { grid-template-columns: 1fr; gap: 20px; }
+  .scene, .webScene { aspect-ratio: 2 / 3; border-radius: 23px; }
+  .sign { gap: 16px; }
+  .productName { font-size: clamp(22px, 7cqw, 31px); }
+  .description { font-size: clamp(12px, 3.7cqw, 16px); }
+  .grocerymaster .productName { font-size: clamp(21px, 6.5cqw, 28px); }
+  .action { min-height: 52px; }
+  .appleMark { width: 20px; height: 24px; }
+  .storeLabel > span { font-size: clamp(8px, 2.4cqw, 11px); }
+  .storeLabel strong { font-size: clamp(15px, 4.3cqw, 20px); }
+  .scanRow { gap: 12px; }
+  .bookScene .productName { font-size: clamp(25px, 8.8cqw, 39px); }
+  .bookScene .description { font-size: clamp(13px, 4cqw, 17px); }
+  .bookScene .storeLabel > span { font-size: clamp(7px, 2.2cqw, 10px); }
+  .bookScene .storeLabel strong { font-size: clamp(14px, 4cqw, 19px); }
+  .bookScene .appleMark { width: 17px; }
+  .webSection { margin-top: 30px; }
+  .webScene .sign, .coco .sign { left: 14%; width: 72%; top: 51%; height: 37%; gap: 15px; }
+  .webScene .productName, .coco .productName { font-size: clamp(23px, 7cqw, 32px); }
+  .webScene .description { font-size: clamp(12px, 3.7cqw, 16px); }
+  .webScene .scanRow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .webScene .qr { width: 100%; }
+  .webAction { min-height: 56px; white-space: normal; font-size: clamp(13px, 3.6cqw, 17px); gap: 5px; padding: 8px; }
+  .webAction svg { width: 17px; height: 17px; }
+  .scanHint { max-width: 310px; font-size: 11px; margin: 25px auto 0; align-items: flex-start; }
+  .footer { margin: 29px 20px 0; padding: 20px 0 28px; flex-direction: column; gap: 8px; font-size: 11px; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .sign { gap: 8px; }
+  .productName, .grocerymaster .productName { font-size: 20px; }
+  .description { font-size: 11px; }
+  .dunnymaster .sign { top: 46%; height: 42%; }
+  .tara .sign { top: 49%; height: 41%; }
+  .grocerymaster .sign { top: 53%; height: 40%; }
+  .scanRow, .webScene .scanRow { grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr); gap: 8px; }
+  .action { min-width: 0; padding: 5px 4px; gap: 3px; }
+  .appleMark { width: 16px; height: 20px; }
+  .storeLabel > span { font-size: 7px; }
+  .storeLabel strong { font-size: 13px; }
+  .bookScene .productName { font-size: 23px; line-height: 1.1; }
+  .bookScene .description { font-size: 11.5px; line-height: 1.3; }
+  .bookScene .bookEyebrow { font-size: 7px; margin-bottom: 6px; }
+  .bookScene .bookFlourish { display: none; }
+  .bookScene .scanRow { gap: 6px; }
+  .bookScene .action { min-height: 44px; }
+  .webScene .sign { gap: 8px; top: 50%; height: 40%; }
+  .webScene .productName { font-size: 21px; }
+  .webScene .description { font-size: 11px; }
+  .grocerymaster .scanRow, .webScene .scanRow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .action:hover, .action:active { transform: none; }
+}
+
+@media (forced-colors: active) {
+  .hero h1 span { background: none; -webkit-text-fill-color: currentColor; color: CanvasText; }
+  .sign { color: #111; forced-color-adjust: none; }
+  .action { border: 2px solid currentColor; }
+  .qr { forced-color-adjust: none; }
+}

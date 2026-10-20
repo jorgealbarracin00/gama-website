@@ -151,8 +151,8 @@ export default function Home() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,20,0.32),rgba(3,9,20,0.55)_55%,rgba(3,9,20,0.72))]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,18,0.7),rgba(2,7,18,0.22)_30%,rgba(2,7,18,0.22)_70%,rgba(2,7,18,0.7))]" />
 
-      <header className="relative z-20 flex items-center justify-between px-8 pt-5 md:px-12 md:pt-6">
-        <div className="flex items-center gap-4">
+      <header className="relative z-20 flex items-center justify-between gap-6 px-8 pt-5 md:pt-6 lg:px-12">
+        <div className="flex shrink-0 items-center gap-4">
           <div className="group relative flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.3)] backdrop-blur-md transition-all duration-500 hover:scale-[1.03] hover:bg-white/15">
             <div className="pointer-events-none absolute inset-0 rounded-xl bg-[radial-gradient(circle,rgba(120,180,255,0.25),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="pointer-events-none absolute inset-0 rounded-xl animate-[pulse_6s_ease-in-out_infinite] bg-[radial-gradient(circle,rgba(120,180,255,0.6),transparent_70%)] opacity-[0.08]" />
@@ -162,13 +162,16 @@ export default function Home() {
               alt="GAMA Dynamics"
               width={210}
               height={56}
-              className="relative h-10 w-auto object-contain brightness-110 transition duration-500 group-hover:brightness-125 md:h-12"
+              className="relative h-10 w-auto object-contain brightness-110 transition duration-500 group-hover:brightness-125 lg:h-12"
               priority
             />
           </div>
         </div>
 
-        <nav className="hidden items-center gap-8 text-lg text-white/80 md:flex xl:gap-10">
+        <nav aria-label="Main navigation" className="hidden items-center gap-4 whitespace-nowrap text-sm text-white/80 md:flex lg:gap-6 lg:text-base xl:gap-10 xl:text-lg">
+          <Link href="/apps" className="transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200">
+            Apps
+          </Link>
           <Link href="/incubation" className="transition hover:text-white">
             Incubation Chamber
           </Link>
@@ -177,7 +180,7 @@ export default function Home() {
           </Link>
           <Link
             href="#contact"
-            className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-md transition hover:bg-white/20"
+            className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-md transition hover:bg-white/20 lg:px-6 lg:py-3"
           >
             Contact
           </Link>

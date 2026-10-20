@@ -18,12 +18,20 @@ export default function IncubationIndex() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,11,22,0.14),rgba(5,11,22,1)_80%)]" />
 
         <div className="relative mx-auto max-w-7xl">
-          <Link
-            href="/"
-            className="inline-flex rounded-full border border-white/14 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/70 transition hover:bg-white/14"
-          >
-            ← Return to lab entrance
-          </Link>
+          <nav aria-label="Explore GAMA Dynamics" className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/"
+              className="inline-flex rounded-full border border-white/14 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/70 transition hover:bg-white/14"
+            >
+              ← Return to lab entrance
+            </Link>
+            <Link
+              href="/apps"
+              className="inline-flex rounded-full border border-cyan-200/24 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100 transition hover:bg-cyan-300/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-100"
+            >
+              Apps
+            </Link>
+          </nav>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
             <div>

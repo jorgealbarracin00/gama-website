@@ -58,6 +58,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${brandSans.variable} antialiased`}
       >
         {children}
+        <footer
+          id="contact"
+          className="border-t border-white/15 bg-slate-950 px-6 py-6 text-center text-sm text-slate-200"
+        >
+          <a
+            href="mailto:support@gamadynamics.com.au"
+            className="underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+          >
+            GAMA Dynamics Support · support@gamadynamics.com.au
+          </a>
+        </footer>
       </body>
     </html>
   );
